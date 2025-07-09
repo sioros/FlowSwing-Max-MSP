@@ -10,10 +10,48 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 110.0, 159.0, 1135.0, 622.0 ],
+		"rect" : [ 293.0, 138.0, 1102.0, 622.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"helpsidebarclosed" : 1,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 18.0, 564.0, 58.0, 22.0 ],
+					"text" : "onecopy"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "gswitch2",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 854.0, 481.0, 39.0, 32.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_enum" : [ "0", "1" ],
+							"parameter_initial" : [ 0 ],
+							"parameter_initial_enable" : 1,
+							"parameter_longname" : "gswitch2",
+							"parameter_mmax" : 1,
+							"parameter_modmode" : 0,
+							"parameter_shortname" : "printSwitch",
+							"parameter_type" : 2
+						}
+
+					}
+,
+					"varname" : "printSwitch"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "newobj",
@@ -282,7 +320,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 874.0, 483.0, 91.0, 22.0 ],
+					"patching_rect" : [ 874.0, 525.0, 91.0, 22.0 ],
 					"text" : "print @popup 1"
 				}
 
@@ -669,15 +707,15 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"source" : [ "obj-1", 7 ]
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"source" : [ "obj-1", 0 ]
+					"destination" : [ "obj-2", 1 ],
+					"source" : [ "obj-1", 7 ]
 				}
 
 			}
@@ -709,6 +747,13 @@
 					"destination" : [ "obj-1", 2 ],
 					"midpoints" : [ 730.5, 238.5, 667.166666666666742, 238.5 ],
 					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"source" : [ "obj-2", 1 ]
 				}
 
 			}
@@ -787,6 +832,7 @@
 			"obj-1::obj-52" : [ "onset_threshold", "onset_threshold", 0 ],
 			"obj-1::obj-90" : [ "secondary_S_control", "secondary_S_control", 0 ],
 			"obj-1::obj-91" : [ "hold", "hold", 0 ],
+			"obj-2" : [ "gswitch2", "printSwitch", 0 ],
 			"obj-27" : [ "Duration", "duration", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{

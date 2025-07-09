@@ -15,6 +15,33 @@
 		"helpsidebarclosed" : 1,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "gswitch2",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 862.0, 450.0, 39.0, 32.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_enum" : [ "0", "1" ],
+							"parameter_initial" : [ 0 ],
+							"parameter_initial_enable" : 1,
+							"parameter_longname" : "gswitch2",
+							"parameter_mmax" : 1,
+							"parameter_modmode" : 0,
+							"parameter_shortname" : "printSwitch",
+							"parameter_type" : 2
+						}
+
+					}
+,
+					"varname" : "printSwitch"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-18",
 					"linecount" : 4,
 					"maxclass" : "comment",
@@ -55,7 +82,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 882.0, 427.0, 91.0, 22.0 ],
+					"patching_rect" : [ 882.0, 506.0, 91.0, 22.0 ],
 					"text" : "print @popup 1"
 				}
 
@@ -1509,7 +1536,7 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
+					"destination" : [ "obj-2", 1 ],
 					"source" : [ "obj-1", 8 ]
 				}
 
@@ -1572,6 +1599,13 @@
 					"midpoints" : [ 238.5, 588.200006753206253, 359.5, 588.200006753206253 ],
 					"order" : 1,
 					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"source" : [ "obj-2", 1 ]
 				}
 
 			}
@@ -1673,6 +1707,7 @@
 			"obj-1::obj-51" : [ "Target", "Target", 0 ],
 			"obj-1::obj-90" : [ "secondary_S_control", "secondary_S_control", 0 ],
 			"obj-1::obj-91" : [ "hold", "hold", 0 ],
+			"obj-2" : [ "gswitch2", "printSwitch", 0 ],
 			"obj-27" : [ "Duration", "duration", 0 ],
 			"obj-8::obj-35" : [ "min gate duration", "min gate duration", 0 ],
 			"obj-90" : [ "mc sequencer", "mc sequencer", 0 ],
