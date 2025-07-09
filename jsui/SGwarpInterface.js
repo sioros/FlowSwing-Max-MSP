@@ -1,3 +1,5 @@
+// code adapted from warpy2.js distributed with Max/MSP 9 
+
 //canvas setup
 autowatch = 1;
 outlets = 2;
