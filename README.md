@@ -1,2 +1,7 @@
 # FlowSwing-Max-MSP
-Flow Swing is a set of Max/MSP patches for real-time manipulation of non-isochronous timing using. It enables time-warping of audio and control signals, supporting expressive rhythmic variation and complex interactions within performance and generative contexts.
+FlowSwing is a Max/MSP package for real-time rhythmic manipulation based on Non-Isochronous (NI) Grids. It provides tools for time-warping audio and modulating control signals using flexible timing structures defined by a small set of parameters. Warp markers and breakpoints can be aligned to NI Grids and adjusted during performance. All parameters are mappable and fully integrable into Max projects.
+
+## installation
+Download latest version as zip. Unzip and place in Max Packages (eg. /Documents/Max 9/Packages)
+or
+install in Max Packages via git clone

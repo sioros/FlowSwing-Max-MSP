@@ -1,0 +1,14 @@
+max objectfile  flowSwing.audioWarp flowSwing_audioWarp;
+max definesubstitution flowSwing.audioWarp bpatcher @name flowSwing_audioWarp; 
+
+max objectfile  flowSwing.envelop flowSwing_envelop;
+max definesubstitution flowSwing.envelop bpatcher @name flowSwing_envelop;
+
+max objectfile liminalGrid liminalGrid;
+
+max objectfile flowSwing.warpInterface SGwarpInterface;
+max definesubstitution flowSwing.warpInterface jsui @filename SGwarpInterface;
+
+max objectfile flowSwing.euclidean euclidean_rhythm;
+max definesubstitution flowSwing.euclidean js @filename euclidean_rhythm;
+

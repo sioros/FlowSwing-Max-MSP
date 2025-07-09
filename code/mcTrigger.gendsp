@@ -1,0 +1,133 @@
+{
+	"patcher" : 	{
+		"fileversion" : 1,
+		"appversion" : 		{
+			"major" : 9,
+			"minor" : 0,
+			"revision" : 5,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"classnamespace" : "dsp.gen",
+		"rect" : [ 134.0, 82.0, 852.0, 778.0 ],
+		"gridsize" : [ 15.0, 15.0 ],
+		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 614.0, 48.0, 28.0, 22.0 ],
+					"text" : "in 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 290.0, 28.0, 150.0, 48.0 ],
+					"text" : "triggers need to move forward otherwise keep the same output. "
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 110.0, 21.0, 153.0, 62.0 ],
+					"text" : "need to supress the a new index trigger (but allow not offs?) after an offset change. "
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 614.0, 472.0, 35.0, 22.0 ],
+					"text" : "out 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"code" : "// Buffer lookup based on input values and phases\r\n// Declare input parameters\r\n\r\n// Declare buffers\r\nBuffer value(\"values\");\r\nBuffer phase(\"phases\");\r\nHistory currentOutput(0);\r\nHistory currentIndex(0);\r\nParam thr (0.01);\r\n\r\n// Input variables\r\n\r\nx = in1;\r\nsupress = in2;\t\r\nch = mc_channel-1;\r\nif (ch < phase.channels())\r\n{\r\nindx = -1;\r\n\r\nfor (i = 0; i < phase.dim(); i += 1) \r\n{\r\n\tif (x < phase.peek(i,ch))\r\n\t{\r\n\t\tindx = i - 1;\r\n  \t\tbreak; // The previous index is the last one where x >= phases[i]\r\n\t}\r\n}\r\n\r\nif (indx < 0)\r\n\tindx = dim(phase)-1;\r\nnew_value = value.peek(indx, ch);\t\r\n\r\nif (supress>0 && currentIndex != indx)\r\n{\r\n\tif (currentOutput != 0 && new_value != currentOutput)\r\n\t{\r\n\t\tif (abs(phase.peek(currentIndex, ch)-x)>thr \r\n\t\t\t\t|| abs(phase.peek(indx,ch)-x)<thr)\r\n\t\t\tcurrentOutput = new_value;\r\n\t}else if (currentOutput == 0 && new_value != 0)\r\n\t{ \r\n\t\tif (abs(phase.peek(indx,ch)-x)<thr)\r\n\t\t\tcurrentOutput = new_value;\r\n\t}\r\n\tcurrentIndex = indx;\r\n}else if ( currentIndex != indx)\r\n{\r\n\tcurrentIndex = indx;\r\n\tcurrentOutput = new_value;\r\n}\r\n\r\n/*IF cur_output != 0 && new_output==0\r\n    IF abs(p[curr_i]-x)>Thr\r\n        cur_output = new_output\r\nELSE IF cur_output == 0 && new_output != cur_output \r\n    IF abs(p[indx]-x)<Thr\r\n        cur_output = new_output\r\n*/\r\n/*\r\nif (change(in2)>0 && indx != currentIndex) \r\n//if there is an offset change (trigger signal in in2)\r\n// and there is a change in the indx value\r\n{\r\n\t// if the new segment is a silent one then set the current output \r\n\tif (peek(values, indx, ch)==0) \r\n\t\tcurrentOuput = peek(values, indx, ch);\r\n\t// otherwise update only the current index and keep current output. \r\n\tcurrentIndex = indx;\r\n}else if (indx>currentIndex || (indx==0 && currentIndex==dim(phases)-1))\r\n{\r\n\t// if a new index is a \"forward\" step then update current index and output\r\n\tcurrentIndex = indx;\r\n\tcurrentOuput = values.peek(currentIndex, ch);\r\n}\r\n*/\r\ncurrentIndex = indx;\r\n}else\r\n{\r\n\tcurrentIndex = 0;\r\n\tcurrentOutput = 0;\r\n}\r\n\r\n// Outputs\r\n\r\nout1 = currentOutput; \r\nout2 = currentIndex;",
+					"fontface" : 0,
+					"fontname" : "<Monospaced>",
+					"fontsize" : 12.0,
+					"id" : "obj-5",
+					"maxclass" : "codebox",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 50.0, 96.0, 583.0, 347.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 50.0, 14.0, 28.0, 22.0 ],
+					"text" : "in 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 50.0, 483.0, 35.0, 22.0 ],
+					"text" : "out 1"
+				}
+
+			}
+ ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 1 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-5", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+ ],
+		"originid" : "pat-636"
+	}
+
+}
