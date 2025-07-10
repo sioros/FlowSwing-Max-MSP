@@ -449,8 +449,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 18.0, 914.0, 435.0, 38.0 ],
-					"text" : ";\r\nmax launch_browser https://www.researchgate.net/publication/393513606"
+					"patching_rect" : [ 18.0, 914.0, 369.0, 38.0 ],
+					"text" : ";\r\nmax launch_browser https://doi.org/10.5281/zenodo.15843562"
 				}
 
 			}
