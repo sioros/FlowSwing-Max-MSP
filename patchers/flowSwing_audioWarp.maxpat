@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 100.0, 100.0, 668.0, 224.0 ],
+		"rect" : [ 0.0, 42.0, 993.0, 859.0 ],
 		"openrect" : [ 0.0, 0.0, 668.0, 224.0 ],
 		"openinpresentation" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
@@ -1140,8 +1140,7 @@
 						}
 ,
 						"valueof" : 						{
-							"parameter_initial" : [ 0.0 ],
-							"parameter_initial_enable" : 1,
+							"parameter_invisible" : 2,
 							"parameter_longname" : "secondary_S_control",
 							"parameter_mmax" : 1.0,
 							"parameter_modmode" : 3,
@@ -8572,36 +8571,36 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "SGwarpInterface.js",
-				"bootpath" : "~/OneDrive/Documents/GitHub/flowswing/Generative",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
+				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "complex_quantise.js",
-				"bootpath" : "~/OneDrive/Documents/GitHub/flowswing/Generative",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "drawDoubleGrid.js",
-				"bootpath" : "~/OneDrive/Documents/GitHub/flowswing/Grid",
-				"patcherrelativepath" : "../Grid",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
+				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "drawGrid.js",
-				"bootpath" : "~/OneDrive/Documents/GitHub/flowswing/Grid",
-				"patcherrelativepath" : "../Grid",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
+				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "euclidean_rhythm.js",
-				"bootpath" : "~/OneDrive/Documents/GitHub/flowswing/Grid",
-				"patcherrelativepath" : "../Grid",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -8611,49 +8610,49 @@
 			}
 , 			{
 				"name" : "grooveWrapper~.maxpat",
-				"bootpath" : "~/OneDrive/Documents/GitHub/flowswing/Generative",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "liminalGrid.maxpat",
-				"bootpath" : "~/OneDrive/Documents/MAX patches/includes/liminalSpace",
-				"patcherrelativepath" : "../../../MAX patches/includes/liminalSpace",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "markerDictionary2List.maxpat",
-				"bootpath" : "~/OneDrive/Documents/GitHub/flowswing/Generative",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "markerTimesToSpeeds.maxpat",
-				"bootpath" : "~/OneDrive/Documents/GitHub/flowswing/Generative",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "polySegmentGroove.maxpat",
-				"bootpath" : "~/OneDrive/Documents/GitHub/flowswing/Generative",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "shift_markers.js",
-				"bootpath" : "~/OneDrive/Documents/GitHub/flowswing/Generative",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "warpMarkersToBuffer.maxpat",
-				"bootpath" : "~/OneDrive/Documents/GitHub/flowswing/Generative",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

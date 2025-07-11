@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 0.0, 42.0, 1441.0, 859.0 ],
+		"rect" : [ 0.0, 42.0, 993.0, 859.0 ],
 		"openrect" : [ 0.0, 0.0, 668.0, 224.0 ],
 		"openinpresentation" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
@@ -1158,7 +1158,7 @@
 			}
 , 			{
 				"box" : 				{
-					"addpoints_with_curve" : [ 0.0, 1.0, 0, 0.0, 0.25, 0.403225806451613, 0, 0.0, 0.5, 1.0, 0, 0.7, 0.75, 0.387096774193548, 0, 0.745, 1.0, 1.0, 0, 0.0 ],
+					"addpoints_with_curve" : [ 0.0, 1.0, 0, 0.0, 0.251264755480607, 0.370967741935484, 0, 0.0, 0.5, 1.0, 0, 0.7, 0.75, 0.387096774193548, 0, 0.745, 1.0, 1.0, 0, 0.0 ],
 					"bgcolor" : [ 0.176470588235294, 0.176470588235294, 0.176470588235294, 0.0 ],
 					"classic_curve" : 0,
 					"clicksustain" : 0,
@@ -2025,11 +2025,11 @@
 										"maxclass" : "codebox",
 										"patching_rect" : [ 46.0, 96.0, 539.0, 360.0 ],
 										"numoutlets" : 1,
-										"fontname" : "<Monospaced>",
+										"fontsize" : 12.0,
 										"outlettype" : [ "" ],
+										"fontname" : "<Monospaced>",
 										"fontface" : 0,
 										"id" : "obj-6",
-										"fontsize" : 12.0,
 										"numinlets" : 1,
 										"code" : "// Initialize variables\r\nHistory previous_input(0); // Tracks if the input signal was previously high (1)\r\nHistory keep_muted(0); //keep muted if signal was already high when mute was switched off\r\n\r\n// Parameters\r\n\r\nParam mute(0);             // External mute control: 0 = off, 1 = on\r\n\r\n// Inputs and Outputs\r\ninput_signal = in1;         // Input signal\r\noutput_signal = input_signal;     // Output signal\r\nmute_change = change(mute);\r\n// Main code\r\nif (mute > 0) \r\n{\r\n    // Mute is ON: output is always 0\r\n    output_signal = 0;\r\n\r\n} else if (mute_change<0)\r\n{\r\n    // Mute is switched OFF: process input signal\r\n    if (input_signal > 0 && previous_input == input_signal) \r\n\t{\r\n         // Input was already high, keep output muted\r\n        output_signal = 0;\r\n\t\tkeep_muted = 1; // set the keep muted flag to coninue muting the input signal\r\n    }\r\n}else if (keep_muted >0)\r\n{\r\n\toutput_signal = 0;\r\n\tif (input_signal == 0) // if the input signal returns to 0\r\n\t\tkeep_muted = 0; //reset the keep muting flag\r\n}\r\n\r\nout1 = output_signal;\r\n\r\nprevious_input = in1;"
 									}
@@ -2085,7 +2085,7 @@
 					"outlettype" : [ "multichannelsignal" ],
 					"patching_rect" : [ 169.0, 1229.0, 84.0, 22.0 ],
 					"text" : "mc.gen~",
-					"wrapper_uniquekey" : "u982000694"
+					"wrapper_uniquekey" : "u519000307"
 				}
 
 			}
@@ -3462,6 +3462,11 @@
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 998.0, 316.0, 98.0, 22.0 ],
 					"restore" : [ 						{
+							"env" : [ 0.0, 1.0, 0.0, 0.251264755480607, 0.370967741935484, 0.0, 0.5, 1.0, 0.7, 0.75, 0.387096774193548, 0.745, 1.0, 1.0, 0.0 ],
+							"lock" : 							{
+								"associations" : [ 0, 1, 2, 3, 4 ],
+								"order" : [ 0, 0, 0, 0, 0 ]
+							}
 
 						}
  ],
@@ -5306,8 +5311,6 @@
 						}
 ,
 						"valueof" : 						{
-							"parameter_initial" : [ 0.0 ],
-							"parameter_initial_enable" : 1,
 							"parameter_invisible" : 2,
 							"parameter_longname" : "secondary_S_control",
 							"parameter_mmax" : 1.0,
