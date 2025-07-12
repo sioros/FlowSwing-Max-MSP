@@ -14,3 +14,7 @@ FlowSwing requires Max 9 due to its use of the newer JavaScript engine (v8). How
 
 ## Updates and Maintenance
 This repository is actively maintained and regularly updated with new features, usage examples, and bug fixes. We recommend checking back frequently and pulling the latest changes to stay up to date with improvements and additions.
+
+## Resources
+
+For source code, updates, and additional documentation, visit the [FlowSwing GitHub Repository](https://github.com/sioros/FlowSwing-Max-MSP/).
