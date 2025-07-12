@@ -11,3 +11,6 @@ Install in Max Packages via git clone
 ## Requirements
 
 FlowSwing requires Max 9 due to its use of the newer JavaScript engine (v8). However, scripts compatible with the older js object (JavaScript 1.8.5) are also provided. To use FlowSwing in earlier versions of Max, replace all v8 objects in the patchers with js, and load the corresponding legacy-compatible script files.
+
+## Updates and Maintenance
+This repository is actively maintained and regularly updated with new features, usage examples, and bug fixes. We recommend checking back frequently and pulling the latest changes to stay up to date with improvements and additions.
