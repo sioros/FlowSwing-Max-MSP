@@ -20,11 +20,11 @@
 				"box" : 				{
 					"id" : "obj-103",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 871.0, 103.0, 135.0, 22.0 ],
-					"text" : "route breakpoints"
+					"numinlets" : 3,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 861.0, 83.0, 145.0, 22.0 ],
+					"text" : "route breakpoints patcher"
 				}
 
 			}
@@ -2119,12 +2119,12 @@
 										"maxclass" : "codebox",
 										"patching_rect" : [ 46.0, 96.0, 539.0, 360.0 ],
 										"numoutlets" : 1,
-										"fontname" : "<Monospaced>",
+										"fontsize" : 12.0,
 										"outlettype" : [ "" ],
+										"fontname" : "<Monospaced>",
+										"numinlets" : 1,
 										"fontface" : 0,
 										"id" : "obj-6",
-										"fontsize" : 12.0,
-										"numinlets" : 1,
 										"code" : "// Initialize variables\r\nHistory previous_input(0); // Tracks if the input signal was previously high (1)\r\nHistory keep_muted(0); //keep muted if signal was already high when mute was switched off\r\n\r\n// Parameters\r\n\r\nParam mute(0);             // External mute control: 0 = off, 1 = on\r\n\r\n// Inputs and Outputs\r\ninput_signal = in1;         // Input signal\r\noutput_signal = input_signal;     // Output signal\r\nmute_change = change(mute);\r\n// Main code\r\nif (mute > 0) \r\n{\r\n    // Mute is ON: output is always 0\r\n    output_signal = 0;\r\n\r\n} else if (mute_change<0)\r\n{\r\n    // Mute is switched OFF: process input signal\r\n    if (input_signal > 0 && previous_input == input_signal) \r\n\t{\r\n         // Input was already high, keep output muted\r\n        output_signal = 0;\r\n\t\tkeep_muted = 1; // set the keep muted flag to coninue muting the input signal\r\n    }\r\n}else if (keep_muted >0)\r\n{\r\n\toutput_signal = 0;\r\n\tif (input_signal == 0) // if the input signal returns to 0\r\n\t\tkeep_muted = 0; //reset the keep muting flag\r\n}\r\n\r\nout1 = output_signal;\r\n\r\nprevious_input = in1;"
 									}
 
@@ -2136,8 +2136,8 @@
 										"patching_rect" : [ 46.0, 45.0, 28.0, 22.0 ],
 										"numoutlets" : 1,
 										"outlettype" : [ "" ],
-										"id" : "obj-1",
-										"numinlets" : 0
+										"numinlets" : 0,
+										"id" : "obj-1"
 									}
 
 								}
@@ -2147,23 +2147,23 @@
 										"text" : "out 1",
 										"patching_rect" : [ 46.0, 483.0, 35.0, 22.0 ],
 										"numoutlets" : 0,
-										"id" : "obj-4",
-										"numinlets" : 1
+										"numinlets" : 1,
+										"id" : "obj-4"
 									}
 
 								}
  ],
 							"lines" : [ 								{
 									"patchline" : 									{
-										"source" : [ "obj-1", 0 ],
-										"destination" : [ "obj-6", 0 ]
+										"source" : [ "obj-6", 0 ],
+										"destination" : [ "obj-4", 0 ]
 									}
 
 								}
 , 								{
 									"patchline" : 									{
-										"source" : [ "obj-6", 0 ],
-										"destination" : [ "obj-4", 0 ]
+										"source" : [ "obj-1", 0 ],
+										"destination" : [ "obj-6", 0 ]
 									}
 
 								}
@@ -2179,7 +2179,7 @@
 					"outlettype" : [ "multichannelsignal" ],
 					"patching_rect" : [ 169.0, 1229.0, 84.0, 22.0 ],
 					"text" : "mc.gen~",
-					"wrapper_uniquekey" : "u093000418"
+					"wrapper_uniquekey" : "u600002229"
 				}
 
 			}
@@ -6506,7 +6506,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 871.0, 45.0, 30.0, 30.0 ]
+					"patching_rect" : [ 861.0, 40.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -9465,6 +9465,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-101", 0 ],
+					"source" : [ "obj-103", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-109", 0 ],
 					"source" : [ "obj-103", 0 ]
 				}
@@ -9473,7 +9480,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-112", 0 ],
-					"source" : [ "obj-103", 1 ]
+					"source" : [ "obj-103", 2 ]
 				}
 
 			}
