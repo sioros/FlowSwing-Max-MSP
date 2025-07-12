@@ -2155,15 +2155,15 @@
  ],
 							"lines" : [ 								{
 									"patchline" : 									{
-										"source" : [ "obj-6", 0 ],
-										"destination" : [ "obj-4", 0 ]
+										"source" : [ "obj-1", 0 ],
+										"destination" : [ "obj-6", 0 ]
 									}
 
 								}
 , 								{
 									"patchline" : 									{
-										"source" : [ "obj-1", 0 ],
-										"destination" : [ "obj-6", 0 ]
+										"source" : [ "obj-6", 0 ],
+										"destination" : [ "obj-4", 0 ]
 									}
 
 								}
@@ -2179,7 +2179,7 @@
 					"outlettype" : [ "multichannelsignal" ],
 					"patching_rect" : [ 169.0, 1229.0, 84.0, 22.0 ],
 					"text" : "mc.gen~",
-					"wrapper_uniquekey" : "u561007216"
+					"wrapper_uniquekey" : "u093000418"
 				}
 
 			}
@@ -6535,7 +6535,7 @@
 						"storage_rect" : [ 583, 87, 1034, 509 ]
 					}
 ,
-					"text" : "pattrstorage @outputmode 1",
+					"text" : "pattrstorage @outputmode 5",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"varname" : "u793003239"
 				}

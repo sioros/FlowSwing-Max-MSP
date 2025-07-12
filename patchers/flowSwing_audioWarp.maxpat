@@ -3828,12 +3828,11 @@
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-77",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1070.0, 136.0, 100.0, 31.0 ],
+					"patching_rect" : [ 1070.0, 136.0, 136.0, 20.0 ],
 					"priority" : 					{
 						"markers" : 2
 					}
@@ -3845,7 +3844,7 @@
 						"storage_rect" : [ 583, 87, 1034, 509 ]
 					}
 ,
-					"text" : "pattrstorage @outputmode 1",
+					"text" : "pattrstorage @outputmode 5",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"varname" : "u793003239"
 				}
