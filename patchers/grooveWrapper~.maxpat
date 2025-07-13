@@ -4,15 +4,39 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 76.0, 1110.0, 791.0 ],
+		"rect" : [ 34.0, 76.0, 1373.0, 791.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "float" ],
+					"patching_rect" : [ 650.0, 333.0, 94.0, 22.0 ],
+					"text" : "t b f"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-25",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "int", "float", "int", "int" ],
+					"patching_rect" : [ 650.0, 362.0, 61.0, 22.0 ],
+					"text" : "dspstate~"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-24",
 					"maxclass" : "newobj",
@@ -101,7 +125,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -378,8 +402,7 @@
 								}
 
 							}
- ],
-						"originid" : "pat-1442"
+ ]
 					}
 ,
 					"patching_rect" : [ 170.0, 323.0, 141.0, 22.0 ],
@@ -527,7 +550,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 701.0, 406.0, 150.0, 34.0 ],
+					"patching_rect" : [ 806.0, 397.0, 150.0, 34.0 ],
 					"text" : "expected delta for original speed"
 				}
 
@@ -611,7 +634,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 664.0, 425.0, 29.5, 22.0 ],
+					"patching_rect" : [ 664.0, 450.0, 29.5, 22.0 ],
 					"text" : "!/ 1."
 				}
 
@@ -623,7 +646,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 664.0, 378.0, 66.0, 22.0 ],
+					"patching_rect" : [ 664.0, 403.0, 80.0, 22.0 ],
 					"text" : "* 1."
 				}
 
@@ -635,7 +658,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 711.0, 334.0, 45.0, 22.0 ],
+					"patching_rect" : [ 725.0, 362.0, 45.0, 22.0 ],
 					"text" : "/ 1000."
 				}
 
@@ -795,7 +818,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1002,8 +1025,7 @@
 								}
 
 							}
- ],
-						"originid" : "pat-1454"
+ ]
 					}
 ,
 					"patching_rect" : [ 96.0, 140.0, 315.0, 22.0 ],
@@ -1251,8 +1273,29 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"source" : [ "obj-25", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-120", 0 ],
 					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-25", 0 ],
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-54", 0 ],
+					"source" : [ "obj-29", 1 ]
 				}
 
 			}
@@ -1374,8 +1417,9 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
-					"source" : [ "obj-52", 0 ]
+					"destination" : [ "obj-29", 0 ],
+					"order" : 0,
+					"source" : [ "obj-52", 6 ]
 				}
 
 			}
@@ -1383,14 +1427,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-34", 3 ],
 					"order" : 1,
-					"source" : [ "obj-52", 6 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-54", 0 ],
-					"order" : 0,
 					"source" : [ "obj-52", 6 ]
 				}
 
@@ -1440,10 +1476,9 @@
 
 			}
  ],
-		"originid" : "pat-1440",
 		"dependency_cache" : [ 			{
 				"name" : "polySegmentGroove.maxpat",
-				"bootpath" : "~/OneDrive/Documents/MAX patches/includes/GrooveWrapper",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
