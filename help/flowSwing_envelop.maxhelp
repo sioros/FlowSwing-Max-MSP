@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 100.0, 100.0, 1104.0, 716.0 ],
+		"rect" : [ 34.0, 76.0, 998.0, 791.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"helpsidebarclosed" : 1,
 		"boxes" : [ 			{
@@ -179,7 +179,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 54.0, 146.0, 1067.0, 720.0 ],
+						"rect" : [ 54.0, 146.0, 683.0, 720.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"boxes" : [ 							{
 								"box" : 								{
@@ -271,11 +271,25 @@
 									"format" : 5,
 									"id" : "obj-3",
 									"maxclass" : "number",
+									"maximum" : 127,
+									"minimum" : 0,
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 235.0, 349.0, 50.0, 22.0 ]
+									"parameter_enable" : 1,
+									"patching_rect" : [ 235.0, 349.0, 50.0, 22.0 ],
+									"saved_attribute_attributes" : 									{
+										"valueof" : 										{
+											"parameter_invisible" : 1,
+											"parameter_longname" : "midinote",
+											"parameter_modmode" : 4,
+											"parameter_shortname" : "midinote",
+											"parameter_type" : 1
+										}
+
+									}
+,
+									"varname" : "midinote"
 								}
 
 							}
@@ -1081,15 +1095,16 @@
 			}
 , 			{
 				"box" : 				{
+					"channels" : 1,
 					"id" : "obj-12",
 					"lastchannelcount" : 0,
 					"maxclass" : "live.gain~",
-					"numinlets" : 2,
-					"numoutlets" : 5,
+					"numinlets" : 1,
+					"numoutlets" : 4,
 					"orientation" : 1,
-					"outlettype" : [ "signal", "signal", "", "float", "list" ],
+					"outlettype" : [ "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 229.0, 497.0, 128.0, 47.0 ],
+					"patching_rect" : [ 229.0, 497.0, 128.0, 41.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "noise gain",
@@ -1696,6 +1711,7 @@
 			"obj-12" : [ "noise gain", "noise gain", 0 ],
 			"obj-1::obj-109" : [ "breakpoints", "breakpoints", 0 ],
 			"obj-1::obj-114" : [ "clear_breakpoints", "clear_breakpoints", 0 ],
+			"obj-1::obj-128" : [ "zoom", "zoom", 0 ],
 			"obj-1::obj-16" : [ "title", "title", 0 ],
 			"obj-1::obj-19" : [ "mute", "mute", 0 ],
 			"obj-1::obj-22" : [ "lock", "lock", 0 ],
@@ -1709,6 +1725,7 @@
 			"obj-1::obj-91" : [ "hold", "hold", 0 ],
 			"obj-2" : [ "gswitch2", "printSwitch", 0 ],
 			"obj-27" : [ "Duration", "duration", 0 ],
+			"obj-8::obj-3" : [ "midinote", "midinote", 0 ],
 			"obj-8::obj-35" : [ "min gate duration", "min gate duration", 0 ],
 			"obj-90" : [ "mc sequencer", "mc sequencer", 0 ],
 			"parameterbanks" : 			{
@@ -1745,7 +1762,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "complex_quantise_js185.js",
+				"name" : "complex_quantise.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
 				"patcherrelativepath" : "../javascript",
 				"type" : "TEXT",
@@ -1808,7 +1825,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "shift_markers_js185.js",
+				"name" : "shift_markers.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
 				"patcherrelativepath" : "../javascript",
 				"type" : "TEXT",
@@ -1828,20 +1845,21 @@
 			"snapshot" : 			{
 				"valuedictionary" : 				{
 					"parameter_values" : 					{
-						"Duration" : 0.01,
+						"Duration" : 1.0,
 						"Formative" : 8.0,
 						"S" : 0.433070866141732,
 						"Target" : 5.0,
+						"gswitch2" : 0.0,
 						"hold" : 0.0,
 						"lock" : 1.0,
-						"mc sequencer" : 0.0,
+						"mc sequencer" : -10.813561527949538,
 						"min gate duration" : 0.0,
 						"morph" : 1.0,
 						"mute" : 0.0,
 						"niRotation" : 2.0,
-						"noise gain" : 0.0,
+						"noise gain" : -70.0,
 						"offset" : 0.0,
-						"simple sequencer" : 0.0,
+						"simple sequencer" : -70.0,
 						"blob" : 						{
 							"breakpoints" : [ 								{
 									"env" : [ 0.0, 0.790322580645161, 0.0, 0.125, 0.209677419354839, 0.8, 0.375, 0.596774193548387, 0.75, 0.5, 0.82258064516129, 0.5, 0.75, 0.451612903225806, -0.55, 0.875, 0.225806451612903, 0.65, 1.0, 0.790322580645161, 0.0 ],
@@ -1852,7 +1870,9 @@
 
 								}
  ],
-							"title" : [ "flowSwing_envelop" ]
+							"midinote" : [ 24 ],
+							"title" : [ "flowSwing_envelop" ],
+							"zoom" : [ 1.0 ]
 						}
 
 					}
@@ -1868,27 +1888,28 @@
 						"version" : 2,
 						"minorversion" : 0,
 						"name" : "basic_envelop_example",
-						"origin" : "basic_envelop_example",
+						"origin" : "flowSwing_envelop.maxhelp",
 						"type" : "patcher",
 						"subtype" : "Undefined",
 						"embed" : 1,
 						"snapshot" : 						{
 							"valuedictionary" : 							{
 								"parameter_values" : 								{
-									"Duration" : 0.01,
+									"Duration" : 1.0,
 									"Formative" : 8.0,
 									"S" : 0.433070866141732,
 									"Target" : 5.0,
+									"gswitch2" : 0.0,
 									"hold" : 0.0,
 									"lock" : 1.0,
-									"mc sequencer" : 0.0,
+									"mc sequencer" : -10.813561527949538,
 									"min gate duration" : 0.0,
 									"morph" : 1.0,
 									"mute" : 0.0,
 									"niRotation" : 2.0,
-									"noise gain" : 0.0,
+									"noise gain" : -70.0,
 									"offset" : 0.0,
-									"simple sequencer" : 0.0,
+									"simple sequencer" : -70.0,
 									"blob" : 									{
 										"breakpoints" : [ 											{
 												"env" : [ 0.0, 0.790322580645161, 0.0, 0.125, 0.209677419354839, 0.8, 0.375, 0.596774193548387, 0.75, 0.5, 0.82258064516129, 0.5, 0.75, 0.451612903225806, -0.55, 0.875, 0.225806451612903, 0.65, 1.0, 0.790322580645161, 0.0 ],
@@ -1899,7 +1920,9 @@
 
 											}
  ],
-										"title" : [ "flowSwing_envelop" ]
+										"midinote" : [ 24 ],
+										"title" : [ "flowSwing_envelop" ],
+										"zoom" : [ 1.0 ]
 									}
 
 								}
@@ -1913,7 +1936,7 @@
 							"filename" : "basic_envelop_example.maxsnap",
 							"filepath" : "~/Documents/Max 9/Snapshots",
 							"filepos" : -1,
-							"snapshotfileid" : "054b9e10e56c51816ecffba471fbdda7"
+							"snapshotfileid" : "6666dde08c235a7c85a4576ee23cee44"
 						}
 
 					}
