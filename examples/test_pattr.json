@@ -1,0 +1,37 @@
+{
+	"pattrstorage" : 	{
+		"name" : "u047020457",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"flowSwing_envelop::u793003239" : [ -1 ],
+					"flowSwing_envelop::offset" : [ 0.0 ],
+					"flowSwing_envelop::niRotation" : [ 0.0 ],
+					"flowSwing_envelop::Formative" : [ 4.0 ],
+					"flowSwing_envelop::Target" : [ 3.0 ],
+					"flowSwing_envelop::mute" : [ 0.0 ],
+					"flowSwing_envelop::breakpoints" : [ 						{
+							"env" : [ 0.0, 1.0, 0.0, 0.251264755480607, 0.370967741935484, 0.0, 0.5, 1.0, 0.7, 0.75, 0.387096774193548, 0.745, 1.0, 1.0, 0.0 ],
+							"lock" : 							{
+								"associations" : [ 0, 1, 2, 3, 4 ],
+								"order" : [ 0, 0, 0, 0, 0 ]
+							}
+
+						}
+ ],
+					"flowSwing_envelop::title" : [ "flowSwing_envelop" ],
+					"flowSwing_envelop::chans" : [ 64 ],
+					"flowSwing_envelop::zoom" : [ 1.0 ],
+					"flowSwing_envelop::morph" : [ 1.0 ],
+					"flowSwing_envelop::S" : [ 0.0 ],
+					"flowSwing_envelop::lock" : [ 0.0 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,65 @@
+{
+	"pattrstorage" : 	{
+		"name" : "u690021558",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"flowSwing_envelop::u793003239" : [ -1 ],
+					"flowSwing_envelop::offset" : [ 0.0 ],
+					"flowSwing_envelop::niRotation" : [ 0.0 ],
+					"flowSwing_envelop::Formative" : [ 5.0 ],
+					"flowSwing_envelop::Target" : [ 7.0 ],
+					"flowSwing_envelop::mute" : [ 0.0 ],
+					"flowSwing_envelop::breakpoints" : [ 						{
+							"env" : [ 0.0, 0.838709677419355, 0.0, 0.285714285714286, 0.306451612903226, 0.0, 0.355379188712522, 0.951612903225806, 0.0, 0.428571428571429, 0.274193548387097, 0.0, 0.714285714285714, 0.903225806451613, 0.0, 0.857142857142857, 0.306451612903226, 0.0, 1.0, 0.838709677419355, 0.0 ],
+							"lock" : 							{
+								"associations" : [ 0, 1, 2, 2, 4, 4, 5 ],
+								"order" : [ 0, 0, 1, 0, 1, 0, 0 ]
+							}
+
+						}
+ ],
+					"flowSwing_envelop::title" : [ "flowSwing_envelop" ],
+					"flowSwing_envelop::chans" : [ 64 ],
+					"flowSwing_envelop::zoom" : [ 1.0 ],
+					"flowSwing_envelop::morph" : [ 1.0 ],
+					"flowSwing_envelop::S" : [ 0.692913385826772 ],
+					"flowSwing_envelop::lock" : [ 1.0 ]
+				}
+
+			}
+,
+			"2" : 			{
+				"id" : 2,
+				"data" : 				{
+					"flowSwing_envelop::u793003239" : [ -1 ],
+					"flowSwing_envelop::offset" : [ 0.0 ],
+					"flowSwing_envelop::niRotation" : [ 0.0 ],
+					"flowSwing_envelop::Formative" : [ 5.0 ],
+					"flowSwing_envelop::Target" : [ 7.0 ],
+					"flowSwing_envelop::mute" : [ 0.0 ],
+					"flowSwing_envelop::breakpoints" : [ 						{
+							"env" : [ 0.0, 0.838709677419355, 0.0, 0.285714285714286, 0.306451612903226, 0.0, 0.355379188712522, 0.951612903225806, 0.0, 0.428571428571429, 0.274193548387097, 0.0, 0.714285714285714, 0.903225806451613, 0.0, 0.857142857142857, 0.306451612903226, 0.0, 1.0, 0.838709677419355, 0.0 ],
+							"lock" : 							{
+								"associations" : [ 0, 1, 2, 2, 4, 4, 5 ],
+								"order" : [ 0, 0, 1, 0, 1, 0, 0 ]
+							}
+
+						}
+ ],
+					"flowSwing_envelop::title" : [ "flowSwing_envelop" ],
+					"flowSwing_envelop::chans" : [ 64 ],
+					"flowSwing_envelop::zoom" : [ 1.0 ],
+					"flowSwing_envelop::morph" : [ 1.0 ],
+					"flowSwing_envelop::S" : [ 0.692913385826772 ],
+					"flowSwing_envelop::lock" : [ 1.0 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}
