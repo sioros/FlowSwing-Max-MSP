@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 184.0, 132.0, 1000.0, 720.0 ],
+		"rect" : [ 34.0, 76.0, 989.0, 791.0 ],
 		"openinpresentation" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
@@ -22,7 +22,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 146.0, 9.0, 184.0, 39.0 ],
+					"patching_rect" : [ 5.0, 21.5, 154.0, 39.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 20.0, 14.0, 279.0, 23.0 ],
 					"text" : "NI Grid Dynamic Phrase Variation"
@@ -36,7 +36,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 6.0, 6.0, 150.0, 269.0 ],
+					"patching_rect" : [ 7.0, 71.0, 150.0, 269.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 6,
 					"presentation_rect" : [ 20.0, 39.0, 471.0, 89.0 ],
@@ -53,7 +53,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 479.0, 19.5, 155.0, 43.0 ],
+					"patching_rect" : [ 476.166666666666515, 17.5, 155.0, 43.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 20.0, 140.0, 166.0, 25.0 ],
 					"text" : "R (rotation) variation"
@@ -351,7 +351,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 344.0, 346.0, 121.0, 22.0 ],
+					"patching_rect" : [ 344.0, 342.0, 121.0, 22.0 ],
 					"text" : "p \"simple sequencer\""
 				}
 
@@ -366,7 +366,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 479.0, 57.0, 44.0, 15.0 ],
+					"patching_rect" : [ 413.0, 26.0, 44.0, 15.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 184.0, 140.0, 58.0, 25.0 ],
 					"saved_attribute_attributes" : 					{
@@ -395,7 +395,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 555.0, 150.0, 84.0, 50.0 ],
+					"patching_rect" : [ 524.666666666666629, 146.0, 84.0, 50.0 ],
 					"text" : "mode monophonic, quality better"
 				}
 
@@ -405,8 +405,8 @@
 					"id" : "obj-13",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
@@ -421,6 +421,18 @@
 						"rect" : [ 59.0, 107.0, 1000.0, 720.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"boxes" : [ 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-3",
+									"index" : 2,
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 165.0, 271.0, 30.0, 30.0 ]
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"comment" : "",
 									"id" : "obj-2",
@@ -550,6 +562,15 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-24", 0 ],
+									"order" : 1,
+									"source" : [ "obj-21", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"order" : 0,
 									"source" : [ "obj-21", 0 ]
 								}
 
@@ -571,7 +592,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 352.0, 85.0, 146.0, 22.0 ],
+					"patching_rect" : [ 286.0, 61.0, 146.0, 22.0 ],
 					"text" : "p \"count repetition cycles\""
 				}
 
@@ -583,7 +604,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 693.0, 164.0, 110.0, 22.0 ],
+					"patching_rect" : [ 624.0, 169.0, 110.0, 22.0 ],
 					"text" : "prepend niRotation"
 				}
 
@@ -616,7 +637,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 693.0, 129.0, 50.5, 22.0 ],
+					"patching_rect" : [ 624.0, 134.0, 50.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 1,
 						"precision" : 6
@@ -633,7 +654,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 598.0, 63.0, 58.0, 22.0 ],
+					"patching_rect" : [ 524.666666666666629, 102.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -676,7 +697,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 646.0, 170.0, 31.0, 22.0 ],
+					"patching_rect" : [ 563.333333333333371, 200.0, 31.0, 22.0 ],
 					"text" : "loop"
 				}
 
@@ -688,7 +709,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
-					"patching_rect" : [ 733.0, 274.0, 166.0, 22.0 ],
+					"patching_rect" : [ 660.0, 230.0, 166.0, 22.0 ],
 					"text" : "buffer~ loop simpleDrumLoop"
 				}
 
@@ -709,7 +730,7 @@
 					"numoutlets" : 8,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "signal", "signal", "", "", "", "" ],
-					"patching_rect" : [ 486.0, 203.0, 226.0, 98.0 ],
+					"patching_rect" : [ 486.0, 230.0, 135.0, 31.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 14.0, 423.0, 677.0, 226.0 ],
 					"varname" : "flowSwing_audioWarp",
@@ -724,7 +745,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 352.0, 152.0, 110.0, 22.0 ],
+					"patching_rect" : [ 286.0, 160.0, 110.0, 22.0 ],
 					"text" : "prepend niRotation"
 				}
 
@@ -757,7 +778,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 352.0, 128.0, 50.5, 22.0 ],
+					"patching_rect" : [ 286.0, 136.0, 50.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 1,
 						"precision" : 6
@@ -783,11 +804,11 @@
 					"presentation_rect" : [ 717.0, 281.0, 136.0, 41.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "simple sequencer",
+							"parameter_longname" : "bass",
 							"parameter_mmax" : 6.0,
 							"parameter_mmin" : -70.0,
 							"parameter_modmode" : 3,
-							"parameter_shortname" : "simple sequencer",
+							"parameter_shortname" : "bass",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
 						}
@@ -805,7 +826,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 170.0, 21.0, 79.0, 22.0 ],
+					"patching_rect" : [ 170.0, 6.0, 79.0, 22.0 ],
 					"text" : "phasor~ 0.66"
 				}
 
@@ -817,7 +838,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 89.0, 469.0, 72.0, 22.0 ],
+					"patching_rect" : [ 103.0, 534.0, 72.0, 22.0 ],
 					"text" : "startwindow"
 				}
 
@@ -855,13 +876,37 @@
 						"gridsize" : [ 15.0, 15.0 ],
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 50.0, 248.5, 37.0, 22.0 ],
+									"text" : "*~ 10"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 6,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 200.0, 172.0, 124.0, 22.0 ],
+									"text" : "scale~ 0. 1. 10 100 3."
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-84",
 									"maxclass" : "newobj",
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 149.333333333333314, 141.0, 137.0, 22.0 ],
-									"text" : "scale~ 0. 1. 100 1000 3."
+									"patching_rect" : [ 149.333333333333314, 141.0, 130.0, 22.0 ],
+									"text" : "scale~ 0. 1. 50 1000 3."
 								}
 
 							}
@@ -872,7 +917,7 @@
 									"numinlets" : 4,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 50.0, 179.0, 168.0, 22.0 ],
+									"patching_rect" : [ 50.0, 209.0, 168.0, 22.0 ],
 									"text" : "reson~ 1. 0. 1."
 								}
 
@@ -922,15 +967,23 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 261.0, 30.0, 30.0 ]
+									"patching_rect" : [ 50.0, 288.0, 30.0, 30.0 ]
 								}
 
 							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"order" : 0,
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-57", 0 ],
-									"order" : 1,
+									"order" : 2,
 									"source" : [ "obj-1", 0 ]
 								}
 
@@ -938,8 +991,15 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-84", 0 ],
-									"order" : 0,
+									"order" : 1,
 									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-83", 3 ],
+									"source" : [ "obj-4", 0 ]
 								}
 
 							}
@@ -952,6 +1012,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-83", 0 ],
 									"source" : [ "obj-80", 0 ]
 								}
@@ -959,7 +1026,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-5", 0 ],
+									"destination" : [ "obj-6", 0 ],
 									"source" : [ "obj-83", 0 ]
 								}
 
@@ -1026,7 +1093,7 @@
 					"numoutlets" : 9,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "", "", "", "", "", "" ],
-					"patching_rect" : [ 170.0, 194.0, 201.0, 86.0 ],
+					"patching_rect" : [ 170.0, 232.0, 135.0, 27.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 14.0, 172.0, 677.0, 226.0 ],
 					"varname" : "flowSwing_envelop",
@@ -1038,7 +1105,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
-					"midpoints" : [ 202.25, 317.0, 353.5, 317.0 ],
+					"midpoints" : [ 194.0, 317.0, 353.5, 317.0 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -1093,6 +1160,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
+					"midpoints" : [ 295.5, 95.0, 633.5, 95.0 ],
 					"order" : 0,
 					"source" : [ "obj-13", 0 ]
 				}
@@ -1234,7 +1302,7 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-10" : [ "simple sequencer", "simple sequencer", 0 ],
+			"obj-10" : [ "bass", "bass", 0 ],
 			"obj-12" : [ "noise gain", "noise gain", 0 ],
 			"obj-1::obj-109" : [ "breakpoints", "breakpoints", 0 ],
 			"obj-1::obj-114" : [ "clear_breakpoints", "clear_breakpoints", 0 ],
@@ -1484,25 +1552,25 @@
 						"S[1]" : 0.5,
 						"Target" : 5.0,
 						"Target[1]" : 5.0,
+						"bass" : 0.0,
 						"clear_markers" : 0.0,
 						"dynamic" : 1.0,
 						"hold" : 0.0,
 						"hold[1]" : 0.0,
 						"lock" : 1.0,
 						"lock[1]" : 1.0,
-						"loop gain" : -5.535781478642662,
+						"loop gain" : 0.0,
 						"morph" : 1.0,
 						"morph[1]" : 1.0,
 						"mute" : 0.0,
 						"mute[1]" : 0.0,
 						"niRotation" : 0.0,
 						"niRotation[1]" : 0.0,
-						"noise gain" : -70.0,
+						"noise gain" : 0.0,
 						"offset" : 0.0,
 						"offset[1]" : 0.0,
 						"onset_threshold" : 0.0,
 						"onsets_button" : 0.0,
-						"simple sequencer" : -10.755905511811072,
 						"blob" : 						{
 							"breakpoints" : [ 								{
 									"env" : [ 0.0, 0.935483870967742, 0.0, 0.142857142857143, 0.17741935483871, -0.45, 0.281618887015177, 0.435483870967742, 0.0, 0.428571428571429, 0.967741935483871, 0.745, 0.57504215851602, 0.290322580645161, 0.55, 0.714285714285714, 0.612903225806452, 0.1, 0.857142857142857, 0.258064516129032, 0.8, 1.0, 0.935483870967742, 0.0 ],
@@ -1601,25 +1669,25 @@
 									"S[1]" : 0.5,
 									"Target" : 5.0,
 									"Target[1]" : 5.0,
+									"bass" : 0.0,
 									"clear_markers" : 0.0,
 									"dynamic" : 1.0,
 									"hold" : 0.0,
 									"hold[1]" : 0.0,
 									"lock" : 1.0,
 									"lock[1]" : 1.0,
-									"loop gain" : -5.535781478642662,
+									"loop gain" : 0.0,
 									"morph" : 1.0,
 									"morph[1]" : 1.0,
 									"mute" : 0.0,
 									"mute[1]" : 0.0,
 									"niRotation" : 0.0,
 									"niRotation[1]" : 0.0,
-									"noise gain" : -70.0,
+									"noise gain" : 0.0,
 									"offset" : 0.0,
 									"offset[1]" : 0.0,
 									"onset_threshold" : 0.0,
 									"onsets_button" : 0.0,
-									"simple sequencer" : -10.755905511811072,
 									"blob" : 									{
 										"breakpoints" : [ 											{
 												"env" : [ 0.0, 0.935483870967742, 0.0, 0.142857142857143, 0.17741935483871, -0.45, 0.281618887015177, 0.435483870967742, 0.0, 0.428571428571429, 0.967741935483871, 0.745, 0.57504215851602, 0.290322580645161, 0.55, 0.714285714285714, 0.612903225806452, 0.1, 0.857142857142857, 0.258064516129032, 0.8, 1.0, 0.935483870967742, 0.0 ],
