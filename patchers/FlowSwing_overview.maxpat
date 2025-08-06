@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 120.0, 130.0, 892.0, 674.0 ],
+		"rect" : [ 126.0, 104.0, 892.0, 692.0 ],
 		"openinpresentation" : 1,
 		"default_fontsize" : 13.0,
 		"gridsize" : [ 7.0, 7.0 ],
@@ -47,12 +47,71 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 120.0, 156.0, 892.0, 648.0 ],
+						"rect" : [ 126.0, 130.0, 892.0, 666.0 ],
 						"openinpresentation" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
 						"subpatcher_template" : "Grid_Toolbar",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontface" : 1,
+									"id" : "obj-23",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 337.0, 57.0, 150.0, 20.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 295.0, 57.0, 150.0, 20.0 ],
+									"text" : "v.1.0.0-SMC2025"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontface" : 1,
+									"id" : "obj-17",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 390.0, 658.0, 162.0, 34.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 178.0, 606.0, 241.0, 20.0 ],
+									"text" : "George Sioros & Odysseas Klissouras"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontface" : 1,
+									"id" : "obj-11",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 375.0, 612.0, 159.0, 20.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 178.0, 592.0, 159.0, 20.0 ],
+									"text" : "George Sioros"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 156.0, 620.0, 150.0, 48.0 ],
+									"presentation" : 1,
+									"presentation_linecount" : 2,
+									"presentation_rect" : [ 17.0, 592.0, 160.0, 34.0 ],
+									"text" : "Concept, Max/MSP, js, DSP:\nUI design: ",
+									"textjustification" : 2
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-39",
 									"maxclass" : "newobj",
@@ -237,7 +296,7 @@
 									"patching_rect" : [ 50.0, 730.0, 433.0, 48.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 2,
-									"presentation_rect" : [ 175.0, 521.0, 676.0, 34.0 ],
+									"presentation_rect" : [ 175.0, 506.0, 676.0, 34.0 ],
 									"text" : "Sioros, G. (2023). Polyrhythmic modelling of non-isochronous and microtiming patterns. Proceedings of the 24th International Society for Music Information Retrieval Conference. Milan, Italy."
 								}
 
@@ -252,7 +311,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 50.0, 618.0, 186.0, 23.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 175.0, 465.0, 186.0, 23.0 ],
+									"presentation_rect" : [ 175.0, 450.0, 186.0, 23.0 ],
 									"text" : "Related publications:"
 								}
 
@@ -282,7 +341,7 @@
 									"parameter_enable" : 0,
 									"patching_rect" : [ 568.0, 401.0, 98.0, 77.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 15.0, 359.0, 153.0, 57.0 ],
+									"presentation_rect" : [ 15.0, 344.0, 153.0, 57.0 ],
 									"rounded" : 4.0,
 									"saved_attribute_attributes" : 									{
 										"textcolor" : 										{
@@ -306,7 +365,7 @@
 									"patching_rect" : [ 50.0, 580.0, 404.0, 39.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 2,
-									"presentation_rect" : [ 175.0, 383.0, 668.0, 39.0 ],
+									"presentation_rect" : [ 175.0, 368.0, 668.0, 39.0 ],
 									"text" : "A patch for modulating control signals or automation curves, with optional multichannel trigger output for sequencing."
 								}
 
@@ -322,7 +381,7 @@
 									"patching_rect" : [ 50.0, 653.0, 433.0, 62.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 2,
-									"presentation_rect" : [ 175.0, 486.0, 672.0, 34.0 ],
+									"presentation_rect" : [ 175.0, 471.0, 672.0, 34.0 ],
 									"text" : "Sioros, G., & Klissouras, O. (2025, July). Flow Swing: A system for dynamic control and exploration of non-isochronous timing in musical rhythms. Proceedings of the 22nd Sound and Music Computing Conference (SMC2025). Graz, Austria."
 								}
 
@@ -350,7 +409,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 50.0, 505.0, 186.0, 23.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 175.0, 337.0, 186.0, 23.0 ],
+									"presentation_rect" : [ 175.0, 322.0, 186.0, 23.0 ],
 									"text" : "The package includes:"
 								}
 
@@ -365,7 +424,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 50.0, 535.0, 404.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 175.0, 359.0, 669.0, 23.0 ],
+									"presentation_rect" : [ 175.0, 344.0, 669.0, 23.0 ],
 									"text" : "A patch for time-warping audio samples by aligning warp markers to an NI Grid."
 								}
 
@@ -381,7 +440,7 @@
 									"patching_rect" : [ 50.0, 215.0, 473.0, 264.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 10,
-									"presentation_rect" : [ 15.0, 150.0, 828.0, 167.0 ],
+									"presentation_rect" : [ 15.0, 135.0, 828.0, 167.0 ],
 									"text" : "FlowSwing is a Max/MSP package for real-time rhythmic manipulation based on Non-Isochronous (NI) Grids. It includes two main patches designed to time-warp audio, re-shape control signals and sequencing through flexible, dynamic timing structures that go beyond traditional meter.\n\nAt its core, FlowSwing uses a small number of parameters to define grids generated by morphing between two isochronous pulses. These Non-Isochronous Grids are made of two beat durations (Short and Long), distributed as evenly as possible over a cycle, that can be dynamically modulated during performance.\n\nFlowSwing is intended for artists, producers, and researchers interested in exploring timing structures that reflect a wider range of musical practices, including those found in polyrhythmic, groove-based, and experimental music.",
 									"textcolor" : [ 0.0, 0.0, 0.0, 0.910000026226044 ]
 								}
@@ -399,7 +458,7 @@
 									"parameter_enable" : 0,
 									"patching_rect" : [ 54.0, 784.0, 97.0, 64.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 486.0, 150.0, 100.0 ],
+									"presentation_rect" : [ 17.0, 471.0, 150.0, 100.0 ],
 									"rounded" : 4.0,
 									"saved_attribute_attributes" : 									{
 										"textcolor" : 										{
@@ -418,14 +477,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"id" : "obj-18",
-									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 500.0, 107.0, 157.0, 36.0 ],
+									"patching_rect" : [ 500.0, 107.0, 157.0, 21.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 15.0, 109.0, 253.0, 21.0 ],
-									"text" : "George Sioros and Odysseas Klissouras"
+									"text" : "George Sioros "
 								}
 
 							}
@@ -457,7 +515,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 50.0, 100.0, 241.0, 62.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 15.0, 15.0, 241.0, 62.0 ],
+									"presentation_rect" : [ 15.0, 15.0, 278.0, 62.0 ],
 									"text" : "FlowSwing",
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 								}
@@ -651,6 +709,27 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "NI_grids_demo_samba[1].maxsnap",
+				"bootpath" : "~/Documents/Max 9/Snapshots",
+				"patcherrelativepath" : "../../../Snapshots",
+				"type" : "mx@s",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "NI_grids_demo_samba[1]_20250722.maxsnap",
+				"bootpath" : "~/Documents/Max 9/Snapshots",
+				"patcherrelativepath" : "../../../Snapshots",
+				"type" : "mx@s",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "NI_grids_demo_samba[1]_20250722_1.maxsnap",
+				"bootpath" : "~/Documents/Max 9/Snapshots",
+				"patcherrelativepath" : "../../../Snapshots",
+				"type" : "mx@s",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "NI_grids_description.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/examples",
 				"patcherrelativepath" : "../examples",
@@ -812,6 +891,60 @@
 							"filepath" : "~/Documents/Max 9/Snapshots",
 							"filepos" : -1,
 							"snapshotfileid" : "98ab39606395b50c9b72475fd95f18d8"
+						}
+
+					}
+, 					{
+						"filetype" : "C74Snapshot",
+						"version" : 2,
+						"minorversion" : 0,
+						"name" : "Euclidean_rhythms",
+						"origin" : "FlowSwing_overview",
+						"type" : "patcher",
+						"subtype" : "Undefined",
+						"embed" : 0,
+						"fileref" : 						{
+							"name" : "Euclidean_rhythms",
+							"filename" : "NI_grids_demo_samba[1].maxsnap",
+							"filepath" : "~/Documents/Max 9/Snapshots",
+							"filepos" : -1,
+							"snapshotfileid" : "6547e3cf4445983f2354ed9953202639"
+						}
+
+					}
+, 					{
+						"filetype" : "C74Snapshot",
+						"version" : 2,
+						"minorversion" : 0,
+						"name" : "Cuban_tresillo",
+						"origin" : "FlowSwing_overview",
+						"type" : "patcher",
+						"subtype" : "Undefined",
+						"embed" : 0,
+						"fileref" : 						{
+							"name" : "Cuban_tresillo",
+							"filename" : "NI_grids_demo_samba[1]_20250722.maxsnap",
+							"filepath" : "~/Documents/Max 9/Snapshots",
+							"filepos" : -1,
+							"snapshotfileid" : "864dfc413989104dbd10ef64cd3b23ce"
+						}
+
+					}
+, 					{
+						"filetype" : "C74Snapshot",
+						"version" : 2,
+						"minorversion" : 0,
+						"name" : "8 | 5",
+						"origin" : "FlowSwing_overview",
+						"type" : "patcher",
+						"subtype" : "Undefined",
+						"embed" : 0,
+						"fileref" : 						{
+							"name" : "8 | 5",
+							"filename" : "NI_grids_demo_samba[1]_20250722_1.maxsnap",
+							"filepath" : "~/Documents/Max 9/Snapshots",
+							"filepos" : -1,
+							"snapshotfileid" : "05e052681075aff74806650f2bef4360"
 						}
 
 					}
