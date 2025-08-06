@@ -1,3 +1,7 @@
+// part of the FlowSwing Max/MSP package
+// Copyright 2025 - George Sioros
+// See linence.md for licence information
+
 inlets = 5;
 outlets = 1;
 
