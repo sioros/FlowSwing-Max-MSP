@@ -5,6 +5,9 @@
 inlets = 1;
 outlets = 1;
 
+setinletassist(0, "(list) number of onsets and number of beats");
+setoutletassist(0, "(list) euclidean pattern (1: onset, 0: empty beat)");
+
 
 var total;
 var ones;

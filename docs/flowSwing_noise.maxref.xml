@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+<!--
+Part of the FlowSwing package
+See license.md file in the project root for full license information.
+-->
+<c74object name='flowSwing.noise' category='FlowSwing'>
+	<digest>Synthesizer with tone-to-noise control and mc based polyphony</digest>
+	<description>
+		A flexible noise synthesizer with tone-to-noise control, skew shaping, and ADSR. Supports polyphony and sample-accurate timing via mc signals.
+		<p>
+			<o>flowSwing.noise</o> is part of the FlowSwing package.
+		</p>
+	</description>
+	<discussion>
+	</discussion>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name='author'>George Sioros</metadata>
+		<metadata name='tag'>FlowSwing</metadata>
+		<metadata name='tag'>Flow</metadata>
+		<metadata name='tag'>Swing</metadata>
+	</metadatalist>
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="signal">
+			<digest>
+				Multichannel gate signal to trigger independent voices.
+			</digest>
+			<description>
+			</description>
+		</inlet>
+	</inletlist>
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="mc.signal">
+			<digest>
+				 Channel 1 of generated audio.
+			</digest>
+			<description>
+			</description>
+		</outlet>
+		<outlet id="1" type="signal">
+			<digest>
+				Channel 2 of generated audio.
+			</digest>
+			<description>
+			</description>
+		</outlet>
+	</outletlist>
+	<!--ARGUMENTS-->
+	<objarglist>
+	</objarglist>
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="mc.signal">
+			<arglist>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+				Multi-channel gate signal to trigger independent voices.
+				<p>
+					Transition from 0 to a positive value in a channel triggers the envelop for that voice. A subsequent transition to 0 will trigger the release stage of the envelop.
+				</p>
+			</description>
+		</method>
+		<method name="float, signal, mc.signal">
+			<arglist>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+				<p>
+					Modulation of audio synthesis parameters. Each parameter is controlled by a dedicated inlet. A float or signal sets the value for all voices. Individual values for each voice can be set using <m>mc.target</m> or multichannel signal.
+				</p>
+				<p>2nd inlet: Oscillator frequency (Hz).</p>		
+				<p>3rd inlet: Noise F (-1 to 1).	</p>	
+				<p>4th inlet: Noise A (-1 to 1).</p>
+				<p>5th inlet: Skew (-1 to 1).</p>
+				<p>6th inlet: Filter cutoff frequency (Hz).</p>
+				<p>7th inlet: Filter resonance (-1. to 1).</p>
+			</description>
+		</method>		
+		<method name="ampCurve">
+			<arglist>
+				<arg name="Amplitude sensitivity" optional="0" type="float"/>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+				In right inlet: controls the contrast between loud and quiet events.
+				<p>Range = [0.0 - 5.0] dfault value = 1.0 </p>
+				<p>
+					See <m>scale~</m> for details.
+				</p>
+			</description>
+		</method>
+		<method name="attack">
+			<arglist>
+				<arg name="Attack duration of the ADSR envelop in ms" optional="0" type="float"/>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+			</description>
+		</method>
+		<method name="envCurve">
+			<arglist>
+				<arg name="Envelop curve" optional="0" type="float"/>
+			</arglist>
+			<digest>
+				Sets the shape of the envelop curve.See <m>scale~</m> for details.
+			</digest>
+			<description>
+			</description>
+		</method>
+		<method name="filter">
+			<arglist>
+				<arg name="Filter cutoff frequency in Hz" optional="0" type="float"/>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+			</description>
+		</method>
+		<method name="filterRange">
+			<arglist>
+				<arg name="Amount of envelop modulation" optional="0" type="float"/>
+			</arglist>
+			<digest>
+				Sets the amount of envelop modulation on the filter cutoff frequency.The value is given as a multiplier of the cutoff frequency. For example, a value of 0.5 means that the cutoff frequency will be modulated by half of its value when the envelop is at its maximum.
+			</digest>
+			<description>
+			</description>
+		</method>
+		<method name="noiseA">
+			<arglist>
+				<arg name="Noise A value. Range: 0. to 1." optional="0" type="float"/>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+				The oscillator is a cosine wave whose amplitude fluctuates between random values. A new random value is generated at the start and midpoint of each cycle—when the oscillator reaches +1 or -1—and interpolation between values follows the cosine curve. When Noise A is 0, the amplitude remains at 1; when set to 1, it varies randomly between 0 and 1.
+			</description>
+		</method>
+		<method name="noiseArange">
+			<arglist>
+				<arg name="Amount of envelop modulation" optional="0" type="float"/>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+				This sets the amount of envelope modulation applied to the Noise A value. For example, a value of 0.5 means that Noise A will increase by 0.5 when the envelope is at its maximum.				
+			</description>
+		</method>
+		<method name="noiseF">
+			<arglist>
+				<arg name="Noise F value. Range: 0. to 1." optional="0" type="float"/>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+				The oscillator generates a cosine wave with a fluctuating period. A new random period is generated when the oscillator reaches +1 or -1, at the start and midpoint of each cycle. When Noise F is set to 0, the oscillator's period is constant; when set to 1, it varies randomly around its centre period, with a maximum value of twice that.
+			</description>
+		</method>
+		<method name="noiseFrange">
+			<arglist>
+				<arg name="Amount of envelop modulation" optional="0" type="float"/>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+				This sets the amount of envelope modulation applied to the Noise F value. For example, a value of 0.5 means that Noise A will increase by 0.5 when the envelope is at its maximum.
+			</description>
+		</method>
+		<method name="release">
+			<arglist>
+				<arg name="Duration of the release stage of the ADSR envelop in ms" optional="0" type="float"/>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+			</description>
+		</method>
+		<method name="skew">
+			<arglist>
+				<arg name="Shape factor. Range: [-1, 1]" optional="0" type="float"/>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+				The skew factor determines the shape of the cosine wave. A value of 0 results in a symmetric cosine wave, while values of -1 and 1 create asymmetric waves. 
+			</description>
+		</method>
+		<method name="skewRange">
+			<arglist>
+				<arg name="Amount of envelop modulation" optional="0" type="float"/>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+				This sets the amount of envelope modulation applied to the Skew value. For example, a value of 0.5 means that Skew will increase by 0.5 when the envelope is at its maximum.
+			</description>
+		</method>
+		<method name="sustain">
+			<arglist>
+				<arg name="Sustain level. Range: [-1, 1]" optional="0" type="float"/>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+				The sustain level determines the amplitude of the sound during the sustain stage of the ADSR envelope. A value of 0 means no sound, while a value of 1 means full amplitude. The exact value of the sustain level is determined by the envelop curve. See <m>scale~</m>.
+			</description>
+		</method>		
+	</methodlist>
+	<!--ATTRIBUTES-->
+	<attributelist>
+
+	</attributelist>
+	<!--RELATED-->
+	<seealsolist>
+		<seealso name="flowSwing_envelop" />
+		<seealso name="flowSwing_audioWarp" />
+	</seealsolist>
+	<!--INLETS/OUTLETS-->
+	<misc name="Inlets">
+		<entry name="Left most">
+			<digest>
+				Multi-channel gate signal to trigger independent voices.
+			</digest>
+			<description>
+				<p>
+					Transition from 0 to a positive value in a channel triggers the envelop for that voice. A subsequent transition to 0 will trigger the release stage of the envelop.  
+				</p>
+			</description>
+		</entry>
+		<entry name="Inlets 2 to 7">
+			<digest>
+				Modulation of the respective paramater.
+			</digest>
+			<description>
+			</description>
+		</entry>
+		<entry name="Right most">
+			<digest>
+				Messages to set and get parameters through the pattr system, and messages to thispatcher.
+			</digest>
+			<description>
+			</description>
+		</entry>
+	</misc>
+	<misc name="Output">
+		<entry name="signal">
+			<description>
+				<p>Out left and middle outlet: Synthesised audio.</p>
+			</description>
+		</entry>
+		<entry name="anything">
+			<description>
+				<p>
+					Out right outlet: Parameter changes made via the UI or by recalling a preset.
+				</p>
+			</description>
+		</entry>
+	</misc>
+
+</c74object>

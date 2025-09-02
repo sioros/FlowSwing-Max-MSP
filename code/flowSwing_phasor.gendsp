@@ -1,0 +1,146 @@
+{
+	"patcher" : 	{
+		"fileversion" : 1,
+		"appversion" : 		{
+			"major" : 9,
+			"minor" : 0,
+			"revision" : 6,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"classnamespace" : "dsp.gen",
+		"rect" : [ 106.0, 192.0, 670.0, 553.0 ],
+		"gridsize" : [ 15.0, 15.0 ],
+		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 763.0, 53.0, 28.0, 22.0 ],
+					"text" : "in 4"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 804.0, 441.0, 100.0, 22.0 ],
+					"text" : "out 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 547.666666666666629, 53.0, 28.0, 22.0 ],
+					"text" : "in 3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 294.0, 42.0, 28.0, 22.0 ],
+					"text" : "in 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 35.0, 460.0, 100.0, 22.0 ],
+					"text" : "out 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"code" : "History delta_range(0);\r\nHistory delta_average(0);\r\nHistory phase(0);\r\nHistory delta_noise(0);\r\nHistory previous_delta_noise(0);\r\n\r\n\r\ndelta = in1/SAMPLERATE;\r\nf_noise = in2;\t\r\nreset_phase = in3;\r\non = in4;\r\n\r\nd_n = 0;\r\n\r\nif (on>0.) // when the oscilator is on\r\n{\r\n\tif (reset_phase > 0.)\r\n\t{\r\n\t\tphase = reset_phase %1.;\r\n\t\tdelta_noise = 0; \r\n\t\tprevious_delta_noise = 0;\r\n\t\tdelta_range = 0;\r\n\t\tdelta_average = 0;\t\t\r\n\t}\r\n\td_n = delta_range * cycle(phase%0.5, index=\"phase\") + delta_average;\r\n\r\n\r\n\tif (f_noise > 1)\r\n\t\tf_noise = 1;\r\n\telse if (f_noise < 0)\r\n\t\tf_noise = 0;\r\n\t\r\n\t// this could be a multiplication factor (logarithmic modulation) for the noise not an addition\r\n\t// e.g. delta/2 or delta*2 for delta_noise=-1 and delta_noise=+1\r\n\t// new_phase = phase + pow(2., fm_noise*d_n) *delta;\r\n\t// I tried both linear and logarithic noise but the linear \"sounded better\"!\r\n\r\n\tnew_phase = phase + (1 + d_n*f_noise)*delta;\r\n\r\n\tif (new_phase  >= 1. ||  (new_phase >= 0.5 && phase < 0.5))\r\n\t{\r\n\t\tprevious_delta_noise = delta_noise;\r\n\t\tdelta_noise = noise();\r\n\t\tdelta_range = (previous_delta_noise-delta_noise)/2;\r\n\t\tdelta_average = (previous_delta_noise+delta_noise)/2;\r\n\r\n\t}\r\n\tif (new_phase >= 1.)\r\n\t{\r\n\t\tphase = new_phase %1.0;\r\n\t}else\r\n\t\tphase = new_phase;\r\n}else\r\n\tphase = 0;\r\n\r\nout1 = phase;\r\nout2 = d_n;",
+					"fontface" : 0,
+					"fontname" : "<Monospaced>",
+					"fontsize" : 12.0,
+					"id" : "obj-5",
+					"maxclass" : "codebox",
+					"numinlets" : 4,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 35.0, 108.0, 788.0, 316.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 35.0, 47.0, 28.0, 22.0 ],
+					"text" : "in 1"
+				}
+
+			}
+ ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 2 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 3 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-5", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 1 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+ ]
+	}
+
+}

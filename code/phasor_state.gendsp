@@ -1,0 +1,195 @@
+{
+	"patcher" : 	{
+		"fileversion" : 1,
+		"appversion" : 		{
+			"major" : 9,
+			"minor" : 0,
+			"revision" : 6,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"classnamespace" : "dsp.gen",
+		"rect" : [ 224.0, 177.0, 776.0, 645.0 ],
+		"gridsize" : [ 15.0, 15.0 ],
+		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"linecount" : 19,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 530.0, 138.0, 154.0, 269.0 ],
+					"text" : "Similalry, a delta phase can be momentarily equally to zero without setting the running flag to 0. The running flag shoudl be set to 0 after a certain amount of time (~50ms). That would allow to have the phasor moving very slow and even backwards without trigering a phase jump. However, there is always going to be a problem with the phase rest (transition from 1 -> 0) if the phase moves backwards would result in phase that jumps from 0 to 1. "
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-52",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 530.0, 62.0, 150.0, 62.0 ],
+					"text" : "The phase jumps must be reworked. Going slithly backwards should not be consider a phase jump."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 517.0, 427.0, 152.0, 34.0 ],
+					"text" : "delta value ignoring phase resets and jumps"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 487.000000000000057, 460.0, 35.0, 22.0 ],
+					"text" : "out 4"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-12",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 351.0, 434.0, 49.0, 20.0 ],
+					"text" : "running"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 193.0, 434.0, 73.0, 20.0 ],
+					"text" : "phaseReset"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 77.0, 428.0, 71.0, 20.0 ],
+					"text" : "phase jump"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 341.333333333333371, 460.0, 35.0, 22.0 ],
+					"text" : "out 3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 195.666666666666686, 460.0, 35.0, 22.0 ],
+					"text" : "out 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"code" : "History prevDelta(0);\r\nHistory running(0);\r\nParam speedChangeThrs(10); // up to 10 times faster/slower then the previous speed\r\n\r\nphaseDelta = delta(in1);\r\n\r\n\t\r\nphaseJump = 0;\r\nphaseReset = 0;\r\n\r\nif (phaseDelta <= 3*prevDelta-1) // when transitioning 1->0\r\n\tphaseReset = 1;\r\n\r\n\r\n\t\r\n\t\t\r\n// jumping backwards but not 1->0\t\r\nif ((phaseDelta<0. && phaseDelta>speedChangeThrs*prevDelta-1)\r\n\t|| phaseDelta > prevDelta*speedChangeThrs) // jumping forwards\r\n\tphaseJump = 1;\r\n\r\n// storing delta value for next cycle only if not jumping or phaseresetting\r\nif (prevDelta>0 && phaseDelta > 0 && phaseDelta < speedChangeThrs*prevDelta)\r\n\tprevDelta = phaseDelta;\r\nelse if (prevDelta==0 && phaseDelta > 0)\r\n\tprevDelta = phaseDelta;\r\n\r\n// determine running state\r\nif \t(phaseDelta == 0.)\r\n\trunning = 0;\r\nelse if (phaseDelta < speedChangeThrs*prevDelta && phaseJump < 0.5)\r\n\trunning =1;\r\n\t\r\n\t\r\nout1 = phaseJump;\r\nout2 = phaseReset;\r\nout3 = running;\r\nout4 = prevDelta;\r\n",
+					"fontface" : 0,
+					"fontname" : "<Monospaced>",
+					"fontsize" : 12.0,
+					"id" : "obj-5",
+					"maxclass" : "codebox",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 50.0, 71.0, 456.0, 346.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 50.0, 14.0, 28.0, 22.0 ],
+					"text" : "in 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 50.0, 460.0, 35.0, 22.0 ],
+					"text" : "out 1"
+				}
+
+			}
+ ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-5", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-5", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-5", 1 ]
+				}
+
+			}
+ ],
+		"autosave" : 0
+	}
+
+}

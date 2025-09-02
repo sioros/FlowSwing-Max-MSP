@@ -12,3 +12,8 @@ max definesubstitution flowSwing.warpInterface jsui @filename SGwarpInterface;
 max objectfile flowSwing.euclidean euclidean_rhythm;
 max definesubstitution flowSwing.euclidean js @filename euclidean_rhythm;
 
+max objectfile  flowSwing.noise flowSwing_noise;
+max definesubstitution flowSwing.noise bpatcher @name flowSwing_noise; 
+
+max objectfile  flowSwing.stochastic stochasticGate;
+max definesubstitution flowSwing.stochastic mc.gen~ stochasticGate; 

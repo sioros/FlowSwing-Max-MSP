@@ -1,0 +1,148 @@
+{
+	"patcher" : 	{
+		"fileversion" : 1,
+		"appversion" : 		{
+			"major" : 9,
+			"minor" : 0,
+			"revision" : 5,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"classnamespace" : "dsp.gen",
+		"rect" : [ 754.0, 82.0, 651.0, 784.0 ],
+		"gridsize" : [ 15.0, 15.0 ],
+		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 526.0, 29.0, 28.0, 22.0 ],
+					"text" : "in 5"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 403.0, 29.0, 28.0, 22.0 ],
+					"text" : "in 4"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 280.5, 29.0, 28.0, 22.0 ],
+					"text" : "in 3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 157.75, 29.0, 28.0, 22.0 ],
+					"text" : "in 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 35.0, 508.0, 100.0, 22.0 ],
+					"text" : "out 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"code" : "History am(1);\r\nHistory ap(1);\r\nHistory previousPhase(0);\r\nParam am_noise(0, max=2., default=0, min=0.);\r\n\r\nphase = in1;\r\na_noise = in2;\r\nskew = in3;\r\nreset = in4;\r\non = in5;\r\noutput = 0;\r\n\r\n\r\nif (on>0.)\r\n\t{\r\n\tif (a_noise > 2.)\r\n\t\ta_noise = 2;\r\n\telse if (a_noise < 0)\r\n\t\ta_noise = 0;\r\n\t\t\r\n\tif (skew<-1)\r\n\t\tskew = -1;\r\n\telse if (skew>0.99)\r\n\t\tskew = 0.99;\r\n\t\t\r\n\t\t\r\n\taCos = cycle(phase, index=\"phase\");\r\n\tV =  (aCos - aCos*skew)/(skew-2*abs(aCos)*skew+1);\r\n\r\n\tif (reset>0.)\r\n\t{\r\n\t\tam = 1;\r\n\t\tap = 1;\r\n\t}\r\n\telse if (previousPhase > phase)\r\n\t{\r\n\t\tam = 1- a_noise * abs(noise());\r\n\t}else if (phase>=0.5 && previousPhase <0.5)\r\n\t{\r\n\t\tap = 1- a_noise * abs(noise());\r\n\t}\r\n\r\n\tf2 = (ap-am)/2.;\r\n\tf1 = (am+ap)/2.;\r\n\toutput =f1*V + f2;\r\n\t\r\n\tpreviousPhase = phase;\r\n\r\n}\r\n\t\r\nout1 = output;\r\n\r\n\r\n\r\n",
+					"fontface" : 0,
+					"fontname" : "<Monospaced>",
+					"fontsize" : 12.0,
+					"id" : "obj-5",
+					"maxclass" : "codebox",
+					"numinlets" : 5,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 35.0, 108.0, 510.0, 366.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 35.0, 22.0, 28.0, 22.0 ],
+					"text" : "in 1"
+				}
+
+			}
+ ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 1 ],
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 2 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 3 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 4 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+ ],
+		"originid" : "pat-175"
+	}
+
+}

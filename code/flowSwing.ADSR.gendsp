@@ -1,0 +1,119 @@
+{
+	"patcher" : 	{
+		"fileversion" : 1,
+		"appversion" : 		{
+			"major" : 9,
+			"minor" : 0,
+			"revision" : 6,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"classnamespace" : "dsp.gen",
+		"rect" : [ 453.0, 174.0, 855.0, 610.0 ],
+		"gridsize" : [ 15.0, 15.0 ],
+		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 62.0, 21.0, 462.0, 34.0 ],
+					"text" : "Built on the Husserl tutorial series (7)\nhttps://cycling74.com/forums/husserl-tutorials-part-7-repeating-adsr-envelope-in-gen~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 621.0, 473.0, 35.0, 22.0 ],
+					"text" : "out 3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 323.0, 473.0, 35.0, 22.0 ],
+					"text" : "out 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"code" : "\r\nParam att(0.005), dec(0.200), sus(.5), rel(0.200), pre(.005), release_mode(0), ampMin(0), ampCurve(1), envCurve(1), retrigger_mode(0);\r\nHistory pre_(0.005), att_(1/(samplerate*0.005)), dec_(1/(samplerate*0.200)), sus_(.5), rel_(1/(samplerate*0.200)); // sampled-&-hold values of A,D,S,R\r\nHistory stage, lvl, lvl2, preLevel, arm_release, amp;\r\n\r\n\r\ngate = in1;\r\ntrigger = change(gate);\r\n\r\nstage = selector(stage, \r\n\t\t\tstage+pre_, \r\n\t\t\tstage+att_, \r\n\t\t\tstage+dec_, \r\n\t\t\t4, \r\n\t\t\tstage+rel_, \r\n\t\t\t6\r\n\t\t);\r\n\t\r\nif(trigger >0){\t\t\t\t// gate on\r\n\tif (pre<=0)\r\n\t\tpre_ = 1;\r\n\telse\r\n\t\tpre_ = 1/pre/samplerate;\r\n\tif (att<=0)\r\n\t\tatt_ = 1;\r\n\telse\r\n\t\tatt_ = 1/att/samplerate;\t\t\t\t\r\n\tif (dec<=0)\r\n\t\tdec_ = 1;\r\n\telse\r\n\t\tdec_ = 1/dec/samplerate;\r\n\tif (rel<=0)\r\n\t\trel_ = 1;\r\n\telse\r\n\t\trel_ = 1/rel/samplerate;\r\n\tsus_ = sus;\r\n\t\t\t\t\r\n\tgate_scaled = scale(gate, 0., 1., ampMin, 1.-ampMin, 1.); \r\n\tamp = scale(gate_scaled, 0., 1., 0., 1., ampCurve); \r\n\tarm_release = 0;\r\n\tif (stage > 0 && retrigger_mode>0){ \r\n\t\tstage = 1;\r\n\t\tpreLevel = lvl;\r\n\t\tlvl2 = 0;\t\t\r\n\t} else {\t\t\t \r\n\t\tstage = 2;\r\n\t\tlvl2 = lvl;\r\n\t}\r\n}else if(trigger < 0){\t\t// gate off\r\n\tif (stage>= 4 || release_mode ==0)\r\n\t{\r\n\t\tstage = 5; \r\n\t\tlvl2  = lvl; \r\n\t}else\r\n\t\tarm_release = 1;\r\n}\r\n\r\n\r\nif(stage <1){\r\n\tlvl= 0;\r\n}else if(stage < 2){\t\t// quick fade to 0 if note already on\r\n\tlvl    = 1 - fract(stage);\r\n\tlvl\t  = lvl * preLevel; \r\n}else if(stage < 3){\t\t// attack\r\n\tlvl    = fract(stage);\r\n\tlvl\t  = lvl *(1 -lvl2) + lvl2;\r\n//\tlvl   = lvl * lvl * lvl; \r\n}else if(stage < 4){\t\t// decay\r\n\tif (arm_release>0 && release_mode<2)\r\n\t{\t\r\n\t\tlvl2  = lvl;\r\n\t\tstage = 5;\r\n\t\tarm_release = 0;\r\n\t}else \r\n\t{\r\n\t\tlvl    = 1 - fract(stage);\r\n\t\tlvl\t  = lvl *(1 -sus_) + sus_;\r\n\t}\r\n}else if(stage < 5){\t\t//sustain\r\n\tif (arm_release>0)\r\n\t{\r\n\t\tlvl2  = lvl;\r\n\t\tstage = 5;\r\n\t\tarm_release = 0;\r\n\t}\r\n\telse{\r\n\t\tlvl  = sus_; \r\n\t}\r\n}else if(stage < 6){\t\t// release\r\n\t\r\n\tlvl    = 1 - fract(stage);\r\n\tlvl    = lvl * lvl2; \r\n} else if(gate ==0) {\r\n\tlvl   = 0;\r\n\tstage = 0;\r\n} else {\r\n\tstage = 2; \r\n\tlvl2 = sus_;\r\n}\r\n\r\nev = lvl;\r\nif(stage >=1) //for active envelops scale the output.\r\n\tev = amp * scale(ev, 0., 1., 0., 1., envCurve); \r\n\r\nout1 = ev;\r\nout2 = stage;\r\nout3 = arm_release;\r\n\r\n",
+					"fontface" : 0,
+					"fontname" : "<Monospaced>",
+					"fontsize" : 12.0,
+					"id" : "obj-13",
+					"maxclass" : "codebox",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 25.0, 67.0, 615.0, 376.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 25.0, 33.0, 28.0, 22.0 ],
+					"text" : "in 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 25.0, 473.0, 35.0, 22.0 ],
+					"text" : "out 1"
+				}
+
+			}
+ ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-13", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-13", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+ ]
+	}
+
+}

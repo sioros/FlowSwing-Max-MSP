@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 6,
+			"revision" : 8,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "dsp.gen",
-		"rect" : [ 59.0, 107.0, 600.0, 450.0 ],
+		"rect" : [ 632.0, 270.0, 600.0, 450.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
@@ -26,7 +26,7 @@
 			}
 , 			{
 				"box" : 				{
-					"code" : "History counter(0);\r\nHistory output(0); \r\nParam threshold(1000);\r\n\r\n\r\ntrigger = change(in1);\r\n\r\nif (trigger > 0)\r\n\tcounter = 0;\r\nelse \r\n\tcounter = counter + 1;\r\n\r\nif (in1 > 0. || counter>threshold)\r\n\toutput = in1;\r\n\r\n\t\r\nout1 = output;\r\n",
+					"code" : "History counter(0);\r\nHistory output(0); \r\nParam threshold(1000);\r\n\r\n\r\ntrigger = change(in1);\r\n\r\nif (in1 > 0. || counter>threshold)\r\n\toutput = in1;\r\n\t\r\nif (trigger > 0)\r\n{\r\n\tcounter = 0;\r\n\toutput = in1;\r\n}\r\nelse \r\n\tcounter = counter + 1;\r\n\r\n\r\n\r\n\t\r\nout1 = output;\r\n",
 					"fontface" : 0,
 					"fontname" : "<Monospaced>",
 					"fontsize" : 12.0,
