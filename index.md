@@ -1,6 +1,3 @@
----
-layout: none
----
 # FlowSwing for Max/MSP
 FlowSwing is a Max/MSP package for real-time rhythmic transformation based on Non-Isochronous (NI) Grids. Unlike the isochronous grids of most DAWs, NI Grids generate flexible reference structures of unequal subdivisions from a small set of parameters, supporting systematic and expressive approaches to rhythm and enabling realtime variation of complex timing patterns without complex manual timing edits. 
 
