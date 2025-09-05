@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 6,
+			"revision" : 8,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -15,11 +15,11 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-11",
-					"linecount" : 19,
+					"linecount" : 18,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 530.0, 138.0, 154.0, 269.0 ],
+					"patching_rect" : [ 530.0, 138.0, 158.0, 255.0 ],
 					"text" : "Similalry, a delta phase can be momentarily equally to zero without setting the running flag to 0. The running flag shoudl be set to 0 after a certain amount of time (~50ms). That would allow to have the phasor moving very slow and even backwards without trigering a phase jump. However, there is always going to be a problem with the phase rest (transition from 1 -> 0) if the phase moves backwards would result in phase that jumps from 0 to 1. "
 				}
 
@@ -116,7 +116,7 @@
 			}
 , 			{
 				"box" : 				{
-					"code" : "History prevDelta(0);\r\nHistory running(0);\r\nParam speedChangeThrs(10); // up to 10 times faster/slower then the previous speed\r\n\r\nphaseDelta = delta(in1);\r\n\r\n\t\r\nphaseJump = 0;\r\nphaseReset = 0;\r\n\r\nif (phaseDelta <= 3*prevDelta-1) // when transitioning 1->0\r\n\tphaseReset = 1;\r\n\r\n\r\n\t\r\n\t\t\r\n// jumping backwards but not 1->0\t\r\nif ((phaseDelta<0. && phaseDelta>speedChangeThrs*prevDelta-1)\r\n\t|| phaseDelta > prevDelta*speedChangeThrs) // jumping forwards\r\n\tphaseJump = 1;\r\n\r\n// storing delta value for next cycle only if not jumping or phaseresetting\r\nif (prevDelta>0 && phaseDelta > 0 && phaseDelta < speedChangeThrs*prevDelta)\r\n\tprevDelta = phaseDelta;\r\nelse if (prevDelta==0 && phaseDelta > 0)\r\n\tprevDelta = phaseDelta;\r\n\r\n// determine running state\r\nif \t(phaseDelta == 0.)\r\n\trunning = 0;\r\nelse if (phaseDelta < speedChangeThrs*prevDelta && phaseJump < 0.5)\r\n\trunning =1;\r\n\t\r\n\t\r\nout1 = phaseJump;\r\nout2 = phaseReset;\r\nout3 = running;\r\nout4 = prevDelta;\r\n",
+					"code" : "History prevDelta(0);\r\nHistory running(0);\r\nParam speedChangeThrs(10); // up to 10 times faster/slower then the previous speed\r\nParam phaseResetThrs(3); // up to 10 times faster/slower then the previous speed\r\n\r\nphaseDelta = delta(in1);\r\n\r\n\t\r\nphaseJump = 0;\r\nphaseReset = 0;\r\n\r\nif (phaseDelta <= phaseResetThrs*prevDelta-1) // when transitioning 1->0\r\n\tphaseReset = 1;\r\n\r\n\r\n\t\r\n\t\t\r\n// jumping backwards but not 1->0\t\r\nif ((phaseDelta<0. && phaseDelta>speedChangeThrs*prevDelta-1)\r\n\t|| phaseDelta > prevDelta*speedChangeThrs) // jumping forwards\r\n\tphaseJump = 1;\r\n\r\n// storing delta value for next cycle only if not jumping or phaseresetting\r\nif (prevDelta>0 && phaseDelta > 0 && phaseDelta < speedChangeThrs*prevDelta)\r\n\tprevDelta = phaseDelta;\r\nelse if (prevDelta==0 && phaseDelta > 0)\r\n\tprevDelta = phaseDelta;\r\n\r\n// determine running state\r\nif \t(phaseDelta == 0.)\r\n\trunning = 0;\r\nelse if (phaseDelta < speedChangeThrs*prevDelta && phaseJump < 0.5)\r\n\trunning =1;\r\n\t\r\n\t\r\nout1 = phaseJump;\r\nout2 = phaseReset;\r\nout3 = running;\r\nout4 = prevDelta;\r\n",
 					"fontface" : 0,
 					"fontname" : "<Monospaced>",
 					"fontsize" : 12.0,

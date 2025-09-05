@@ -3,9 +3,12 @@
 // See linence.md for licence information
 
 inlets = 2;
-outlets = 2;
+outlets = 3;
 var currentPoints = [];
+var currentMute = [];
 var previousPoints = [0, 0, 0, 1, 0, 0]; // initialise the previousPoints
+var previousMute = [0, 0];
+
 var changed = false;
 var fix_horizontal = false;
 
@@ -23,32 +26,31 @@ function list()
 			bang();
 			return;
 		}	
-		currentPoints = new Array();
-    	for (i = 0 ; i < len ; i++)
-    	{
-    		currentPoints[i] = arguments[i];
-    	}
+		currentPoints = arrayfromargs(arguments);
 		processPoints();
 		previousPoints = currentPoints;
+		previousMute = currentMute;
 		bang();
 		break;
 	case 1:
 		if (len<6)
 			return;
-		previousPoints = new Array();
-
-    	for (i = 0 ; i < len ; i++)
-    	{
-    		previousPoints[i] = arguments[i];
-    	}	
+		previousPoints = arrayfromargs(arguments);
 		break;
 	}
 }
 
+function sustain()
+{
+	currentMute = arrayfromargs(arguments);
+
+}
+
 function bang()
 {
-	outlet(1, changed);
-	outlet(0, previousPoints);
+	outlet(2, changed);
+	outlet(1, currentMute);
+	outlet(0, currentPoints);
 		
 }
 
@@ -70,13 +72,15 @@ if first or last point are not at x = 0. and x = 1.
 	else
 		changed = false;
 	
-	if (currentPoints[0] > 0.001 )
+	if (currentPoints[0] > 0.0001 )
 	{
 		changed = true;
 		if (currentPoints.length < previousPoints.length) // if the first point was deleted (recall it from the previousPoints)
 		{
 			var firstPoint = previousPoints.slice(0, 3);
 			currentPoints.unshift.apply(currentPoints, firstPoint);
+			currentMute.unshift(previousMute[0]);
+			
 		}else // if the first point was only moved
 		{
 			currentPoints[0] = 0;
@@ -93,6 +97,7 @@ if first or last point are not at x = 0. and x = 1.
 
 			var lastPoint = previousPoints.slice(previousPoints.length-3, previousPoints.length);
 			currentPoints = currentPoints.concat(lastPoint);
+			currentMute.push(previousMute[previousMute.length-1]);
 			
 		}else // if the first point was only moved
 		{
@@ -121,8 +126,16 @@ if first or last point are not at x = 0. and x = 1.
             currentPoints[currentPoints.length - 2] = average;
         }
     }
-	//post(currentPoints)
-    //return currentPoints;
+	// check if the first and last mute values are the same and correct if not
+	if (currentMute[0] !== currentMute[currentMute.length-1])
+	{
+		changed = true;
+		if (previousMute != null && previousMute.length > 1 && previousMute[0]!==currentMute[0]) // the first mute is changed
+			currentMute[currentMute.length-1] = currentMute[0];
+		else
+			currentMute[0] = currentMute[currentMute.length-1];
+	}
+
 }
 
 function fixX()

@@ -1539,7 +1539,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-35",
-									"items" : [ "choose an example to load the patch", ",", "FlowSwing dynamic parameters", ",", "FlowSwing looper", ",", "Link FlowSwing instances", ",", "Little wander", ",", "Polyrhythmic morphologies 1", ",", "Polyrhythmic morphologies 2", ",", "Polyrhythmic morphologies 3", ",", "Polyrhythmic morphologies 4", ",", "Stochastic gates", ",", "The many FlowSwing hypothesis" ],
+									"items" : [ "choose an example to load the patch", ",", "FlowSwing dynamic parameters", ",", "FlowSwing looper", ",", "Link FlowSwing instances", ",", "Little wander", ",", "Polyrhythmic Morphologies 1", ",", "Polyrhythmic morphologies 2", ",", "Polyrhythmic morphologies 3", ",", "Polyrhythmic morphologies 4", ",", "Sounds of Silence", ",", "Stochastic gates", ",", "The many FlowSwing hypothesis" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1590,7 +1590,7 @@
 									"patching_rect" : [ 342.0, 57.0, 44.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 342.0, 57.0, 44.0, 20.0 ],
-									"text" : "v.2.0.0"
+									"text" : "v.2.1.0"
 								}
 
 							}
@@ -2582,7 +2582,7 @@
 									"patching_rect" : [ 15.0, 81.0, 553.0, 25.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 15.0, 81.0, 553.0, 25.0 ],
-									"text" : "real-time rhythmic transformation based on Non-Isochronous (NI) Grids"
+									"text" : "real-time rhythmic transformation based on Non-Isochronous [NI] Grids"
 								}
 
 							}
@@ -2988,7 +2988,7 @@
 , 			{
 				"name" : "FlowSwing_Grids.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
-				"patcherrelativepath" : ".",
+				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -3051,7 +3051,7 @@
 , 			{
 				"name" : "flowSwing_envelop.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
-				"patcherrelativepath" : ".",
+				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -3072,14 +3072,14 @@
 , 			{
 				"name" : "liminalGrid.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
-				"patcherrelativepath" : ".",
+				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "liminal_lock.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
-				"patcherrelativepath" : "./subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}

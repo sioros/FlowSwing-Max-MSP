@@ -1,7 +1,7 @@
 {
 	"name": "FlowSwing-Max-MSP",
 	"displayname": "FlowSwing",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"author": "George Sioros",
 	"authors": [],
 	"description": "FlowSwing is a Max/MSP package for real-time rhythmic transformations and variations based on Non-Isochronous (NI) Grids. It provides tools for time-warping audio, shaping control signals, and sample-accurate sequencing using flexible timing structures defined by a small set of parameters. Warp markers and breakpoints can be aligned to NI Grids and adjusted during performance, with all parameters fully mappable and integrable into Max projects. FlowSwing depends on the FluCoMa package for onset detection, though this feature is optional; the rest of FlowSwing works without FluCoMa installed.",

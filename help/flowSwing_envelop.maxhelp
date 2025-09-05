@@ -10,12 +10,755 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 100.0, 100.0, 1081.0, 694.0 ],
+		"rect" : [ 100.0, 100.0, 1083.0, 694.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"showrootpatcherontab" : 0,
 		"showontab" : 0,
 		"helpsidebarclosed" : 1,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 8,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"classnamespace" : "box",
+						"rect" : [ 100.0, 126.0, 1083.0, 668.0 ],
+						"gridsize" : [ 15.0, 15.0 ],
+						"showontab" : 1,
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-9",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 7.0, 358.0, 211.0, 48.0 ],
+									"presentation_linecount" : 3,
+									"text" : "Silent breakpoints appear as open circles, while active breakpoints appear as filled circles."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 280.0, 565.0, 458.0, 34.0 ],
+									"text" : "The synthesizer output is modulated by the envelope generated in the same device, keeping the envelope and sequence locked to the same NI Grid."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"arrows" : 2,
+									"id" : "obj-16",
+									"maxclass" : "live.line",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 82.0, 344.0, 138.0, 12.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontface" : 1,
+									"id" : "obj-18",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 7.0, 424.0, 65.0, 20.0 ],
+									"text" : "Attention:"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-15",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 7.0, 440.0, 209.0, 62.0 ],
+									"text" : "Double-clicking a locked pattern unlocks it and sets the current breakpoints as the new user-defined base pattern."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-12",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 7.0, 322.0, 211.0, 34.0 ],
+									"text" : "Double-click a breakpoint to toggle its silent state."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 330.0, 142.0, 566.0, 62.0 ],
+									"text" : "Silent breakpoints shape the envelope curve without triggering a gate at the second outlet. This enables precise shaping of control signals and modulation curves without adding extra events. It is particularly useful when no event should be triggered at the start of a loop, where a breakpoint is still required to define the envelope."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 226.0, 578.0, 29.5, 22.0 ],
+									"text" : "*~"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 6,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 226.0, 488.0, 117.0, 22.0 ],
+									"text" : "scale~ 0. 1. 0. 1. 1.5"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 384.0, 497.0, 85.0, 22.0 ],
+									"text" : "lores~ 440 0.5"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"border" : 0,
+									"filename" : "helpdetails.js",
+									"id" : "obj-20",
+									"ignoreclick" : 1,
+									"jsarguments" : [ "flowSwing.envelop", 85 ],
+									"maxclass" : "jsui",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 7.0, 8.0, 489.0, 101.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"hidden" : 1,
+									"id" : "obj-17",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 500.0, 97.0, 51.0, 22.0 ],
+									"text" : "pcontrol"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-24",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 500.0, 11.0, 386.0, 22.0 ],
+									"text" : "Open a detailed description of the FlowSwing interface and parameters"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"hidden" : 1,
+									"id" : "obj-5",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 500.0, 37.0, 25.0, 22.0 ],
+									"text" : "b 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"hidden" : 1,
+									"id" : "obj-13",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 500.0, 68.0, 287.0, 22.0 ],
+									"text" : "loadunique FlowSwing_detailed_parameters.maxpat"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgmode" : 0,
+									"border" : 0,
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
+									"id" : "obj-1",
+									"lockeddragscroll" : 0,
+									"lockedsize" : 0,
+									"maxclass" : "bpatcher",
+									"name" : "flowSwing_envelop.maxpat",
+									"numinlets" : 2,
+									"numoutlets" : 9,
+									"offset" : [ 0.0, 0.0 ],
+									"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
+									"patching_rect" : [ 226.0, 217.0, 670.0, 204.0 ],
+									"varname" : "flowSwing_envelop",
+									"viewvisibility" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "multichannelsignal" ],
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 9,
+											"minor" : 0,
+											"revision" : 8,
+											"architecture" : "x64",
+											"modernui" : 1
+										}
+,
+										"classnamespace" : "box",
+										"rect" : [ 54.0, 140.0, 683.0, 720.0 ],
+										"gridsize" : [ 15.0, 15.0 ],
+										"boxes" : [ 											{
+												"box" : 												{
+													"id" : "obj-2",
+													"maxclass" : "newobj",
+													"numinlets" : 6,
+													"numoutlets" : 1,
+													"outlettype" : [ "multichannelsignal" ],
+													"patching_rect" : [ 214.0, 252.0, 136.0, 22.0 ],
+													"text" : "mc.scale~ 0. 1. 0. 1. 0.5"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"arrows" : 1,
+													"id" : "obj-9",
+													"justification" : 1,
+													"maxclass" : "live.line",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 469.506742268800735, 224.215254187583923, 78.475338965654373, 7.174888134002686 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-10",
+													"linecount" : 8,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 45.0, 458.0, 152.0, 117.0 ],
+													"text" : "Each voice's busy state is controlled by combining the gate and adstr signals. A voice is activated on each new trigger and deactivated when the envelope returns to 0, freeing up CPU resources."
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-37",
+													"linecount" : 11,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 471.0, 65.0, 151.0, 158.0 ],
+													"text" : "When two breakpoints occur at the same time, the gate pulse is limited to a minimum duration. To ensure the envelope is properly triggered, it is important to exclude from the busymap any processing of the gate signal before the envelope."
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-35",
+													"maxclass" : "live.numbox",
+													"numinlets" : 1,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "float" ],
+													"parameter_enable" : 1,
+													"patching_rect" : [ 242.75, 100.0, 44.0, 15.0 ],
+													"saved_attribute_attributes" : 													{
+														"valueof" : 														{
+															"parameter_initial" : [ 20.0 ],
+															"parameter_initial_enable" : 1,
+															"parameter_longname" : "min gate duration[1]",
+															"parameter_mmax" : 500.0,
+															"parameter_modmode" : 3,
+															"parameter_shortname" : "min gate duration",
+															"parameter_type" : 0,
+															"parameter_unitstyle" : 1
+														}
+
+													}
+,
+													"varname" : "live.numbox"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-33",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 2,
+													"outlettype" : [ "signal", "float" ],
+													"patching_rect" : [ 242.75, 127.0, 77.0, 22.0 ],
+													"text" : "mstosamps~"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-22",
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 300.75, 172.0, 75.0, 22.0 ],
+													"text" : "threshold $1"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-17",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "multichannelsignal" ],
+													"patching_rect" : [ 214.0, 215.0, 251.0, 22.0 ],
+													"text" : "mc.gen~ min_gate_duration @usebusymap 0"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-110",
+													"linecount" : 2,
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 6,
+													"outlettype" : [ "list", "list", "int", "int", "", "int" ],
+													"patching_rect" : [ 81.75, 418.0, 109.0, 36.0 ],
+													"text" : "mc.noteallocator~ @direct 1"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-65",
+													"maxclass" : "newobj",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "multichannelsignal" ],
+													"patching_rect" : [ 214.0, 449.0, 92.0, 22.0 ],
+													"text" : "mc.mixdown~ 1"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-62",
+													"maxclass" : "newobj",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "multichannelsignal" ],
+													"patching_rect" : [ 214.0, 418.0, 40.0, 22.0 ],
+													"text" : "mc.*~"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-61",
+													"maxclass" : "newobj",
+													"numinlets" : 3,
+													"numoutlets" : 1,
+													"outlettype" : [ "multichannelsignal" ],
+													"patching_rect" : [ 235.0, 357.0, 142.0, 22.0 ],
+													"text" : "mc.rect~ 110 @chans 64"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-44",
+													"maxclass" : "newobj",
+													"numinlets" : 5,
+													"numoutlets" : 5,
+													"outlettype" : [ "multichannelsignal", "multichannelsignal", "", "", "" ],
+													"patching_rect" : [ 214.0, 289.0, 234.0, 22.0 ],
+													"text" : "mc.adsr~ 1. 100. 0.25 30. @triggermode 0"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-1",
+													"index" : 1,
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "multichannelsignal" ],
+													"patching_rect" : [ 81.75, 43.0, 30.0, 30.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-5",
+													"index" : 1,
+													"maxclass" : "outlet",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 214.0, 493.0, 30.0, 30.0 ]
+												}
+
+											}
+ ],
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-110", 0 ],
+													"order" : 1,
+													"source" : [ "obj-1", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-17", 0 ],
+													"order" : 0,
+													"source" : [ "obj-1", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-2", 0 ],
+													"source" : [ "obj-17", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-44", 0 ],
+													"source" : [ "obj-2", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-17", 0 ],
+													"source" : [ "obj-22", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-22", 0 ],
+													"source" : [ "obj-33", 1 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-33", 0 ],
+													"source" : [ "obj-35", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-110", 0 ],
+													"midpoints" : [ 223.5, 367.0, 91.25, 367.0 ],
+													"order" : 1,
+													"source" : [ "obj-44", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-62", 0 ],
+													"order" : 0,
+													"source" : [ "obj-44", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-62", 1 ],
+													"source" : [ "obj-61", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-65", 0 ],
+													"source" : [ "obj-62", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-5", 0 ],
+													"source" : [ "obj-65", 0 ]
+												}
+
+											}
+ ],
+										"toolbaradditions" : [ "audiomute", "audiosolo" ]
+									}
+,
+									"patching_rect" : [ 384.0, 451.0, 75.0, 22.0 ],
+									"text" : "p \"mc synth\""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-28",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "float" ],
+									"patching_rect" : [ 226.0, 148.0, 29.5, 22.0 ],
+									"text" : "!/ 1."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"activebgcolor" : [ 0.175, 0.175, 0.175, 1.0 ],
+									"id" : "obj-27",
+									"maxclass" : "live.numbox",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "float" ],
+									"parameter_enable" : 1,
+									"patching_rect" : [ 226.0, 124.0, 64.0, 15.0 ],
+									"saved_attribute_attributes" : 									{
+										"activebgcolor" : 										{
+											"expression" : "themecolor.theme_bgcolor"
+										}
+,
+										"textcolor" : 										{
+											"expression" : "themecolor.theme_syntax_objectcolor"
+										}
+,
+										"valueof" : 										{
+											"parameter_longname" : "Duration[2]",
+											"parameter_mmax" : 60.0,
+											"parameter_mmin" : 0.01,
+											"parameter_modmode" : 3,
+											"parameter_shortname" : "duration",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 1
+										}
+
+									}
+,
+									"textcolor" : [ 0.956590352327427, 0.76614891786161, 0.452834090916593, 1.0 ],
+									"varname" : "live.numbox[1]"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-30",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 226.0, 182.0, 72.0, 22.0 ],
+									"text" : "phasor~ 0.5"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-23",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 152.0, 623.0, 72.0, 22.0 ],
+									"text" : "startwindow"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-19",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 0,
+									"patching_rect" : [ 226.0, 623.0, 35.0, 22.0 ],
+									"text" : "dac~"
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"midpoints" : [ 316.875, 436.0, 393.5, 436.0 ],
+									"source" : [ "obj-1", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-17", 0 ],
+									"hidden" : 1,
+									"source" : [ "obj-13", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 1 ],
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-19", 0 ],
+									"source" : [ "obj-23", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"hidden" : 1,
+									"source" : [ "obj-24", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-28", 0 ],
+									"source" : [ "obj-27", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-30", 0 ],
+									"source" : [ "obj-28", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-30", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-13", 0 ],
+									"hidden" : 1,
+									"source" : [ "obj-5", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-19", 1 ],
+									"order" : 0,
+									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-19", 0 ],
+									"order" : 1,
+									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"source" : [ "obj-8", 0 ]
+								}
+
+							}
+ ],
+						"toolbaradditions" : [ "audiomute", "audiosolo" ]
+					}
+,
+					"patching_rect" : [ 284.0, 174.0, 126.0, 22.0 ],
+					"text" : "p \"muted breakpoints\"",
+					"varname" : "patcher[2]"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
@@ -32,7 +775,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 100.0, 126.0, 1081.0, 668.0 ],
+						"rect" : [ 0.0, 26.0, 1083.0, 668.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [ 							{
@@ -1405,7 +2148,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 1081.0, 668.0 ],
+						"rect" : [ 0.0, 26.0, 1083.0, 668.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [  ],
@@ -1413,7 +2156,7 @@
 						"toolbaradditions" : [ "audiomute", "audiosolo" ]
 					}
 ,
-					"patching_rect" : [ 291.0, 174.0, 25.0, 22.0 ],
+					"patching_rect" : [ 424.0, 174.0, 25.0, 22.0 ],
 					"text" : "p ?",
 					"varname" : "q_tab"
 				}
@@ -1436,7 +2179,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 1081.0, 668.0 ],
+						"rect" : [ 0.0, 26.0, 1083.0, 668.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [ 							{
@@ -3397,6 +4140,27 @@
 			"obj-21::obj-8::obj-3" : [ "midinote", "midinote", 0 ],
 			"obj-21::obj-8::obj-35" : [ "min gate duration", "min gate duration", 0 ],
 			"obj-21::obj-90" : [ "mc sequencer", "mc sequencer", 0 ],
+			"obj-2::obj-1::obj-109" : [ "breakpoints[2]", "breakpoints", 2 ],
+			"obj-2::obj-1::obj-114" : [ "clear_breakpoints[2]", "clear_breakpoints", 0 ],
+			"obj-2::obj-1::obj-123" : [ "asGrid[2]", "asGrid", 1 ],
+			"obj-2::obj-1::obj-128" : [ "zoom[2]", "zoom", 0 ],
+			"obj-2::obj-1::obj-16" : [ "title[2]", "title", 0 ],
+			"obj-2::obj-1::obj-19" : [ "mute[2]", "mute", 0 ],
+			"obj-2::obj-1::obj-191" : [ "snapToNIGrid_parameter[2]", "snapToNIGrid_parameter", 0 ],
+			"obj-2::obj-1::obj-193" : [ "firstChannel_parameter[2]", "firstChannel_parameter", 0 ],
+			"obj-2::obj-1::obj-195" : [ "chans_parameter[2]", "chans_parameter", 0 ],
+			"obj-2::obj-1::obj-199" : [ "resetNIGrid[2]", "resetNIGrid", 0 ],
+			"obj-2::obj-1::obj-22" : [ "lock[2]", "lock", 0 ],
+			"obj-2::obj-1::obj-42" : [ "morph[2]", "morph", 0 ],
+			"obj-2::obj-1::obj-45" : [ "S[2]", "S", 1 ],
+			"obj-2::obj-1::obj-47" : [ "offset[2]", "offset", 0 ],
+			"obj-2::obj-1::obj-48" : [ "niRotation[2]", "niRotation", 0 ],
+			"obj-2::obj-1::obj-50" : [ "Formative[2]", "Formative", 0 ],
+			"obj-2::obj-1::obj-51" : [ "Target[2]", "Target", 0 ],
+			"obj-2::obj-1::obj-90" : [ "secondary_S_control[2]", "secondary_S_control", 0 ],
+			"obj-2::obj-1::obj-91" : [ "hold[2]", "hold", 0 ],
+			"obj-2::obj-27" : [ "Duration[2]", "duration", 0 ],
+			"obj-2::obj-8::obj-35" : [ "min gate duration[1]", "min gate duration", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -3469,6 +4233,70 @@
 ,
 				"obj-1::obj-1::obj-91" : 				{
 					"parameter_longname" : "hold[1]"
+				}
+,
+				"obj-2::obj-1::obj-114" : 				{
+					"parameter_longname" : "clear_breakpoints[2]"
+				}
+,
+				"obj-2::obj-1::obj-128" : 				{
+					"parameter_longname" : "zoom[2]"
+				}
+,
+				"obj-2::obj-1::obj-19" : 				{
+					"parameter_longname" : "mute[2]"
+				}
+,
+				"obj-2::obj-1::obj-191" : 				{
+					"parameter_longname" : "snapToNIGrid_parameter[2]"
+				}
+,
+				"obj-2::obj-1::obj-193" : 				{
+					"parameter_longname" : "firstChannel_parameter[2]"
+				}
+,
+				"obj-2::obj-1::obj-195" : 				{
+					"parameter_longname" : "chans_parameter[2]"
+				}
+,
+				"obj-2::obj-1::obj-199" : 				{
+					"parameter_longname" : "resetNIGrid[2]"
+				}
+,
+				"obj-2::obj-1::obj-22" : 				{
+					"parameter_longname" : "lock[2]"
+				}
+,
+				"obj-2::obj-1::obj-42" : 				{
+					"parameter_longname" : "morph[2]"
+				}
+,
+				"obj-2::obj-1::obj-45" : 				{
+					"parameter_longname" : "S[2]"
+				}
+,
+				"obj-2::obj-1::obj-47" : 				{
+					"parameter_longname" : "offset[2]"
+				}
+,
+				"obj-2::obj-1::obj-48" : 				{
+					"parameter_longname" : "niRotation[2]"
+				}
+,
+				"obj-2::obj-1::obj-50" : 				{
+					"parameter_longname" : "Formative[2]"
+				}
+,
+				"obj-2::obj-1::obj-51" : 				{
+					"parameter_longname" : "Target[2]"
+				}
+,
+				"obj-2::obj-1::obj-90" : 				{
+					"parameter_longname" : "secondary_S_control[2]"
+				}
+,
+				"obj-2::obj-1::obj-91" : 				{
+					"parameter_longname" : "hold[2]"
 				}
 
 			}
@@ -3616,39 +4444,54 @@
 					"parameter_values" : 					{
 						"Duration" : 5.0,
 						"Duration[1]" : 3.0,
+						"Duration[2]" : 2.0,
 						"Formative" : 8.0,
 						"Formative[1]" : 5.0,
+						"Formative[2]" : 5.0,
 						"Target" : 5.0,
 						"Target[1]" : 4.0,
+						"Target[2]" : 4.0,
 						"chans_parameter" : 64.0,
 						"chans_parameter[1]" : 64.0,
+						"chans_parameter[2]" : 64.0,
 						"firstChannel_parameter" : 1.0,
 						"firstChannel_parameter[1]" : 1.0,
+						"firstChannel_parameter[2]" : 1.0,
 						"gswitch2" : 0.0,
 						"hold" : 0.0,
 						"hold[1]" : 0.0,
+						"hold[2]" : 0.0,
 						"lock" : 0.0,
 						"lock[1]" : 1.0,
-						"mc sequencer" : -70.0,
+						"lock[2]" : 1.0,
+						"mc sequencer" : -6.344764755645237,
 						"min gate duration" : 10.0,
+						"min gate duration[1]" : 20.0,
 						"morph" : 1.0,
 						"morph[1]" : 1.0,
+						"morph[2]" : 1.0,
 						"mute" : 0.0,
 						"mute[1]" : 0.0,
+						"mute[2]" : 0.0,
 						"niRotation" : 2.0,
 						"niRotation[1]" : 3.0,
+						"niRotation[2]" : 0.0,
 						"noise gain" : -70.0,
 						"offset" : 0.0,
 						"offset[1]" : 0.0,
+						"offset[2]" : 0.0,
 						"simple sequencer" : -70.0,
 						"snapToNIGrid_parameter" : 1.0,
 						"snapToNIGrid_parameter[1]" : 1.0,
+						"snapToNIGrid_parameter[2]" : 1.0,
+						"S[2]" : 0.0,
 						"S" : 0.0,
 						"S[1]" : 1.0,
 						"blob" : 						{
-							"midinote" : [ 24 ],
+							"midinote" : [ 36 ],
 							"title" : [ "FlowSwing E" ],
 							"title[1]" : [ "FlowSwing", "E" ],
+							"title[2]" : [ "FlowSwing", "E" ],
 							"vst~" : [ 								{
 									"filetype" : "C74Snapshot",
 									"version" : 2,
@@ -3666,8 +4509,15 @@
  ],
 							"zoom" : [ 1.0 ],
 							"zoom[1]" : [ 1.0 ],
+							"zoom[2]" : [ 1.0 ],
 							"asGrid" : [ 0.09448818897638, 2, 5 ],
 							"asGrid[1]" : [ 0.0, 3, 4 ],
+							"asGrid[2]" : [ 0.0, 0, 4 ],
+							"breakpoints[2]" : [ 								{
+									"env" : [ 0, 0.826413650290474, 0, 0.200107067848763, 0.210359896163899, 0, 0.4, 0.939897236576949, 0.85, 0.451692598279674, 0.356267364246509, 0, 0.509101377035721, 0.56702259592139, 0, 0.551313714356343, 0.258995718858102, 0, 0.6, 0.291419600654238, 0.85, 0.715097583160359, 0.907473354780813, -0.6, 0.8, 0.42111512783878, -0.6, 1, 0.826413650290474, 0.8 ],
+									"mute" : [ 1, 0, 0, 1, 1, 1, 1, 1, 0, 1 ]
+								}
+ ],
 							"breakpoints" : [ 								{
 									"env" : [ 0.0, 0.790322580645161, 0.0, 0.125, 0.209677419354839, 0.8, 0.375, 0.596774193548387, 0.75, 0.5, 0.82258064516129, 0.5, 0.75, 0.451612903225806, -0.55, 0.875, 0.225806451612903, 0.65, 1.0, 0.790322580645161, 0.0 ],
 									"lock" : 									{
@@ -3710,39 +4560,54 @@
 								"parameter_values" : 								{
 									"Duration" : 5.0,
 									"Duration[1]" : 3.0,
+									"Duration[2]" : 2.0,
 									"Formative" : 8.0,
 									"Formative[1]" : 5.0,
+									"Formative[2]" : 5.0,
 									"Target" : 5.0,
 									"Target[1]" : 4.0,
+									"Target[2]" : 4.0,
 									"chans_parameter" : 64.0,
 									"chans_parameter[1]" : 64.0,
+									"chans_parameter[2]" : 64.0,
 									"firstChannel_parameter" : 1.0,
 									"firstChannel_parameter[1]" : 1.0,
+									"firstChannel_parameter[2]" : 1.0,
 									"gswitch2" : 0.0,
 									"hold" : 0.0,
 									"hold[1]" : 0.0,
+									"hold[2]" : 0.0,
 									"lock" : 0.0,
 									"lock[1]" : 1.0,
-									"mc sequencer" : -70.0,
+									"lock[2]" : 1.0,
+									"mc sequencer" : -6.344764755645237,
 									"min gate duration" : 10.0,
+									"min gate duration[1]" : 20.0,
 									"morph" : 1.0,
 									"morph[1]" : 1.0,
+									"morph[2]" : 1.0,
 									"mute" : 0.0,
 									"mute[1]" : 0.0,
+									"mute[2]" : 0.0,
 									"niRotation" : 2.0,
 									"niRotation[1]" : 3.0,
+									"niRotation[2]" : 0.0,
 									"noise gain" : -70.0,
 									"offset" : 0.0,
 									"offset[1]" : 0.0,
+									"offset[2]" : 0.0,
 									"simple sequencer" : -70.0,
 									"snapToNIGrid_parameter" : 1.0,
 									"snapToNIGrid_parameter[1]" : 1.0,
+									"snapToNIGrid_parameter[2]" : 1.0,
+									"S[2]" : 0.0,
 									"S" : 0.0,
 									"S[1]" : 1.0,
 									"blob" : 									{
-										"midinote" : [ 24 ],
+										"midinote" : [ 36 ],
 										"title" : [ "FlowSwing E" ],
 										"title[1]" : [ "FlowSwing", "E" ],
+										"title[2]" : [ "FlowSwing", "E" ],
 										"vst~" : [ 											{
 												"filetype" : "C74Snapshot",
 												"version" : 2,
@@ -3760,8 +4625,15 @@
  ],
 										"zoom" : [ 1.0 ],
 										"zoom[1]" : [ 1.0 ],
+										"zoom[2]" : [ 1.0 ],
 										"asGrid" : [ 0.09448818897638, 2, 5 ],
 										"asGrid[1]" : [ 0.0, 3, 4 ],
+										"asGrid[2]" : [ 0.0, 0, 4 ],
+										"breakpoints[2]" : [ 											{
+												"env" : [ 0, 0.826413650290474, 0, 0.200107067848763, 0.210359896163899, 0, 0.4, 0.939897236576949, 0.85, 0.451692598279674, 0.356267364246509, 0, 0.509101377035721, 0.56702259592139, 0, 0.551313714356343, 0.258995718858102, 0, 0.6, 0.291419600654238, 0.85, 0.715097583160359, 0.907473354780813, -0.6, 0.8, 0.42111512783878, -0.6, 1, 0.826413650290474, 0.8 ],
+												"mute" : [ 1, 0, 0, 1, 1, 1, 1, 1, 0, 1 ]
+											}
+ ],
 										"breakpoints" : [ 											{
 												"env" : [ 0.0, 0.790322580645161, 0.0, 0.125, 0.209677419354839, 0.8, 0.375, 0.596774193548387, 0.75, 0.5, 0.82258064516129, 0.5, 0.75, 0.451612903225806, -0.55, 0.875, 0.225806451612903, 0.65, 1.0, 0.790322580645161, 0.0 ],
 												"lock" : 												{

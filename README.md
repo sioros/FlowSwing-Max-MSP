@@ -60,6 +60,7 @@ This repository is actively maintained and regularly updated with new features, 
 ### Highlights in Version 2
 - **Pattern locking:** Events are now associated with the nearest NI Grid beat (instead of the formative beat), offering more flexible alignment options.  
 - **Parameter reset button:** Quickly revert T, S, and R values to the state they had when the pattern was locked.  
+- **Silent breakpoints (v2.1):** Silent breakpoints shape envelop or control signals but do not trigger events.
 - **Custom patch names:** Add short descriptive labels directly on the UI.  
 - **Reworked UI layout:** More convenient sizing options, including switchable views of either the NI Grid or breakpoints/markers.  
 - **Improved stability:** Numerous bug fixes.  

@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 6,
+			"revision" : 8,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -14,6 +14,20 @@
 		"openinpresentation" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontface" : 1,
+					"id" : "obj-18",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 530.0, 135.0, 162.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 527.0, 142.5, 70.0, 20.0 ],
+					"text" : "start audio"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"arrows" : 2,
 					"id" : "obj-25",
@@ -64,8 +78,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 7.0, 71.0, 151.0, 269.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 6,
-					"presentation_rect" : [ 20.0, 39.0, 471.0, 89.0 ],
+					"presentation_linecount" : 4,
+					"presentation_rect" : [ 20.0, 39.0, 661.0, 62.0 ],
 					"text" : "This example illustrates how changing NI Grid parameters dynamically can create rhythmic variation at the phrase level beyond a single repetition cycle. By alternating rotation configurations (R) across cycles, the pattern retains its core features while varying the timing of individual beats. All NI Grid parameters can be modulated in real time, enabling evolving patterns that remain stylistically unified and rhythmically engaging. "
 				}
 
@@ -98,7 +112,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -438,7 +452,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -865,6 +879,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 103.0, 534.0, 72.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 599.0, 141.5, 72.0, 22.0 ],
 					"text" : "startwindow"
 				}
 
@@ -892,7 +908,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1118,7 +1134,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 9,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "multichannelsignal", "signal", "", "", "", "", "", "" ],
+					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
 					"patching_rect" : [ 170.0, 232.0, 135.0, 27.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 14.0, 172.0, 667.0, 203.0 ],
@@ -1334,11 +1350,12 @@
 			"obj-1::obj-114" : [ "clear_breakpoints", "clear_breakpoints", 0 ],
 			"obj-1::obj-123" : [ "asGrid", "asGrid", 1 ],
 			"obj-1::obj-128" : [ "zoom", "zoom", 0 ],
-			"obj-1::obj-13" : [ "chans", "chans", 0 ],
 			"obj-1::obj-16" : [ "title", "title", 0 ],
-			"obj-1::obj-160" : [ "snapToNIGrid", "snapToNIGrid", 0 ],
-			"obj-1::obj-166" : [ "firstChannel", "firstChannel", 0 ],
 			"obj-1::obj-19" : [ "mute", "mute", 0 ],
+			"obj-1::obj-191" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
+			"obj-1::obj-193" : [ "firstChannel_parameter", "firstChannel_parameter", 0 ],
+			"obj-1::obj-195" : [ "chans_parameter", "chans_parameter", 0 ],
+			"obj-1::obj-199" : [ "resetNIGrid", "resetNIGrid", 0 ],
 			"obj-1::obj-22" : [ "lock", "lock", 0 ],
 			"obj-1::obj-42" : [ "morph", "morph", 0 ],
 			"obj-1::obj-45" : [ "S", "S", 0 ],
@@ -1352,9 +1369,11 @@
 			"obj-31::obj-113" : [ "onsets_button", "onsets_button", 0 ],
 			"obj-31::obj-114" : [ "clear_markers", "clear_markers", 0 ],
 			"obj-31::obj-132" : [ "markers_dict", "markers", 0 ],
+			"obj-31::obj-140" : [ "snapToNIGrid_parameter[1]", "snapToNIGrid_parameter", 0 ],
 			"obj-31::obj-160" : [ "snapToNIGrid[1]", "snapToNIGrid", 0 ],
 			"obj-31::obj-161" : [ "asGrid[1]", "asGrid", 1 ],
 			"obj-31::obj-19" : [ "mute[1]", "mute", 0 ],
+			"obj-31::obj-199" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
 			"obj-31::obj-20" : [ "title[1]", "title", 0 ],
 			"obj-31::obj-22" : [ "lock[1]", "lock", 0 ],
 			"obj-31::obj-42" : [ "morph[1]", "morph", 0 ],
@@ -1382,8 +1401,16 @@
 					"parameter_longname" : "clear_markers"
 				}
 ,
+				"obj-31::obj-140" : 				{
+					"parameter_longname" : "snapToNIGrid_parameter[1]"
+				}
+,
 				"obj-31::obj-19" : 				{
 					"parameter_longname" : "mute[1]"
+				}
+,
+				"obj-31::obj-199" : 				{
+					"parameter_longname" : "resetNIGrid[1]"
 				}
 ,
 				"obj-31::obj-22" : 				{
@@ -1439,13 +1466,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "EnvelopTomcTriggerBuffers.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
-				"patcherrelativepath" : "../javascript",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "FlowSwing_Grids.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
 				"patcherrelativepath" : "../patchers",
@@ -1495,13 +1515,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "filterOutGateRepetitions.gendsp",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/code",
-				"patcherrelativepath" : "../code",
-				"type" : "gDSP",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "flowSwing_audioWarp.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
 				"patcherrelativepath" : "../patchers",
@@ -1528,8 +1541,8 @@
 			}
 , 			{
 				"name" : "grooveWrapper~.maxpat",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
-				"patcherrelativepath" : "../patchers",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1542,27 +1555,40 @@
 			}
 , 			{
 				"name" : "liminal_lock.maxpat",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
-				"patcherrelativepath" : "../patchers",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "loop.svg",
+				"bootpath" : "C74:/media/max/picts/m4l-picts",
+				"type" : "svg",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "markerDictionary2List.maxpat",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
-				"patcherrelativepath" : "../patchers",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "markerTimesToSpeeds.maxpat",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
-				"patcherrelativepath" : "../patchers",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "mcTrigger.gendsp",
+				"name" : "markersDictChange.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mcTriggerV2.gendsp",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/code",
 				"patcherrelativepath" : "../code",
 				"type" : "gDSP",
@@ -1576,9 +1602,16 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "phasor_state.gendsp",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "polySegmentGroove.maxpat",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
-				"patcherrelativepath" : "../patchers",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1591,8 +1624,8 @@
 			}
 , 			{
 				"name" : "warpMarkersToBuffer.maxpat",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
-				"patcherrelativepath" : "../patchers",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1851,7 +1884,8 @@
 			}
 
 		}
-
+,
+		"toolbaradditions" : [ "audiomute", "audiosolo" ]
 	}
 
 }
