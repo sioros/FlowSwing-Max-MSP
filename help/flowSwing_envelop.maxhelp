@@ -32,7 +32,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 100.0, 126.0, 1083.0, 668.0 ],
+						"rect" : [ 0.0, 26.0, 1083.0, 668.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [ 							{
@@ -43,7 +43,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 7.0, 358.0, 211.0, 48.0 ],
-									"presentation_linecount" : 3,
 									"text" : "Silent breakpoints appear as open circles, while active breakpoints appear as filled circles."
 								}
 
@@ -752,8 +751,8 @@
 						"toolbaradditions" : [ "audiomute", "audiosolo" ]
 					}
 ,
-					"patching_rect" : [ 284.0, 174.0, 126.0, 22.0 ],
-					"text" : "p \"muted breakpoints\"",
+					"patching_rect" : [ 284.0, 174.0, 120.0, 22.0 ],
+					"text" : "p \"silent breakpoints\"",
 					"varname" : "patcher[2]"
 				}
 
@@ -2179,7 +2178,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 1083.0, 668.0 ],
+						"rect" : [ 100.0, 126.0, 1083.0, 668.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [ 							{
