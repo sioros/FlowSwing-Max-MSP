@@ -14,12 +14,60 @@
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 616.0, 373.0, 52.0, 22.0 ],
+					"text" : "2092.96"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 502.0, 469.0, 29.5, 22.0 ],
+					"text" : "*~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 6,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 461.0, 401.0, 110.0, 22.0 ],
+					"text" : "scale~ 0. 1. 0. 1. 2."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 462.0, 469.0, 29.5, 22.0 ],
+					"text" : "*~"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-41",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 235.0, 141.0, 73.0, 22.0 ],
+					"patching_rect" : [ 235.0, 231.0, 73.0, 22.0 ],
 					"text" : "routepass S"
 				}
 
@@ -31,7 +79,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 552.0, 147.0, 73.0, 22.0 ],
+					"patching_rect" : [ 552.0, 237.0, 73.0, 22.0 ],
 					"text" : "routepass S"
 				}
 
@@ -43,7 +91,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 501.25, 295.0, 58.0, 22.0 ],
+					"patching_rect" : [ 606.0, 281.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -55,8 +103,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 501.25, 327.0, 52.0, 22.0 ],
-					"text" : "2092.96"
+					"patching_rect" : [ 606.0, 313.0, 29.5, 22.0 ],
+					"text" : "110"
 				}
 
 			}
@@ -69,9 +117,9 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 472.375, 439.0, 49.0, 67.0 ],
+					"patching_rect" : [ 472.0, 529.0, 49.0, 67.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 435.0, 568.0, 48.0, 117.0 ],
+					"presentation_rect" : [ 435.0, 598.0, 48.0, 117.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "gain[1]",
@@ -105,9 +153,9 @@
 					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "multichannelsignal", "multichannelsignal", "" ],
-					"patching_rect" : [ 472.375, 375.5, 104.0, 29.0 ],
+					"patching_rect" : [ 472.0, 357.0, 104.0, 29.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 564.0, 430.0, 121.0 ],
+					"presentation_rect" : [ 14.0, 594.0, 430.0, 121.0 ],
 					"varname" : "flowSwing_noise[1]",
 					"viewvisibility" : 1
 				}
@@ -129,9 +177,9 @@
 					"numoutlets" : 9,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-					"patching_rect" : [ 461.0, 186.0, 110.0, 32.0 ],
+					"patching_rect" : [ 461.0, 276.0, 110.0, 32.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 460.0, 688.0, 100.0 ],
+					"presentation_rect" : [ 14.0, 490.0, 688.0, 100.0 ],
 					"varname" : "flowSwing_envelop[1]",
 					"viewvisibility" : 1
 				}
@@ -144,11 +192,11 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.0, 49.0, 532.0, 48.0 ],
+					"patching_rect" : [ 14.0, 49.0, 677.0, 48.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 14.0, 49.0, 677.0, 34.0 ],
-					"text" : "The envelope pattern combines several silent breakpoints with three active ones. Active breakpoints trigger the sounds that form the backbone of the rhythm, while silent breakpoints shape the timbre, letting a more detailed rhythmic structure emerge."
+					"presentation_linecount" : 3,
+					"presentation_rect" : [ 14.0, 49.0, 677.0, 48.0 ],
+					"text" : "The envelope patterns combine several silent breakpoints with active ones. Active breakpoints trigger the sounds that form the backbone of the rhythm, while silent breakpoints shape the timbre and modulate the amlitude, letting a more detailed rhythmic structure emerge."
 				}
 
 			}
@@ -173,7 +221,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 232.0, 290.0, 110.0, 22.0 ],
+					"patching_rect" : [ 232.0, 380.0, 110.0, 22.0 ],
 					"text" : "scale~ 0. 1. 0.7 0.3"
 				}
 
@@ -185,7 +233,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 204.0, 258.0, 97.0, 22.0 ],
+					"patching_rect" : [ 204.0, 348.0, 97.0, 22.0 ],
 					"text" : "scale~ 0. 1. 0. 0."
 				}
 
@@ -362,7 +410,7 @@
 						"toolbaradditions" : [ "audiomute", "audiosolo" ]
 					}
 ,
-					"patching_rect" : [ 135.0, 141.0, 81.0, 22.0 ],
+					"patching_rect" : [ 135.0, 231.0, 81.0, 22.0 ],
 					"text" : "p ramp"
 				}
 
@@ -376,9 +424,9 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 147.0, 439.0, 49.0, 67.0 ],
+					"patching_rect" : [ 147.0, 529.0, 49.0, 67.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 449.0, 328.0, 48.0, 117.0 ],
+					"presentation_rect" : [ 449.0, 358.0, 48.0, 117.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "gain",
@@ -403,7 +451,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 176.0, 306.0, 58.0, 22.0 ],
+					"patching_rect" : [ 176.0, 396.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -415,7 +463,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 176.0, 336.0, 45.0, 22.0 ],
+					"patching_rect" : [ 176.0, 426.0, 45.0, 22.0 ],
 					"text" : "130.81"
 				}
 
@@ -429,9 +477,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 197.0, 110.0, 44.0, 15.0 ],
+					"patching_rect" : [ 197.0, 200.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 67.0, 92.0, 44.0, 15.0 ],
+					"presentation_rect" : [ 67.0, 122.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
@@ -461,9 +509,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 135.0, 110.0, 44.0, 15.0 ],
+					"patching_rect" : [ 135.0, 200.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 92.0, 44.0, 15.0 ],
+					"presentation_rect" : [ 14.0, 122.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"activebgoncolor" : 						{
 							"expression" : ""
@@ -498,9 +546,9 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 147.0, 524.0, 45.0, 45.0 ],
+					"patching_rect" : [ 147.0, 614.0, 45.0, 45.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 631.0, 634.0, 45.0, 45.0 ]
+					"presentation_rect" : [ 631.0, 664.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -511,7 +559,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 261.0, 327.0, 104.0, 22.0 ],
+					"patching_rect" : [ 261.0, 417.0, 104.0, 22.0 ],
 					"text" : "scale~ 0. 1. 0. 0.9"
 				}
 
@@ -532,9 +580,9 @@
 					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "multichannelsignal", "multichannelsignal", "" ],
-					"patching_rect" : [ 147.0, 376.0, 218.0, 28.0 ],
+					"patching_rect" : [ 147.0, 466.0, 218.0, 28.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 324.0, 430.0, 121.0 ],
+					"presentation_rect" : [ 14.0, 354.0, 430.0, 121.0 ],
 					"varname" : "flowSwing_noise",
 					"viewvisibility" : 1
 				}
@@ -556,9 +604,9 @@
 					"numoutlets" : 9,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-					"patching_rect" : [ 135.0, 186.0, 119.0, 32.0 ],
+					"patching_rect" : [ 135.0, 276.0, 119.0, 32.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 115.0, 688.0, 200.0 ],
+					"presentation_rect" : [ 14.0, 145.0, 669.0, 200.0 ],
 					"varname" : "flowSwing_envelop",
 					"viewvisibility" : 1
 				}
@@ -568,7 +616,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
-					"midpoints" : [ 144.5, 239.0, 213.5, 239.0 ],
+					"midpoints" : [ 144.5, 329.0, 213.5, 329.0 ],
 					"order" : 2,
 					"source" : [ "obj-1", 0 ]
 				}
@@ -577,7 +625,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
-					"midpoints" : [ 144.5, 238.0, 241.5, 238.0 ],
+					"midpoints" : [ 144.5, 328.0, 241.5, 328.0 ],
 					"order" : 1,
 					"source" : [ "obj-1", 0 ]
 				}
@@ -593,7 +641,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
-					"midpoints" : [ 144.5, 238.5, 270.5, 238.5 ],
+					"midpoints" : [ 144.5, 328.5, 270.5, 328.5 ],
 					"order" : 0,
 					"source" : [ "obj-1", 0 ]
 				}
@@ -653,7 +701,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 1 ],
-					"midpoints" : [ 256.0, 429.5, 186.5, 429.5 ],
+					"midpoints" : [ 256.0, 519.5, 186.5, 519.5 ],
 					"source" : [ "obj-2", 1 ]
 				}
 
@@ -688,15 +736,22 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-34", 1 ],
-					"source" : [ "obj-33", 1 ]
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-31", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-34", 0 ],
+					"destination" : [ "obj-5", 1 ],
 					"source" : [ "obj-33", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 1 ],
+					"source" : [ "obj-33", 1 ]
 				}
 
 			}
@@ -751,8 +806,31 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-34", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-15", 1 ],
 					"source" : [ "obj-56", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"order" : 1,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"order" : 0,
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
@@ -767,6 +845,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-34", 1 ],
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
@@ -1141,26 +1226,26 @@
 						"Formative[1]" : 7.0,
 						"Noise A" : 0.0,
 						"Noise A range" : 0.0,
-						"Noise A range[1]" : 0.527559055118111,
-						"Noise A[1]" : 0.0,
+						"Noise A range[1]" : 0.2,
+						"Noise A[1]" : 0.409448818897637,
 						"Noise F" : 0.0,
 						"Noise F range" : 0.173228346456693,
 						"Noise F range[1]" : 0.0,
-						"Noise F[1]" : 0.0,
+						"Noise F[1]" : 0.68503937007874,
 						"Q" : 0.669291338582676,
 						"Q range" : 0.0,
 						"Q range[1]" : 0.0,
-						"Q[1]" : 0.0,
+						"Q[1]" : 0.98,
 						"Skew" : 0.0,
 						"Skew range" : 0.0,
 						"Skew range[1]" : 0.0,
-						"Skew[1]" : 0.677165354330707,
+						"Skew[1]" : 0.74015748031496,
 						"Target" : 5.0,
 						"Target[1]" : 5.0,
 						"ampCurve" : 2.483533385336362,
-						"ampCurve[1]" : 3.357009801475102,
+						"ampCurve[1]" : 2.483533385336362,
 						"attack" : 355.68933044900632,
-						"attack[1]" : 262.074139420889708,
+						"attack[1]" : 285.696186664987181,
 						"chans_parameter" : 64.0,
 						"chans_parameter[1]" : 64.0,
 						"decay" : 1105.209449592116243,
@@ -1168,11 +1253,11 @@
 						"envCurve" : 3.692361919836229,
 						"envCurve[1]" : 4.244896815530822,
 						"filter" : 7.565141547442035,
-						"filter[1]" : 4.886980447917325,
+						"filter[1]" : 10.0,
 						"firstChannel_parameter" : 1.0,
 						"firstChannel_parameter[1]" : 1.0,
-						"gain" : -15.256410256410263,
-						"gain[1]" : -45.769230769230774,
+						"gain" : -16.15384615384616,
+						"gain[1]" : -22.435897435897431,
 						"hold" : 0.0,
 						"hold[1]" : 0.0,
 						"lock" : 1.0,
@@ -1184,30 +1269,30 @@
 						"niRotation" : 2.0,
 						"niRotation[1]" : 1.0,
 						"offset" : 0.0,
-						"offset[1]" : 0.428571428571429,
+						"offset[1]" : 0.0,
 						"release" : 1310.370697104448254,
-						"release[1]" : 530.843138049330719,
+						"release[1]" : 719.81951600208788,
 						"snapToNIGrid_parameter" : 1.0,
 						"snapToNIGrid_parameter[1]" : 1.0,
 						"sustain" : 0.25,
-						"sustain[1]" : 0.0,
-						"S" : 0.480314960629922,
-						"S[1]" : 0.480314960629922,
+						"sustain[1]" : 0.543307086614173,
+						"S" : 0.503937007874016,
+						"S[1]" : 0.503937007874016,
 						"blob" : 						{
 							"title" : [ "FlowSwing", "E" ],
 							"title[1]" : [ "FlowSwing", "E" ],
 							"zoom" : [ 1.0 ],
 							"zoom[1]" : [ 1.0 ],
-							"asGrid" : [ 0.56, 2, 5 ],
+							"asGrid" : [ 0.503937007874016, 2, 5 ],
 							"asGrid[1]" : [ 0.480314960629922, 1, 5 ],
 							"breakpoints" : [ 								{
-									"env" : [ 0, 0.826413650290474, 0, 0.174857142857143, 0.323843482450373, 0, 0.237714285714286, 0.793989768494339, -0.45, 0.331387755102041, 0.307631541552306, 0.7, 0.412571428571429, 0.988533059271152, 0.595, 0.502780355420041, 0.210359896163899, -0.6, 0.587428571428571, 0.826413650290474, 0.695, 0.688802016441721, 0.194147955265831, -0.695, 0.762285714285714, 0.729142004902068, 0.6, 0.825142857142857, 1, 0.695, 0.910895367133331, 0.437327068736848, -0.745, 1, 0.826413650290474, 0.8 ],
+									"env" : [ 0, 0.826413650290474, 0, 0.170303712035996, 0.323843482450373, 0, 0.244544431946007, 0.793989768494339, -0.45, 0.33687504076758, 0, 0.7, 0.414848143982002, 0.988533059271152, 0.595, 0.502707952566738, 0.210359896163899, -0.6, 0.585151856017998, 0.826413650290474, 0.695, 0.684704700289511, 0, -0.695, 0.755455568053993, 0.729142004902068, 0.6, 0.829696287964005, 1, 0.695, 0.917716802299347, 0.226571837061967, -0.745, 1, 0.826413650290474, 0.8 ],
 									"mute" : [ 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0 ]
 								}
  ],
 							"breakpoints[1]" : [ 								{
-									"env" : [ 0, 0.648082300411729, 0, 0.07515854937972, 0.323843482450373, 0, 0.414848143982002, 0.226571837061967, 0, 0.585151856017998, 0.85883753208661, 0, 0.659392575928009, 0.177936014367763, 0, 0.829696287964004, 1, 0, 1, 0.648082300411729, 0 ],
-									"mute" : [ 0, 0, 0, 0, 0, 0, 0 ]
+									"env" : [ 0, 0.648082300411729, 0, 0.074240719910011, 0.323843482450373, 0, 0.244544431946007, 0.875049472984678, -0.7, 0.335759869917168, 0.242783777960034, 0, 0.414848143982002, 1, 0, 0.509370739905173, 0.210359896163899, 0, 0.585151856017998, 0.85883753208661, 0, 0.659392575928009, 0.177936014367763, 0, 0.829696287964004, 1, 0.7, 1, 0.648082300411729, 0 ],
+									"mute" : [ 0, 0, 1, 1, 1, 1, 0, 0, 0, 0 ]
 								}
  ]
 						}
@@ -1238,26 +1323,26 @@
 									"Formative[1]" : 7.0,
 									"Noise A" : 0.0,
 									"Noise A range" : 0.0,
-									"Noise A range[1]" : 0.527559055118111,
-									"Noise A[1]" : 0.0,
+									"Noise A range[1]" : 0.2,
+									"Noise A[1]" : 0.409448818897637,
 									"Noise F" : 0.0,
 									"Noise F range" : 0.173228346456693,
 									"Noise F range[1]" : 0.0,
-									"Noise F[1]" : 0.0,
+									"Noise F[1]" : 0.68503937007874,
 									"Q" : 0.669291338582676,
 									"Q range" : 0.0,
 									"Q range[1]" : 0.0,
-									"Q[1]" : 0.0,
+									"Q[1]" : 0.98,
 									"Skew" : 0.0,
 									"Skew range" : 0.0,
 									"Skew range[1]" : 0.0,
-									"Skew[1]" : 0.677165354330707,
+									"Skew[1]" : 0.74015748031496,
 									"Target" : 5.0,
 									"Target[1]" : 5.0,
 									"ampCurve" : 2.483533385336362,
-									"ampCurve[1]" : 3.357009801475102,
+									"ampCurve[1]" : 2.483533385336362,
 									"attack" : 355.68933044900632,
-									"attack[1]" : 262.074139420889708,
+									"attack[1]" : 285.696186664987181,
 									"chans_parameter" : 64.0,
 									"chans_parameter[1]" : 64.0,
 									"decay" : 1105.209449592116243,
@@ -1265,11 +1350,11 @@
 									"envCurve" : 3.692361919836229,
 									"envCurve[1]" : 4.244896815530822,
 									"filter" : 7.565141547442035,
-									"filter[1]" : 4.886980447917325,
+									"filter[1]" : 10.0,
 									"firstChannel_parameter" : 1.0,
 									"firstChannel_parameter[1]" : 1.0,
-									"gain" : -15.256410256410263,
-									"gain[1]" : -45.769230769230774,
+									"gain" : -16.15384615384616,
+									"gain[1]" : -22.435897435897431,
 									"hold" : 0.0,
 									"hold[1]" : 0.0,
 									"lock" : 1.0,
@@ -1281,30 +1366,30 @@
 									"niRotation" : 2.0,
 									"niRotation[1]" : 1.0,
 									"offset" : 0.0,
-									"offset[1]" : 0.428571428571429,
+									"offset[1]" : 0.0,
 									"release" : 1310.370697104448254,
-									"release[1]" : 530.843138049330719,
+									"release[1]" : 719.81951600208788,
 									"snapToNIGrid_parameter" : 1.0,
 									"snapToNIGrid_parameter[1]" : 1.0,
 									"sustain" : 0.25,
-									"sustain[1]" : 0.0,
-									"S" : 0.480314960629922,
-									"S[1]" : 0.480314960629922,
+									"sustain[1]" : 0.543307086614173,
+									"S" : 0.503937007874016,
+									"S[1]" : 0.503937007874016,
 									"blob" : 									{
 										"title" : [ "FlowSwing", "E" ],
 										"title[1]" : [ "FlowSwing", "E" ],
 										"zoom" : [ 1.0 ],
 										"zoom[1]" : [ 1.0 ],
-										"asGrid" : [ 0.56, 2, 5 ],
+										"asGrid" : [ 0.503937007874016, 2, 5 ],
 										"asGrid[1]" : [ 0.480314960629922, 1, 5 ],
 										"breakpoints" : [ 											{
-												"env" : [ 0, 0.826413650290474, 0, 0.174857142857143, 0.323843482450373, 0, 0.237714285714286, 0.793989768494339, -0.45, 0.331387755102041, 0.307631541552306, 0.7, 0.412571428571429, 0.988533059271152, 0.595, 0.502780355420041, 0.210359896163899, -0.6, 0.587428571428571, 0.826413650290474, 0.695, 0.688802016441721, 0.194147955265831, -0.695, 0.762285714285714, 0.729142004902068, 0.6, 0.825142857142857, 1, 0.695, 0.910895367133331, 0.437327068736848, -0.745, 1, 0.826413650290474, 0.8 ],
+												"env" : [ 0, 0.826413650290474, 0, 0.170303712035996, 0.323843482450373, 0, 0.244544431946007, 0.793989768494339, -0.45, 0.33687504076758, 0, 0.7, 0.414848143982002, 0.988533059271152, 0.595, 0.502707952566738, 0.210359896163899, -0.6, 0.585151856017998, 0.826413650290474, 0.695, 0.684704700289511, 0, -0.695, 0.755455568053993, 0.729142004902068, 0.6, 0.829696287964005, 1, 0.695, 0.917716802299347, 0.226571837061967, -0.745, 1, 0.826413650290474, 0.8 ],
 												"mute" : [ 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0 ]
 											}
  ],
 										"breakpoints[1]" : [ 											{
-												"env" : [ 0, 0.648082300411729, 0, 0.07515854937972, 0.323843482450373, 0, 0.414848143982002, 0.226571837061967, 0, 0.585151856017998, 0.85883753208661, 0, 0.659392575928009, 0.177936014367763, 0, 0.829696287964004, 1, 0, 1, 0.648082300411729, 0 ],
-												"mute" : [ 0, 0, 0, 0, 0, 0, 0 ]
+												"env" : [ 0, 0.648082300411729, 0, 0.074240719910011, 0.323843482450373, 0, 0.244544431946007, 0.875049472984678, -0.7, 0.335759869917168, 0.242783777960034, 0, 0.414848143982002, 1, 0, 0.509370739905173, 0.210359896163899, 0, 0.585151856017998, 0.85883753208661, 0, 0.659392575928009, 0.177936014367763, 0, 0.829696287964004, 1, 0.7, 1, 0.648082300411729, 0 ],
+												"mute" : [ 0, 0, 1, 1, 1, 1, 0, 0, 0, 0 ]
 											}
  ]
 									}
