@@ -15,16 +15,28 @@
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 447.0, 304.0, 50.0, 22.0 ],
+					"text" : "clear"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bubble" : 1,
 					"id" : "obj-25",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 682.0, 352.0, 115.0, 52.0 ],
+					"patching_rect" : [ 682.0, 352.0, 118.0, 52.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 695.0, 364.0, 115.0, 52.0 ],
+					"presentation_rect" : [ 695.0, 364.0, 118.0, 52.0 ],
 					"text" : "Ctrl+Click&Drag to zoom and pan vertically"
 				}
 
@@ -593,9 +605,20 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 560.0, 346.0, 98.0, 22.0 ],
-					"restore" : [ 64, 64, 64, 64, 64 ],
+					"restore" : [ -0.705263157894737, -0.431578947368421, 0.494736842105263, 0.642105263157895, -0.536842105263158 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_invisible" : 1,
+							"parameter_longname" : "skewvalues",
+							"parameter_modmode" : 0,
+							"parameter_shortname" : "skewvalues",
+							"parameter_type" : 3
+						}
+
+					}
+,
 					"saved_object_attributes" : 					{
-						"parameter_enable" : 0,
+						"parameter_enable" : 1,
 						"parameter_mappable" : 0
 					}
 ,
@@ -805,7 +828,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 277.0, 348.0, 74.0, 22.0 ],
-					"restore" : [ 33, 41, 45.285550302233084, 120, 47 ],
+					"restore" : [ 33, 41, 45.285550302233084, 70, 47 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
@@ -2455,6 +2478,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-52", 0 ],
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-33", 1 ],
 					"source" : [ "obj-2", 1 ]
 				}
@@ -2719,6 +2749,7 @@
 			"obj-2::obj-96" : [ "envCurve", "envCurve", 0 ],
 			"obj-33" : [ "gain", "gain", 0 ],
 			"obj-41" : [ "pitches", "pitches", 0 ],
+			"obj-45" : [ "skewvalues", "skewvalues", 0 ],
 			"obj-46" : [ "play", "play", 0 ],
 			"obj-56" : [ "rewind", "rewind", 0 ],
 			"obj-90" : [ "CPM", "CPM", 0 ],
@@ -2934,10 +2965,11 @@
 						"release" : 767.063610490275323,
 						"snapToNIGrid_parameter" : 1.0,
 						"sustain" : 0.503937007874015,
-						"S" : 0.5,
+						"S" : 0.515748031496063,
 						"blob" : 						{
 							"clear_breakpoints" : [ 0 ],
-							"pitches" : [ 33, 41, 45.285550302233084, 120, 47 ],
+							"pitches" : [ 33, 41, 45.285550302233084, 70, 47 ],
+							"skewvalues" : [ -0.705263157894737, -0.431578947368421, 0.494736842105263, 0.642105263157895, -0.536842105263158 ],
 							"title" : [ "Synth" ],
 							"zoom" : [ 1.0 ],
 							"asGrid" : [ 0.574803149606299, 7, 7 ],
@@ -3004,10 +3036,11 @@
 									"release" : 767.063610490275323,
 									"snapToNIGrid_parameter" : 1.0,
 									"sustain" : 0.503937007874015,
-									"S" : 0.5,
+									"S" : 0.515748031496063,
 									"blob" : 									{
 										"clear_breakpoints" : [ 0 ],
-										"pitches" : [ 33, 41, 45.285550302233084, 120, 47 ],
+										"pitches" : [ 33, 41, 45.285550302233084, 70, 47 ],
+										"skewvalues" : [ -0.705263157894737, -0.431578947368421, 0.494736842105263, 0.642105263157895, -0.536842105263158 ],
 										"title" : [ "Synth" ],
 										"zoom" : [ 1.0 ],
 										"asGrid" : [ 0.574803149606299, 7, 7 ],
