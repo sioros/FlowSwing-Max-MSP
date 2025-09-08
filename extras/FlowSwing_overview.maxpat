@@ -1539,7 +1539,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-35",
-									"items" : [ "choose an example to load the patch", ",", "FlowSwing dynamic parameters", ",", "FlowSwing looper", ",", "Link FlowSwing instances", ",", "Little wander", ",", "Polyrhythmic Morphologies 1", ",", "Polyrhythmic morphologies 2", ",", "Polyrhythmic morphologies 3", ",", "Polyrhythmic morphologies 4", ",", "Sounds of Silence", ",", "Stochastic gates", ",", "The many FlowSwing hypothesis" ],
+									"items" : [ "choose an example to load the patch", ",", "FlowSwing dynamic parameters", ",", "FlowSwing looper", ",", "Link FlowSwing instances", ",", "Little wander", ",", "Polyrhythmic Morphologies 1", ",", "Polyrhythmic morphologies 2", ",", "Polyrhythmic morphologies 3", ",", "Polyrhythmic morphologies 4", ",", "Sounds of Silence", ",", "Step sequencer", ",", "Stochastic gates", ",", "The many FlowSwing hypothesis" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1590,7 +1590,7 @@
 									"patching_rect" : [ 342.0, 57.0, 44.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 342.0, 57.0, 44.0, 20.0 ],
-									"text" : "v.2.1.0"
+									"text" : "v.2.2.0"
 								}
 
 							}

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 100.0, 48.0, 668.0, 852.0 ],
+		"rect" : [ 0.0, 42.0, 1441.0, 859.0 ],
 		"openrect" : [ 0.0, 0.0, 668.0, 201.0 ],
 		"openinpresentation" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
@@ -217,12 +217,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-170",
-					"linecount" : 3,
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1446.0, 85.0, 153.0, 48.0 ],
-					"text" : "workaround to the limitation of pattrstorage to set dictionary values"
+					"patching_rect" : [ 1897.0, 255.75, 143.0, 62.0 ],
+					"text" : "workaround to the limitation of pattrstorage to set/retrieve dictionary values"
 				}
 
 			}
@@ -3781,13 +3781,13 @@
 									"box" : 									{
 										"maxclass" : "codebox",
 										"patching_rect" : [ 46.0, 96.0, 539.0, 360.0 ],
-										"numoutlets" : 1,
-										"fontsize" : 12.0,
 										"outlettype" : [ "" ],
 										"fontname" : "<Monospaced>",
 										"fontface" : 0,
 										"id" : "obj-6",
 										"numinlets" : 1,
+										"numoutlets" : 1,
+										"fontsize" : 12.0,
 										"code" : "// Initialize variables\r\nHistory previous_input(0); // Tracks if the input signal was previously high (1)\r\nHistory keep_muted(0); //keep muted if signal was already high when mute was switched off\r\n\r\n// Parameters\r\n\r\nParam mute(0);             // External mute control: 0 = off, 1 = on\r\n\r\n// Inputs and Outputs\r\ninput_signal = in1;         // Input signal\r\noutput_signal = input_signal;     // Output signal\r\nmute_change = change(mute);\r\n// Main code\r\nif (mute > 0) \r\n{\r\n    // Mute is ON: output is always 0\r\n    output_signal = 0;\r\n\r\n} else if (mute_change<0)\r\n{\r\n    // Mute is switched OFF: process input signal\r\n    if (input_signal > 0 && previous_input == input_signal) \r\n\t{\r\n         // Input was already high, keep output muted\r\n        output_signal = 0;\r\n\t\tkeep_muted = 1; // set the keep muted flag to coninue muting the input signal\r\n    }\r\n}else if (keep_muted >0)\r\n{\r\n\toutput_signal = 0;\r\n\tif (input_signal == 0) // if the input signal returns to 0\r\n\t\tkeep_muted = 0; //reset the keep muting flag\r\n}\r\n\r\nout1 = output_signal;\r\n\r\nprevious_input = in1;"
 									}
 
@@ -3797,10 +3797,10 @@
 										"maxclass" : "newobj",
 										"text" : "in 1",
 										"patching_rect" : [ 46.0, 45.0, 28.0, 22.0 ],
-										"numoutlets" : 1,
 										"outlettype" : [ "" ],
 										"id" : "obj-1",
-										"numinlets" : 0
+										"numinlets" : 0,
+										"numoutlets" : 1
 									}
 
 								}
@@ -3809,24 +3809,24 @@
 										"maxclass" : "newobj",
 										"text" : "out 1",
 										"patching_rect" : [ 46.0, 483.0, 35.0, 22.0 ],
-										"numoutlets" : 0,
 										"id" : "obj-4",
-										"numinlets" : 1
+										"numinlets" : 1,
+										"numoutlets" : 0
 									}
 
 								}
  ],
 							"lines" : [ 								{
 									"patchline" : 									{
-										"source" : [ "obj-6", 0 ],
-										"destination" : [ "obj-4", 0 ]
+										"source" : [ "obj-1", 0 ],
+										"destination" : [ "obj-6", 0 ]
 									}
 
 								}
 , 								{
 									"patchline" : 									{
-										"source" : [ "obj-1", 0 ],
-										"destination" : [ "obj-6", 0 ]
+										"source" : [ "obj-6", 0 ],
+										"destination" : [ "obj-4", 0 ]
 									}
 
 								}
@@ -3842,7 +3842,7 @@
 					"outlettype" : [ "multichannelsignal" ],
 					"patching_rect" : [ 170.0, 1368.0, 84.0, 22.0 ],
 					"text" : "mc.gen~",
-					"wrapper_uniquekey" : "u208012408"
+					"wrapper_uniquekey" : "u224007456"
 				}
 
 			}
@@ -6879,7 +6879,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 976.0, 966.0, 30.0, 30.0 ]
+					"patching_rect" : [ 1012.0, 1149.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -8465,16 +8465,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-59", 0 ],
-					"order" : 1,
-					"source" : [ "obj-110", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-69", 5 ],
-					"order" : 0,
 					"source" : [ "obj-110", 1 ]
 				}
 
@@ -9511,7 +9502,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-59", 0 ],
+					"order" : 1,
+					"source" : [ "obj-46", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-66", 0 ],
+					"order" : 0,
 					"source" : [ "obj-46", 0 ]
 				}
 

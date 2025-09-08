@@ -17,3 +17,6 @@ max definesubstitution flowSwing.noise bpatcher @name flowSwing_noise;
 
 max objectfile  flowSwing.stochastic stochasticGate;
 max definesubstitution flowSwing.stochastic mc.gen~ stochasticGate; 
+
+max objectfile flowSwing.stepUI flowSwingStepSequencerUI;
+max definesubstitution flowSwing.stepUI jsui @filename flowSwingStepSequencerUI.js; 
