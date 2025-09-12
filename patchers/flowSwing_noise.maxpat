@@ -4,16 +4,17 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 6,
+			"revision" : 8,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 76.0, 1373.0, 791.0 ],
+		"rect" : [ 103.0, 168.0, 434.0, 126.0 ],
 		"openrect" : [ 0.0, 0.0, 430.0, 121.0 ],
 		"openinpresentation" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
+		"toolbarvisible" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-37",
@@ -58,7 +59,7 @@
 							"appversion" : 							{
 								"major" : 9,
 								"minor" : 0,
-								"revision" : 6,
+								"revision" : 8,
 								"architecture" : "x64",
 								"modernui" : 1
 							}
@@ -71,9 +72,9 @@
 										"maxclass" : "newobj",
 										"text" : "in 2",
 										"patching_rect" : [ 185.0, 14.0, 28.0, 22.0 ],
-										"id" : "obj-2",
 										"outlettype" : [ "" ],
 										"numinlets" : 0,
+										"id" : "obj-2",
 										"numoutlets" : 1
 									}
 
@@ -83,9 +84,9 @@
 										"maxclass" : "newobj",
 										"text" : "in 1 @default 0.",
 										"patching_rect" : [ 50.0, 14.0, 93.0, 22.0 ],
-										"id" : "obj-1",
 										"outlettype" : [ "" ],
 										"numinlets" : 0,
+										"id" : "obj-1",
 										"numoutlets" : 1
 									}
 
@@ -95,8 +96,8 @@
 										"maxclass" : "newobj",
 										"text" : "out 1",
 										"patching_rect" : [ 50.0, 65.0, 35.0, 22.0 ],
-										"id" : "obj-4",
 										"numinlets" : 1,
+										"id" : "obj-4",
 										"numoutlets" : 0
 									}
 
@@ -121,7 +122,7 @@
 					"outlettype" : [ "multichannelsignal" ],
 					"patching_rect" : [ 661.0, 455.0, 148.0, 22.0 ],
 					"text" : "mc.gen~ @usebusymap 1",
-					"wrapper_uniquekey" : "u205000839"
+					"wrapper_uniquekey" : "u704000261"
 				}
 
 			}
@@ -133,7 +134,7 @@
 							"appversion" : 							{
 								"major" : 9,
 								"minor" : 0,
-								"revision" : 6,
+								"revision" : 8,
 								"architecture" : "x64",
 								"modernui" : 1
 							}
@@ -146,9 +147,9 @@
 										"maxclass" : "newobj",
 										"text" : "in 2",
 										"patching_rect" : [ 185.0, 14.0, 28.0, 22.0 ],
-										"id" : "obj-2",
 										"outlettype" : [ "" ],
 										"numinlets" : 0,
+										"id" : "obj-2",
 										"numoutlets" : 1
 									}
 
@@ -158,9 +159,9 @@
 										"maxclass" : "newobj",
 										"text" : "in 1 @default 0.",
 										"patching_rect" : [ 50.0, 14.0, 93.0, 22.0 ],
-										"id" : "obj-1",
 										"outlettype" : [ "" ],
 										"numinlets" : 0,
+										"id" : "obj-1",
 										"numoutlets" : 1
 									}
 
@@ -170,8 +171,8 @@
 										"maxclass" : "newobj",
 										"text" : "out 1",
 										"patching_rect" : [ 50.0, 65.0, 35.0, 22.0 ],
-										"id" : "obj-4",
 										"numinlets" : 1,
+										"id" : "obj-4",
 										"numoutlets" : 0
 									}
 
@@ -196,7 +197,7 @@
 					"outlettype" : [ "multichannelsignal" ],
 					"patching_rect" : [ 862.0, 453.0, 148.0, 22.0 ],
 					"text" : "mc.gen~ @usebusymap 1",
-					"wrapper_uniquekey" : "u362000849"
+					"wrapper_uniquekey" : "u268000270"
 				}
 
 			}
@@ -208,7 +209,7 @@
 							"appversion" : 							{
 								"major" : 9,
 								"minor" : 0,
-								"revision" : 6,
+								"revision" : 8,
 								"architecture" : "x64",
 								"modernui" : 1
 							}
@@ -221,9 +222,9 @@
 										"maxclass" : "newobj",
 										"text" : "in 2",
 										"patching_rect" : [ 185.0, 14.0, 28.0, 22.0 ],
-										"id" : "obj-2",
 										"outlettype" : [ "" ],
 										"numinlets" : 0,
+										"id" : "obj-2",
 										"numoutlets" : 1
 									}
 
@@ -233,9 +234,9 @@
 										"maxclass" : "newobj",
 										"text" : "in 1 @default 0.",
 										"patching_rect" : [ 50.0, 14.0, 93.0, 22.0 ],
-										"id" : "obj-1",
 										"outlettype" : [ "" ],
 										"numinlets" : 0,
+										"id" : "obj-1",
 										"numoutlets" : 1
 									}
 
@@ -245,8 +246,8 @@
 										"maxclass" : "newobj",
 										"text" : "out 1",
 										"patching_rect" : [ 50.0, 65.0, 35.0, 22.0 ],
-										"id" : "obj-4",
 										"numinlets" : 1,
+										"id" : "obj-4",
 										"numoutlets" : 0
 									}
 
@@ -271,7 +272,7 @@
 					"outlettype" : [ "multichannelsignal" ],
 					"patching_rect" : [ 1470.0, 480.0, 148.0, 22.0 ],
 					"text" : "mc.gen~ @usebusymap 1",
-					"wrapper_uniquekey" : "u975000859"
+					"wrapper_uniquekey" : "u240001888"
 				}
 
 			}
@@ -283,7 +284,7 @@
 							"appversion" : 							{
 								"major" : 9,
 								"minor" : 0,
-								"revision" : 6,
+								"revision" : 8,
 								"architecture" : "x64",
 								"modernui" : 1
 							}
@@ -296,9 +297,9 @@
 										"maxclass" : "newobj",
 										"text" : "in 2",
 										"patching_rect" : [ 185.0, 14.0, 28.0, 22.0 ],
-										"id" : "obj-2",
 										"outlettype" : [ "" ],
 										"numinlets" : 0,
+										"id" : "obj-2",
 										"numoutlets" : 1
 									}
 
@@ -308,9 +309,9 @@
 										"maxclass" : "newobj",
 										"text" : "in 1 @default 0.",
 										"patching_rect" : [ 50.0, 14.0, 93.0, 22.0 ],
-										"id" : "obj-1",
 										"outlettype" : [ "" ],
 										"numinlets" : 0,
+										"id" : "obj-1",
 										"numoutlets" : 1
 									}
 
@@ -320,8 +321,8 @@
 										"maxclass" : "newobj",
 										"text" : "out 1",
 										"patching_rect" : [ 50.0, 65.0, 35.0, 22.0 ],
-										"id" : "obj-4",
 										"numinlets" : 1,
+										"id" : "obj-4",
 										"numoutlets" : 0
 									}
 
@@ -346,7 +347,7 @@
 					"outlettype" : [ "multichannelsignal" ],
 					"patching_rect" : [ 1073.0, 444.0, 148.0, 22.0 ],
 					"text" : "mc.gen~ @usebusymap 1",
-					"wrapper_uniquekey" : "u011000869"
+					"wrapper_uniquekey" : "u868001915"
 				}
 
 			}
@@ -548,7 +549,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1034,7 +1035,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1272,7 +1273,7 @@
 											"appversion" : 											{
 												"major" : 9,
 												"minor" : 0,
-												"revision" : 6,
+												"revision" : 8,
 												"architecture" : "x64",
 												"modernui" : 1
 											}
@@ -1284,12 +1285,12 @@
 													"box" : 													{
 														"maxclass" : "codebox",
 														"patching_rect" : [ 50.0, 83.0, 340.0, 200.0 ],
+														"fontsize" : 12.0,
+														"outlettype" : [ "" ],
+														"fontname" : "<Monospaced>",
+														"numinlets" : 2,
 														"fontface" : 0,
 														"id" : "obj-5",
-														"outlettype" : [ "" ],
-														"fontsize" : 12.0,
-														"numinlets" : 2,
-														"fontname" : "<Monospaced>",
 														"numoutlets" : 1,
 														"code" : "output = in2>0 ? in1 : 1;\r\n//if (in2 > 0)\r\n//\toutput = in1;\r\n\t\r\nout1 = output;"
 													}
@@ -1300,9 +1301,9 @@
 														"maxclass" : "newobj",
 														"text" : "in 1",
 														"patching_rect" : [ 50.0, 14.0, 28.0, 22.0 ],
-														"id" : "obj-1",
 														"outlettype" : [ "" ],
 														"numinlets" : 0,
+														"id" : "obj-1",
 														"numoutlets" : 1
 													}
 
@@ -1312,9 +1313,9 @@
 														"maxclass" : "newobj",
 														"text" : "in 2",
 														"patching_rect" : [ 371.0, 22.0, 28.0, 22.0 ],
-														"id" : "obj-2",
 														"outlettype" : [ "" ],
 														"numinlets" : 0,
+														"id" : "obj-2",
 														"numoutlets" : 1
 													}
 
@@ -1324,8 +1325,8 @@
 														"maxclass" : "newobj",
 														"text" : "out 1",
 														"patching_rect" : [ 50.0, 310.0, 35.0, 22.0 ],
-														"id" : "obj-4",
 														"numinlets" : 1,
+														"id" : "obj-4",
 														"numoutlets" : 0
 													}
 
@@ -1333,8 +1334,8 @@
  ],
 											"lines" : [ 												{
 													"patchline" : 													{
-														"source" : [ "obj-1", 0 ],
-														"destination" : [ "obj-5", 0 ]
+														"source" : [ "obj-2", 0 ],
+														"destination" : [ "obj-5", 1 ]
 													}
 
 												}
@@ -1347,8 +1348,8 @@
 												}
 , 												{
 													"patchline" : 													{
-														"source" : [ "obj-2", 0 ],
-														"destination" : [ "obj-5", 1 ]
+														"source" : [ "obj-1", 0 ],
+														"destination" : [ "obj-5", 0 ]
 													}
 
 												}
@@ -1364,7 +1365,7 @@
 									"outlettype" : [ "multichannelsignal" ],
 									"patching_rect" : [ 77.0, 128.0, 55.0, 22.0 ],
 									"text" : "mc.gen~",
-									"wrapper_uniquekey" : "u307000895"
+									"wrapper_uniquekey" : "u925001404"
 								}
 
 							}
@@ -1723,7 +1724,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2209,7 +2210,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2695,7 +2696,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -3267,7 +3268,7 @@
 				"box" : 				{
 					"comment" : "Q",
 					"id" : "obj-92",
-					"index" : 7,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -3284,7 +3285,7 @@
 							"appversion" : 							{
 								"major" : 9,
 								"minor" : 0,
-								"revision" : 6,
+								"revision" : 8,
 								"architecture" : "x64",
 								"modernui" : 1
 							}
@@ -3297,9 +3298,9 @@
 										"maxclass" : "newobj",
 										"text" : "in 2",
 										"patching_rect" : [ 185.0, 14.0, 28.0, 22.0 ],
-										"id" : "obj-2",
 										"outlettype" : [ "" ],
 										"numinlets" : 0,
+										"id" : "obj-2",
 										"numoutlets" : 1
 									}
 
@@ -3309,9 +3310,9 @@
 										"maxclass" : "newobj",
 										"text" : "in 1 @default 1.",
 										"patching_rect" : [ 50.0, 14.0, 93.0, 22.0 ],
-										"id" : "obj-1",
 										"outlettype" : [ "" ],
 										"numinlets" : 0,
+										"id" : "obj-1",
 										"numoutlets" : 1
 									}
 
@@ -3321,8 +3322,8 @@
 										"maxclass" : "newobj",
 										"text" : "out 1",
 										"patching_rect" : [ 50.0, 65.0, 35.0, 22.0 ],
-										"id" : "obj-4",
 										"numinlets" : 1,
+										"id" : "obj-4",
 										"numoutlets" : 0
 									}
 
@@ -3347,7 +3348,7 @@
 					"outlettype" : [ "multichannelsignal" ],
 					"patching_rect" : [ 1292.0, 464.0, 148.0, 22.0 ],
 					"text" : "mc.gen~ @usebusymap 1",
-					"wrapper_uniquekey" : "u382000929"
+					"wrapper_uniquekey" : "u801001217"
 				}
 
 			}
@@ -3367,7 +3368,7 @@
 				"box" : 				{
 					"comment" : "filter",
 					"id" : "obj-82",
-					"index" : 6,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -3392,7 +3393,7 @@
 				"box" : 				{
 					"comment" : "skew",
 					"id" : "obj-68",
-					"index" : 5,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -3417,7 +3418,7 @@
 				"box" : 				{
 					"comment" : "noise A",
 					"id" : "obj-66",
-					"index" : 4,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -3442,7 +3443,7 @@
 				"box" : 				{
 					"comment" : "noise F",
 					"id" : "obj-60",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -3463,7 +3464,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -3752,7 +3753,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -4056,7 +4057,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -4175,7 +4176,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -4353,7 +4354,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -4568,7 +4569,7 @@
 				"box" : 				{
 					"comment" : "chanel 2",
 					"id" : "obj-42",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -4580,7 +4581,7 @@
 				"box" : 				{
 					"comment" : "pattr output",
 					"id" : "obj-14",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -4592,7 +4593,7 @@
 				"box" : 				{
 					"comment" : "parameter input",
 					"id" : "obj-16",
-					"index" : 8,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -5286,7 +5287,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 199.0, 32.0, 166.0, 22.0 ],
-					"restore" : [ 10.000000000000004 ],
+					"restore" : [ 10.000000000000009 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -5501,7 +5502,7 @@
 				"box" : 				{
 					"comment" : "frequency in Hz (mc signal, float, or target messages)",
 					"id" : "obj-2",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -5551,11 +5552,11 @@
 				"box" : 				{
 					"comment" : "multichannel gate signal",
 					"id" : "obj-1",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "multichannelsignal" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 82.0, 337.0, 30.0, 30.0 ]
 				}
 
@@ -5564,7 +5565,7 @@
 				"box" : 				{
 					"comment" : "channel 1",
 					"id" : "obj-5",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -6859,7 +6860,60 @@
 				}
 
 			}
- ]
+ ],
+		"parameters" : 		{
+			"obj-15" : [ "Noise A", "Noise A", 0 ],
+			"obj-19" : [ "Skew range", "Skew_range", 0 ],
+			"obj-20" : [ "Noise F range", "NFrange", 0 ],
+			"obj-21" : [ "Noise A range", "NArange", 0 ],
+			"obj-29" : [ "Skew", "Skew", 0 ],
+			"obj-34" : [ "Filter range", "Filter_range", 0 ],
+			"obj-38" : [ "filter", "filter", 0 ],
+			"obj-51" : [ "ampCurve", "ampCurve", 0 ],
+			"obj-54" : [ "Q range", "Q range", 0 ],
+			"obj-57" : [ "Q", "Q", 0 ],
+			"obj-74" : [ "attack", "attack", 0 ],
+			"obj-75" : [ "decay", "decay", 0 ],
+			"obj-76" : [ "sustain", "sustain", 0 ],
+			"obj-77" : [ "release", "release", 0 ],
+			"obj-8" : [ "Noise F", "Noise F", 0 ],
+			"obj-96" : [ "envCurve", "envCurve", 0 ],
+			"parameterbanks" : 			{
+				"0" : 				{
+					"index" : 0,
+					"name" : "",
+					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+				}
+
+			}
+,
+			"inherited_shortname" : 1
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "flowSwing.ADSR.gendsp",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "flowSwing_phasor.gendsp",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "flowSwing_wave.gendsp",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0,
+		"toolbaradditions" : [ "audiomute", "audiosolo" ]
 	}
 
 }
