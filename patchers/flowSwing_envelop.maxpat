@@ -18,6 +18,18 @@
 		"title" : "FlowSwing",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-155",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1805.0, 185.0, 63.0, 22.0 ],
+					"text" : "array.tolist"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-188",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -3781,13 +3793,13 @@
 									"box" : 									{
 										"maxclass" : "codebox",
 										"patching_rect" : [ 46.0, 96.0, 539.0, 360.0 ],
-										"outlettype" : [ "" ],
 										"fontname" : "<Monospaced>",
 										"fontface" : 0,
 										"id" : "obj-6",
 										"numinlets" : 1,
-										"numoutlets" : 1,
 										"fontsize" : 12.0,
+										"numoutlets" : 1,
+										"outlettype" : [ "" ],
 										"code" : "// Initialize variables\r\nHistory previous_input(0); // Tracks if the input signal was previously high (1)\r\nHistory keep_muted(0); //keep muted if signal was already high when mute was switched off\r\n\r\n// Parameters\r\n\r\nParam mute(0);             // External mute control: 0 = off, 1 = on\r\n\r\n// Inputs and Outputs\r\ninput_signal = in1;         // Input signal\r\noutput_signal = input_signal;     // Output signal\r\nmute_change = change(mute);\r\n// Main code\r\nif (mute > 0) \r\n{\r\n    // Mute is ON: output is always 0\r\n    output_signal = 0;\r\n\r\n} else if (mute_change<0)\r\n{\r\n    // Mute is switched OFF: process input signal\r\n    if (input_signal > 0 && previous_input == input_signal) \r\n\t{\r\n         // Input was already high, keep output muted\r\n        output_signal = 0;\r\n\t\tkeep_muted = 1; // set the keep muted flag to coninue muting the input signal\r\n    }\r\n}else if (keep_muted >0)\r\n{\r\n\toutput_signal = 0;\r\n\tif (input_signal == 0) // if the input signal returns to 0\r\n\t\tkeep_muted = 0; //reset the keep muting flag\r\n}\r\n\r\nout1 = output_signal;\r\n\r\nprevious_input = in1;"
 									}
 
@@ -3797,10 +3809,10 @@
 										"maxclass" : "newobj",
 										"text" : "in 1",
 										"patching_rect" : [ 46.0, 45.0, 28.0, 22.0 ],
-										"outlettype" : [ "" ],
 										"id" : "obj-1",
 										"numinlets" : 0,
-										"numoutlets" : 1
+										"numoutlets" : 1,
+										"outlettype" : [ "" ]
 									}
 
 								}
@@ -3818,15 +3830,15 @@
  ],
 							"lines" : [ 								{
 									"patchline" : 									{
-										"source" : [ "obj-1", 0 ],
-										"destination" : [ "obj-6", 0 ]
+										"source" : [ "obj-6", 0 ],
+										"destination" : [ "obj-4", 0 ]
 									}
 
 								}
 , 								{
 									"patchline" : 									{
-										"source" : [ "obj-6", 0 ],
-										"destination" : [ "obj-4", 0 ]
+										"source" : [ "obj-1", 0 ],
+										"destination" : [ "obj-6", 0 ]
 									}
 
 								}
@@ -3842,7 +3854,7 @@
 					"outlettype" : [ "multichannelsignal" ],
 					"patching_rect" : [ 170.0, 1368.0, 84.0, 22.0 ],
 					"text" : "mc.gen~",
-					"wrapper_uniquekey" : "u224007456"
+					"wrapper_uniquekey" : "u571001198"
 				}
 
 			}
@@ -7499,7 +7511,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1857.75, 154.0, 136.0, 20.0 ],
+					"patching_rect" : [ 1857.0, 146.0, 136.0, 20.0 ],
 					"priority" : 					{
 						"S" : 2,
 						"breakpoints" : 3,
@@ -8245,7 +8257,7 @@
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.176470588235294, 0.176470588235294, 0.176470588235294, 0.0 ],
-					"ghostbar" : 25,
+					"ghostbar" : 100,
 					"id" : "obj-21",
 					"ignoreclick" : 1,
 					"maxclass" : "multislider",
@@ -8257,9 +8269,9 @@
 					"parameter_mappable" : 0,
 					"patching_rect" : [ 252.0, 810.0, 84.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 69.0, 41.0, 593.0, 120.0 ],
+					"presentation_rect" : [ 69.0, 41.0, 593.0, 10.0 ],
 					"setminmax" : [ 0.0, 1.0 ],
-					"slidercolor" : [ 1.0, 0.729411764705882, 0.0, 1.0 ],
+					"slidercolor" : [ 0.901960784313726, 0.650980392156863, 0.050980392156863, 1.0 ],
 					"thickness" : 3
 				}
 
@@ -8487,7 +8499,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
+					"destination" : [ "obj-155", 0 ],
 					"source" : [ "obj-112", 1 ]
 				}
 
@@ -8759,6 +8771,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-153", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-155", 0 ]
 				}
 
 			}
@@ -9703,7 +9722,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
+					"destination" : [ "obj-155", 0 ],
 					"source" : [ "obj-77", 0 ]
 				}
 
