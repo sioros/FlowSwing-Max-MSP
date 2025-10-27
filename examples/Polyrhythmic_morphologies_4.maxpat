@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 228.0, 224.0, 780.0, 558.0 ],
+		"rect" : [ 228.0, 224.0, 807.0, 558.0 ],
 		"openinpresentation" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
@@ -225,7 +225,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 44.0, 465.0, 34.0 ],
+					"patching_rect" : [ 21.0, 44.0, 467.0, 34.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 21.0, 44.0, 680.0, 20.0 ],
 					"text" : "This patch blends a 6-over-8 polyrhythm with quintuple timing. Adjust the value of S to explore different ‘polyrhythmic blends’."
@@ -680,7 +680,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 42.0, 655.0, 48.0, 136.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 688.0, 110.0, 71.0, 189.0 ],
+					"presentation_rect" : [ 718.0, 110.0, 71.0, 189.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "synth",
@@ -716,7 +716,7 @@
 					"outlettype" : [ "signal", "signal", "signal", "signal", "", "", "", "" ],
 					"patching_rect" : [ 509.0, 383.0, 123.5, 29.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 20.0, 331.0, 667.0, 204.0 ],
+					"presentation_rect" : [ 20.0, 331.0, 705.0, 204.0 ],
 					"varname" : "loop1",
 					"viewvisibility" : 1
 				}
@@ -734,7 +734,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 509.0, 662.0, 48.0, 136.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 690.0, 339.0, 66.0, 187.0 ],
+					"presentation_rect" : [ 720.0, 339.0, 66.0, 187.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "loop",
@@ -1137,7 +1137,7 @@
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
 					"patching_rect" : [ 42.0, 277.5, 121.0, 29.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 21.0, 100.0, 665.0, 211.0 ],
+					"presentation_rect" : [ 21.0, 100.0, 703.0, 211.0 ],
 					"varname" : "flowSwing_envelop",
 					"viewvisibility" : 1
 				}
@@ -1480,15 +1480,16 @@
  ],
 		"parameters" : 		{
 			"obj-12::obj-113" : [ "onsets_button", "onsets_button", 0 ],
-			"obj-12::obj-114" : [ "clear_markers", "clear_markers", 0 ],
+			"obj-12::obj-114" : [ "clear_markers", "clear_breakpoints", 0 ],
 			"obj-12::obj-132" : [ "markers_dict", "markers", 0 ],
 			"obj-12::obj-140" : [ "snapToNIGrid_parameter[1]", "snapToNIGrid_parameter", 0 ],
+			"obj-12::obj-154" : [ "title[1]", "title", 0 ],
 			"obj-12::obj-160" : [ "snapToNIGrid", "snapToNIGrid", 0 ],
 			"obj-12::obj-161" : [ "asGrid[1]", "asGrid", 1 ],
 			"obj-12::obj-19" : [ "mute", "mute", 0 ],
-			"obj-12::obj-199" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
-			"obj-12::obj-20" : [ "title[2]", "title", 0 ],
+			"obj-12::obj-199" : [ "resetNIGrid[2]", "resetNIGrid", 0 ],
 			"obj-12::obj-22" : [ "lock", "lock", 0 ],
+			"obj-12::obj-242" : [ "resetNIGrid[3]", "resetNIGrid", 0 ],
 			"obj-12::obj-42" : [ "morph", "morph", 0 ],
 			"obj-12::obj-45" : [ "S", "S", 0 ],
 			"obj-12::obj-47" : [ "offset", "offset", 0 ],
@@ -1507,13 +1508,14 @@
 			"obj-4::obj-114" : [ "live.text[26]", "clear_breakpoints", 0 ],
 			"obj-4::obj-123" : [ "asGrid", "asGrid", 1 ],
 			"obj-4::obj-128" : [ "zoom", "zoom", 0 ],
-			"obj-4::obj-16" : [ "title", "title", 0 ],
+			"obj-4::obj-154" : [ "title", "title", 0 ],
 			"obj-4::obj-19" : [ "live.text[25]", "mute", 0 ],
 			"obj-4::obj-191" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
 			"obj-4::obj-193" : [ "firstChannel_parameter", "firstChannel_parameter", 0 ],
 			"obj-4::obj-195" : [ "chans_parameter", "chans_parameter", 0 ],
 			"obj-4::obj-199" : [ "resetNIGrid", "resetNIGrid", 0 ],
 			"obj-4::obj-22" : [ "live.text[27]", "lock", 0 ],
+			"obj-4::obj-242" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
 			"obj-4::obj-42" : [ "live.numbox[38]", "morph", 0 ],
 			"obj-4::obj-45" : [ "live.numbox[41]", "S", 0 ],
 			"obj-4::obj-47" : [ "live.numbox[40]", "offset", 0 ],
@@ -1559,7 +1561,11 @@
 				}
 ,
 				"obj-12::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[1]"
+					"parameter_longname" : "resetNIGrid[2]"
+				}
+,
+				"obj-12::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[3]"
 				}
 ,
 				"obj-12::obj-84" : 				{
@@ -1630,6 +1636,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "GCD.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "Polyrhythmic_morphologies_4_I.maxsnap",
 				"bootpath" : "~/Documents/Max 9/Snapshots",
 				"patcherrelativepath" : "../../../Snapshots",
@@ -1651,13 +1664,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "SGwarpInterface.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "complex_quantise.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
 				"patcherrelativepath" : "../javascript",
@@ -1665,14 +1671,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "drawGrid.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "drawNIGrid.js",
+				"name" : "drawNIGrid_zoom.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
 				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
@@ -1822,10 +1821,24 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "timeWarpInterface.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
+				"patcherrelativepath" : "../jsui",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "warpMarkersToBuffer.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
 				"patcherrelativepath" : "../patchers/subpatchers",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "zoomNscroll_coremath.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],
@@ -1857,19 +1870,18 @@
 						"ampCurve" : 1.359267048555289,
 						"attack" : 208.008382305190452,
 						"chans_parameter" : 64.0,
-						"clear_markers" : 0.0,
 						"decay" : 1216.440399114680076,
 						"envCurve" : 3.692361919836229,
 						"filter" : 6.103414751602301,
 						"firstChannel_parameter" : 1.0,
 						"hold" : 0.0,
-						"link" : 0.0,
 						"live.numbox[37]" : 3.0,
 						"live.numbox[38]" : 1.0,
 						"live.numbox[39]" : 6.0,
 						"live.numbox[40]" : 0.0,
 						"live.numbox[41]" : 0.2,
 						"live.numbox[42]" : 5.0,
+						"live.text" : 0.0,
 						"live.text[25]" : 0.0,
 						"live.text[27]" : 1.0,
 						"live.text[28]" : 0.0,
@@ -1990,7 +2002,7 @@
 								}
  ],
 							"title" : [ "Bass Synth" ],
-							"title[2]" : [ "Drum loop" ],
+							"title[1]" : [ "Loop" ],
 							"zoom" : [ 1.0 ],
 							"zoom[1]" : [ 1.0 ],
 							"asGrid" : [ 0.2, 3, 5 ],
@@ -2032,19 +2044,18 @@
 									"ampCurve" : 1.359267048555289,
 									"attack" : 208.008382305190452,
 									"chans_parameter" : 64.0,
-									"clear_markers" : 0.0,
 									"decay" : 1216.440399114680076,
 									"envCurve" : 3.692361919836229,
 									"filter" : 6.103414751602301,
 									"firstChannel_parameter" : 1.0,
 									"hold" : 0.0,
-									"link" : 0.0,
 									"live.numbox[37]" : 3.0,
 									"live.numbox[38]" : 1.0,
 									"live.numbox[39]" : 6.0,
 									"live.numbox[40]" : 0.0,
 									"live.numbox[41]" : 0.2,
 									"live.numbox[42]" : 5.0,
+									"live.text" : 0.0,
 									"live.text[25]" : 0.0,
 									"live.text[27]" : 1.0,
 									"live.text[28]" : 0.0,
@@ -2165,7 +2176,7 @@
 											}
  ],
 										"title" : [ "Bass Synth" ],
-										"title[2]" : [ "Drum loop" ],
+										"title[1]" : [ "Loop" ],
 										"zoom" : [ 1.0 ],
 										"zoom[1]" : [ 1.0 ],
 										"asGrid" : [ 0.2, 3, 5 ],

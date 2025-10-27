@@ -49,7 +49,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 878.0, 652.0 ],
+						"rect" : [ 129.0, 130.0, 878.0, 652.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"subpatcher_template" : "Grid_Toolbar",
 						"showontab" : 1,
@@ -62,7 +62,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "float" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 407.0, 29.0, 44.0, 15.0 ],
+									"patching_rect" : [ 159.0, 92.0, 44.0, 15.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_longname" : "speed",
@@ -382,6 +382,7 @@
 									"id" : "obj-23",
 									"lastchannelcount" : 0,
 									"maxclass" : "live.gain~",
+									"metering" : 0,
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"orientation" : 1,
@@ -390,6 +391,8 @@
 									"patching_rect" : [ 689.0, 260.0, 136.0, 20.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
+											"parameter_initial" : [ -70.0 ],
+											"parameter_initial_enable" : 1,
 											"parameter_invisible" : 2,
 											"parameter_longname" : "bass",
 											"parameter_mmax" : 6.0,
@@ -592,7 +595,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "list", "int", "" ],
-									"patching_rect" : [ 225.0, 217.0, 593.0, 25.0 ]
+									"patching_rect" : [ 256.0, 214.0, 593.0, 25.0 ]
 								}
 
 							}
@@ -652,7 +655,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 59.0, 107.0, 1000.0, 720.0 ],
+										"rect" : [ 779.0, 222.0, 1000.0, 720.0 ],
 										"gridsize" : [ 15.0, 15.0 ],
 										"boxes" : [ 											{
 												"box" : 												{
@@ -1175,7 +1178,8 @@
 												}
 
 											}
- ]
+ ],
+										"toolbaradditions" : [ "audiomute", "audiosolo" ]
 									}
 ,
 									"patching_rect" : [ 225.0, 148.0, 115.0, 22.0 ],
@@ -1246,8 +1250,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 652.0, 68.0, 166.0, 22.0 ],
-									"text" : "loadmess patcher offset 0 -46"
+									"patching_rect" : [ 779.0, 98.0, 166.0, 22.0 ],
+									"text" : "loadmess patcher offset 0 -50"
 								}
 
 							}
@@ -1265,9 +1269,9 @@
 									"name" : "flowSwing_envelop.maxpat",
 									"numinlets" : 2,
 									"numoutlets" : 9,
-									"offset" : [ 0.0, -46.0 ],
+									"offset" : [ 0.0, -50.0 ],
 									"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-									"patching_rect" : [ 159.0, 200.0, 672.0, 54.0 ],
+									"patching_rect" : [ 159.0, 200.0, 705.0, 50.0 ],
 									"varname" : "flowSwing_envelop",
 									"viewvisibility" : 1
 								}
@@ -1514,12 +1518,39 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 129.0, 130.0, 878.0, 652.0 ],
+						"rect" : [ 0.0, 26.0, 878.0, 652.0 ],
 						"openinpresentation" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
 						"subpatcher_template" : "Grid_Toolbar",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontsize" : 14.0,
+									"id" : "obj-43",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 30.0, 515.0, 263.0, 55.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 175.0, 390.0, 598.0, 23.0 ],
+									"text" : "Generates automation curves and multichannel triggers from 2 hiearchicaly organised NI Grids."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-42",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 590.0, 696.0, 160.0, 22.0 ],
+									"text" : "flowSwing_nested.maxhelp"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"autofit" : 1,
 									"forceaspect" : 1,
@@ -1539,7 +1570,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-35",
-									"items" : [ "choose an example to load the patch", ",", "FlowSwing dynamic parameters", ",", "FlowSwing looper", ",", "Link FlowSwing instances", ",", "Little wander", ",", "Polyrhythmic Morphologies 1", ",", "Polyrhythmic morphologies 2", ",", "Polyrhythmic morphologies 3", ",", "Polyrhythmic morphologies 4", ",", "Sounds of Silence", ",", "Step sequencer", ",", "Stochastic gates", ",", "The many FlowSwing hypothesis" ],
+									"items" : [ "choose an example to load the patch", ",", "FlowSwing dynamic parameters", ",", "FlowSwing looper", ",", "Link FlowSwing instances", ",", "Little wander", ",", "Nested flow", ",", "Nested NI Grids", ",", "Polyrhythmic Morphologies 1", ",", "Polyrhythmic morphologies 2", ",", "Polyrhythmic morphologies 3", ",", "Polyrhythmic morphologies 4", ",", "Sounds of Silence", ",", "Step sequencer", ",", "Stochastic gates", ",", "The many FlowSwing hypothesis" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1548,7 +1579,7 @@
 									"patching_rect" : [ 654.0, 211.0, 100.0, 22.0 ],
 									"prefix" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/examples/",
 									"presentation" : 1,
-									"presentation_rect" : [ 361.0, 450.5, 313.0, 22.0 ]
+									"presentation_rect" : [ 361.0, 475.0, 313.0, 22.0 ]
 								}
 
 							}
@@ -1563,7 +1594,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 666.0, 490.0, 167.0, 55.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 450.0, 337.0, 23.0 ],
+									"presentation_rect" : [ 17.0, 474.0, 337.0, 23.0 ],
 									"text" : "Explore the examples to learn about the features:"
 								}
 
@@ -1590,7 +1621,7 @@
 									"patching_rect" : [ 342.0, 57.0, 44.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 342.0, 57.0, 44.0, 20.0 ],
-									"text" : "v.2.2.0"
+									"text" : "v.2.3.0"
 								}
 
 							}
@@ -1640,7 +1671,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 261.0, 714.0, 151.0, 20.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 590.0, 54.0, 20.0 ],
+									"presentation_rect" : [ 17.0, 601.0, 54.0, 20.0 ],
 									"text" : "Credits:"
 								}
 
@@ -1655,7 +1686,7 @@
 									"patching_rect" : [ 261.0, 736.0, 151.0, 75.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 2,
-									"presentation_rect" : [ 77.0, 590.0, 313.0, 34.0 ],
+									"presentation_rect" : [ 77.0, 601.0, 313.0, 34.0 ],
 									"text" : "Concept, Max/MSP, js, DSP development: George Sioros\nUI design: George Sioros & Odysseas Klissouras"
 								}
 
@@ -1747,7 +1778,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 288.0, 506.0, 175.0, 55.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 175.0, 413.0, 454.0, 23.0 ],
+									"presentation_rect" : [ 175.0, 436.0, 454.0, 23.0 ],
 									"text" : "Filters mc gate signals based on per-channel probabilities."
 								}
 
@@ -1774,8 +1805,8 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 288.0, 449.0, 243.0, 55.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 175.0, 390.0, 454.0, 23.0 ],
-									"text" : "A flexible noise synthesizer with sample-accurate control via mc signals."
+									"presentation_rect" : [ 175.0, 413.0, 454.0, 23.0 ],
+									"text" : "A noise synthesizer with sample-accurate control via mc signals."
 								}
 
 							}
@@ -1786,7 +1817,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 591.0, 703.0, 147.0, 22.0 ],
+									"patching_rect" : [ 601.0, 725.0, 147.0, 22.0 ],
 									"text" : "flowSwing_noise.maxhelp"
 								}
 
@@ -2376,11 +2407,11 @@
 								"box" : 								{
 									"id" : "obj-32",
 									"maxclass" : "newobj",
-									"numinlets" : 5,
-									"numoutlets" : 5,
-									"outlettype" : [ "bang", "bang", "bang", "bang", "" ],
-									"patching_rect" : [ 568.0, 511.0, 64.0, 22.0 ],
-									"text" : "sel 0 1 2 3"
+									"numinlets" : 6,
+									"numoutlets" : 6,
+									"outlettype" : [ "bang", "bang", "bang", "bang", "bang", "" ],
+									"patching_rect" : [ 568.0, 511.0, 74.0, 22.0 ],
+									"text" : "sel 0 1 2 3 4"
 								}
 
 							}
@@ -2395,7 +2426,7 @@
 									"patching_rect" : [ 15.0, 650.0, 433.0, 48.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 2,
-									"presentation_rect" : [ 175.0, 547.0, 672.0, 34.0 ],
+									"presentation_rect" : [ 175.0, 558.0, 672.0, 34.0 ],
 									"text" : "Sioros, G. (2023). Polyrhythmic modelling of non-isochronous and microtiming patterns. Proceedings of the 24th International Society for Music Information Retrieval Conference. Milan, Italy."
 								}
 
@@ -2410,7 +2441,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 15.0, 538.0, 186.0, 23.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 486.0, 186.0, 23.0 ],
+									"presentation_rect" : [ 17.0, 497.0, 186.0, 23.0 ],
 									"text" : "Related publications:"
 								}
 
@@ -2438,11 +2469,11 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 568.0, 411.0, 98.0, 77.0 ],
+									"patching_rect" : [ 568.0, 411.0, 153.0, 77.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 344.0, 153.0, 92.0 ],
+									"presentation_rect" : [ 17.0, 344.0, 153.0, 115.0 ],
 									"rounded" : 4.0,
-									"tabs" : [ "FlowSwing.audioWarp", "FlowSwing.envelop", "FlowSwing.noise", "FlowSwing.stochastic" ]
+									"tabs" : [ "FlowSwing.audioWarp", "FlowSwing.envelop", "FlowSwing.nested", "FlowSwing.noise", "FlowSwing.stochastic" ]
 								}
 
 							}
@@ -2472,7 +2503,7 @@
 									"patching_rect" : [ 15.0, 573.0, 433.0, 62.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 2,
-									"presentation_rect" : [ 175.0, 511.0, 668.0, 34.0 ],
+									"presentation_rect" : [ 175.0, 522.0, 668.0, 34.0 ],
 									"text" : "Sioros, G., & Klissouras, O. (2025, July). Flow Swing: A system for dynamic control and exploration of non-isochronous timing in musical rhythms. Proceedings of the 22nd Sound and Music Computing Conference (SMC2025). Graz, Austria."
 								}
 
@@ -2548,7 +2579,7 @@
 									"parameter_enable" : 0,
 									"patching_rect" : [ 19.0, 704.0, 97.0, 64.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 505.0, 150.0, 76.0 ],
+									"presentation_rect" : [ 17.0, 516.0, 150.0, 76.0 ],
 									"rounded" : 4.0,
 									"tabs" : [ "SMC 2025 paper", "ISMIR 2023 paper" ]
 								}
@@ -2778,14 +2809,14 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-1", 0 ],
-									"source" : [ "obj-32", 2 ]
+									"source" : [ "obj-32", 3 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-11", 0 ],
-									"source" : [ "obj-32", 3 ]
+									"source" : [ "obj-32", 4 ]
 								}
 
 							}
@@ -2800,6 +2831,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-20", 0 ],
 									"source" : [ "obj-32", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-42", 0 ],
+									"source" : [ "obj-32", 2 ]
 								}
 
 							}
@@ -2842,6 +2880,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-35", 0 ],
 									"source" : [ "obj-39", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-17", 0 ],
+									"source" : [ "obj-42", 0 ]
 								}
 
 							}
@@ -2898,19 +2943,23 @@
 			"obj-7::obj-20::obj-114" : [ "clear_breakpoints[1]", "clear_breakpoints", 0 ],
 			"obj-7::obj-20::obj-123" : [ "asGrid", "asGrid", 1 ],
 			"obj-7::obj-20::obj-128" : [ "zoom[1]", "zoom", 0 ],
-			"obj-7::obj-20::obj-16" : [ "title[1]", "title", 0 ],
+			"obj-7::obj-20::obj-154" : [ "title", "title", 0 ],
 			"obj-7::obj-20::obj-19" : [ "mute[1]", "mute", 0 ],
 			"obj-7::obj-20::obj-191" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
 			"obj-7::obj-20::obj-193" : [ "firstChannel_parameter", "firstChannel_parameter", 0 ],
 			"obj-7::obj-20::obj-195" : [ "chans_parameter", "chans_parameter", 0 ],
 			"obj-7::obj-20::obj-199" : [ "resetNIGrid", "resetNIGrid", 0 ],
 			"obj-7::obj-20::obj-22" : [ "lock[1]", "lock", 0 ],
+			"obj-7::obj-20::obj-242" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
+			"obj-7::obj-20::obj-253" : [ "rescale", "rescale", 0 ],
 			"obj-7::obj-20::obj-42" : [ "morph[1]", "morph", 0 ],
 			"obj-7::obj-20::obj-45" : [ "S[1]", "S", 1 ],
 			"obj-7::obj-20::obj-47" : [ "offset[1]", "offset", 0 ],
 			"obj-7::obj-20::obj-48" : [ "niRotation[1]", "niRotation", 0 ],
 			"obj-7::obj-20::obj-50" : [ "Formative[1]", "Formative", 0 ],
 			"obj-7::obj-20::obj-51" : [ "Target[1]", "Target", 0 ],
+			"obj-7::obj-20::obj-66" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-7::obj-20::obj-68" : [ "clear_breakpoints[2]", "clear_breakpoints", 0 ],
 			"obj-7::obj-20::obj-90" : [ "secondary_S_control[1]", "secondary_S_control", 0 ],
 			"obj-7::obj-20::obj-91" : [ "hold[1]", "hold", 0 ],
 			"obj-7::obj-23" : [ "bass", "bass", 0 ],
@@ -2965,6 +3014,10 @@
 					"parameter_longname" : "Target[1]"
 				}
 ,
+				"obj-7::obj-20::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[2]"
+				}
+,
 				"obj-7::obj-20::obj-90" : 				{
 					"parameter_longname" : "secondary_S_control[1]"
 				}
@@ -3000,6 +3053,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "GCD.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "NI_grids_demo_samba[1].maxsnap",
 				"bootpath" : "~/Documents/Max 9/Snapshots",
 				"patcherrelativepath" : "../../../Snapshots",
@@ -3021,6 +3081,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "breakpointsListToDict.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
+				"patcherrelativepath" : "../patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "complex_quantise.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
 				"patcherrelativepath" : "../javascript",
@@ -3028,14 +3095,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "drawGrid.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "drawNIGrid.js",
+				"name" : "drawNIGrid_zoom.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
 				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
@@ -3105,6 +3165,13 @@
 			}
 , 			{
 				"name" : "shift_markers.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "zoomNscroll_coremath.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
 				"patcherrelativepath" : "../javascript",
 				"type" : "TEXT",

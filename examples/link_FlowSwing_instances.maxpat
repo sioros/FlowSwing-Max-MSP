@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 6,
+			"revision" : 8,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 128.0, 106.0, 1107.0, 709.0 ],
+		"rect" : [ 128.0, 106.0, 1142.0, 709.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"showrootpatcherontab" : 0,
 		"showontab" : 0,
@@ -25,13 +25,13 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 128.0, 132.0, 1107.0, 683.0 ],
+						"rect" : [ 0.0, 26.0, 1142.0, 683.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [ 							{
@@ -42,7 +42,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 257.0, 537.0, 255.0, 20.0 ],
-									"presentation_linecount" : 2,
 									"text" : "Click here to convert the list to breakpoints"
 								}
 
@@ -68,7 +67,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 29.0, 479.0, 320.0, 27.0 ],
-									"presentation_linecount" : 2,
 									"text" : "Markers to Breakpoints "
 								}
 
@@ -223,7 +221,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 356.0, 459.0, 335.0, 48.0 ],
-									"presentation_linecount" : 3,
 									"text" : "The markersDictToList abstraction converts a markers dictionary (as output from a flowSwing.audioWarp instance) into separate lists of source and destination times."
 								}
 
@@ -247,8 +244,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 130.0, 570.0, 375.0, 75.0 ],
-									"presentation_linecount" : 6,
+									"patching_rect" : [ 130.0, 570.0, 383.0, 75.0 ],
 									"text" : "The breakpointsListToDict abstraction converts a list of time positions into a breakpoints dictionary, which can be sent directly to a flowSwing.envelop instance. By default the y and curve values are set 0.5 and 0. for all points. The middle and right outlet can be used to set different values for each point. "
 								}
 
@@ -303,7 +299,7 @@
 								"box" : 								{
 									"id" : "obj-36",
 									"maxclass" : "newobj",
-									"numinlets" : 3,
+									"numinlets" : 4,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 514.0, 570.0, 123.0, 22.0 ],
@@ -381,7 +377,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 514.0, 255.0, 198.0, 22.0 ],
-									"text" : "0. 0.2564 0.3846 1."
+									"text" : "0. 0.2 0.4 0.6 0.8 1."
 								}
 
 							}
@@ -392,7 +388,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 720.0, 350.0, 69.0, 22.0 ],
+									"patching_rect" : [ 759.0, 332.0, 69.0, 22.0 ],
 									"text" : "getmarkers"
 								}
 
@@ -454,7 +450,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 720.0, 80.0, 87.0, 22.0 ],
+									"patching_rect" : [ 711.0, 35.0, 87.0, 22.0 ],
 									"text" : "getbreakpoints"
 								}
 
@@ -464,8 +460,8 @@
 									"id" : "obj-4",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 3,
-									"outlettype" : [ "", "", "" ],
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 693.0, 219.0, 123.0, 22.0 ],
 									"text" : "breakpointsDictToList"
 								}
@@ -499,7 +495,7 @@
 									"numoutlets" : 8,
 									"offset" : [ 0.0, -100.0 ],
 									"outlettype" : [ "signal", "signal", "signal", "signal", "", "", "", "" ],
-									"patching_rect" : [ 29.0, 350.0, 683.0, 106.0 ],
+									"patching_rect" : [ 29.0, 350.0, 720.0, 100.0 ],
 									"varname" : "flowSwing_audioWarp",
 									"viewvisibility" : 1
 								}
@@ -521,7 +517,7 @@
 									"numoutlets" : 9,
 									"offset" : [ 0.0, -100.0 ],
 									"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-									"patching_rect" : [ 24.0, 66.0, 688.0, 107.0 ],
+									"patching_rect" : [ 24.0, 66.0, 725.0, 100.0 ],
 									"varname" : "flowSwing_envelop",
 									"viewvisibility" : 1
 								}
@@ -626,7 +622,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-2", 3 ],
-									"midpoints" : [ 523.5, 345.0, 702.5, 345.0 ],
+									"midpoints" : [ 523.5, 345.0, 739.5, 345.0 ],
 									"source" : [ "obj-30", 0 ]
 								}
 
@@ -664,7 +660,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-1", 1 ],
-									"midpoints" : [ 523.5, 642.0, 862.0, 642.0, 862.0, 55.5, 702.5, 55.5 ],
+									"midpoints" : [ 523.5, 642.0, 862.0, 642.0, 862.0, 55.5, 739.5, 55.5 ],
 									"source" : [ "obj-37", 0 ]
 								}
 
@@ -707,7 +703,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-1", 1 ],
-									"midpoints" : [ 902.5, 425.0, 863.5, 425.0, 863.5, 56.0, 702.5, 56.0 ],
+									"midpoints" : [ 902.5, 425.0, 863.5, 425.0, 863.5, 56.0, 739.5, 56.0 ],
 									"source" : [ "obj-67", 0 ]
 								}
 
@@ -719,7 +715,8 @@
 								}
 
 							}
- ]
+ ],
+						"toolbaradditions" : [ "audiomute", "audiosolo" ]
 					}
 ,
 					"patching_rect" : [ 152.0, 132.0, 159.0, 22.0 ],
@@ -739,13 +736,13 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 1107.0, 683.0 ],
+						"rect" : [ 128.0, 132.0, 1142.0, 683.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [ 							{
@@ -877,7 +874,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 999.0, 526.0, 24.0, 25.0 ],
+									"patching_rect" : [ 1005.0, 526.0, 24.0, 25.0 ],
 									"text" : "D"
 								}
 
@@ -890,7 +887,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 994.0, 251.0, 24.0, 25.0 ],
+									"patching_rect" : [ 1000.0, 251.0, 24.0, 25.0 ],
 									"text" : "C"
 								}
 
@@ -928,7 +925,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 48.0, 668.0, 103.0 ],
+									"patching_rect" : [ 7.0, 48.0, 670.0, 103.0 ],
 									"text" : "FlowSwing instances can be mirrored via their rightmost inlets and outlets. Any change made through the UI is automatically sent out the right outlet as a message. All parameters can be set by messages to the right inlet. \nTo mirror parameters between instances, connect the right outlet of one FlowSwing patch to the right inlet of another. You can mirror all parameters or filter specific ones using the routepass object. \nAdditionally, sending a getXXXX message (e.g., getS or getlock) to the inlet retrieves the current value of a parameter. \nSince parameter changes via messages are not echoed back to the outlet, you can set up either one-way or bidirectional communication between patches."
 								}
 
@@ -989,7 +986,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 960.0, 354.0, 108.0, 22.0 ],
+									"patching_rect" : [ 987.0, 354.0, 108.0, 22.0 ],
 									"text" : "routepass markers"
 								}
 
@@ -1010,7 +1007,7 @@
 									"numoutlets" : 8,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal", "signal", "signal", "signal", "", "", "", "" ],
-									"patching_rect" : [ 540.0, 462.0, 439.0, 137.0 ],
+									"patching_rect" : [ 540.0, 462.0, 466.0, 139.0 ],
 									"varname" : "flowSwing_audioWarp[1]",
 									"viewvisibility" : 1
 								}
@@ -1032,7 +1029,7 @@
 									"numoutlets" : 8,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal", "signal", "signal", "signal", "", "", "", "" ],
-									"patching_rect" : [ 540.0, 188.0, 439.0, 137.0 ],
+									"patching_rect" : [ 540.0, 188.0, 466.0, 139.0 ],
 									"varname" : "flowSwing_audioWarp",
 									"viewvisibility" : 1
 								}
@@ -1054,7 +1051,7 @@
 									"numoutlets" : 9,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-									"patching_rect" : [ 37.0, 463.0, 441.0, 136.0 ],
+									"patching_rect" : [ 37.0, 463.0, 465.0, 139.0 ],
 									"varname" : "flowSwing_envelop[1]",
 									"viewvisibility" : 1
 								}
@@ -1088,7 +1085,7 @@
 									"numoutlets" : 9,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-									"patching_rect" : [ 37.0, 188.0, 441.0, 136.0 ],
+									"patching_rect" : [ 37.0, 188.0, 465.0, 139.0 ],
 									"varname" : "flowSwing_envelop",
 									"viewvisibility" : 1
 								}
@@ -1098,7 +1095,7 @@
 						"lines" : [ 							{
 								"patchline" : 								{
 									"destination" : [ "obj-11", 0 ],
-									"midpoints" : [ 468.5, 404.0, 862.5, 404.0 ],
+									"midpoints" : [ 492.5, 404.0, 862.5, 404.0 ],
 									"order" : 0,
 									"source" : [ "obj-1", 8 ]
 								}
@@ -1122,7 +1119,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-6", 3 ],
-									"midpoints" : [ 944.5, 456.0, 969.5, 456.0 ],
+									"midpoints" : [ 944.5, 456.0, 996.5, 456.0 ],
 									"source" : [ "obj-11", 1 ]
 								}
 
@@ -1138,7 +1135,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-4", 2 ],
 									"hidden" : 1,
-									"order" : 1,
+									"order" : 0,
 									"source" : [ "obj-13", 0 ]
 								}
 
@@ -1147,7 +1144,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-6", 2 ],
 									"hidden" : 1,
-									"order" : 0,
+									"order" : 1,
 									"source" : [ "obj-13", 0 ]
 								}
 
@@ -1171,7 +1168,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-1", 1 ],
 									"hidden" : 1,
-									"order" : 1,
+									"order" : 2,
 									"source" : [ "obj-19", 0 ]
 								}
 
@@ -1180,7 +1177,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-4", 3 ],
 									"hidden" : 1,
-									"order" : 3,
+									"order" : 0,
 									"source" : [ "obj-19", 0 ]
 								}
 
@@ -1189,7 +1186,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-6", 3 ],
 									"hidden" : 1,
-									"order" : 2,
+									"order" : 1,
 									"source" : [ "obj-19", 0 ]
 								}
 
@@ -1198,7 +1195,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-8", 1 ],
 									"hidden" : 1,
-									"order" : 0,
+									"order" : 3,
 									"source" : [ "obj-19", 0 ]
 								}
 
@@ -1206,7 +1203,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-1", 1 ],
-									"midpoints" : [ 468.5, 666.0, 508.0, 666.0, 508.0, 171.0, 468.5, 171.0 ],
+									"midpoints" : [ 468.5, 666.0, 508.0, 666.0, 508.0, 171.0, 492.5, 171.0 ],
 									"source" : [ "obj-2", 0 ]
 								}
 
@@ -1246,7 +1243,8 @@
 								}
 
 							}
- ]
+ ],
+						"toolbaradditions" : [ "audiomute", "audiosolo" ]
 					}
 ,
 					"patching_rect" : [ 74.0, 133.0, 47.0, 22.0 ],
@@ -1262,31 +1260,36 @@
 			"obj-1::obj-1::obj-114" : [ "clear_breakpoints", "clear_breakpoints", 0 ],
 			"obj-1::obj-1::obj-123" : [ "asGrid", "asGrid", 1 ],
 			"obj-1::obj-1::obj-128" : [ "zoom", "zoom", 0 ],
-			"obj-1::obj-1::obj-16" : [ "title", "title", 0 ],
+			"obj-1::obj-1::obj-154" : [ "title", "title", 0 ],
 			"obj-1::obj-1::obj-19" : [ "mute", "mute", 0 ],
 			"obj-1::obj-1::obj-191" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
 			"obj-1::obj-1::obj-193" : [ "firstChannel_parameter", "firstChannel_parameter", 0 ],
 			"obj-1::obj-1::obj-195" : [ "chans_parameter", "chans_parameter", 0 ],
 			"obj-1::obj-1::obj-199" : [ "resetNIGrid", "resetNIGrid", 0 ],
 			"obj-1::obj-1::obj-22" : [ "lock", "lock", 0 ],
+			"obj-1::obj-1::obj-242" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
+			"obj-1::obj-1::obj-253" : [ "rescale", "rescale", 0 ],
 			"obj-1::obj-1::obj-42" : [ "morph", "morph", 0 ],
 			"obj-1::obj-1::obj-45" : [ "S", "S", 1 ],
 			"obj-1::obj-1::obj-47" : [ "offset", "offset", 0 ],
 			"obj-1::obj-1::obj-48" : [ "niRotation", "niRotation", 0 ],
 			"obj-1::obj-1::obj-50" : [ "Formative", "Formative", 0 ],
 			"obj-1::obj-1::obj-51" : [ "Target", "Target", 0 ],
+			"obj-1::obj-1::obj-66" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-1::obj-1::obj-68" : [ "clear_breakpoints[1]", "clear_breakpoints", 0 ],
 			"obj-1::obj-1::obj-90" : [ "secondary_S_control", "secondary_S_control", 0 ],
 			"obj-1::obj-1::obj-91" : [ "hold", "hold", 0 ],
 			"obj-1::obj-4::obj-113" : [ "onsets_button", "onsets_button", 0 ],
-			"obj-1::obj-4::obj-114" : [ "clear_breakpoints[2]", "clear_markers", 0 ],
+			"obj-1::obj-4::obj-114" : [ "clear_breakpoints[4]", "clear_breakpoints", 0 ],
 			"obj-1::obj-4::obj-132" : [ "markers_dict", "markers", 3 ],
 			"obj-1::obj-4::obj-140" : [ "snapToNIGrid_parameter[4]", "snapToNIGrid_parameter", 0 ],
+			"obj-1::obj-4::obj-154" : [ "title[2]", "title", 0 ],
 			"obj-1::obj-4::obj-160" : [ "snapToNIGrid", "snapToNIGrid", 0 ],
 			"obj-1::obj-4::obj-161" : [ "asGrid[4]", "asGrid", 1 ],
 			"obj-1::obj-4::obj-19" : [ "mute[4]", "mute", 0 ],
-			"obj-1::obj-4::obj-199" : [ "resetNIGrid[4]", "resetNIGrid", 0 ],
-			"obj-1::obj-4::obj-20" : [ "title[4]", "title", 0 ],
+			"obj-1::obj-4::obj-199" : [ "resetNIGrid[5]", "resetNIGrid", 0 ],
 			"obj-1::obj-4::obj-22" : [ "lock[4]", "lock", 0 ],
+			"obj-1::obj-4::obj-242" : [ "resetNIGrid[6]", "resetNIGrid", 0 ],
 			"obj-1::obj-4::obj-42" : [ "morph[4]", "morph", 0 ],
 			"obj-1::obj-4::obj-45" : [ "S[4]", "S", 2 ],
 			"obj-1::obj-4::obj-47" : [ "offset[4]", "offset", 0 ],
@@ -1298,15 +1301,16 @@
 			"obj-1::obj-4::obj-90" : [ "secondary_S_control[4]", "secondary_S_control", 0 ],
 			"obj-1::obj-4::obj-91" : [ "hold[4]", "hold", 0 ],
 			"obj-1::obj-6::obj-113" : [ "onsets_button[1]", "onsets_button", 0 ],
-			"obj-1::obj-6::obj-114" : [ "clear_breakpoints[3]", "clear_markers", 0 ],
+			"obj-1::obj-6::obj-114" : [ "clear_breakpoints[5]", "clear_breakpoints", 0 ],
 			"obj-1::obj-6::obj-132" : [ "markers_dict[1]", "markers", 3 ],
 			"obj-1::obj-6::obj-140" : [ "snapToNIGrid_parameter[5]", "snapToNIGrid_parameter", 0 ],
+			"obj-1::obj-6::obj-154" : [ "title[3]", "title", 0 ],
 			"obj-1::obj-6::obj-160" : [ "snapToNIGrid[2]", "snapToNIGrid", 0 ],
 			"obj-1::obj-6::obj-161" : [ "asGrid[5]", "asGrid", 1 ],
 			"obj-1::obj-6::obj-19" : [ "mute[5]", "mute", 0 ],
-			"obj-1::obj-6::obj-199" : [ "resetNIGrid[5]", "resetNIGrid", 0 ],
-			"obj-1::obj-6::obj-20" : [ "title[5]", "title", 0 ],
+			"obj-1::obj-6::obj-199" : [ "resetNIGrid[7]", "resetNIGrid", 0 ],
 			"obj-1::obj-6::obj-22" : [ "lock[5]", "lock", 0 ],
+			"obj-1::obj-6::obj-242" : [ "resetNIGrid[8]", "resetNIGrid", 0 ],
 			"obj-1::obj-6::obj-42" : [ "morph[5]", "morph", 0 ],
 			"obj-1::obj-6::obj-45" : [ "S[5]", "S", 2 ],
 			"obj-1::obj-6::obj-47" : [ "offset[5]", "offset", 0 ],
@@ -1318,53 +1322,62 @@
 			"obj-1::obj-6::obj-90" : [ "secondary_S_control[5]", "secondary_S_control", 0 ],
 			"obj-1::obj-6::obj-91" : [ "hold[5]", "hold", 0 ],
 			"obj-1::obj-8::obj-109" : [ "breakpoints[1]", "breakpoints", 2 ],
-			"obj-1::obj-8::obj-114" : [ "clear_breakpoints[1]", "clear_breakpoints", 0 ],
+			"obj-1::obj-8::obj-114" : [ "clear_breakpoints[2]", "clear_breakpoints", 0 ],
 			"obj-1::obj-8::obj-123" : [ "asGrid[3]", "asGrid", 1 ],
 			"obj-1::obj-8::obj-128" : [ "zoom[3]", "zoom", 0 ],
-			"obj-1::obj-8::obj-16" : [ "title[3]", "title", 0 ],
+			"obj-1::obj-8::obj-154" : [ "title[1]", "title", 0 ],
 			"obj-1::obj-8::obj-19" : [ "mute[3]", "mute", 0 ],
 			"obj-1::obj-8::obj-191" : [ "snapToNIGrid_parameter[3]", "snapToNIGrid_parameter", 0 ],
 			"obj-1::obj-8::obj-193" : [ "firstChannel_parameter[1]", "firstChannel_parameter", 0 ],
 			"obj-1::obj-8::obj-195" : [ "chans_parameter[1]", "chans_parameter", 0 ],
 			"obj-1::obj-8::obj-199" : [ "resetNIGrid[3]", "resetNIGrid", 0 ],
 			"obj-1::obj-8::obj-22" : [ "lock[3]", "lock", 0 ],
+			"obj-1::obj-8::obj-242" : [ "resetNIGrid[4]", "resetNIGrid", 0 ],
+			"obj-1::obj-8::obj-253" : [ "rescale[1]", "rescale", 0 ],
 			"obj-1::obj-8::obj-42" : [ "morph[3]", "morph", 0 ],
 			"obj-1::obj-8::obj-45" : [ "S[3]", "S", 1 ],
 			"obj-1::obj-8::obj-47" : [ "offset[3]", "offset", 0 ],
 			"obj-1::obj-8::obj-48" : [ "niRotation[3]", "niRotation", 0 ],
 			"obj-1::obj-8::obj-50" : [ "Formative[3]", "Formative", 0 ],
 			"obj-1::obj-8::obj-51" : [ "Target[3]", "Target", 0 ],
+			"obj-1::obj-8::obj-66" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-1::obj-8::obj-68" : [ "clear_breakpoints[3]", "clear_breakpoints", 0 ],
 			"obj-1::obj-8::obj-90" : [ "secondary_S_control[3]", "secondary_S_control", 0 ],
 			"obj-1::obj-8::obj-91" : [ "hold[3]", "hold", 0 ],
 			"obj-2::obj-1::obj-109" : [ "breakpoints[2]", "breakpoints", 2 ],
-			"obj-2::obj-1::obj-114" : [ "clear_breakpoints[4]", "clear_breakpoints", 0 ],
+			"obj-2::obj-1::obj-114" : [ "clear_breakpoints[7]", "clear_breakpoints", 0 ],
 			"obj-2::obj-1::obj-123" : [ "asGrid[6]", "asGrid", 1 ],
 			"obj-2::obj-1::obj-128" : [ "zoom[6]", "zoom", 0 ],
-			"obj-2::obj-1::obj-16" : [ "title[6]", "title", 0 ],
+			"obj-2::obj-1::obj-154" : [ "title[4]", "title", 0 ],
 			"obj-2::obj-1::obj-19" : [ "mute[6]", "mute", 0 ],
 			"obj-2::obj-1::obj-191" : [ "snapToNIGrid_parameter[6]", "snapToNIGrid_parameter", 0 ],
 			"obj-2::obj-1::obj-193" : [ "firstChannel_parameter[2]", "firstChannel_parameter", 0 ],
 			"obj-2::obj-1::obj-195" : [ "chans_parameter[2]", "chans_parameter", 0 ],
-			"obj-2::obj-1::obj-199" : [ "resetNIGrid[6]", "resetNIGrid", 0 ],
+			"obj-2::obj-1::obj-199" : [ "resetNIGrid[10]", "resetNIGrid", 0 ],
 			"obj-2::obj-1::obj-22" : [ "lock[6]", "lock", 0 ],
+			"obj-2::obj-1::obj-242" : [ "resetNIGrid[9]", "resetNIGrid", 0 ],
+			"obj-2::obj-1::obj-253" : [ "rescale[2]", "rescale", 0 ],
 			"obj-2::obj-1::obj-42" : [ "morph[6]", "morph", 0 ],
 			"obj-2::obj-1::obj-45" : [ "S[6]", "S", 1 ],
 			"obj-2::obj-1::obj-47" : [ "offset[6]", "offset", 0 ],
 			"obj-2::obj-1::obj-48" : [ "niRotation[6]", "niRotation", 0 ],
 			"obj-2::obj-1::obj-50" : [ "Formative[6]", "Formative", 0 ],
 			"obj-2::obj-1::obj-51" : [ "Target[6]", "Target", 0 ],
+			"obj-2::obj-1::obj-66" : [ "live.menu[3]", "live.menu", 0 ],
+			"obj-2::obj-1::obj-68" : [ "clear_breakpoints[6]", "clear_breakpoints", 0 ],
 			"obj-2::obj-1::obj-90" : [ "secondary_S_control[6]", "secondary_S_control", 0 ],
 			"obj-2::obj-1::obj-91" : [ "hold[6]", "hold", 0 ],
 			"obj-2::obj-2::obj-113" : [ "onsets_button[2]", "onsets_button", 0 ],
-			"obj-2::obj-2::obj-114" : [ "clear_breakpoints[5]", "clear_markers", 0 ],
+			"obj-2::obj-2::obj-114" : [ "clear_breakpoints[8]", "clear_breakpoints", 0 ],
 			"obj-2::obj-2::obj-132" : [ "markers_dict[2]", "markers", 3 ],
 			"obj-2::obj-2::obj-140" : [ "snapToNIGrid_parameter[7]", "snapToNIGrid_parameter", 0 ],
+			"obj-2::obj-2::obj-154" : [ "title[5]", "title", 0 ],
 			"obj-2::obj-2::obj-160" : [ "snapToNIGrid[3]", "snapToNIGrid", 0 ],
 			"obj-2::obj-2::obj-161" : [ "asGrid[7]", "asGrid", 1 ],
 			"obj-2::obj-2::obj-19" : [ "mute[7]", "mute", 0 ],
-			"obj-2::obj-2::obj-199" : [ "resetNIGrid[7]", "resetNIGrid", 0 ],
-			"obj-2::obj-2::obj-20" : [ "title[7]", "title", 0 ],
+			"obj-2::obj-2::obj-199" : [ "resetNIGrid[12]", "resetNIGrid", 0 ],
 			"obj-2::obj-2::obj-22" : [ "lock[7]", "lock", 0 ],
+			"obj-2::obj-2::obj-242" : [ "resetNIGrid[11]", "resetNIGrid", 0 ],
 			"obj-2::obj-2::obj-42" : [ "morph[7]", "morph", 0 ],
 			"obj-2::obj-2::obj-45" : [ "S[7]", "S", 2 ],
 			"obj-2::obj-2::obj-47" : [ "offset[7]", "offset", 0 ],
@@ -1386,7 +1399,7 @@
 ,
 			"parameter_overrides" : 			{
 				"obj-1::obj-4::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[2]"
+					"parameter_longname" : "clear_breakpoints[4]"
 				}
 ,
 				"obj-1::obj-4::obj-140" : 				{
@@ -1398,11 +1411,15 @@
 				}
 ,
 				"obj-1::obj-4::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[4]"
+					"parameter_longname" : "resetNIGrid[5]"
 				}
 ,
 				"obj-1::obj-4::obj-22" : 				{
 					"parameter_longname" : "lock[4]"
+				}
+,
+				"obj-1::obj-4::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[6]"
 				}
 ,
 				"obj-1::obj-4::obj-42" : 				{
@@ -1446,7 +1463,7 @@
 				}
 ,
 				"obj-1::obj-6::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[3]"
+					"parameter_longname" : "clear_breakpoints[5]"
 				}
 ,
 				"obj-1::obj-6::obj-140" : 				{
@@ -1458,11 +1475,15 @@
 				}
 ,
 				"obj-1::obj-6::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[5]"
+					"parameter_longname" : "resetNIGrid[7]"
 				}
 ,
 				"obj-1::obj-6::obj-22" : 				{
 					"parameter_longname" : "lock[5]"
+				}
+,
+				"obj-1::obj-6::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[8]"
 				}
 ,
 				"obj-1::obj-6::obj-42" : 				{
@@ -1506,7 +1527,7 @@
 				}
 ,
 				"obj-1::obj-8::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[1]"
+					"parameter_longname" : "clear_breakpoints[2]"
 				}
 ,
 				"obj-1::obj-8::obj-128" : 				{
@@ -1537,6 +1558,14 @@
 					"parameter_longname" : "lock[3]"
 				}
 ,
+				"obj-1::obj-8::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[4]"
+				}
+,
+				"obj-1::obj-8::obj-253" : 				{
+					"parameter_longname" : "rescale[1]"
+				}
+,
 				"obj-1::obj-8::obj-42" : 				{
 					"parameter_longname" : "morph[3]"
 				}
@@ -1561,6 +1590,14 @@
 					"parameter_longname" : "Target[3]"
 				}
 ,
+				"obj-1::obj-8::obj-66" : 				{
+					"parameter_longname" : "live.menu[2]"
+				}
+,
+				"obj-1::obj-8::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[3]"
+				}
+,
 				"obj-1::obj-8::obj-90" : 				{
 					"parameter_longname" : "secondary_S_control[3]"
 				}
@@ -1570,7 +1607,7 @@
 				}
 ,
 				"obj-2::obj-1::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[4]"
+					"parameter_longname" : "clear_breakpoints[7]"
 				}
 ,
 				"obj-2::obj-1::obj-128" : 				{
@@ -1594,11 +1631,19 @@
 				}
 ,
 				"obj-2::obj-1::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[6]"
+					"parameter_longname" : "resetNIGrid[10]"
 				}
 ,
 				"obj-2::obj-1::obj-22" : 				{
 					"parameter_longname" : "lock[6]"
+				}
+,
+				"obj-2::obj-1::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[9]"
+				}
+,
+				"obj-2::obj-1::obj-253" : 				{
+					"parameter_longname" : "rescale[2]"
 				}
 ,
 				"obj-2::obj-1::obj-42" : 				{
@@ -1625,6 +1670,14 @@
 					"parameter_longname" : "Target[6]"
 				}
 ,
+				"obj-2::obj-1::obj-66" : 				{
+					"parameter_longname" : "live.menu[3]"
+				}
+,
+				"obj-2::obj-1::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[6]"
+				}
+,
 				"obj-2::obj-1::obj-90" : 				{
 					"parameter_longname" : "secondary_S_control[6]"
 				}
@@ -1638,7 +1691,7 @@
 				}
 ,
 				"obj-2::obj-2::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[5]"
+					"parameter_longname" : "clear_breakpoints[8]"
 				}
 ,
 				"obj-2::obj-2::obj-140" : 				{
@@ -1650,11 +1703,15 @@
 				}
 ,
 				"obj-2::obj-2::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[7]"
+					"parameter_longname" : "resetNIGrid[12]"
 				}
 ,
 				"obj-2::obj-2::obj-22" : 				{
 					"parameter_longname" : "lock[7]"
+				}
+,
+				"obj-2::obj-2::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[11]"
 				}
 ,
 				"obj-2::obj-2::obj-42" : 				{
@@ -1717,10 +1774,10 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "SGwarpInterface.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
+				"name" : "GCD.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -1752,14 +1809,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "drawGrid.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "drawNIGrid.js",
+				"name" : "drawNIGrid_zoom.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
 				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
@@ -1909,10 +1959,24 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "timeWarpInterface.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
+				"patcherrelativepath" : "../jsui",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "warpMarkersToBuffer.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
 				"patcherrelativepath" : "../patchers/subpatchers",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "zoomNscroll_coremath.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],
@@ -1944,9 +2008,6 @@
 						"chans_parameter" : 64.0,
 						"chans_parameter[1]" : 64.0,
 						"chans_parameter[2]" : 64.0,
-						"clear_breakpoints[2]" : 0.0,
-						"clear_breakpoints[3]" : 0.0,
-						"clear_breakpoints[5]" : 0.0,
 						"firstChannel_parameter" : 1.0,
 						"firstChannel_parameter[1]" : 1.0,
 						"firstChannel_parameter[2]" : 1.0,
@@ -2009,11 +2070,11 @@
 						"S[7]" : 0.0,
 						"blob" : 						{
 							"title" : [ "Envelop A" ],
+							"title[1]" : [ "FlowSwing" ],
+							"title[2]" : [ "FlowSwing" ],
 							"title[3]" : [ "Audio 2" ],
 							"title[4]" : [ "FlowSwing", "A" ],
 							"title[5]" : [ "FlowSwing", "A" ],
-							"title[6]" : [ "FlowSwing", "E" ],
-							"title[7]" : [ "FlowSwing", "A" ],
 							"zoom" : [ 0.66 ],
 							"zoom[3]" : [ 0.66 ],
 							"zoom[4]" : [ 0.66 ],
@@ -2116,7 +2177,7 @@
 						"version" : 2,
 						"minorversion" : 0,
 						"name" : "link_FS_instances",
-						"origin" : "link_FlowSwing_instances",
+						"origin" : "Link_FlowSwing_instances",
 						"type" : "patcher",
 						"subtype" : "Undefined",
 						"embed" : 1,
@@ -2138,9 +2199,6 @@
 									"chans_parameter" : 64.0,
 									"chans_parameter[1]" : 64.0,
 									"chans_parameter[2]" : 64.0,
-									"clear_breakpoints[2]" : 0.0,
-									"clear_breakpoints[3]" : 0.0,
-									"clear_breakpoints[5]" : 0.0,
 									"firstChannel_parameter" : 1.0,
 									"firstChannel_parameter[1]" : 1.0,
 									"firstChannel_parameter[2]" : 1.0,
@@ -2203,11 +2261,11 @@
 									"S[7]" : 0.0,
 									"blob" : 									{
 										"title" : [ "Envelop A" ],
+										"title[1]" : [ "FlowSwing" ],
+										"title[2]" : [ "FlowSwing" ],
 										"title[3]" : [ "Audio 2" ],
 										"title[4]" : [ "FlowSwing", "A" ],
 										"title[5]" : [ "FlowSwing", "A" ],
-										"title[6]" : [ "FlowSwing", "E" ],
-										"title[7]" : [ "FlowSwing", "A" ],
 										"zoom" : [ 0.66 ],
 										"zoom[3]" : [ 0.66 ],
 										"zoom[4]" : [ 0.66 ],
@@ -2308,7 +2366,7 @@
 							"filename" : "link_FS_instances.maxsnap",
 							"filepath" : "~/Documents/Max 9/Snapshots",
 							"filepos" : -1,
-							"snapshotfileid" : "f16d512d15efaf3600a71ca542697021"
+							"snapshotfileid" : "82b7c244c4992ed63dc6d9db9ce516cf"
 						}
 
 					}
@@ -2316,7 +2374,8 @@
 			}
 
 		}
-
+,
+		"toolbaradditions" : [ "audiomute", "audiosolo" ]
 	}
 
 }

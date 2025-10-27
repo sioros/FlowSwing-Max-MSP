@@ -20,7 +20,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 530.0, 135.0, 162.0, 20.0 ],
+					"patching_rect" : [ 260.0, 535.0, 70.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 527.0, 142.5, 70.0, 20.0 ],
 					"text" : "start audio"
@@ -76,7 +76,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 7.0, 71.0, 151.0, 269.0 ],
+					"patching_rect" : [ 9.0, 102.0, 151.0, 269.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 4,
 					"presentation_rect" : [ 20.0, 39.0, 661.0, 62.0 ],
@@ -712,7 +712,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 486.0, 391.0, 128.0, 41.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 717.0, 450.0, 128.0, 41.0 ],
+					"presentation_rect" : [ 732.0, 450.0, 128.0, 41.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "loop gain",
@@ -770,9 +770,9 @@
 					"numoutlets" : 8,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "signal", "signal", "", "", "", "" ],
-					"patching_rect" : [ 486.0, 230.0, 135.0, 31.0 ],
+					"patching_rect" : [ 468.0, 232.0, 135.0, 29.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 393.0, 667.0, 203.0 ],
+					"presentation_rect" : [ 14.0, 393.0, 701.0, 203.0 ],
 					"varname" : "flowSwing_audioWarp",
 					"viewvisibility" : 1
 				}
@@ -841,7 +841,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 344.0, 392.0, 136.0, 41.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 717.0, 281.0, 136.0, 41.0 ],
+					"presentation_rect" : [ 732.0, 281.0, 136.0, 41.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "bass",
@@ -1101,7 +1101,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 170.0, 397.0, 128.0, 41.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 717.0, 212.0, 128.0, 41.0 ],
+					"presentation_rect" : [ 732.0, 212.0, 128.0, 41.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "noise gain",
@@ -1135,9 +1135,9 @@
 					"numoutlets" : 9,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-					"patching_rect" : [ 170.0, 232.0, 135.0, 27.0 ],
+					"patching_rect" : [ 170.0, 232.0, 114.0, 29.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 172.0, 667.0, 203.0 ],
+					"presentation_rect" : [ 14.0, 172.0, 701.0, 203.0 ],
 					"varname" : "flowSwing_envelop",
 					"viewvisibility" : 1
 				}
@@ -1147,7 +1147,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
-					"midpoints" : [ 194.0, 317.0, 353.5, 317.0 ],
+					"midpoints" : [ 191.375, 317.0, 353.5, 317.0 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -1308,7 +1308,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-31", 0 ],
-					"midpoints" : [ 179.5, 191.0, 495.5, 191.0 ],
+					"midpoints" : [ 179.5, 191.0, 477.5, 191.0 ],
 					"order" : 1,
 					"source" : [ "obj-5", 0 ]
 				}
@@ -1350,13 +1350,14 @@
 			"obj-1::obj-114" : [ "clear_breakpoints", "clear_breakpoints", 0 ],
 			"obj-1::obj-123" : [ "asGrid", "asGrid", 1 ],
 			"obj-1::obj-128" : [ "zoom", "zoom", 0 ],
-			"obj-1::obj-16" : [ "title", "title", 0 ],
+			"obj-1::obj-154" : [ "title", "title", 0 ],
 			"obj-1::obj-19" : [ "mute", "mute", 0 ],
 			"obj-1::obj-191" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
 			"obj-1::obj-193" : [ "firstChannel_parameter", "firstChannel_parameter", 0 ],
 			"obj-1::obj-195" : [ "chans_parameter", "chans_parameter", 0 ],
 			"obj-1::obj-199" : [ "resetNIGrid", "resetNIGrid", 0 ],
 			"obj-1::obj-22" : [ "lock", "lock", 0 ],
+			"obj-1::obj-242" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
 			"obj-1::obj-42" : [ "morph", "morph", 0 ],
 			"obj-1::obj-45" : [ "S", "S", 0 ],
 			"obj-1::obj-47" : [ "offset", "offset", 0 ],
@@ -1367,15 +1368,16 @@
 			"obj-1::obj-91" : [ "hold", "hold", 0 ],
 			"obj-21" : [ "dynamic", "dynamic", 0 ],
 			"obj-31::obj-113" : [ "onsets_button", "onsets_button", 0 ],
-			"obj-31::obj-114" : [ "clear_markers", "clear_markers", 0 ],
+			"obj-31::obj-114" : [ "clear_markers", "clear_breakpoints", 0 ],
 			"obj-31::obj-132" : [ "markers_dict", "markers", 0 ],
 			"obj-31::obj-140" : [ "snapToNIGrid_parameter[1]", "snapToNIGrid_parameter", 0 ],
+			"obj-31::obj-154" : [ "title[1]", "title", 0 ],
 			"obj-31::obj-160" : [ "snapToNIGrid[1]", "snapToNIGrid", 0 ],
 			"obj-31::obj-161" : [ "asGrid[1]", "asGrid", 1 ],
 			"obj-31::obj-19" : [ "mute[1]", "mute", 0 ],
-			"obj-31::obj-199" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
-			"obj-31::obj-20" : [ "title[1]", "title", 0 ],
+			"obj-31::obj-199" : [ "resetNIGrid[2]", "resetNIGrid", 0 ],
 			"obj-31::obj-22" : [ "lock[1]", "lock", 0 ],
+			"obj-31::obj-242" : [ "resetNIGrid[3]", "resetNIGrid", 0 ],
 			"obj-31::obj-42" : [ "morph[1]", "morph", 0 ],
 			"obj-31::obj-45" : [ "S[1]", "S", 0 ],
 			"obj-31::obj-47" : [ "offset[1]", "offset", 0 ],
@@ -1410,11 +1412,15 @@
 				}
 ,
 				"obj-31::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[1]"
+					"parameter_longname" : "resetNIGrid[2]"
 				}
 ,
 				"obj-31::obj-22" : 				{
 					"parameter_longname" : "lock[1]"
+				}
+,
+				"obj-31::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[3]"
 				}
 ,
 				"obj-31::obj-42" : 				{
@@ -1480,10 +1486,10 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "SGwarpInterface.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
+				"name" : "GCD.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -1494,14 +1500,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "drawGrid.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "drawNIGrid.js",
+				"name" : "drawNIGrid_zoom.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
 				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
@@ -1623,10 +1622,24 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "timeWarpInterface.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
+				"patcherrelativepath" : "../jsui",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "warpMarkersToBuffer.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
 				"patcherrelativepath" : "../patchers/subpatchers",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "zoomNscroll_coremath.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],

@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 6,
+			"revision" : 8,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -196,7 +196,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 594.0, 126.0, 258.0, 158.0 ],
+					"patching_rect" : [ 594.0, 126.0, 259.0, 158.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 6,
 					"presentation_rect" : [ 311.0, 40.0, 518.0, 89.0 ],
@@ -292,7 +292,7 @@
 					"outlettype" : [ "signal", "signal", "signal", "signal", "", "", "", "" ],
 					"patching_rect" : [ 288.0, 422.0, 115.0, 31.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 117.0, 412.0, 667.0, 204.0 ],
+					"presentation_rect" : [ 117.0, 412.0, 704.0, 207.0 ],
 					"varname" : "loop2",
 					"viewvisibility" : 1
 				}
@@ -316,7 +316,7 @@
 					"outlettype" : [ "signal", "signal", "signal", "signal", "", "", "", "" ],
 					"patching_rect" : [ 132.0, 422.0, 115.0, 31.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 117.0, 159.0, 667.0, 204.0 ],
+					"presentation_rect" : [ 117.0, 159.0, 704.0, 207.0 ],
 					"varname" : "loop1",
 					"viewvisibility" : 1
 				}
@@ -334,7 +334,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 288.0, 476.0, 55.0, 79.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 786.0, 412.0, 48.0, 198.0 ],
+					"presentation_rect" : [ 816.0, 412.0, 48.0, 198.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "loop 2",
@@ -364,7 +364,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 132.0, 472.0, 55.0, 79.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 786.0, 159.0, 48.0, 198.0 ],
+					"presentation_rect" : [ 816.0, 159.0, 48.0, 198.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "loop 1",
@@ -1123,15 +1123,16 @@
 			"obj-10" : [ "loop 1", "loop 1", 0 ],
 			"obj-11" : [ "loop 2", "loop 2", 0 ],
 			"obj-12::obj-113" : [ "onsets_button", "onsets_button", 0 ],
-			"obj-12::obj-114" : [ "clear_markers", "clear_markers", 0 ],
+			"obj-12::obj-114" : [ "clear_markers", "clear_breakpoints", 0 ],
 			"obj-12::obj-132" : [ "markers_dict", "markers", 0 ],
 			"obj-12::obj-140" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
+			"obj-12::obj-154" : [ "title", "title", 0 ],
 			"obj-12::obj-160" : [ "snapToNIGrid", "snapToNIGrid", 0 ],
 			"obj-12::obj-161" : [ "asGrid", "asGrid", 1 ],
 			"obj-12::obj-19" : [ "mute", "mute", 0 ],
 			"obj-12::obj-199" : [ "resetNIGrid", "resetNIGrid", 0 ],
-			"obj-12::obj-20" : [ "title", "title", 0 ],
 			"obj-12::obj-22" : [ "lock", "lock", 0 ],
+			"obj-12::obj-242" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
 			"obj-12::obj-42" : [ "morph", "morph", 0 ],
 			"obj-12::obj-45" : [ "S", "S", 0 ],
 			"obj-12::obj-47" : [ "offset", "offset", 0 ],
@@ -1143,15 +1144,16 @@
 			"obj-12::obj-90" : [ "secondary_S_control", "secondary_S_control", 0 ],
 			"obj-12::obj-91" : [ "hold", "hold", 0 ],
 			"obj-13::obj-113" : [ "onsets_button[1]", "onsets_button", 0 ],
-			"obj-13::obj-114" : [ "clear_markers[1]", "clear_markers", 0 ],
+			"obj-13::obj-114" : [ "clear_markers[1]", "clear_breakpoints", 0 ],
 			"obj-13::obj-132" : [ "markers_dict[1]", "markers", 0 ],
 			"obj-13::obj-140" : [ "snapToNIGrid_parameter[1]", "snapToNIGrid_parameter", 0 ],
+			"obj-13::obj-154" : [ "title[1]", "title", 0 ],
 			"obj-13::obj-160" : [ "snapToNIGrid[1]", "snapToNIGrid", 0 ],
 			"obj-13::obj-161" : [ "asGrid[1]", "asGrid", 1 ],
 			"obj-13::obj-19" : [ "mute[1]", "mute", 0 ],
-			"obj-13::obj-199" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
-			"obj-13::obj-20" : [ "title[1]", "title", 0 ],
+			"obj-13::obj-199" : [ "resetNIGrid[2]", "resetNIGrid", 0 ],
 			"obj-13::obj-22" : [ "lock[1]", "lock", 0 ],
+			"obj-13::obj-242" : [ "resetNIGrid[3]", "resetNIGrid", 0 ],
 			"obj-13::obj-42" : [ "morph[1]", "morph", 0 ],
 			"obj-13::obj-45" : [ "S[1]", "S", 0 ],
 			"obj-13::obj-47" : [ "offset[1]", "offset", 0 ],
@@ -1198,11 +1200,15 @@
 				}
 ,
 				"obj-13::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[1]"
+					"parameter_longname" : "resetNIGrid[2]"
 				}
 ,
 				"obj-13::obj-22" : 				{
 					"parameter_longname" : "lock[1]"
+				}
+,
+				"obj-13::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[3]"
 				}
 ,
 				"obj-13::obj-42" : 				{
@@ -1280,10 +1286,10 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "SGwarpInterface.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
+				"name" : "GCD.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -1294,14 +1300,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "drawGrid.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "drawNIGrid.js",
+				"name" : "drawNIGrid_zoom.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
 				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
@@ -1374,6 +1373,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "markersDictChange.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "onsetBufferToMarkersDict.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
 				"patcherrelativepath" : "../javascript",
@@ -1402,10 +1408,24 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "timeWarpInterface.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
+				"patcherrelativepath" : "../jsui",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "warpMarkersToBuffer.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
 				"patcherrelativepath" : "../patchers/subpatchers",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "zoomNscroll_coremath.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],
@@ -1629,7 +1649,8 @@
 			}
 
 		}
-
+,
+		"toolbaradditions" : [ "audiomute", "audiosolo" ]
 	}
 
 }

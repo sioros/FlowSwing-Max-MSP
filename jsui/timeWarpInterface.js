@@ -29,6 +29,33 @@ var waveRGBA = [0.5, 0.5, 0.5, 1.];
 var bufName = [];
 var resolution = 100;
 
+// --- Zoom (normalized [0,1]) ---
+var zoom = [0, 1];
+
+// Helpers for zoom mapping
+function _span() {
+    var s = zoom[1] - zoom[0];
+    return (s <= 1e-12) ? 1e-12 : s;
+}
+function worldToScreen(x01) { // [0,1] -> pixels
+    return ((x01 - zoom[0]) / _span()) * w;
+}
+function screenToWorld(px) { // pixels -> [0,1]
+    return zoom[0] + (px / w) * _span();
+}
+
+// Set zoom range
+function zoom_x(a, b) {
+    var z0 = +a, z1 = +b;
+    if (isNaN(z0) || isNaN(z1)) return;
+    if (z0 < 0) z0 = 0; if (z0 > 1) z0 = 1;
+    if (z1 < 0) z1 = 0; if (z1 > 1) z1 = 1;
+    if (z1 < z0) { var t = z0; z0 = z1; z1 = t; }
+    if (z1 === z0) z1 = Math.min(1, z0 + 1e-6);
+    zoom[0] = z0; zoom[1] = z1;
+    mgraphics.redraw();
+}
+
 function loadbang(){
 	if (typeof warps === 'undefined' || warps === null)
 	{
@@ -97,7 +124,8 @@ function paint(){
 			sx = warps[i].origin;
 			sw = warps[i].sw;
 			dw = warps[i+1].position-warps[i].position;
-			mgraphics.scale(w/ow*dw/sw,h/oh);
+			// scale includes zoom span so zoomed region fills the window
+			mgraphics.scale((w/ow)*(dw/_span())/sw, h/oh);
 			mgraphics.translate(-sx*ow,0);
 			mgraphics.image_surface_draw(wave,sx*ow,0,sw*ow,oh);
 			//pop(start);
@@ -118,7 +146,7 @@ function onclick(x, y, button, mod1, shift, caps, opt, mod2){
         }
     }
     else {
-		active = insertMarker(x/w);
+		active = insertMarker(screenToWorld(x));
 	}
 	outlet(1, 'bang');
 	bang();
@@ -127,7 +155,8 @@ function onclick(x, y, button, mod1, shift, caps, opt, mod2){
 function ondrag(x,y,button){
 	if(button==1){
 		if(active>0 && active<warps.length-1){
-			var newpos = warps[active].position + (x-lastX)/w;
+			// apply horizontal delta in world units under current zoom
+			var newpos = warps[active].position + ((x - lastX) / w) * _span();
      		if(newpos<=0) newpos= 0.00001;
 			if(active<(warps.length)){
 				if(newpos>warps[active+1].position) newpos = warps[active+1].position-0.00001;
@@ -164,7 +193,7 @@ function init(){
 
 function getID(x,y){
   var found = -1;
-  var nx = x/w;
+  var nx = screenToWorld(x); // map pixel to world for hit-test
   var apos = 0;
   for (i=0;i<warps.length;i++){
     if(warps[i].getPos(nx,y)) found = i;
@@ -204,22 +233,35 @@ function warpMarker(t){
   this.sw = t;
   this.position =t;
   this.speed = 1;
-  this.draw = function(){
-    mgraphics.translate(this.position*w,10);
-    mgraphics.move_to(0,0);
-    mgraphics.line_to(-5,-8);
-    mgraphics.line_to(5,-8);
-    mgraphics.line_to(0,0);
-    mgraphics.line_to(0,h-10);
-    mgraphics.close_path();
-   	mgraphics.stroke_preserve();
-    mgraphics.fill();
-    mgraphics.translate(0,-10);
-  }
-  this.getPos=function(x,y){
-    var negpos = this.position-5/w;
-    var pospos = this.position+5/w;
-    if ((x<pospos)&&(x>negpos)) return true;
+	this.draw = function() {
+		var x = worldToScreen(this.position);
+
+		// Move to drawing position
+		mgraphics.translate(x, 10);
+
+		// --- Top triangle ---
+		mgraphics.move_to(0, 0);
+		mgraphics.line_to(-5, -8);
+		mgraphics.line_to(5, -8);
+		mgraphics.close_path();
+
+		// --- Bottom triangle (mirrored vertically) ---
+
+
+		// Draw both together
+		mgraphics.stroke_preserve();
+		mgraphics.fill();
+
+		// Undo translation
+		mgraphics.translate(0, -10);
+	}
+
+  this.getPos=function(x_world,y){
+    // 5px tolerance expressed in world units under current zoom
+    var tol = (5 / w) * _span();
+    var negpos = this.position - tol;
+    var pospos = this.position + tol;
+    if ((x_world<pospos)&&(x_world>negpos)) return true;
     else return false;
   }
 }
@@ -322,6 +364,4 @@ function dictionary(x)
 	}
 	bang();
 
-}	
-	
-
+}

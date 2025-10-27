@@ -11,6 +11,7 @@
 ,
 		"classnamespace" : "box",
 		"rect" : [ 59.0, 82.0, 758.0, 778.0 ],
+		"openinpresentation" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
@@ -179,7 +180,7 @@
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
 					"patching_rect" : [ 461.0, 276.0, 110.0, 32.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 490.0, 688.0, 100.0 ],
+					"presentation_rect" : [ 14.0, 490.0, 717.0, 100.0 ],
 					"varname" : "flowSwing_envelop[1]",
 					"viewvisibility" : 1
 				}
@@ -606,7 +607,7 @@
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
 					"patching_rect" : [ 135.0, 276.0, 119.0, 32.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 145.0, 669.0, 200.0 ],
+					"presentation_rect" : [ 14.0, 145.0, 705.0, 207.0 ],
 					"varname" : "flowSwing_envelop",
 					"viewvisibility" : 1
 				}
@@ -862,13 +863,14 @@
 			"obj-1::obj-114" : [ "clear_breakpoints", "clear_breakpoints", 0 ],
 			"obj-1::obj-123" : [ "asGrid", "asGrid", 1 ],
 			"obj-1::obj-128" : [ "zoom", "zoom", 0 ],
-			"obj-1::obj-16" : [ "title", "title", 0 ],
+			"obj-1::obj-154" : [ "title", "title", 0 ],
 			"obj-1::obj-19" : [ "mute", "mute", 0 ],
 			"obj-1::obj-191" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
 			"obj-1::obj-193" : [ "firstChannel_parameter", "firstChannel_parameter", 0 ],
 			"obj-1::obj-195" : [ "chans_parameter", "chans_parameter", 0 ],
 			"obj-1::obj-199" : [ "resetNIGrid", "resetNIGrid", 0 ],
 			"obj-1::obj-22" : [ "lock", "lock", 0 ],
+			"obj-1::obj-242" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
 			"obj-1::obj-42" : [ "morph", "morph", 0 ],
 			"obj-1::obj-45" : [ "S", "S", 1 ],
 			"obj-1::obj-47" : [ "offset", "offset", 0 ],
@@ -897,13 +899,14 @@
 			"obj-31::obj-114" : [ "clear_breakpoints[1]", "clear_breakpoints", 0 ],
 			"obj-31::obj-123" : [ "asGrid[1]", "asGrid", 1 ],
 			"obj-31::obj-128" : [ "zoom[1]", "zoom", 0 ],
-			"obj-31::obj-16" : [ "title[1]", "title", 0 ],
+			"obj-31::obj-154" : [ "title[1]", "title", 0 ],
 			"obj-31::obj-19" : [ "mute[1]", "mute", 0 ],
 			"obj-31::obj-191" : [ "snapToNIGrid_parameter[1]", "snapToNIGrid_parameter", 0 ],
 			"obj-31::obj-193" : [ "firstChannel_parameter[1]", "firstChannel_parameter", 0 ],
 			"obj-31::obj-195" : [ "chans_parameter[1]", "chans_parameter", 0 ],
-			"obj-31::obj-199" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
+			"obj-31::obj-199" : [ "resetNIGrid[3]", "resetNIGrid", 0 ],
 			"obj-31::obj-22" : [ "lock[1]", "lock", 0 ],
+			"obj-31::obj-242" : [ "resetNIGrid[2]", "resetNIGrid", 0 ],
 			"obj-31::obj-42" : [ "morph[1]", "morph", 0 ],
 			"obj-31::obj-45" : [ "S[1]", "S", 1 ],
 			"obj-31::obj-47" : [ "offset[1]", "offset", 0 ],
@@ -966,11 +969,15 @@
 				}
 ,
 				"obj-31::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[1]"
+					"parameter_longname" : "resetNIGrid[3]"
 				}
 ,
 				"obj-31::obj-22" : 				{
 					"parameter_longname" : "lock[1]"
+				}
+,
+				"obj-31::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[2]"
 				}
 ,
 				"obj-31::obj-42" : 				{
@@ -1089,6 +1096,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "GCD.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "Sounds_of_Silence.maxsnap",
 				"bootpath" : "~/Documents/Max 9/Snapshots",
 				"patcherrelativepath" : "../../../Snapshots",
@@ -1103,14 +1117,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "drawGrid.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "drawNIGrid.js",
+				"name" : "drawNIGrid_zoom.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
 				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
@@ -1201,6 +1208,13 @@
 			}
 , 			{
 				"name" : "shift_markers.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "zoomNscroll_coremath.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
 				"patcherrelativepath" : "../javascript",
 				"type" : "TEXT",

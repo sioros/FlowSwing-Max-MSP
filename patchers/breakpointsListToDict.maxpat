@@ -124,7 +124,7 @@
 				"box" : 				{
 					"comment" : "silent state (lost of 0/1 values)",
 					"id" : "obj-16",
-					"index" : 4,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -185,7 +185,7 @@
 				"box" : 				{
 					"comment" : "curve values",
 					"id" : "obj-13",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -198,7 +198,7 @@
 				"box" : 				{
 					"comment" : "y values",
 					"id" : "obj-12",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -236,10 +236,10 @@
 					"id" : "obj-11",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "bang", "", "clear" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
 					"patching_rect" : [ 42.0, 324.0, 57.0, 22.0 ],
-					"text" : "t b l clear"
+					"text" : "t b l"
 				}
 
 			}
@@ -269,7 +269,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 63.0, 362.0, 95.0, 22.0 ],
+					"patching_rect" : [ 80.0, 364.0, 95.0, 22.0 ],
 					"text" : "prepend set env"
 				}
 
@@ -315,10 +315,10 @@
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 42.0, 94.0, 67.0, 22.0 ],
-					"text" : "t b l"
+					"numoutlets" : 3,
+					"outlettype" : [ "bang", "", "clear" ],
+					"patching_rect" : [ 42.0, 94.0, 142.0, 22.0 ],
+					"text" : "t b l clear"
 				}
 
 			}
@@ -326,7 +326,7 @@
 				"box" : 				{
 					"comment" : "dictionary of breakpoints",
 					"id" : "obj-4",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -338,7 +338,7 @@
 				"box" : 				{
 					"comment" : "list of breakpoints times",
 					"id" : "obj-3",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -359,13 +359,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-10", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"source" : [ "obj-11", 2 ]
 				}
 
 			}
@@ -530,6 +523,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-5", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
 					"order" : 0,
 					"source" : [ "obj-5", 1 ]
@@ -596,6 +596,8 @@
 
 			}
  ],
+		"dependency_cache" : [  ],
+		"autosave" : 0,
 		"toolbaradditions" : [ "audiomute", "audiosolo" ]
 	}
 

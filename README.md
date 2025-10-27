@@ -57,6 +57,10 @@ This repository is actively maintained and regularly updated with new features, 
 **Version 1** was a pre-release corresponding to the description in the SMC2025 paper (Sioros & Klissouras, 2025).
 **Version 2** introduces new features, a redesigned UI, and an improved DSP engine with bug fixes and better performance. It remains backwards compatible.  
 
+### Highlights in Version 2.3
+- **flowSwing.nested:** New flowSwing device that implements 2 hierarchically nested NI Grids.
+- **Zoom:** Zoom in and out of the time line for a closer view and detailed editing of breakpoints or warp markers.
+
 ### Highlights in Version 2
 - **Pattern locking:** Events are now associated with the nearest NI Grid beat (instead of the formative beat), offering more flexible alignment options.  
 - **Parameter reset button:** Quickly revert T, S, and R values to the state they had when the pattern was locked.  

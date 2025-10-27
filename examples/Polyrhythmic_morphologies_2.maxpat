@@ -29,11 +29,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-32",
-					"linecount" : 25,
+					"linecount" : 23,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.0, 58.5, 112.0, 351.0 ],
+					"patching_rect" : [ 14.0, 58.5, 116.0, 324.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
 					"presentation_rect" : [ 4.0, 40.0, 849.0, 48.0 ],
@@ -1024,7 +1024,7 @@
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
 					"patching_rect" : [ 388.0, 376.0, 123.0, 32.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.0, 412.0, 688.0, 101.0 ],
+					"presentation_rect" : [ 4.0, 412.0, 715.0, 100.0 ],
 					"varname" : "flowSwing_envelop[1]",
 					"viewvisibility" : 1
 				}
@@ -1048,7 +1048,7 @@
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
 					"patching_rect" : [ 137.0, 376.0, 131.0, 32.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.0, 131.0, 688.0, 101.0 ],
+					"presentation_rect" : [ 4.0, 131.0, 715.0, 100.0 ],
 					"varname" : "flowSwing_envelop",
 					"viewvisibility" : 1
 				}
@@ -1486,40 +1486,48 @@
 			"obj-1::obj-114" : [ "clear_breakpoints", "clear_breakpoints", 0 ],
 			"obj-1::obj-123" : [ "asGrid", "asGrid", 1 ],
 			"obj-1::obj-128" : [ "zoom", "zoom", 0 ],
-			"obj-1::obj-16" : [ "title", "title", 0 ],
+			"obj-1::obj-154" : [ "title", "title", 0 ],
 			"obj-1::obj-19" : [ "mute", "mute", 0 ],
 			"obj-1::obj-191" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
 			"obj-1::obj-193" : [ "firstChannel_parameter", "firstChannel_parameter", 0 ],
 			"obj-1::obj-195" : [ "chans_parameter", "chans_parameter", 0 ],
 			"obj-1::obj-199" : [ "resetNIGrid", "resetNIGrid", 0 ],
 			"obj-1::obj-22" : [ "lock", "lock", 0 ],
+			"obj-1::obj-242" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
+			"obj-1::obj-253" : [ "rescale", "rescale", 0 ],
 			"obj-1::obj-42" : [ "morph", "morph", 0 ],
 			"obj-1::obj-45" : [ "S", "S", 1 ],
 			"obj-1::obj-47" : [ "offset", "offset", 0 ],
 			"obj-1::obj-48" : [ "niRotation", "niRotation", 0 ],
 			"obj-1::obj-50" : [ "Formative", "Formative", 0 ],
 			"obj-1::obj-51" : [ "Target", "Target", 0 ],
+			"obj-1::obj-66" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-1::obj-68" : [ "clear_breakpoints[1]", "clear_breakpoints", 0 ],
 			"obj-1::obj-90" : [ "secondary_S_control", "secondary_S_control", 0 ],
 			"obj-1::obj-91" : [ "hold", "hold", 0 ],
 			"obj-24" : [ "rate numerator ", "rate numerator ", 0 ],
 			"obj-27" : [ "rate denominator", "rate denominator", 0 ],
 			"obj-2::obj-109" : [ "breakpoints[1]", "breakpoints", 2 ],
-			"obj-2::obj-114" : [ "clear_breakpoints[1]", "clear_breakpoints", 0 ],
+			"obj-2::obj-114" : [ "clear_breakpoints[3]", "clear_breakpoints", 0 ],
 			"obj-2::obj-123" : [ "asGrid[1]", "asGrid", 1 ],
 			"obj-2::obj-128" : [ "zoom[1]", "zoom", 0 ],
-			"obj-2::obj-16" : [ "title[1]", "title", 0 ],
+			"obj-2::obj-154" : [ "title[1]", "title", 0 ],
 			"obj-2::obj-19" : [ "mute[1]", "mute", 0 ],
 			"obj-2::obj-191" : [ "snapToNIGrid_parameter[1]", "snapToNIGrid_parameter", 0 ],
 			"obj-2::obj-193" : [ "firstChannel_parameter[1]", "firstChannel_parameter", 0 ],
 			"obj-2::obj-195" : [ "chans_parameter[1]", "chans_parameter", 0 ],
-			"obj-2::obj-199" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
+			"obj-2::obj-199" : [ "resetNIGrid[3]", "resetNIGrid", 0 ],
 			"obj-2::obj-22" : [ "lock[1]", "lock", 0 ],
+			"obj-2::obj-242" : [ "resetNIGrid[2]", "resetNIGrid", 0 ],
+			"obj-2::obj-253" : [ "rescale[1]", "rescale", 0 ],
 			"obj-2::obj-42" : [ "morph[1]", "morph", 0 ],
 			"obj-2::obj-45" : [ "S[1]", "S", 1 ],
 			"obj-2::obj-47" : [ "offset[1]", "offset", 0 ],
 			"obj-2::obj-48" : [ "niRotation[1]", "niRotation", 0 ],
 			"obj-2::obj-50" : [ "Formative[1]", "Formative", 0 ],
 			"obj-2::obj-51" : [ "Target[1]", "Target", 0 ],
+			"obj-2::obj-66" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-2::obj-68" : [ "clear_breakpoints[2]", "clear_breakpoints", 0 ],
 			"obj-2::obj-90" : [ "secondary_S_control[1]", "secondary_S_control", 0 ],
 			"obj-2::obj-91" : [ "hold[1]", "hold", 0 ],
 			"obj-31" : [ "probCurve1", "probCurve1", 0 ],
@@ -1591,7 +1599,7 @@
 ,
 			"parameter_overrides" : 			{
 				"obj-2::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[1]"
+					"parameter_longname" : "clear_breakpoints[3]"
 				}
 ,
 				"obj-2::obj-128" : 				{
@@ -1615,11 +1623,19 @@
 				}
 ,
 				"obj-2::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[1]"
+					"parameter_longname" : "resetNIGrid[3]"
 				}
 ,
 				"obj-2::obj-22" : 				{
 					"parameter_longname" : "lock[1]"
+				}
+,
+				"obj-2::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[2]"
+				}
+,
+				"obj-2::obj-253" : 				{
+					"parameter_longname" : "rescale[1]"
 				}
 ,
 				"obj-2::obj-42" : 				{
@@ -1644,6 +1660,14 @@
 ,
 				"obj-2::obj-51" : 				{
 					"parameter_longname" : "Target[1]"
+				}
+,
+				"obj-2::obj-66" : 				{
+					"parameter_longname" : "live.menu[2]"
+				}
+,
+				"obj-2::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[2]"
 				}
 ,
 				"obj-2::obj-90" : 				{
@@ -1752,31 +1776,10 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "Polyrhythmic_morphologies_2.maxsnap",
-				"bootpath" : "~/Documents/Max 9/Snapshots",
-				"patcherrelativepath" : "../../../Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Polyrhythmic_morphologies_2[1].maxsnap",
-				"bootpath" : "~/Documents/Max 9/Snapshots",
-				"patcherrelativepath" : "../../../Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Polyrhythmic_morphologies_2[2].maxsnap",
-				"bootpath" : "~/Documents/Max 9/Snapshots",
-				"patcherrelativepath" : "../../../Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Polyrhythmic_morphologies_2[3].maxsnap",
-				"bootpath" : "~/Documents/Max 9/Snapshots",
-				"patcherrelativepath" : "../../../Snapshots",
-				"type" : "mx@s",
+				"name" : "GCD.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -1787,6 +1790,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "breakpointsListToDict.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
+				"patcherrelativepath" : "../patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "complex_quantise.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
 				"patcherrelativepath" : "../javascript",
@@ -1794,14 +1804,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "drawGrid.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "drawNIGrid.js",
+				"name" : "drawNIGrid_zoom.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
 				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
@@ -1904,6 +1907,13 @@
 				"type" : "gDSP",
 				"implicit" : 1
 			}
+, 			{
+				"name" : "zoomNscroll_coremath.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
  ],
 		"autosave" : 0,
 		"snapshot" : 		{
@@ -1961,16 +1971,16 @@
 						"ampCurve[1]" : 3.357009801475102,
 						"attack" : 262.074139420889708,
 						"attack[1]" : 646.330407009565192,
-						"chans" : 64.0,
-						"chans[1]" : 64.0,
+						"chans_parameter" : 64.0,
+						"chans_parameter[1]" : 64.0,
 						"decay" : 965.48938460562988,
 						"decay[1]" : 965.48938460562988,
 						"envCurve" : 3.692361919836229,
 						"envCurve[1]" : 3.692361919836229,
 						"filter" : 6.924143728996021,
 						"filter[1]" : 4.886980447917325,
-						"firstChannel" : 1.0,
-						"firstChannel[1]" : 1.0,
+						"firstChannel_parameter" : 1.0,
+						"firstChannel_parameter[1]" : 1.0,
 						"hold" : 0.0,
 						"hold[1]" : 0.0,
 						"lock" : 1.0,
@@ -1984,15 +1994,15 @@
 						"offset" : 0.0,
 						"offset[1]" : 0.0,
 						"pattern 1 gain" : -3.916010498687641,
-						"pattern 2 gain" : -46.09756097560976,
+						"pattern 2 gain" : -7.322450547340139,
 						"probCurve1" : 0.0,
 						"probCurve2" : 0.0,
 						"rate denominator" : 8.0,
 						"rate numerator " : 5.0,
 						"release" : 1310.370697104448254,
 						"release[1]" : 1310.370697104448254,
-						"snapToNIGrid" : 1.0,
-						"snapToNIGrid[1]" : 1.0,
+						"snapToNIGrid_parameter" : 1.0,
+						"snapToNIGrid_parameter[1]" : 1.0,
 						"sustain" : 0.503937007874015,
 						"sustain[1]" : 0.503937007874015,
 						"S" : 0.598425196850393,
@@ -2239,1376 +2249,12 @@
 			}
 ,
 			"snapshotlist" : 			{
-				"current_snapshot" : 4,
+				"current_snapshot" : 0,
 				"entries" : [ 					{
 						"filetype" : "C74Snapshot",
 						"version" : 2,
 						"minorversion" : 0,
 						"name" : "Polyrhythmic_morphologies_2",
-						"origin" : "Polyrhythmic_morphologies_2",
-						"type" : "patcher",
-						"subtype" : "Undefined",
-						"embed" : 1,
-						"snapshot" : 						{
-							"valuedictionary" : 							{
-								"parameter_values" : 								{
-									"ModInA" : 1.0,
-									"ModInB" : 1.0,
-									"ModOutA" : 1.0,
-									"ModOutB" : 1.0,
-									"Active" : 1.0,
-									"Bass" : 1.0,
-									"CPM" : 10.0,
-									"Damp" : 0.5,
-									"Decay" : 3.5,
-									"Filter range" : 4.886980447917325,
-									"Filter range[1]" : 4.886980447917325,
-									"Formative" : 8.0,
-									"Formative[1]" : 5.0,
-									"Freeze" : 0.0,
-									"Frequency1" : 110.0,
-									"Frequency2" : 330.0,
-									"Mix" : 0.5,
-									"Mod" : 0.5,
-									"Noise A" : 0.0,
-									"Noise A range" : 0.0,
-									"Noise A range[1]" : 0.740157480314959,
-									"Noise A[1]" : 0.0,
-									"Noise F" : 0.0,
-									"Noise F range" : 0.968503937007874,
-									"Noise F range[1]" : 0.0,
-									"Noise F[1]" : 0.283464566929134,
-									"Q" : 0.913385826771652,
-									"Q range" : 0.0,
-									"Q range[1]" : 0.0,
-									"Q[1]" : 0.968503937007873,
-									"Shape" : 0.5,
-									"Size" : 0.5,
-									"Skew" : -0.614173228346456,
-									"Skew range" : -0.771653543307085,
-									"Skew range[1]" : 0.0,
-									"Skew[1]" : 0.0,
-									"Target" : 11.0,
-									"Target[1]" : 4.0,
-									"XBass" : 400.0,
-									"ampCurve" : 3.357009801475102,
-									"ampCurve[1]" : 3.357009801475102,
-									"attack" : 208.008382305190452,
-									"attack[1]" : 355.689330449006434,
-									"chans" : 64.0,
-									"chans[1]" : 64.0,
-									"decay" : 965.48938460562988,
-									"decay[1]" : 965.48938460562988,
-									"envCurve" : 2.764705472715657,
-									"envCurve[1]" : 3.692361919836229,
-									"filter" : 4.886980447917325,
-									"filter[1]" : 6.924143728996021,
-									"firstChannel" : 1.0,
-									"firstChannel[1]" : 1.0,
-									"hold" : 0.0,
-									"hold[1]" : 0.0,
-									"lock" : 1.0,
-									"lock[1]" : 1.0,
-									"morph" : 1.0,
-									"morph[1]" : 1.0,
-									"mute" : 0.0,
-									"mute[1]" : 0.0,
-									"niRotation" : 1.0,
-									"niRotation[1]" : 3.0,
-									"offset" : 0.0,
-									"offset[1]" : 0.0,
-									"pattern 1 gain" : -10.569809871327088,
-									"pattern 2 gain" : -18.278663337814464,
-									"probCurve1" : 0.0,
-									"probCurve2" : 0.0,
-									"rate denominator" : 8.0,
-									"rate numerator " : 5.0,
-									"release" : 1310.370697104448254,
-									"release[1]" : 1310.370697104448254,
-									"snapToNIGrid" : 1.0,
-									"snapToNIGrid[1]" : 1.0,
-									"sustain" : 0.181102362204724,
-									"sustain[1]" : 0.503937007874015,
-									"S" : 0.598425196850393,
-									"S[1]" : 0.598425196850393,
-									"blob" : 									{
-										"Abl.DarkHall" : [ 											{
-												"pattrstorage" : 												{
-													"name" : "Abl.DarkHallReverb",
-													"slots" : 													{
-														"1" : 														{
-															"id" : 1,
-															"name" : "Default",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"2" : 														{
-															"id" : 2,
-															"name" : "Small",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 0.496004271633635 ],
-																"Damp" : [ 0.661417322834646 ],
-																"Decay" : [ 0.24366878655017 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 1.0 ],
-																"Size" : [ 0.122047244094488 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"3" : 														{
-															"id" : 3,
-															"name" : "Long",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 7.004655426251928 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 1.0 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"4" : 														{
-															"id" : 4,
-															"name" : "Large",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 6.047257916583295 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.0 ],
-																"Size" : [ 1.0 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"5" : 														{
-															"id" : 5,
-															"name" : "Huge",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 60.0 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.350393700787402 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 1.0 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"6" : 														{
-															"id" : 6,
-															"name" : "Dark",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 1.0 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"7" : 														{
-															"id" : 7,
-															"name" : "Bright",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 0.25 ],
-																"Damp" : [ 0.0 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"8" : 														{
-															"id" : 8,
-															"name" : "Flat",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.0 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"9" : 														{
-															"id" : 9,
-															"name" : "Warm",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 4.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 1.132619640488149 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 1.0 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 1.0 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-
-													}
-
-												}
-
-											}
- ],
-										"title" : [ "Pattern 1 (slow)" ],
-										"title[1]" : [ "Pattern 2 (fast)" ],
-										"zoom" : [ 1.0 ],
-										"zoom[1]" : [ 1.0 ],
-										"asGrid" : [ 0.0, 2, 11 ],
-										"asGrid[1]" : [ 0.0, 0, 8 ],
-										"breakpoints" : [ 											{
-												"env" : [ 0, 1, 0, 0.125, 0.306451612903226, 0, 0.25, 0.290322580645161, -0.695, 0.375, 0.983870967741935, 0.65, 0.499156829679595, 0.338709677419355, 0.7, 0.625, 0.193548387096774, 0.2, 0.75, 0.629032258064516, 0, 0.876897133220911, 0.258064516129032, 0, 1, 1, 0.6 ],
-												"lock" : 												{
-													"associations" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
-													"order" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
-												}
-
-											}
- ],
-										"breakpoints[1]" : [ 											{
-												"env" : [ 0, 1, 0, 0.2, 0.338709677419355, -0.695, 0.4, 0.935483870967742, 0.65, 0.6, 0.17741935483871, 0.7, 0.8, 0.612903225806452, 0, 1, 1, 0.6 ],
-												"lock" : 												{
-													"associations" : [ 0, 1, 2, 3, 4, 5 ],
-													"order" : [ 0, 0, 0, 0, 0, 0 ]
-												}
-
-											}
- ]
-									}
-
-								}
-
-							}
-
-						}
-,
-						"fileref" : 						{
-							"name" : "Polyrhythmic_morphologies_2",
-							"filename" : "Polyrhythmic_morphologies_2.maxsnap",
-							"filepath" : "~/Documents/Max 9/Snapshots",
-							"filepos" : -1,
-							"snapshotfileid" : "88989a43a3d950aa22e10858c0265ecd"
-						}
-
-					}
-, 					{
-						"filetype" : "C74Snapshot",
-						"version" : 2,
-						"minorversion" : 0,
-						"name" : "Polyrhythmic_morphologies_2[1]",
-						"origin" : "Polyrhythmic_morphologies_2",
-						"type" : "patcher",
-						"subtype" : "Undefined",
-						"embed" : 1,
-						"snapshot" : 						{
-							"valuedictionary" : 							{
-								"parameter_values" : 								{
-									"ModInA" : 1.0,
-									"ModInB" : 1.0,
-									"ModOutA" : 1.0,
-									"ModOutB" : 1.0,
-									"Active" : 1.0,
-									"Bass" : 4.0,
-									"CPM" : 10.0,
-									"Damp" : 0.5,
-									"Decay" : 15.573836675710968,
-									"Filter range" : 5.572789986627862,
-									"Filter range[1]" : 4.886980447917325,
-									"Formative" : 8.0,
-									"Formative[1]" : 5.0,
-									"Freeze" : 0.0,
-									"Frequency1" : 220.0,
-									"Frequency2" : 330.0,
-									"Mix" : 0.5,
-									"Mod" : 1.0,
-									"Noise A" : 0.0,
-									"Noise A range" : 0.0,
-									"Noise A range[1]" : 0.740157480314959,
-									"Noise A[1]" : 0.0,
-									"Noise F" : 0.0,
-									"Noise F range" : 0.968503937007874,
-									"Noise F range[1]" : 0.0,
-									"Noise F[1]" : 0.283464566929134,
-									"Q" : 0.968503937007874,
-									"Q range" : 0.0,
-									"Q range[1]" : 0.0,
-									"Q[1]" : 0.968503937007873,
-									"Shape" : 1.0,
-									"Size" : 0.5,
-									"Skew" : 0.0,
-									"Skew range" : 0.0,
-									"Skew range[1]" : 0.0,
-									"Skew[1]" : 0.0,
-									"Target" : 11.0,
-									"Target[1]" : 4.0,
-									"XBass" : 400.0,
-									"ampCurve" : 3.357009801475102,
-									"ampCurve[1]" : 3.357009801475102,
-									"attack" : 262.074139420889708,
-									"attack[1]" : 208.008382305190452,
-									"chans" : 64.0,
-									"chans[1]" : 64.0,
-									"decay" : 965.48938460562988,
-									"decay[1]" : 965.48938460562988,
-									"envCurve" : 2.764705472715657,
-									"envCurve[1]" : 3.692361919836229,
-									"filter" : 3.844033090433351,
-									"filter[1]" : 4.886980447917325,
-									"firstChannel" : 1.0,
-									"firstChannel[1]" : 1.0,
-									"hold" : 0.0,
-									"hold[1]" : 0.0,
-									"lock" : 1.0,
-									"lock[1]" : 1.0,
-									"morph" : 1.0,
-									"morph[1]" : 1.0,
-									"mute" : 0.0,
-									"mute[1]" : 0.0,
-									"niRotation" : 1.0,
-									"niRotation[1]" : 3.0,
-									"offset" : 0.0,
-									"offset[1]" : 0.0,
-									"pattern 1 gain" : -13.658536585365852,
-									"pattern 2 gain" : -20.646437487996934,
-									"probCurve1" : 1.0,
-									"probCurve2" : 1.0,
-									"rate denominator" : 8.0,
-									"rate numerator " : 5.0,
-									"release" : 1310.370697104448254,
-									"release[1]" : 1310.370697104448254,
-									"snapToNIGrid" : 1.0,
-									"snapToNIGrid[1]" : 1.0,
-									"sustain" : 0.181102362204724,
-									"sustain[1]" : 0.503937007874015,
-									"S" : 0.598425196850393,
-									"S[1]" : 0.598425196850393,
-									"blob" : 									{
-										"Abl.DarkHall" : [ 											{
-												"pattrstorage" : 												{
-													"name" : "Abl.DarkHallReverb",
-													"slots" : 													{
-														"1" : 														{
-															"id" : 1,
-															"name" : "Default",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"2" : 														{
-															"id" : 2,
-															"name" : "Small",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 0.496004271633635 ],
-																"Damp" : [ 0.661417322834646 ],
-																"Decay" : [ 0.24366878655017 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 1.0 ],
-																"Size" : [ 0.122047244094488 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"3" : 														{
-															"id" : 3,
-															"name" : "Long",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 7.004655426251928 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 1.0 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"4" : 														{
-															"id" : 4,
-															"name" : "Large",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 6.047257916583295 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.0 ],
-																"Size" : [ 1.0 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"5" : 														{
-															"id" : 5,
-															"name" : "Huge",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 60.0 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.350393700787402 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 1.0 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"6" : 														{
-															"id" : 6,
-															"name" : "Dark",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 1.0 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"7" : 														{
-															"id" : 7,
-															"name" : "Bright",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 0.25 ],
-																"Damp" : [ 0.0 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"8" : 														{
-															"id" : 8,
-															"name" : "Flat",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.0 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"9" : 														{
-															"id" : 9,
-															"name" : "Warm",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 4.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 1.132619640488149 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 1.0 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 1.0 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-
-													}
-
-												}
-
-											}
- ],
-										"title" : [ "Pattern 1 (slow)" ],
-										"title[1]" : [ "Pattern 2 (fast)" ],
-										"zoom" : [ 1.0 ],
-										"zoom[1]" : [ 1.0 ],
-										"asGrid" : [ 0.598425196850393, 1, 11 ],
-										"asGrid[1]" : [ 0.0, 0, 8 ],
-										"breakpoints" : [ 											{
-												"env" : [ 0, 1, 0, 0.125, 0.306451612903226, 0, 0.25, 0.290322580645161, -0.695, 0.375, 0.983870967741935, 0.65, 0.499156829679595, 0.338709677419355, 0.7, 0.625, 0.193548387096774, 0.2, 0.75, 0.629032258064516, 0.65, 0.876897133220911, 0.258064516129032, -0.75, 1, 1, 0.6 ],
-												"lock" : 												{
-													"associations" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
-													"order" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
-												}
-
-											}
- ],
-										"breakpoints[1]" : [ 											{
-												"env" : [ 0, 1, 0, 0.2, 0.338709677419355, -0.695, 0.4, 0.935483870967742, 0.65, 0.6, 0.17741935483871, 0.7, 0.8, 0.612903225806452, 0, 1, 1, 0.6 ],
-												"lock" : 												{
-													"associations" : [ 0, 1, 2, 3, 4, 5 ],
-													"order" : [ 0, 0, 0, 0, 0, 0 ]
-												}
-
-											}
- ]
-									}
-
-								}
-
-							}
-
-						}
-,
-						"fileref" : 						{
-							"name" : "Polyrhythmic_morphologies_2[1]",
-							"filename" : "Polyrhythmic_morphologies_2[1].maxsnap",
-							"filepath" : "~/Documents/Max 9/Snapshots",
-							"filepos" : -1,
-							"snapshotfileid" : "56f5bde6290f7afae8d35f8f39dd2cee"
-						}
-
-					}
-, 					{
-						"filetype" : "C74Snapshot",
-						"version" : 2,
-						"minorversion" : 0,
-						"name" : "Polyrhythmic_morphologies_2[2]",
-						"origin" : "Polyrhythmic_morphologies_2",
-						"type" : "patcher",
-						"subtype" : "Undefined",
-						"embed" : 1,
-						"snapshot" : 						{
-							"valuedictionary" : 							{
-								"parameter_values" : 								{
-									"ModInA" : 1.0,
-									"ModInB" : 1.0,
-									"ModOutA" : 1.0,
-									"ModOutB" : 1.0,
-									"Active" : 1.0,
-									"Bass" : 4.0,
-									"CPM" : 10.0,
-									"Damp" : 0.5,
-									"Decay" : 15.573836675710968,
-									"Filter range" : 7.565141547442035,
-									"Filter range[1]" : 4.886980447917325,
-									"Formative" : 8.0,
-									"Formative[1]" : 5.0,
-									"Freeze" : 0.0,
-									"Frequency1" : 110.0,
-									"Frequency2" : 330.0,
-									"Mix" : 0.5,
-									"Mod" : 1.0,
-									"Noise A" : 0.0,
-									"Noise A range" : 0.0,
-									"Noise A range[1]" : 0.740157480314959,
-									"Noise A[1]" : 0.0,
-									"Noise F" : 0.4251968503937,
-									"Noise F range" : 0.4251968503937,
-									"Noise F range[1]" : 0.0,
-									"Noise F[1]" : 0.283464566929134,
-									"Q" : 0.968503937007874,
-									"Q range" : 0.0,
-									"Q range[1]" : 0.0,
-									"Q[1]" : 0.968503937007873,
-									"Shape" : 1.0,
-									"Size" : 0.5,
-									"Skew" : 1.0,
-									"Skew range" : 0.0,
-									"Skew range[1]" : 0.0,
-									"Skew[1]" : 0.0,
-									"Target" : 11.0,
-									"Target[1]" : 4.0,
-									"XBass" : 400.0,
-									"ampCurve" : 3.357009801475102,
-									"ampCurve[1]" : 3.357009801475102,
-									"attack" : 262.074139420889708,
-									"attack[1]" : 208.008382305190452,
-									"chans" : 64.0,
-									"chans[1]" : 64.0,
-									"decay" : 965.48938460562988,
-									"decay[1]" : 965.48938460562988,
-									"envCurve" : 2.764705472715657,
-									"envCurve[1]" : 3.692361919836229,
-									"filter" : 3.844033090433351,
-									"filter[1]" : 4.886980447917325,
-									"firstChannel" : 1.0,
-									"firstChannel[1]" : 1.0,
-									"hold" : 0.0,
-									"hold[1]" : 0.0,
-									"lock" : 1.0,
-									"lock[1]" : 1.0,
-									"morph" : 1.0,
-									"morph[1]" : 1.0,
-									"mute" : 0.0,
-									"mute[1]" : 0.0,
-									"niRotation" : 1.0,
-									"niRotation[1]" : 3.0,
-									"offset" : 0.0,
-									"offset[1]" : 0.0,
-									"pattern 1 gain" : -2.560975609756099,
-									"pattern 2 gain" : -36.276166698674871,
-									"probCurve1" : 1.0,
-									"probCurve2" : 1.0,
-									"rate denominator" : 8.0,
-									"rate numerator " : 5.0,
-									"release" : 1310.370697104448254,
-									"release[1]" : 1310.370697104448254,
-									"snapToNIGrid" : 1.0,
-									"snapToNIGrid[1]" : 1.0,
-									"sustain" : 0.181102362204724,
-									"sustain[1]" : 0.503937007874015,
-									"S" : 0.598425196850393,
-									"S[1]" : 0.598425196850393,
-									"blob" : 									{
-										"Abl.DarkHall" : [ 											{
-												"pattrstorage" : 												{
-													"name" : "Abl.DarkHallReverb",
-													"slots" : 													{
-														"1" : 														{
-															"id" : 1,
-															"name" : "Default",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"2" : 														{
-															"id" : 2,
-															"name" : "Small",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 0.496004271633635 ],
-																"Damp" : [ 0.661417322834646 ],
-																"Decay" : [ 0.24366878655017 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 1.0 ],
-																"Size" : [ 0.122047244094488 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"3" : 														{
-															"id" : 3,
-															"name" : "Long",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 7.004655426251928 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 1.0 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"4" : 														{
-															"id" : 4,
-															"name" : "Large",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 6.047257916583295 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.0 ],
-																"Size" : [ 1.0 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"5" : 														{
-															"id" : 5,
-															"name" : "Huge",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 60.0 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.350393700787402 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 1.0 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"6" : 														{
-															"id" : 6,
-															"name" : "Dark",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 1.0 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"7" : 														{
-															"id" : 7,
-															"name" : "Bright",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 0.25 ],
-																"Damp" : [ 0.0 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"8" : 														{
-															"id" : 8,
-															"name" : "Flat",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.0 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"9" : 														{
-															"id" : 9,
-															"name" : "Warm",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 4.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 1.132619640488149 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 1.0 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 1.0 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-
-													}
-
-												}
-
-											}
- ],
-										"title" : [ "Pattern 1 (slow)" ],
-										"title[1]" : [ "Pattern 2 (fast)" ],
-										"zoom" : [ 1.0 ],
-										"zoom[1]" : [ 1.0 ],
-										"asGrid" : [ 0.598425196850393, 1, 11 ],
-										"asGrid[1]" : [ 0.0, 0, 8 ],
-										"breakpoints" : [ 											{
-												"env" : [ 0, 1, 0, 0.125, 0.306451612903226, 0, 0.25, 0.290322580645161, -0.695, 0.375, 0.983870967741935, 0.65, 0.499156829679595, 0.338709677419355, 0.7, 0.625, 0.193548387096774, 0.2, 0.75, 0.629032258064516, 0.65, 0.876897133220911, 0.258064516129032, -0.75, 1, 1, 0.6 ],
-												"lock" : 												{
-													"associations" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
-													"order" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
-												}
-
-											}
- ],
-										"breakpoints[1]" : [ 											{
-												"env" : [ 0, 1, 0, 0.2, 0.338709677419355, -0.695, 0.4, 0.935483870967742, 0.65, 0.6, 0.17741935483871, 0.7, 0.8, 0.612903225806452, 0, 1, 1, 0.6 ],
-												"lock" : 												{
-													"associations" : [ 0, 1, 2, 3, 4, 5 ],
-													"order" : [ 0, 0, 0, 0, 0, 0 ]
-												}
-
-											}
- ]
-									}
-
-								}
-
-							}
-
-						}
-,
-						"fileref" : 						{
-							"name" : "Polyrhythmic_morphologies_2[2]",
-							"filename" : "Polyrhythmic_morphologies_2[2].maxsnap",
-							"filepath" : "~/Documents/Max 9/Snapshots",
-							"filepos" : -1,
-							"snapshotfileid" : "5545224afd82e79d1611a13b81aab96f"
-						}
-
-					}
-, 					{
-						"filetype" : "C74Snapshot",
-						"version" : 2,
-						"minorversion" : 0,
-						"name" : "Polyrhythmic_morphologies_2[3]",
-						"origin" : "Polyrhythmic_morphologies_2",
-						"type" : "patcher",
-						"subtype" : "Undefined",
-						"embed" : 1,
-						"snapshot" : 						{
-							"valuedictionary" : 							{
-								"parameter_values" : 								{
-									"ModInA" : 1.0,
-									"ModInB" : 1.0,
-									"ModOutA" : 1.0,
-									"ModOutB" : 1.0,
-									"Active" : 1.0,
-									"Bass" : 1.511234435979992,
-									"CPM" : 10.0,
-									"Damp" : 0.661417322834646,
-									"Decay" : 8.118110236220444,
-									"Filter range" : 4.886980447917325,
-									"Filter range[1]" : 4.886980447917325,
-									"Formative" : 8.0,
-									"Formative[1]" : 5.0,
-									"Freeze" : 0.0,
-									"Frequency1" : 55.0,
-									"Frequency2" : 330.0,
-									"Mix" : 0.5,
-									"Mod" : 0.5,
-									"Noise A" : 0.0,
-									"Noise A range" : 0.0,
-									"Noise A range[1]" : 0.740157480314959,
-									"Noise A[1]" : 0.0,
-									"Noise F" : 0.291338582677165,
-									"Noise F range" : 0.0,
-									"Noise F range[1]" : 0.0,
-									"Noise F[1]" : 0.283464566929134,
-									"Q" : 0.5,
-									"Q range" : 0.0,
-									"Q range[1]" : 0.0,
-									"Q[1]" : 0.968503937007873,
-									"Shape" : 1.0,
-									"Size" : 0.122047244094488,
-									"Skew" : -0.724409448818895,
-									"Skew range" : 0.0,
-									"Skew range[1]" : 0.0,
-									"Skew[1]" : 0.0,
-									"Target" : 11.0,
-									"Target[1]" : 4.0,
-									"XBass" : 400.0,
-									"ampCurve" : 3.357009801475102,
-									"ampCurve[1]" : 3.357009801475102,
-									"attack" : 262.074139420889708,
-									"attack[1]" : 208.008382305190452,
-									"chans" : 64.0,
-									"chans[1]" : 64.0,
-									"decay" : 965.48938460562988,
-									"decay[1]" : 965.48938460562988,
-									"envCurve" : 2.764705472715657,
-									"envCurve[1]" : 3.692361919836229,
-									"filter" : 6.924143728996021,
-									"filter[1]" : 4.886980447917325,
-									"firstChannel" : 1.0,
-									"firstChannel[1]" : 1.0,
-									"hold" : 0.0,
-									"hold[1]" : 0.0,
-									"lock" : 1.0,
-									"lock[1]" : 1.0,
-									"morph" : 1.0,
-									"morph[1]" : 1.0,
-									"mute" : 0.0,
-									"mute[1]" : 0.0,
-									"niRotation" : 1.0,
-									"niRotation[1]" : 3.0,
-									"offset" : 0.0,
-									"offset[1]" : 0.0,
-									"pattern 1 gain" : -13.227386210869987,
-									"pattern 2 gain" : -25.530439792586904,
-									"probCurve1" : 0.0,
-									"probCurve2" : 0.0,
-									"rate denominator" : 8.0,
-									"rate numerator " : 5.0,
-									"release" : 1310.370697104448254,
-									"release[1]" : 1310.370697104448254,
-									"snapToNIGrid" : 1.0,
-									"snapToNIGrid[1]" : 1.0,
-									"sustain" : 0.181102362204724,
-									"sustain[1]" : 0.503937007874015,
-									"S" : 0.598425196850393,
-									"S[1]" : 0.598425196850393,
-									"blob" : 									{
-										"Abl.DarkHall" : [ 											{
-												"pattrstorage" : 												{
-													"name" : "Abl.DarkHallReverb",
-													"slots" : 													{
-														"1" : 														{
-															"id" : 1,
-															"name" : "Default",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"2" : 														{
-															"id" : 2,
-															"name" : "Small",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 0.496004271633635 ],
-																"Damp" : [ 0.661417322834646 ],
-																"Decay" : [ 0.24366878655017 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 1.0 ],
-																"Size" : [ 0.122047244094488 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"3" : 														{
-															"id" : 3,
-															"name" : "Long",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 7.004655426251928 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 1.0 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"4" : 														{
-															"id" : 4,
-															"name" : "Large",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 6.047257916583295 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.0 ],
-																"Size" : [ 1.0 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"5" : 														{
-															"id" : 5,
-															"name" : "Huge",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 60.0 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.350393700787402 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 1.0 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"6" : 														{
-															"id" : 6,
-															"name" : "Dark",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 1.0 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"7" : 														{
-															"id" : 7,
-															"name" : "Bright",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 0.25 ],
-																"Damp" : [ 0.0 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.5 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"8" : 														{
-															"id" : 8,
-															"name" : "Flat",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 1.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 3.499999999999999 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 0.0 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 0.5 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-,
-														"9" : 														{
-															"id" : 9,
-															"name" : "Warm",
-															"data" : 															{
-																"Active" : [ 1.0 ],
-																"Bass" : [ 4.0 ],
-																"Damp" : [ 0.5 ],
-																"Decay" : [ 1.132619640488149 ],
-																"Freeze" : [ 0.0 ],
-																"Mix" : [ 0.5 ],
-																"Mod" : [ 1.0 ],
-																"ModInA" : [ 1 ],
-																"ModInB" : [ 1 ],
-																"ModOutA" : [ 1 ],
-																"ModOutB" : [ 1 ],
-																"Shape" : [ 1.0 ],
-																"Size" : [ 0.5 ],
-																"XBass" : [ 400.0 ]
-															}
-
-														}
-
-													}
-
-												}
-
-											}
- ],
-										"title" : [ "Pattern 1 (slow)" ],
-										"title[1]" : [ "Pattern 2 (fast)" ],
-										"zoom" : [ 1.0 ],
-										"zoom[1]" : [ 1.0 ],
-										"asGrid" : [ 0.598425196850393, 1, 11 ],
-										"asGrid[1]" : [ 0.0, 0, 8 ],
-										"breakpoints" : [ 											{
-												"env" : [ 0, 1, 0, 0.125, 0.306451612903226, 0, 0.25, 0.290322580645161, -0.695, 0.375, 0.983870967741935, 0.65, 0.499156829679595, 0.338709677419355, 0.7, 0.625, 0.193548387096774, 0.2, 0.75, 0.629032258064516, 0.65, 0.876897133220911, 0.258064516129032, -0.75, 1, 1, 0.6 ],
-												"lock" : 												{
-													"associations" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
-													"order" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
-												}
-
-											}
- ],
-										"breakpoints[1]" : [ 											{
-												"env" : [ 0, 1, 0, 0.2, 0.338709677419355, -0.695, 0.4, 0.935483870967742, 0.65, 0.6, 0.17741935483871, 0.7, 0.8, 0.612903225806452, 0, 1, 1, 0.6 ],
-												"lock" : 												{
-													"associations" : [ 0, 1, 2, 3, 4, 5 ],
-													"order" : [ 0, 0, 0, 0, 0, 0 ]
-												}
-
-											}
- ]
-									}
-
-								}
-
-							}
-
-						}
-,
-						"fileref" : 						{
-							"name" : "Polyrhythmic_morphologies_2[3]",
-							"filename" : "Polyrhythmic_morphologies_2[3].maxsnap",
-							"filepath" : "~/Documents/Max 9/Snapshots",
-							"filepos" : -1,
-							"snapshotfileid" : "373ad22d46b68cb200a0aef69411a92a"
-						}
-
-					}
-, 					{
-						"filetype" : "C74Snapshot",
-						"version" : 2,
-						"minorversion" : 0,
-						"name" : "Polyrhythmic_morphologies_2[4]",
 						"origin" : "Polyrhythmic_morphologies_2",
 						"type" : "patcher",
 						"subtype" : "Undefined",
@@ -3659,16 +2305,16 @@
 									"ampCurve[1]" : 3.357009801475102,
 									"attack" : 262.074139420889708,
 									"attack[1]" : 646.330407009565192,
-									"chans" : 64.0,
-									"chans[1]" : 64.0,
+									"chans_parameter" : 64.0,
+									"chans_parameter[1]" : 64.0,
 									"decay" : 965.48938460562988,
 									"decay[1]" : 965.48938460562988,
 									"envCurve" : 3.692361919836229,
 									"envCurve[1]" : 3.692361919836229,
 									"filter" : 6.924143728996021,
 									"filter[1]" : 4.886980447917325,
-									"firstChannel" : 1.0,
-									"firstChannel[1]" : 1.0,
+									"firstChannel_parameter" : 1.0,
+									"firstChannel_parameter[1]" : 1.0,
 									"hold" : 0.0,
 									"hold[1]" : 0.0,
 									"lock" : 1.0,
@@ -3682,15 +2328,15 @@
 									"offset" : 0.0,
 									"offset[1]" : 0.0,
 									"pattern 1 gain" : -3.916010498687641,
-									"pattern 2 gain" : -46.09756097560976,
+									"pattern 2 gain" : -7.322450547340139,
 									"probCurve1" : 0.0,
 									"probCurve2" : 0.0,
 									"rate denominator" : 8.0,
 									"rate numerator " : 5.0,
 									"release" : 1310.370697104448254,
 									"release[1]" : 1310.370697104448254,
-									"snapToNIGrid" : 1.0,
-									"snapToNIGrid[1]" : 1.0,
+									"snapToNIGrid_parameter" : 1.0,
+									"snapToNIGrid_parameter[1]" : 1.0,
 									"sustain" : 0.503937007874015,
 									"sustain[1]" : 0.503937007874015,
 									"S" : 0.598425196850393,
@@ -3937,7 +2583,7 @@
 						}
 ,
 						"fileref" : 						{
-							"name" : "Polyrhythmic_morphologies_2[4]",
+							"name" : "Polyrhythmic_morphologies_2",
 							"filename" : "Polyrhythmic_morphologies_2[4].maxsnap",
 							"filepath" : "~/Documents/Max 9/Snapshots",
 							"filepos" : -1,

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 190.0, 157.0, 1086.0, 622.0 ],
+		"rect" : [ 100.0, 100.0, 1086.0, 622.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"showrootpatcherontab" : 0,
 		"showontab" : 0,
@@ -62,7 +62,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 190.0, 183.0, 1086.0, 596.0 ],
+						"rect" : [ 100.0, 126.0, 1086.0, 596.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [ 							{
@@ -309,7 +309,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 847.0, 458.0, 39.0, 32.0 ],
+									"patching_rect" : [ 876.0, 458.0, 39.0, 32.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_enum" : [ "0", "1" ],
@@ -458,7 +458,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 711.0, 139.0, 130.0, 22.0 ],
+									"patching_rect" : [ 764.0, 144.0, 130.0, 22.0 ],
 									"text" : "p \"load audio to buffer\""
 								}
 
@@ -469,7 +469,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 753.0, 208.0, 76.0, 20.0 ],
+									"patching_rect" : [ 806.0, 208.0, 76.0, 20.0 ],
 									"text" : "buffer name "
 								}
 
@@ -480,7 +480,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 484.0, 102.0, 127.0, 20.0 ],
+									"patching_rect" : [ 526.0, 116.0, 127.0, 20.0 ],
 									"text" : "messages to groove~ "
 								}
 
@@ -492,7 +492,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 484.0, 124.0, 183.0, 22.0 ],
+									"patching_rect" : [ 526.0, 138.0, 183.0, 22.0 ],
 									"text" : "mode monophonic, quality better"
 								}
 
@@ -504,7 +504,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 711.0, 207.0, 38.0, 22.0 ],
+									"patching_rect" : [ 764.0, 207.0, 38.0, 22.0 ],
 									"text" : "loop1"
 								}
 
@@ -516,7 +516,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 711.0, 173.0, 58.0, 22.0 ],
+									"patching_rect" : [ 764.0, 178.0, 58.0, 22.0 ],
 									"text" : "loadbang"
 								}
 
@@ -528,7 +528,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 711.0, 109.0, 48.0, 22.0 ],
+									"patching_rect" : [ 764.0, 114.0, 48.0, 22.0 ],
 									"text" : "replace"
 								}
 
@@ -561,7 +561,7 @@
 									"numoutlets" : 8,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal", "signal", "signal", "signal", "", "", "", "" ],
-									"patching_rect" : [ 215.0, 240.0, 671.0, 204.0 ],
+									"patching_rect" : [ 215.0, 240.0, 700.0, 205.0 ],
 									"varname" : "flowSwing_audioWarp",
 									"viewvisibility" : 1
 								}
@@ -573,7 +573,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 867.0, 503.0, 91.0, 22.0 ],
+									"patching_rect" : [ 896.0, 503.0, 91.0, 22.0 ],
 									"text" : "print @popup 1"
 								}
 
@@ -585,7 +585,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 867.0, 197.0, 75.0, 22.0 ],
+									"patching_rect" : [ 896.0, 207.0, 75.0, 22.0 ],
 									"text" : "getattributes"
 								}
 
@@ -609,7 +609,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 910.0, 297.0, 135.0, 22.0 ],
+									"patching_rect" : [ 925.0, 308.0, 135.0, 22.0 ],
 									"priority" : 									{
 										"flowSwing_audioWarp::S" : 2,
 										"flowSwing_audioWarp::markers" : 3,
@@ -635,7 +635,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 910.0, 326.0, 150.0, 89.0 ],
+									"patching_rect" : [ 925.0, 337.0, 150.0, 89.0 ],
 									"text" : "The Flow Swing patches  are pattr and snapshot enabled. The right most inlets and outlets can be used to dirrectly set and get all parameters"
 								}
 
@@ -647,7 +647,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 337.0, 170.0, 158.0, 62.0 ],
+									"patching_rect" : [ 373.0, 166.0, 158.0, 62.0 ],
 									"text" : "Control the NI Grid parameters in real time through the UI or via messages to the right outlet"
 								}
 
@@ -667,7 +667,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 315.0, 208.0, 20.0, 20.0 ],
+									"patching_rect" : [ 351.0, 204.0, 20.0, 20.0 ],
 									"rounded" : 60.0,
 									"saved_attribute_attributes" : 									{
 										"bgcolor" : 										{
@@ -700,7 +700,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 519.0, 219.0, 20.0, 20.0 ],
+									"patching_rect" : [ 577.0, 208.0, 20.0, 20.0 ],
 									"rounded" : 60.0,
 									"saved_attribute_attributes" : 									{
 										"bgcolor" : 										{
@@ -830,7 +830,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 541.0, 177.0, 141.0, 62.0 ],
+									"patching_rect" : [ 599.0, 166.0, 141.0, 62.0 ],
 									"text" : "Lock the markers on the NI Grid. Each grid point is matched to the nearest NI Grid beat"
 								}
 
@@ -1000,7 +1000,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-1", 2 ],
-									"midpoints" : [ 720.5, 234.5, 659.166666666666742, 234.5 ],
+									"midpoints" : [ 773.5, 234.5, 678.5, 234.5 ],
 									"source" : [ "obj-17", 0 ]
 								}
 
@@ -1015,7 +1015,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-1", 1 ],
-									"midpoints" : [ 493.5, 234.5, 441.833333333333371, 234.5 ],
+									"midpoints" : [ 535.5, 234.5, 451.5, 234.5 ],
 									"source" : [ "obj-20", 0 ]
 								}
 
@@ -1100,15 +1100,16 @@
 		"parameters" : 		{
 			"obj-1::obj-12" : [ "main", "main", 0 ],
 			"obj-1::obj-1::obj-113" : [ "onsets_button", "onsets_button", 0 ],
-			"obj-1::obj-1::obj-114" : [ "clear_breakpoints", "clear_markers", 0 ],
+			"obj-1::obj-1::obj-114" : [ "clear_breakpoints", "clear_breakpoints", 0 ],
 			"obj-1::obj-1::obj-132" : [ "markers_dict", "markers", 3 ],
 			"obj-1::obj-1::obj-140" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
+			"obj-1::obj-1::obj-154" : [ "title", "title", 0 ],
 			"obj-1::obj-1::obj-160" : [ "snapToNIGrid", "snapToNIGrid", 0 ],
 			"obj-1::obj-1::obj-161" : [ "asGrid", "asGrid", 1 ],
 			"obj-1::obj-1::obj-19" : [ "mute", "mute", 0 ],
 			"obj-1::obj-1::obj-199" : [ "resetNIGrid", "resetNIGrid", 0 ],
-			"obj-1::obj-1::obj-20" : [ "title", "title", 0 ],
 			"obj-1::obj-1::obj-22" : [ "lock", "lock", 0 ],
+			"obj-1::obj-1::obj-242" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
 			"obj-1::obj-1::obj-42" : [ "morph", "morph", 0 ],
 			"obj-1::obj-1::obj-45" : [ "S", "S", 2 ],
 			"obj-1::obj-1::obj-47" : [ "offset", "offset", 0 ],
@@ -1141,10 +1142,10 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "SGwarpInterface.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
+				"name" : "GCD.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -1155,14 +1156,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "drawGrid.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "drawNIGrid.js",
+				"name" : "drawNIGrid_zoom.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
 				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
@@ -1269,10 +1263,24 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "timeWarpInterface.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
+				"patcherrelativepath" : "../jsui",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "warpMarkersToBuffer.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
 				"patcherrelativepath" : "../patchers/subpatchers",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "zoomNscroll_coremath.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],

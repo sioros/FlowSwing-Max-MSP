@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 6,
+			"revision" : 8,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 35.0, 82.0, 758.0, 778.0 ],
+		"rect" : [ 35.0, 82.0, 870.0, 778.0 ],
 		"openinpresentation" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
@@ -22,7 +22,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 571.117666840553284, 698.823558568954468, 72.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 602.634165287017822, 828.235328674316406, 72.0, 22.0 ],
+					"presentation_rect" : [ 575.0, 534.0, 72.0, 22.0 ],
 					"text" : "startwindow"
 				}
 
@@ -80,7 +80,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -594,18 +594,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.705883383750916, 712.941206216812134, 54.0, 22.0 ],
-					"text" : "deferlow"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-38",
 					"linecount" : 4,
 					"maxclass" : "comment",
@@ -687,7 +675,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1163,7 +1151,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1593,43 +1581,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-56",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 24.705883383750916, 631.764732241630554, 58.0, 22.0 ],
-					"text" : "loadbang"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-53",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.705883383750916, 671.764733910560608, 95.0, 22.0 ],
-					"text" : "zoomfactor 0.85"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-51",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 24.705883383750916, 755.294149160385132, 67.0, 22.0 ],
-					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
-					"text" : "thispatcher"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-89",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -1820,7 +1771,7 @@
 					"outlettype" : [ "multichannelsignal", "multichannelsignal", "" ],
 					"patching_rect" : [ 662.352968811988831, 385.882369041442871, 219.0, 27.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 21.176471471786499, 768.235326170921326, 430.0, 121.0 ],
+					"presentation_rect" : [ 21.0, 478.0, 430.0, 121.0 ],
 					"varname" : "flowSwing_noise",
 					"viewvisibility" : 1
 				}
@@ -1928,7 +1879,7 @@
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
 					"patching_rect" : [ 218.823538541793823, 689.41179347038269, 114.0, 30.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 21.176471471786499, 652.941203713417053, 811.764739751815796, 105.882357358932495 ],
+					"presentation_rect" : [ 21.0, 403.0, 725.0, 50.0 ],
 					"varname" : "flowSwing_envelop[5]",
 					"viewvisibility" : 1
 				}
@@ -1952,7 +1903,7 @@
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
 					"patching_rect" : [ 218.823538541793823, 567.058847188949585, 114.0, 30.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 21.176471471786499, 531.76472806930542, 811.764739751815796, 105.882357358932495 ],
+					"presentation_rect" : [ 21.0, 331.0, 725.0, 51.0 ],
 					"varname" : "flowSwing_envelop[4]",
 					"viewvisibility" : 1
 				}
@@ -1976,7 +1927,7 @@
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
 					"patching_rect" : [ 218.823538541793823, 445.882371544837952, 114.0, 30.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 21.176471471786499, 409.411781787872314, 811.764739751815796, 105.882357358932495 ],
+					"presentation_rect" : [ 21.0, 259.0, 725.0, 51.0 ],
 					"varname" : "flowSwing_envelop[3]",
 					"viewvisibility" : 1
 				}
@@ -2000,7 +1951,7 @@
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
 					"patching_rect" : [ 218.823538541793823, 323.529425263404846, 114.0, 30.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 21.176471471786499, 287.058835506439209, 811.764739751815796, 105.882357358932495 ],
+					"presentation_rect" : [ 21.0, 187.0, 720.0, 52.0 ],
 					"varname" : "flowSwing_envelop[2]",
 					"viewvisibility" : 1
 				}
@@ -2024,7 +1975,7 @@
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
 					"patching_rect" : [ 218.823538541793823, 201.176478981971741, 114.0, 30.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 21.176471471786499, 165.882359862327576, 811.764739751815796, 105.882357358932495 ],
+					"presentation_rect" : [ 21.0, 115.0, 725.0, 51.0 ],
 					"varname" : "flowSwing_envelop[1]",
 					"viewvisibility" : 1
 				}
@@ -2048,7 +1999,7 @@
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
 					"patching_rect" : [ 218.823538541793823, 80.000003337860107, 114.0, 30.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 21.176471471786499, 43.52941358089447, 811.764739751815796, 105.882357358932495 ],
+					"presentation_rect" : [ 21.0, 44.0, 725.0, 50.0 ],
 					"varname" : "flowSwing_envelop",
 					"viewvisibility" : 1
 				}
@@ -2478,22 +2429,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-53", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-82", 2 ],
 					"source" : [ "obj-55", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-53", 0 ],
-					"source" : [ "obj-56", 0 ]
 				}
 
 			}
@@ -2546,13 +2483,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-82", 1 ],
 					"source" : [ "obj-64", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-51", 0 ],
-					"source" : [ "obj-7", 0 ]
 				}
 
 			}
@@ -2614,99 +2544,119 @@
 			"obj-1::obj-114" : [ "clear_breakpoints", "clear_breakpoints", 0 ],
 			"obj-1::obj-123" : [ "asGrid", "asGrid", 1 ],
 			"obj-1::obj-128" : [ "zoom", "zoom", 0 ],
-			"obj-1::obj-16" : [ "title", "title", 0 ],
+			"obj-1::obj-154" : [ "title", "title", 0 ],
 			"obj-1::obj-19" : [ "mute", "mute", 0 ],
 			"obj-1::obj-191" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
 			"obj-1::obj-193" : [ "firstChannel_parameter", "firstChannel_parameter", 0 ],
 			"obj-1::obj-195" : [ "chans_parameter", "chans_parameter", 0 ],
 			"obj-1::obj-199" : [ "live.text", "resetNIGrid", 0 ],
 			"obj-1::obj-22" : [ "lock", "lock", 0 ],
+			"obj-1::obj-242" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
+			"obj-1::obj-253" : [ "rescale", "rescale", 0 ],
 			"obj-1::obj-42" : [ "morph", "morph", 0 ],
 			"obj-1::obj-45" : [ "S", "S", 2 ],
 			"obj-1::obj-47" : [ "offset", "offset", 0 ],
 			"obj-1::obj-48" : [ "niRotation", "niRotation", 0 ],
 			"obj-1::obj-50" : [ "Formative", "Formative", 0 ],
 			"obj-1::obj-51" : [ "Target", "Target", 0 ],
+			"obj-1::obj-66" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-1::obj-68" : [ "clear_breakpoints[1]", "clear_breakpoints", 0 ],
 			"obj-1::obj-90" : [ "secondary_S_control", "secondary_S_control", 0 ],
 			"obj-1::obj-91" : [ "hold", "hold", 0 ],
 			"obj-23" : [ "simple_sequencer_gain", "simple_sequencer_gain", 0 ],
 			"obj-24" : [ "noise_gain", "noise_gain", 0 ],
 			"obj-2::obj-109" : [ "breakpoints[1]", "breakpoints", 3 ],
-			"obj-2::obj-114" : [ "clear_breakpoints[1]", "clear_breakpoints", 0 ],
+			"obj-2::obj-114" : [ "clear_breakpoints[2]", "clear_breakpoints", 0 ],
 			"obj-2::obj-123" : [ "asGrid[1]", "asGrid", 1 ],
 			"obj-2::obj-128" : [ "zoom[1]", "zoom", 0 ],
-			"obj-2::obj-16" : [ "title[1]", "title", 0 ],
+			"obj-2::obj-154" : [ "title[1]", "title", 0 ],
 			"obj-2::obj-19" : [ "mute[1]", "mute", 0 ],
 			"obj-2::obj-191" : [ "snapToNIGrid_parameter[1]", "snapToNIGrid_parameter", 0 ],
 			"obj-2::obj-193" : [ "firstChannel_parameter[1]", "firstChannel_parameter", 0 ],
 			"obj-2::obj-195" : [ "chans_parameter[1]", "chans_parameter", 0 ],
 			"obj-2::obj-199" : [ "live.text[1]", "resetNIGrid", 0 ],
 			"obj-2::obj-22" : [ "lock[1]", "lock", 0 ],
+			"obj-2::obj-242" : [ "resetNIGrid[2]", "resetNIGrid", 0 ],
+			"obj-2::obj-253" : [ "rescale[1]", "rescale", 0 ],
 			"obj-2::obj-42" : [ "morph[1]", "morph", 0 ],
 			"obj-2::obj-45" : [ "S[1]", "S", 2 ],
 			"obj-2::obj-47" : [ "offset[1]", "offset", 0 ],
 			"obj-2::obj-48" : [ "niRotation[1]", "niRotation", 0 ],
 			"obj-2::obj-50" : [ "Formative[1]", "Formative", 0 ],
 			"obj-2::obj-51" : [ "Target[1]", "Target", 0 ],
+			"obj-2::obj-66" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-2::obj-68" : [ "clear_breakpoints[3]", "clear_breakpoints", 0 ],
 			"obj-2::obj-90" : [ "secondary_S_control[1]", "secondary_S_control", 0 ],
 			"obj-2::obj-91" : [ "hold[1]", "hold", 0 ],
 			"obj-3::obj-109" : [ "breakpoints[2]", "breakpoints", 3 ],
-			"obj-3::obj-114" : [ "clear_breakpoints[2]", "clear_breakpoints", 0 ],
+			"obj-3::obj-114" : [ "clear_breakpoints[5]", "clear_breakpoints", 0 ],
 			"obj-3::obj-123" : [ "asGrid[2]", "asGrid", 1 ],
 			"obj-3::obj-128" : [ "zoom[2]", "zoom", 0 ],
-			"obj-3::obj-16" : [ "title[2]", "title", 0 ],
+			"obj-3::obj-154" : [ "title[2]", "title", 0 ],
 			"obj-3::obj-19" : [ "mute[2]", "mute", 0 ],
 			"obj-3::obj-191" : [ "snapToNIGrid_parameter[2]", "snapToNIGrid_parameter", 0 ],
 			"obj-3::obj-193" : [ "firstChannel_parameter[2]", "firstChannel_parameter", 0 ],
 			"obj-3::obj-195" : [ "chans_parameter[2]", "chans_parameter", 0 ],
 			"obj-3::obj-199" : [ "live.text[2]", "resetNIGrid", 0 ],
 			"obj-3::obj-22" : [ "lock[2]", "lock", 0 ],
+			"obj-3::obj-242" : [ "resetNIGrid[3]", "resetNIGrid", 0 ],
+			"obj-3::obj-253" : [ "rescale[2]", "rescale", 0 ],
 			"obj-3::obj-42" : [ "morph[2]", "morph", 0 ],
 			"obj-3::obj-45" : [ "S[2]", "S", 2 ],
 			"obj-3::obj-47" : [ "offset[2]", "offset", 0 ],
 			"obj-3::obj-48" : [ "niRotation[2]", "niRotation", 0 ],
 			"obj-3::obj-50" : [ "Formative[2]", "Formative", 0 ],
 			"obj-3::obj-51" : [ "Target[2]", "Target", 0 ],
+			"obj-3::obj-66" : [ "live.menu[3]", "live.menu", 0 ],
+			"obj-3::obj-68" : [ "clear_breakpoints[4]", "clear_breakpoints", 0 ],
 			"obj-3::obj-90" : [ "secondary_S_control[2]", "secondary_S_control", 0 ],
 			"obj-3::obj-91" : [ "hold[2]", "hold", 0 ],
 			"obj-40" : [ "S_rand_range", "S_rand_range", 0 ],
 			"obj-4::obj-109" : [ "breakpoints[3]", "breakpoints", 3 ],
-			"obj-4::obj-114" : [ "clear_breakpoints[3]", "clear_breakpoints", 0 ],
+			"obj-4::obj-114" : [ "clear_breakpoints[7]", "clear_breakpoints", 0 ],
 			"obj-4::obj-123" : [ "asGrid[3]", "asGrid", 1 ],
 			"obj-4::obj-128" : [ "zoom[3]", "zoom", 0 ],
-			"obj-4::obj-16" : [ "title[3]", "title", 0 ],
+			"obj-4::obj-154" : [ "title[3]", "title", 0 ],
 			"obj-4::obj-19" : [ "mute[3]", "mute", 0 ],
 			"obj-4::obj-191" : [ "snapToNIGrid_parameter[3]", "snapToNIGrid_parameter", 0 ],
 			"obj-4::obj-193" : [ "firstChannel_parameter[3]", "firstChannel_parameter", 0 ],
 			"obj-4::obj-195" : [ "chans_parameter[3]", "chans_parameter", 0 ],
 			"obj-4::obj-199" : [ "live.text[3]", "resetNIGrid", 0 ],
 			"obj-4::obj-22" : [ "lock[3]", "lock", 0 ],
+			"obj-4::obj-242" : [ "resetNIGrid[4]", "resetNIGrid", 0 ],
+			"obj-4::obj-253" : [ "rescale[3]", "rescale", 0 ],
 			"obj-4::obj-42" : [ "morph[3]", "morph", 0 ],
 			"obj-4::obj-45" : [ "S[3]", "S", 2 ],
 			"obj-4::obj-47" : [ "offset[3]", "offset", 0 ],
 			"obj-4::obj-48" : [ "niRotation[3]", "niRotation", 0 ],
 			"obj-4::obj-50" : [ "Formative[3]", "Formative", 0 ],
 			"obj-4::obj-51" : [ "Target[3]", "Target", 0 ],
+			"obj-4::obj-66" : [ "live.menu[4]", "live.menu", 0 ],
+			"obj-4::obj-68" : [ "clear_breakpoints[6]", "clear_breakpoints", 0 ],
 			"obj-4::obj-90" : [ "secondary_S_control[3]", "secondary_S_control", 0 ],
 			"obj-4::obj-91" : [ "hold[3]", "hold", 0 ],
 			"obj-55" : [ "skewCurve", "skewCurve", 0 ],
 			"obj-5::obj-109" : [ "breakpoints[4]", "breakpoints", 3 ],
-			"obj-5::obj-114" : [ "clear_breakpoints[4]", "clear_breakpoints", 0 ],
+			"obj-5::obj-114" : [ "clear_breakpoints[9]", "clear_breakpoints", 0 ],
 			"obj-5::obj-123" : [ "asGrid[4]", "asGrid", 1 ],
 			"obj-5::obj-128" : [ "zoom[4]", "zoom", 0 ],
-			"obj-5::obj-16" : [ "title[4]", "title", 0 ],
+			"obj-5::obj-154" : [ "title[4]", "title", 0 ],
 			"obj-5::obj-19" : [ "mute[4]", "mute", 0 ],
 			"obj-5::obj-191" : [ "snapToNIGrid_parameter[4]", "snapToNIGrid_parameter", 0 ],
 			"obj-5::obj-193" : [ "firstChannel_parameter[4]", "firstChannel_parameter", 0 ],
 			"obj-5::obj-195" : [ "chans_parameter[4]", "chans_parameter", 0 ],
 			"obj-5::obj-199" : [ "live.text[4]", "resetNIGrid", 0 ],
 			"obj-5::obj-22" : [ "lock[4]", "lock", 0 ],
+			"obj-5::obj-242" : [ "resetNIGrid[5]", "resetNIGrid", 0 ],
+			"obj-5::obj-253" : [ "rescale[4]", "rescale", 0 ],
 			"obj-5::obj-42" : [ "morph[4]", "morph", 0 ],
 			"obj-5::obj-45" : [ "S[4]", "S", 2 ],
 			"obj-5::obj-47" : [ "offset[4]", "offset", 0 ],
 			"obj-5::obj-48" : [ "niRotation[4]", "niRotation", 0 ],
 			"obj-5::obj-50" : [ "Formative[4]", "Formative", 0 ],
 			"obj-5::obj-51" : [ "Target[4]", "Target", 0 ],
+			"obj-5::obj-66" : [ "live.menu[5]", "live.menu", 0 ],
+			"obj-5::obj-68" : [ "clear_breakpoints[8]", "clear_breakpoints", 0 ],
 			"obj-5::obj-90" : [ "secondary_S_control[4]", "secondary_S_control", 0 ],
 			"obj-5::obj-91" : [ "hold[4]", "hold", 0 ],
 			"obj-61::obj-112" : [ "DCBlock", "DCBlock", 0 ],
@@ -2728,22 +2678,26 @@
 			"obj-61::obj-99" : [ "Active[2]", "Active", 0 ],
 			"obj-64" : [ "frequencyCurve", "frequencyCurve", 0 ],
 			"obj-6::obj-109" : [ "breakpoints[5]", "breakpoints", 3 ],
-			"obj-6::obj-114" : [ "clear_breakpoints[5]", "clear_breakpoints", 0 ],
+			"obj-6::obj-114" : [ "clear_breakpoints[11]", "clear_breakpoints", 0 ],
 			"obj-6::obj-123" : [ "asGrid[5]", "asGrid", 1 ],
 			"obj-6::obj-128" : [ "zoom[5]", "zoom", 0 ],
-			"obj-6::obj-16" : [ "title[5]", "title", 0 ],
+			"obj-6::obj-154" : [ "title[5]", "title", 0 ],
 			"obj-6::obj-19" : [ "mute[5]", "mute", 0 ],
 			"obj-6::obj-191" : [ "snapToNIGrid_parameter[5]", "snapToNIGrid_parameter", 0 ],
 			"obj-6::obj-193" : [ "firstChannel_parameter[5]", "firstChannel_parameter", 0 ],
 			"obj-6::obj-195" : [ "chans_parameter[5]", "chans_parameter", 0 ],
 			"obj-6::obj-199" : [ "live.text[5]", "resetNIGrid", 0 ],
 			"obj-6::obj-22" : [ "lock[5]", "lock", 0 ],
+			"obj-6::obj-242" : [ "resetNIGrid[6]", "resetNIGrid", 0 ],
+			"obj-6::obj-253" : [ "rescale[5]", "rescale", 0 ],
 			"obj-6::obj-42" : [ "morph[5]", "morph", 0 ],
 			"obj-6::obj-45" : [ "S[5]", "S", 2 ],
 			"obj-6::obj-47" : [ "offset[5]", "offset", 0 ],
 			"obj-6::obj-48" : [ "niRotation[5]", "niRotation", 0 ],
 			"obj-6::obj-50" : [ "Formative[5]", "Formative", 0 ],
 			"obj-6::obj-51" : [ "Target[5]", "Target", 0 ],
+			"obj-6::obj-66" : [ "live.menu[6]", "live.menu", 0 ],
+			"obj-6::obj-68" : [ "clear_breakpoints[10]", "clear_breakpoints", 0 ],
 			"obj-6::obj-90" : [ "secondary_S_control[5]", "secondary_S_control", 0 ],
 			"obj-6::obj-91" : [ "hold[5]", "hold", 0 ],
 			"parameterbanks" : 			{
@@ -2761,7 +2715,7 @@
 				}
 ,
 				"obj-2::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[1]"
+					"parameter_longname" : "clear_breakpoints[2]"
 				}
 ,
 				"obj-2::obj-128" : 				{
@@ -2792,6 +2746,14 @@
 					"parameter_longname" : "lock[1]"
 				}
 ,
+				"obj-2::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[2]"
+				}
+,
+				"obj-2::obj-253" : 				{
+					"parameter_longname" : "rescale[1]"
+				}
+,
 				"obj-2::obj-42" : 				{
 					"parameter_longname" : "morph[1]"
 				}
@@ -2816,6 +2778,14 @@
 					"parameter_longname" : "Target[1]"
 				}
 ,
+				"obj-2::obj-66" : 				{
+					"parameter_longname" : "live.menu[2]"
+				}
+,
+				"obj-2::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[3]"
+				}
+,
 				"obj-2::obj-90" : 				{
 					"parameter_longname" : "secondary_S_control[1]"
 				}
@@ -2825,7 +2795,7 @@
 				}
 ,
 				"obj-3::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[2]"
+					"parameter_longname" : "clear_breakpoints[5]"
 				}
 ,
 				"obj-3::obj-128" : 				{
@@ -2856,6 +2826,14 @@
 					"parameter_longname" : "lock[2]"
 				}
 ,
+				"obj-3::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[3]"
+				}
+,
+				"obj-3::obj-253" : 				{
+					"parameter_longname" : "rescale[2]"
+				}
+,
 				"obj-3::obj-42" : 				{
 					"parameter_longname" : "morph[2]"
 				}
@@ -2880,6 +2858,14 @@
 					"parameter_longname" : "Target[2]"
 				}
 ,
+				"obj-3::obj-66" : 				{
+					"parameter_longname" : "live.menu[3]"
+				}
+,
+				"obj-3::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[4]"
+				}
+,
 				"obj-3::obj-90" : 				{
 					"parameter_longname" : "secondary_S_control[2]"
 				}
@@ -2889,7 +2875,7 @@
 				}
 ,
 				"obj-4::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[3]"
+					"parameter_longname" : "clear_breakpoints[7]"
 				}
 ,
 				"obj-4::obj-128" : 				{
@@ -2920,6 +2906,14 @@
 					"parameter_longname" : "lock[3]"
 				}
 ,
+				"obj-4::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[4]"
+				}
+,
+				"obj-4::obj-253" : 				{
+					"parameter_longname" : "rescale[3]"
+				}
+,
 				"obj-4::obj-42" : 				{
 					"parameter_longname" : "morph[3]"
 				}
@@ -2944,6 +2938,14 @@
 					"parameter_longname" : "Target[3]"
 				}
 ,
+				"obj-4::obj-66" : 				{
+					"parameter_longname" : "live.menu[4]"
+				}
+,
+				"obj-4::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[6]"
+				}
+,
 				"obj-4::obj-90" : 				{
 					"parameter_longname" : "secondary_S_control[3]"
 				}
@@ -2953,7 +2955,7 @@
 				}
 ,
 				"obj-5::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[4]"
+					"parameter_longname" : "clear_breakpoints[9]"
 				}
 ,
 				"obj-5::obj-128" : 				{
@@ -2984,6 +2986,14 @@
 					"parameter_longname" : "lock[4]"
 				}
 ,
+				"obj-5::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[5]"
+				}
+,
+				"obj-5::obj-253" : 				{
+					"parameter_longname" : "rescale[4]"
+				}
+,
 				"obj-5::obj-42" : 				{
 					"parameter_longname" : "morph[4]"
 				}
@@ -3006,6 +3016,14 @@
 ,
 				"obj-5::obj-51" : 				{
 					"parameter_longname" : "Target[4]"
+				}
+,
+				"obj-5::obj-66" : 				{
+					"parameter_longname" : "live.menu[5]"
+				}
+,
+				"obj-5::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[8]"
 				}
 ,
 				"obj-5::obj-90" : 				{
@@ -3045,7 +3063,7 @@
 				}
 ,
 				"obj-6::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[5]"
+					"parameter_longname" : "clear_breakpoints[11]"
 				}
 ,
 				"obj-6::obj-128" : 				{
@@ -3076,6 +3094,14 @@
 					"parameter_longname" : "lock[5]"
 				}
 ,
+				"obj-6::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[6]"
+				}
+,
+				"obj-6::obj-253" : 				{
+					"parameter_longname" : "rescale[5]"
+				}
+,
 				"obj-6::obj-42" : 				{
 					"parameter_longname" : "morph[5]"
 				}
@@ -3098,6 +3124,14 @@
 ,
 				"obj-6::obj-51" : 				{
 					"parameter_longname" : "Target[5]"
+				}
+,
+				"obj-6::obj-66" : 				{
+					"parameter_longname" : "live.menu[6]"
+				}
+,
+				"obj-6::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[10]"
 				}
 ,
 				"obj-6::obj-90" : 				{
@@ -3142,6 +3176,20 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "GCD.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "breakpointsListToDict.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
+				"patcherrelativepath" : "../patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "complex_quantise.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
 				"patcherrelativepath" : "../javascript",
@@ -3149,14 +3197,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "drawGrid.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "drawNIGrid.js",
+				"name" : "drawNIGrid_zoom.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
 				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
@@ -3263,6 +3304,13 @@
 				"name" : "thru.maxpat",
 				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "zoomNscroll_coremath.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],
@@ -3980,7 +4028,8 @@
 			}
 
 		}
-
+,
+		"toolbaradditions" : [ "audiomute", "audiosolo" ]
 	}
 
 }

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 324.0, 112.0, 705.0, 722.0 ],
+		"rect" : [ 324.0, 112.0, 786.0, 722.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
@@ -65,7 +65,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 316.0, 388.0, 129.0, 62.0 ],
+					"patching_rect" : [ 316.0, 388.0, 131.0, 62.0 ],
 					"text" : "The gen~ patch filters mc gate signals based on a probability mc-signal."
 				}
 
@@ -397,7 +397,7 @@
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
 					"patching_rect" : [ 161.0, 152.0, 115.0, 32.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 13.0, 134.0, 687.0, 101.0 ],
+					"presentation_rect" : [ 13.0, 134.0, 715.0, 100.0 ],
 					"varname" : "flowSwing_envelop",
 					"viewvisibility" : 1
 				}
@@ -410,7 +410,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 302.0, 250.0, 148.0, 103.0 ],
+					"patching_rect" : [ 302.0, 250.0, 149.0, 103.0 ],
 					"text" : "Multichannel signals control the probability independently for each channel. Alternatively, a non-mc signal can control the probability of all breakpoints."
 				}
 
@@ -613,13 +613,14 @@
 			"obj-6::obj-114" : [ "clear_breakpoints", "clear_breakpoints", 0 ],
 			"obj-6::obj-123" : [ "asGrid", "asGrid", 1 ],
 			"obj-6::obj-128" : [ "zoom", "zoom", 0 ],
-			"obj-6::obj-16" : [ "title", "title", 0 ],
+			"obj-6::obj-154" : [ "title", "title", 0 ],
 			"obj-6::obj-19" : [ "mute", "mute", 0 ],
 			"obj-6::obj-191" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
 			"obj-6::obj-193" : [ "firstChannel_parameter", "firstChannel_parameter", 0 ],
 			"obj-6::obj-195" : [ "chans_parameter", "chans_parameter", 0 ],
 			"obj-6::obj-199" : [ "resetNIGrid", "resetNIGrid", 0 ],
 			"obj-6::obj-22" : [ "lock", "lock", 0 ],
+			"obj-6::obj-242" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
 			"obj-6::obj-42" : [ "morph", "morph", 0 ],
 			"obj-6::obj-45" : [ "S", "S", 1 ],
 			"obj-6::obj-47" : [ "offset", "offset", 0 ],
@@ -655,6 +656,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "GCD.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "complex_quantise.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
 				"patcherrelativepath" : "../javascript",
@@ -662,14 +670,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "drawGrid.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "drawNIGrid.js",
+				"name" : "drawNIGrid_zoom.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
 				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
@@ -777,6 +778,13 @@
 				"bootpath" : "~/Documents/Max 9/Snapshots",
 				"patcherrelativepath" : "../../../Snapshots",
 				"type" : "mx@s",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "zoomNscroll_coremath.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],

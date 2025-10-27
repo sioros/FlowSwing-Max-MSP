@@ -32,10 +32,22 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 1083.0, 668.0 ],
+						"rect" : [ 100.0, 126.0, 1083.0, 668.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 945.0, 438.0, 104.0, 62.0 ],
+									"text" : "The pattr object is used to store a snapshot of the pitch sequence"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontface" : 1,
 									"fontsize" : 14.0,
@@ -43,7 +55,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 118.0, 93.0, 23.0 ],
+									"patching_rect" : [ 17.0, 539.0, 93.0, 23.0 ],
 									"text" : "Appearance:"
 								}
 
@@ -54,7 +66,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 29.0, 341.0, 201.0, 20.0 ],
+									"patching_rect" : [ 17.0, 342.0, 201.0, 20.0 ],
 									"text" : "Set custom horisontal grid locations."
 								}
 
@@ -66,7 +78,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 29.0, 361.0, 145.0, 22.0 ],
+									"patching_rect" : [ 17.0, 362.0, 145.0, 22.0 ],
 									"text" : "setgrid 0 24 48 72 96 120"
 								}
 
@@ -74,23 +86,23 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-67",
-									"linecount" : 6,
+									"linecount" : 4,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 12.0, 462.0, 87.0, 89.0 ],
-									"text" : "When float is set to 0, the y or pitch values are rounded to the closest integer."
+									"patching_rect" : [ 12.0, 462.0, 130.0, 62.0 ],
+									"text" : "When float is set to 0, the y values are rounded to the closest integer."
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"id" : "obj-65",
-									"linecount" : 3,
+									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 14.0, 407.0, 83.0, 48.0 ],
+									"patching_rect" : [ 35.0, 407.0, 109.0, 34.0 ],
 									"text" : "Set size of handle and margin."
 								}
 
@@ -105,7 +117,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 102.0, 407.0, 50.0, 22.0 ]
+									"patching_rect" : [ 147.0, 407.0, 50.0, 22.0 ]
 								}
 
 							}
@@ -116,7 +128,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 397.0, 514.0, 150.0, 34.0 ],
+									"patching_rect" : [ 427.0, 514.0, 150.0, 34.0 ],
 									"text" : "The left outlet outputs the step values in a list."
 								}
 
@@ -128,7 +140,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 746.0, 530.0, 150.0, 62.0 ],
+									"patching_rect" : [ 697.0, 514.0, 151.0, 62.0 ],
 									"text" : "The right outlet outputs information about the step currently being edited with the mouse."
 								}
 
@@ -140,7 +152,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 909.0, 489.0, 150.0, 62.0 ],
+									"patching_rect" : [ 926.0, 574.0, 136.0, 62.0 ],
 									"text" : "Use settpitches with a list of values to set the vertical position of each step."
 								}
 
@@ -152,7 +164,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 902.0, 323.0, 142.0, 62.0 ],
+									"patching_rect" : [ 930.0, 313.0, 134.0, 62.0 ],
 									"text" : "Use settimes with a list of values (0–1) to set the horizontal position of each step."
 								}
 
@@ -177,7 +189,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 434.0, 40.0, 121.0, 23.0 ],
+									"patching_rect" : [ 377.0, 569.0, 121.0, 23.0 ],
 									"text" : "Basic operations"
 								}
 
@@ -189,7 +201,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 434.0, 59.0, 567.0, 48.0 ],
+									"patching_rect" : [ 377.0, 588.0, 518.0, 48.0 ],
 									"text" : "* Click a handle (or anywhere in a step's range) → outputs the step value from the right outlet.\n* Drag vertically → changes the step value.\n* Bang the inlet (or edit a step) → outputs the full list of y/pitch values from the left outlet."
 								}
 
@@ -201,7 +213,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 4.0, 143.0, 195.0, 48.0 ],
+									"patching_rect" : [ 14.0, 564.0, 195.0, 48.0 ],
 									"text" : "The display range can be set with a setrange message, or by Ctrl+Click & Drag directly in the UI."
 								}
 
@@ -222,11 +234,10 @@
 								"box" : 								{
 									"fontsize" : 14.0,
 									"id" : "obj-37",
-									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 7.0, 68.0, 393.0, 39.0 ],
+									"patching_rect" : [ 7.0, 68.0, 748.0, 23.0 ],
 									"text" : "stepUI provides an interactive step editor for pitch (or other parameters) that can be paired with FlowSwing.envelop. "
 								}
 
@@ -238,7 +249,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 102.0, 438.0, 118.0, 22.0 ],
+									"patching_rect" : [ 147.0, 438.0, 118.0, 22.0 ],
 									"text" : "radius $1, margin $1"
 								}
 
@@ -251,7 +262,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 102.0, 472.0, 24.0, 24.0 ]
+									"patching_rect" : [ 147.0, 472.0, 24.0, 24.0 ]
 								}
 
 							}
@@ -262,7 +273,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 102.0, 514.0, 64.0, 22.0 ],
+									"patching_rect" : [ 147.0, 514.0, 64.0, 22.0 ],
 									"text" : "setfloat $1"
 								}
 
@@ -285,29 +296,30 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 228.0, 226.0, 510.0, 488.0 ],
+										"rect" : [ 228.0, 226.0, 576.0, 488.0 ],
 										"gridsize" : [ 15.0, 15.0 ],
 										"boxes" : [ 											{
 												"box" : 												{
-													"id" : "obj-68",
-													"linecount" : 5,
+													"id" : "obj-8",
+													"linecount" : 3,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 14.0, 59.0, 154.0, 75.0 ],
-													"text" : "The second from right outlet of flowSwing.envelop is used to retrieve the actual time position for each event."
+													"patching_rect" : [ 262.0, 44.0, 150.0, 48.0 ],
+													"text" : "the breakpoints dictionary is used to retrieve the silent breakpoints"
 												}
 
 											}
 , 											{
 												"box" : 												{
-													"id" : "obj-12",
-													"linecount" : 2,
+													"id" : "obj-68",
+													"linecount" : 7,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 48.0, 150.0, 121.0, 34.0 ],
-													"text" : "position of all events (active and silent)"
+													"patching_rect" : [ 29.0, 167.0, 118.0, 103.0 ],
+													"presentation_linecount" : 7,
+													"text" : "The second from right outlet of flowSwing.envelop is used to retrieve the actual time position for all event (active and silent)."
 												}
 
 											}
@@ -318,7 +330,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 347.0, 231.0, 150.0, 34.0 ],
+													"patching_rect" : [ 392.0, 231.0, 137.0, 34.0 ],
 													"text" : "get the indices of the active breakpoints"
 												}
 
@@ -330,7 +342,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 347.0, 150.0, 117.0, 34.0 ],
+													"patching_rect" : [ 392.0, 167.0, 117.0, 34.0 ],
 													"text" : "get the silent state of each breakpoint"
 												}
 
@@ -342,7 +354,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 237.0, 304.0, 150.0, 48.0 ],
+													"patching_rect" : [ 282.0, 304.0, 150.0, 48.0 ],
 													"text" : "The silent breakpoints are removed from the list of time values"
 												}
 
@@ -354,7 +366,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 286.0, 167.0, 55.0, 22.0 ],
+													"patching_rect" : [ 331.0, 167.0, 55.0, 22.0 ],
 													"text" : "zl.ecils 1"
 												}
 
@@ -366,7 +378,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 108.0, 237.0, 55.0, 22.0 ],
+													"patching_rect" : [ 153.0, 237.0, 55.0, 22.0 ],
 													"text" : "zl.ecils 1"
 												}
 
@@ -378,7 +390,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 108.0, 280.0, 197.0, 22.0 ],
+													"patching_rect" : [ 153.0, 280.0, 197.0, 22.0 ],
 													"text" : "zl.indexmap"
 												}
 
@@ -390,7 +402,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "int" ],
-													"patching_rect" : [ 286.0, 220.0, 29.5, 22.0 ],
+													"patching_rect" : [ 331.0, 220.0, 29.5, 22.0 ],
 													"text" : "- 1"
 												}
 
@@ -402,7 +414,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 286.0, 245.0, 51.0, 22.0 ],
+													"patching_rect" : [ 331.0, 245.0, 51.0, 22.0 ],
 													"text" : "zl.group"
 												}
 
@@ -414,7 +426,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 286.0, 196.0, 50.0, 22.0 ],
+													"patching_rect" : [ 331.0, 196.0, 50.0, 22.0 ],
 													"text" : "zl.sub 0"
 												}
 
@@ -426,7 +438,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 182.0, 108.0, 101.0, 22.0 ],
+													"patching_rect" : [ 227.0, 108.0, 101.0, 22.0 ],
 													"text" : "route breakpoints"
 												}
 
@@ -438,7 +450,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 4,
 													"outlettype" : [ "", "", "", "" ],
-													"patching_rect" : [ 182.0, 137.0, 123.0, 22.0 ],
+													"patching_rect" : [ 227.0, 137.0, 123.0, 22.0 ],
 													"text" : "breakpointsDictToList"
 												}
 
@@ -450,7 +462,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 108.0, 310.0, 101.0, 22.0 ],
+													"patching_rect" : [ 153.0, 310.0, 101.0, 22.0 ],
 													"text" : "prepend settimes"
 												}
 
@@ -464,7 +476,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 182.0, 48.0, 30.0, 30.0 ]
+													"patching_rect" : [ 227.0, 48.0, 30.0, 30.0 ]
 												}
 
 											}
@@ -477,7 +489,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 108.0, 184.0, 30.0, 30.0 ]
+													"patching_rect" : [ 153.0, 184.0, 30.0, 30.0 ]
 												}
 
 											}
@@ -489,7 +501,7 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 108.0, 392.0, 30.0, 30.0 ]
+													"patching_rect" : [ 153.0, 392.0, 30.0, 30.0 ]
 												}
 
 											}
@@ -582,8 +594,7 @@
 										"toolbaradditions" : [ "audiomute", "audiosolo" ]
 									}
 ,
-									"patching_rect" : [ 715.0, 351.0, 181.0, 22.0 ],
-									"presentation_linecount" : 3,
+									"patching_rect" : [ 736.75, 353.0, 189.25, 22.0 ],
 									"text" : "p settimes"
 								}
 
@@ -759,8 +770,7 @@
 										"toolbaradditions" : [ "audiomute", "audiosolo" ]
 									}
 ,
-									"patching_rect" : [ 293.0, 520.0, 94.0, 22.0 ],
-									"presentation_linecount" : 2,
+									"patching_rect" : [ 327.0, 514.0, 94.0, 22.0 ],
 									"text" : "p \"to mc voices\""
 								}
 
@@ -772,7 +782,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 909.0, 451.0, 110.0, 22.0 ],
+									"patching_rect" : [ 939.0, 538.0, 110.0, 22.0 ],
 									"text" : "prepend setpitches"
 								}
 
@@ -784,8 +794,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 909.0, 420.0, 74.0, 22.0 ],
-									"restore" : [ 76, 64, 43, 33, 16 ],
+									"patching_rect" : [ 939.0, 507.0, 74.0, 22.0 ],
+									"restore" : [ 86, 40, 66, 112, 70 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_invisible" : 1,
@@ -816,7 +826,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 17.0, 265.0, 195.0, 64.0 ],
-									"presentation_linecount" : 2,
 									"text" : "bg 0.175 0.175 0.175 1., dotcolor 0.909804 0.278431 0.278431 1., activecolor 1. 0 0 1., guidecolor 1. 1. 1. 0.1"
 								}
 
@@ -828,7 +837,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 822.0, 500.0, 74.0, 22.0 ],
+									"patching_rect" : [ 850.0, 538.0, 80.0, 22.0 ],
 									"text" : "released"
 								}
 
@@ -840,7 +849,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 2.0, 195.0, 89.0, 22.0 ],
+									"patching_rect" : [ 12.0, 616.0, 89.0, 22.0 ],
 									"text" : "setrange 0 127"
 								}
 
@@ -854,7 +863,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 293.0, 404.0, 603.0, 89.0 ]
+									"patching_rect" : [ 327.0, 398.0, 603.0, 89.0 ]
 								}
 
 							}
@@ -874,7 +883,7 @@
 									"numoutlets" : 9,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-									"patching_rect" : [ 226.0, 142.0, 670.0, 204.0 ],
+									"patching_rect" : [ 226.0, 142.0, 700.0, 205.0 ],
 									"varname" : "flowSwing_envelop",
 									"viewvisibility" : 1
 								}
@@ -1288,7 +1297,7 @@
 										"toolbaradditions" : [ "audiomute", "audiosolo" ]
 									}
 ,
-									"patching_rect" : [ 226.0, 556.0, 86.0, 22.0 ],
+									"patching_rect" : [ 260.0, 550.0, 86.0, 22.0 ],
 									"text" : "p \"mc synth\""
 								}
 
@@ -1312,7 +1321,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 152.0, 596.0, 72.0, 22.0 ],
+									"patching_rect" : [ 182.0, 620.0, 72.0, 22.0 ],
 									"text" : "startwindow"
 								}
 
@@ -1323,7 +1332,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 226.0, 596.0, 35.0, 22.0 ],
+									"patching_rect" : [ 256.0, 620.0, 35.0, 22.0 ],
 									"text" : "dac~"
 								}
 
@@ -1346,7 +1355,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-8", 1 ],
-									"midpoints" : [ 316.875, 358.5, 269.0, 358.5 ],
+									"midpoints" : [ 320.625, 358.5, 303.0, 358.5 ],
 									"source" : [ "obj-1", 1 ]
 								}
 
@@ -1354,6 +1363,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-8", 0 ],
+									"midpoints" : [ 235.5, 359.5, 269.5, 359.5 ],
 									"source" : [ "obj-1", 0 ]
 								}
 
@@ -1361,7 +1371,8 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
-									"midpoints" : [ 11.5, 397.0, 302.5, 397.0 ],
+									"hidden" : 1,
+									"midpoints" : [ 21.5, 397.0, 336.5, 397.0 ],
 									"source" : [ "obj-11", 0 ]
 								}
 
@@ -1376,7 +1387,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
-									"midpoints" : [ 724.5, 380.25, 302.5, 380.25 ],
+									"midpoints" : [ 746.25, 380.25, 336.5, 380.25 ],
 									"source" : [ "obj-21", 0 ]
 								}
 
@@ -1391,6 +1402,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
+									"hidden" : 1,
 									"source" : [ "obj-27", 0 ]
 								}
 
@@ -1413,6 +1425,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-41", 0 ],
+									"midpoints" : [ 336.5, 503.0, 948.5, 503.0 ],
 									"order" : 0,
 									"source" : [ "obj-3", 0 ]
 								}
@@ -1435,6 +1448,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
+									"hidden" : 1,
 									"source" : [ "obj-36", 0 ]
 								}
 
@@ -1449,6 +1463,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
+									"midpoints" : [ 948.5, 569.0, 1062.0, 569.0, 1062.0, 388.0, 336.5, 388.0 ],
 									"source" : [ "obj-43", 0 ]
 								}
 
@@ -1456,7 +1471,8 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
-									"midpoints" : [ 26.5, 397.0, 302.5, 397.0 ],
+									"hidden" : 1,
+									"midpoints" : [ 26.5, 397.0, 336.5, 397.0 ],
 									"source" : [ "obj-60", 0 ]
 								}
 
@@ -1471,7 +1487,8 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
-									"midpoints" : [ 38.5, 398.5, 302.5, 398.5 ],
+									"hidden" : 1,
+									"midpoints" : [ 26.5, 398.5, 336.5, 398.5 ],
 									"source" : [ "obj-69", 0 ]
 								}
 
@@ -1724,7 +1741,7 @@
 									"numoutlets" : 9,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-									"patching_rect" : [ 226.0, 217.0, 670.0, 204.0 ],
+									"patching_rect" : [ 226.0, 217.0, 704.0, 206.0 ],
 									"varname" : "flowSwing_envelop",
 									"viewvisibility" : 1
 								}
@@ -2140,7 +2157,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-8", 0 ],
-									"midpoints" : [ 316.875, 436.0, 393.5, 436.0 ],
+									"midpoints" : [ 321.125, 436.0, 393.5, 436.0 ],
 									"source" : [ "obj-1", 1 ]
 								}
 
@@ -2384,7 +2401,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "multichannelsignal" ],
-									"patching_rect" : [ 307.375, 437.0, 158.0, 22.0 ],
+									"patching_rect" : [ 311.0, 437.0, 158.0, 22.0 ],
 									"text" : "mc.gen~ min_gate_duration"
 								}
 
@@ -2393,7 +2410,7 @@
 								"box" : 								{
 									"id" : "obj-12",
 									"inputs" : 3,
-									"int" : 1,
+									"int" : 2,
 									"maxclass" : "gswitch",
 									"numinlets" : 4,
 									"numoutlets" : 1,
@@ -3320,7 +3337,8 @@
 												}
 
 											}
- ]
+ ],
+										"toolbaradditions" : [ "audiomute", "audiosolo" ]
 									}
 ,
 									"patching_rect" : [ 477.0, 508.0, 112.0, 22.0 ],
@@ -3393,7 +3411,7 @@
 									"numoutlets" : 9,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-									"patching_rect" : [ 226.0, 217.0, 670.0, 204.0 ],
+									"patching_rect" : [ 226.0, 217.0, 700.0, 203.0 ],
 									"varname" : "flowSwing_envelop",
 									"viewvisibility" : 1
 								}
@@ -3520,7 +3538,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-47", 0 ],
-									"midpoints" : [ 316.875, 486.5, 257.5, 486.5 ],
+									"midpoints" : [ 320.5, 486.5, 257.5, 486.5 ],
 									"order" : 1,
 									"source" : [ "obj-14", 0 ]
 								}
@@ -3529,7 +3547,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-66", 0 ],
-									"midpoints" : [ 316.875, 484.5, 486.5, 484.5 ],
+									"midpoints" : [ 320.5, 484.5, 486.5, 484.5 ],
 									"order" : 0,
 									"source" : [ "obj-14", 0 ]
 								}
@@ -3665,7 +3683,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 100.0, 126.0, 1083.0, 668.0 ],
+						"rect" : [ 0.0, 26.0, 1083.0, 668.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [ 							{
@@ -3767,7 +3785,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 857.0, 428.0, 39.0, 32.0 ],
+									"patching_rect" : [ 889.0, 440.0, 39.0, 32.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_enum" : [ "0", "1" ],
@@ -3804,7 +3822,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 877.0, 475.0, 91.0, 22.0 ],
+									"patching_rect" : [ 909.0, 487.0, 91.0, 22.0 ],
 									"text" : "print @popup 1"
 								}
 
@@ -3816,7 +3834,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 877.0, 177.0, 75.0, 22.0 ],
+									"patching_rect" : [ 909.0, 182.0, 75.0, 22.0 ],
 									"text" : "getattributes"
 								}
 
@@ -3828,7 +3846,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 800.0, 177.0, 51.0, 22.0 ],
+									"patching_rect" : [ 832.0, 182.0, 51.0, 22.0 ],
 									"text" : "chans 8"
 								}
 
@@ -3849,7 +3867,7 @@
 									"numoutlets" : 9,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-									"patching_rect" : [ 226.0, 217.0, 670.0, 204.0 ],
+									"patching_rect" : [ 226.0, 217.0, 702.0, 204.0 ],
 									"varname" : "flowSwing_envelop",
 									"viewvisibility" : 1
 								}
@@ -4588,7 +4606,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 917.0, 284.0, 135.0, 22.0 ],
+									"patching_rect" : [ 940.0, 284.0, 135.0, 22.0 ],
 									"priority" : 									{
 										"flowSwing_envelop::S" : 2,
 										"flowSwing_envelop::breakpoints" : 3,
@@ -4614,7 +4632,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 917.0, 313.0, 150.0, 89.0 ],
+									"patching_rect" : [ 940.0, 313.0, 150.0, 89.0 ],
 									"text" : "The Flow Swing patches  are pattr enabled. The right most inlets and outlets can be used to dirrectly set and get all settings"
 								}
 
@@ -4691,7 +4709,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 564.0, 195.0, 20.0, 20.0 ],
+									"patching_rect" : [ 598.0, 195.0, 20.0, 20.0 ],
 									"rounded" : 60.0,
 									"saved_attribute_attributes" : 									{
 										"bgcolor" : 										{
@@ -4808,7 +4826,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 907.0, 221.0, 150.0, 34.0 ],
+									"patching_rect" : [ 930.0, 221.0, 150.0, 34.0 ],
 									"text" : "When muted the signal outputs are zero"
 								}
 
@@ -4833,7 +4851,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 586.0, 153.0, 150.0, 62.0 ],
+									"patching_rect" : [ 620.0, 153.0, 150.0, 62.0 ],
 									"text" : "Locking the breakpoints on the NI Grid matches each grid point to the nearest NI Grid beat"
 								}
 
@@ -5415,7 +5433,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-8", 0 ],
-									"midpoints" : [ 316.875, 488.5, 387.5, 488.5 ],
+									"midpoints" : [ 320.875, 488.5, 387.5, 488.5 ],
 									"order" : 1,
 									"source" : [ "obj-1", 1 ]
 								}
@@ -5424,7 +5442,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-82", 0 ],
-									"midpoints" : [ 316.875, 486.600004285573959, 577.5, 486.600004285573959 ],
+									"midpoints" : [ 320.875, 486.600004285573959, 577.5, 486.600004285573959 ],
 									"order" : 0,
 									"source" : [ "obj-1", 1 ]
 								}
@@ -5600,22 +5618,26 @@
 		"parameters" : 		{
 			"obj-1::obj-16" : [ "vst~", "vst~", 0 ],
 			"obj-1::obj-1::obj-109" : [ "breakpoints[1]", "breakpoints", 3 ],
-			"obj-1::obj-1::obj-114" : [ "clear_breakpoints[1]", "clear_breakpoints", 0 ],
+			"obj-1::obj-1::obj-114" : [ "clear_breakpoints[3]", "clear_breakpoints", 0 ],
 			"obj-1::obj-1::obj-123" : [ "asGrid[1]", "asGrid", 1 ],
 			"obj-1::obj-1::obj-128" : [ "zoom[1]", "zoom", 0 ],
-			"obj-1::obj-1::obj-16" : [ "title[1]", "title", 0 ],
+			"obj-1::obj-1::obj-154" : [ "title[1]", "title", 0 ],
 			"obj-1::obj-1::obj-19" : [ "mute[1]", "mute", 0 ],
 			"obj-1::obj-1::obj-191" : [ "snapToNIGrid_parameter[1]", "snapToNIGrid_parameter", 0 ],
 			"obj-1::obj-1::obj-193" : [ "firstChannel_parameter[1]", "firstChannel_parameter", 0 ],
 			"obj-1::obj-1::obj-195" : [ "chans_parameter[1]", "chans_parameter", 0 ],
-			"obj-1::obj-1::obj-199" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
+			"obj-1::obj-1::obj-199" : [ "resetNIGrid[2]", "resetNIGrid", 0 ],
 			"obj-1::obj-1::obj-22" : [ "lock[1]", "lock", 0 ],
+			"obj-1::obj-1::obj-242" : [ "resetNIGrid[3]", "resetNIGrid", 0 ],
+			"obj-1::obj-1::obj-253" : [ "rescale[1]", "rescale", 0 ],
 			"obj-1::obj-1::obj-42" : [ "morph[1]", "morph", 0 ],
 			"obj-1::obj-1::obj-45" : [ "S[1]", "S", 2 ],
 			"obj-1::obj-1::obj-47" : [ "offset[1]", "offset", 0 ],
 			"obj-1::obj-1::obj-48" : [ "niRotation[1]", "niRotation", 0 ],
 			"obj-1::obj-1::obj-50" : [ "Formative[1]", "Formative", 0 ],
 			"obj-1::obj-1::obj-51" : [ "Target[1]", "Target", 0 ],
+			"obj-1::obj-1::obj-66" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-1::obj-1::obj-68" : [ "clear_breakpoints[2]", "clear_breakpoints", 0 ],
 			"obj-1::obj-1::obj-90" : [ "secondary_S_control[1]", "secondary_S_control", 0 ],
 			"obj-1::obj-1::obj-91" : [ "hold[1]", "hold", 0 ],
 			"obj-1::obj-27" : [ "Duration[1]", "duration", 0 ],
@@ -5625,19 +5647,23 @@
 			"obj-21::obj-1::obj-114" : [ "clear_breakpoints", "clear_breakpoints", 0 ],
 			"obj-21::obj-1::obj-123" : [ "asGrid", "asGrid", 1 ],
 			"obj-21::obj-1::obj-128" : [ "zoom", "zoom", 0 ],
-			"obj-21::obj-1::obj-16" : [ "title", "title", 0 ],
+			"obj-21::obj-1::obj-154" : [ "title", "title", 0 ],
 			"obj-21::obj-1::obj-19" : [ "mute", "mute", 0 ],
 			"obj-21::obj-1::obj-191" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
 			"obj-21::obj-1::obj-193" : [ "firstChannel_parameter", "firstChannel_parameter", 0 ],
 			"obj-21::obj-1::obj-195" : [ "chans_parameter", "chans_parameter", 0 ],
 			"obj-21::obj-1::obj-199" : [ "resetNIGrid", "resetNIGrid", 0 ],
 			"obj-21::obj-1::obj-22" : [ "lock", "lock", 0 ],
+			"obj-21::obj-1::obj-242" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
+			"obj-21::obj-1::obj-253" : [ "rescale", "rescale", 0 ],
 			"obj-21::obj-1::obj-42" : [ "morph", "morph", 0 ],
 			"obj-21::obj-1::obj-45" : [ "S", "S", 2 ],
 			"obj-21::obj-1::obj-47" : [ "offset", "offset", 0 ],
 			"obj-21::obj-1::obj-48" : [ "niRotation", "niRotation", 0 ],
 			"obj-21::obj-1::obj-50" : [ "Formative", "Formative", 0 ],
 			"obj-21::obj-1::obj-51" : [ "Target", "Target", 0 ],
+			"obj-21::obj-1::obj-66" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-21::obj-1::obj-68" : [ "clear_breakpoints[1]", "clear_breakpoints", 0 ],
 			"obj-21::obj-1::obj-90" : [ "secondary_S_control", "secondary_S_control", 0 ],
 			"obj-21::obj-1::obj-91" : [ "hold", "hold", 0 ],
 			"obj-21::obj-2" : [ "gswitch2", "printSwitch", 0 ],
@@ -5646,43 +5672,51 @@
 			"obj-21::obj-8::obj-35" : [ "min gate duration", "min gate duration", 0 ],
 			"obj-21::obj-90" : [ "mc sequencer", "mc sequencer", 0 ],
 			"obj-2::obj-1::obj-109" : [ "breakpoints[2]", "breakpoints", 2 ],
-			"obj-2::obj-1::obj-114" : [ "clear_breakpoints[2]", "clear_breakpoints", 0 ],
+			"obj-2::obj-1::obj-114" : [ "clear_breakpoints[4]", "clear_breakpoints", 0 ],
 			"obj-2::obj-1::obj-123" : [ "asGrid[2]", "asGrid", 1 ],
 			"obj-2::obj-1::obj-128" : [ "zoom[2]", "zoom", 0 ],
-			"obj-2::obj-1::obj-16" : [ "title[2]", "title", 0 ],
+			"obj-2::obj-1::obj-154" : [ "title[2]", "title", 0 ],
 			"obj-2::obj-1::obj-19" : [ "mute[2]", "mute", 0 ],
 			"obj-2::obj-1::obj-191" : [ "snapToNIGrid_parameter[2]", "snapToNIGrid_parameter", 0 ],
 			"obj-2::obj-1::obj-193" : [ "firstChannel_parameter[2]", "firstChannel_parameter", 0 ],
 			"obj-2::obj-1::obj-195" : [ "chans_parameter[2]", "chans_parameter", 0 ],
-			"obj-2::obj-1::obj-199" : [ "resetNIGrid[2]", "resetNIGrid", 0 ],
+			"obj-2::obj-1::obj-199" : [ "resetNIGrid[4]", "resetNIGrid", 0 ],
 			"obj-2::obj-1::obj-22" : [ "lock[2]", "lock", 0 ],
+			"obj-2::obj-1::obj-242" : [ "resetNIGrid[5]", "resetNIGrid", 0 ],
+			"obj-2::obj-1::obj-253" : [ "rescale[2]", "rescale", 0 ],
 			"obj-2::obj-1::obj-42" : [ "morph[2]", "morph", 0 ],
 			"obj-2::obj-1::obj-45" : [ "S[2]", "S", 1 ],
 			"obj-2::obj-1::obj-47" : [ "offset[2]", "offset", 0 ],
 			"obj-2::obj-1::obj-48" : [ "niRotation[2]", "niRotation", 0 ],
 			"obj-2::obj-1::obj-50" : [ "Formative[2]", "Formative", 0 ],
 			"obj-2::obj-1::obj-51" : [ "Target[2]", "Target", 0 ],
+			"obj-2::obj-1::obj-66" : [ "live.menu[3]", "live.menu", 0 ],
+			"obj-2::obj-1::obj-68" : [ "clear_breakpoints[5]", "clear_breakpoints", 0 ],
 			"obj-2::obj-1::obj-90" : [ "secondary_S_control[2]", "secondary_S_control", 0 ],
 			"obj-2::obj-1::obj-91" : [ "hold[2]", "hold", 0 ],
 			"obj-2::obj-27" : [ "Duration[2]", "duration", 0 ],
 			"obj-2::obj-8::obj-35" : [ "min gate duration[1]", "min gate duration", 0 ],
 			"obj-3::obj-1::obj-109" : [ "breakpoints[3]", "breakpoints", 2 ],
-			"obj-3::obj-1::obj-114" : [ "clear_breakpoints[3]", "clear_breakpoints", 0 ],
+			"obj-3::obj-1::obj-114" : [ "clear_breakpoints[6]", "clear_breakpoints", 0 ],
 			"obj-3::obj-1::obj-123" : [ "asGrid[3]", "asGrid", 1 ],
 			"obj-3::obj-1::obj-128" : [ "zoom[3]", "zoom", 0 ],
-			"obj-3::obj-1::obj-16" : [ "title[3]", "title", 0 ],
+			"obj-3::obj-1::obj-154" : [ "title[3]", "title", 0 ],
 			"obj-3::obj-1::obj-19" : [ "mute[3]", "mute", 0 ],
 			"obj-3::obj-1::obj-191" : [ "snapToNIGrid_parameter[3]", "snapToNIGrid_parameter", 0 ],
 			"obj-3::obj-1::obj-193" : [ "firstChannel_parameter[3]", "firstChannel_parameter", 0 ],
 			"obj-3::obj-1::obj-195" : [ "chans_parameter[3]", "chans_parameter", 0 ],
-			"obj-3::obj-1::obj-199" : [ "resetNIGrid[3]", "resetNIGrid", 0 ],
+			"obj-3::obj-1::obj-199" : [ "resetNIGrid[7]", "resetNIGrid", 0 ],
 			"obj-3::obj-1::obj-22" : [ "lock[3]", "lock", 0 ],
+			"obj-3::obj-1::obj-242" : [ "resetNIGrid[6]", "resetNIGrid", 0 ],
+			"obj-3::obj-1::obj-253" : [ "rescale[3]", "rescale", 0 ],
 			"obj-3::obj-1::obj-42" : [ "morph[3]", "morph", 0 ],
 			"obj-3::obj-1::obj-45" : [ "S[3]", "S", 1 ],
 			"obj-3::obj-1::obj-47" : [ "offset[3]", "offset", 0 ],
 			"obj-3::obj-1::obj-48" : [ "niRotation[3]", "niRotation", 0 ],
 			"obj-3::obj-1::obj-50" : [ "Formative[3]", "Formative", 0 ],
 			"obj-3::obj-1::obj-51" : [ "Target[3]", "Target", 0 ],
+			"obj-3::obj-1::obj-66" : [ "live.menu[4]", "live.menu", 0 ],
+			"obj-3::obj-1::obj-68" : [ "clear_breakpoints[7]", "clear_breakpoints", 0 ],
 			"obj-3::obj-1::obj-90" : [ "secondary_S_control[3]", "secondary_S_control", 0 ],
 			"obj-3::obj-1::obj-91" : [ "hold[3]", "hold", 0 ],
 			"obj-3::obj-41" : [ "pitches", "pitches", 0 ],
@@ -5698,7 +5732,7 @@
 ,
 			"parameter_overrides" : 			{
 				"obj-1::obj-1::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[1]"
+					"parameter_longname" : "clear_breakpoints[3]"
 				}
 ,
 				"obj-1::obj-1::obj-128" : 				{
@@ -5722,11 +5756,19 @@
 				}
 ,
 				"obj-1::obj-1::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[1]"
+					"parameter_longname" : "resetNIGrid[2]"
 				}
 ,
 				"obj-1::obj-1::obj-22" : 				{
 					"parameter_longname" : "lock[1]"
+				}
+,
+				"obj-1::obj-1::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[3]"
+				}
+,
+				"obj-1::obj-1::obj-253" : 				{
+					"parameter_longname" : "rescale[1]"
 				}
 ,
 				"obj-1::obj-1::obj-42" : 				{
@@ -5753,6 +5795,14 @@
 					"parameter_longname" : "Target[1]"
 				}
 ,
+				"obj-1::obj-1::obj-66" : 				{
+					"parameter_longname" : "live.menu[2]"
+				}
+,
+				"obj-1::obj-1::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[2]"
+				}
+,
 				"obj-1::obj-1::obj-90" : 				{
 					"parameter_longname" : "secondary_S_control[1]"
 				}
@@ -5762,7 +5812,7 @@
 				}
 ,
 				"obj-2::obj-1::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[2]"
+					"parameter_longname" : "clear_breakpoints[4]"
 				}
 ,
 				"obj-2::obj-1::obj-128" : 				{
@@ -5786,11 +5836,19 @@
 				}
 ,
 				"obj-2::obj-1::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[2]"
+					"parameter_longname" : "resetNIGrid[4]"
 				}
 ,
 				"obj-2::obj-1::obj-22" : 				{
 					"parameter_longname" : "lock[2]"
+				}
+,
+				"obj-2::obj-1::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[5]"
+				}
+,
+				"obj-2::obj-1::obj-253" : 				{
+					"parameter_longname" : "rescale[2]"
 				}
 ,
 				"obj-2::obj-1::obj-42" : 				{
@@ -5817,6 +5875,14 @@
 					"parameter_longname" : "Target[2]"
 				}
 ,
+				"obj-2::obj-1::obj-66" : 				{
+					"parameter_longname" : "live.menu[3]"
+				}
+,
+				"obj-2::obj-1::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[5]"
+				}
+,
 				"obj-2::obj-1::obj-90" : 				{
 					"parameter_longname" : "secondary_S_control[2]"
 				}
@@ -5826,7 +5892,7 @@
 				}
 ,
 				"obj-3::obj-1::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[3]"
+					"parameter_longname" : "clear_breakpoints[6]"
 				}
 ,
 				"obj-3::obj-1::obj-128" : 				{
@@ -5850,11 +5916,19 @@
 				}
 ,
 				"obj-3::obj-1::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[3]"
+					"parameter_longname" : "resetNIGrid[7]"
 				}
 ,
 				"obj-3::obj-1::obj-22" : 				{
 					"parameter_longname" : "lock[3]"
+				}
+,
+				"obj-3::obj-1::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[6]"
+				}
+,
+				"obj-3::obj-1::obj-253" : 				{
+					"parameter_longname" : "rescale[3]"
 				}
 ,
 				"obj-3::obj-1::obj-42" : 				{
@@ -5879,6 +5953,14 @@
 ,
 				"obj-3::obj-1::obj-51" : 				{
 					"parameter_longname" : "Target[3]"
+				}
+,
+				"obj-3::obj-1::obj-66" : 				{
+					"parameter_longname" : "live.menu[4]"
+				}
+,
+				"obj-3::obj-1::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[7]"
 				}
 ,
 				"obj-3::obj-1::obj-90" : 				{
@@ -5916,14 +5998,21 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "basic_envelop_example.maxsnap",
-				"bootpath" : "~/Documents/Max 9/Snapshots",
-				"patcherrelativepath" : "../../../Snapshots",
-				"type" : "mx@s",
+				"name" : "GCD.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "breakpointsDictToList.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
+				"patcherrelativepath" : "../patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "breakpointsListToDict.maxpat",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
@@ -5937,14 +6026,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "drawGrid.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "drawNIGrid.js",
+				"name" : "drawNIGrid_zoom.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
 				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
@@ -6027,6 +6109,13 @@
 			}
 , 			{
 				"name" : "shift_markers.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "zoomNscroll_coremath.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
 				"patcherrelativepath" : "../javascript",
 				"type" : "TEXT",
@@ -6133,7 +6222,7 @@
 							"asGrid" : [ 0.09448818897638, 2, 5 ],
 							"asGrid[1]" : [ 0.0, 3, 4 ],
 							"asGrid[2]" : [ 0.0, 0, 4 ],
-							"asGrid[3]" : [ 0.0, 0, 4 ],
+							"asGrid[3]" : [ 0.52755905511811, 0, 4 ],
 							"breakpoints[2]" : [ 								{
 									"env" : [ 0, 0.826413650290474, 0, 0.200107067848763, 0.210359896163899, 0, 0.4, 0.939897236576949, 0.85, 0.451692598279674, 0.356267364246509, 0, 0.509101377035721, 0.56702259592139, 0, 0.551313714356343, 0.258995718858102, 0, 0.6, 0.291419600654238, 0.85, 0.715097583160359, 0.907473354780813, -0.6, 0.8, 0.42111512783878, -0.6, 1, 0.826413650290474, 0.8 ],
 									"mute" : [ 1, 0, 0, 1, 1, 1, 1, 1, 0, 1 ]
@@ -6145,7 +6234,8 @@
 										"associations" : [ 0, 1, 2, 3, 4, 5 ],
 										"order" : [ 0, 0, 0, 0, 0, 0 ]
 									}
-
+,
+									"mute" : [ 0, 0, 0, 0, 0, 0 ]
 								}
  ],
 							"breakpoints" : [ 								{
@@ -6276,7 +6366,7 @@
 										"asGrid" : [ 0.09448818897638, 2, 5 ],
 										"asGrid[1]" : [ 0.0, 3, 4 ],
 										"asGrid[2]" : [ 0.0, 0, 4 ],
-										"asGrid[3]" : [ 0.0, 0, 4 ],
+										"asGrid[3]" : [ 0.52755905511811, 0, 4 ],
 										"breakpoints[2]" : [ 											{
 												"env" : [ 0, 0.826413650290474, 0, 0.200107067848763, 0.210359896163899, 0, 0.4, 0.939897236576949, 0.85, 0.451692598279674, 0.356267364246509, 0, 0.509101377035721, 0.56702259592139, 0, 0.551313714356343, 0.258995718858102, 0, 0.6, 0.291419600654238, 0.85, 0.715097583160359, 0.907473354780813, -0.6, 0.8, 0.42111512783878, -0.6, 1, 0.826413650290474, 0.8 ],
 												"mute" : [ 1, 0, 0, 1, 1, 1, 1, 1, 0, 1 ]
@@ -6288,7 +6378,8 @@
 													"associations" : [ 0, 1, 2, 3, 4, 5 ],
 													"order" : [ 0, 0, 0, 0, 0, 0 ]
 												}
-
+,
+												"mute" : [ 0, 0, 0, 0, 0, 0 ]
 											}
  ],
 										"breakpoints" : [ 											{

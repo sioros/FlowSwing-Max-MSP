@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 278.0, 110.0, 824.0, 716.0 ],
+		"rect" : [ 278.0, 110.0, 855.0, 716.0 ],
 		"openinpresentation" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
@@ -36,7 +36,7 @@
 					"patching_rect" : [ 682.0, 352.0, 118.0, 52.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 695.0, 364.0, 118.0, 52.0 ],
+					"presentation_rect" : [ 722.0, 364.0, 118.0, 52.0 ],
 					"text" : "Ctrl+Click&Drag to zoom and pan vertically"
 				}
 
@@ -54,7 +54,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 373.0, 284.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 695.0, 535.0, 110.0, 15.0 ],
+					"presentation_rect" : [ 722.0, 535.0, 110.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
 							"expression" : ""
@@ -94,7 +94,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 103.5, 284.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 695.0, 425.0, 110.0, 15.0 ],
+					"presentation_rect" : [ 722.0, 425.0, 110.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
 							"expression" : ""
@@ -257,7 +257,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 608.0, 298.0, 38.0, 27.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 85.603111386299133, 343.190655648708344, 594.0, 207.0 ],
+					"presentation_rect" : [ 113.0, 343.0, 594.0, 207.0 ],
 					"setminmax" : [ 0.0, 1.0 ],
 					"slidercolor" : [ 1.0, 1.0, 1.0, 0.16 ]
 				}
@@ -605,7 +605,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 560.0, 346.0, 98.0, 22.0 ],
-					"restore" : [ -0.705263157894737, -0.431578947368421, 0.494736842105263, 0.642105263157895, -0.536842105263158 ],
+					"restore" : [ -0.705263157894737, -0.431578947368421, 0.494736842105263, 0.642105263157895, -0.536842105263158, 0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
@@ -780,7 +780,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 416.0, 349.0, 107.0, 44.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 82.0, 450.0, 603.0, 100.0 ]
+					"presentation_rect" : [ 109.0, 450.0, 603.0, 100.0 ]
 				}
 
 			}
@@ -828,7 +828,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 277.0, 348.0, 74.0, 22.0 ],
-					"restore" : [ 33, 41, 45.285550302233084, 70, 47 ],
+					"restore" : [ 33, 41, 53, 70, 47, 64 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
@@ -2363,7 +2363,7 @@
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
 					"patching_rect" : [ 45.0, 183.0, 136.0, 27.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 17.0, 126.0, 668.0, 201.0 ],
+					"presentation_rect" : [ 17.0, 126.0, 714.0, 208.0 ],
 					"varname" : "flowSwing_envelop",
 					"viewvisibility" : 1
 				}
@@ -2381,7 +2381,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 133.0, 351.0, 107.0, 44.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 82.0, 340.0, 603.0, 100.0 ]
+					"presentation_rect" : [ 109.0, 340.0, 603.0, 100.0 ]
 				}
 
 			}
@@ -2396,7 +2396,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 554.0, 291.0, 43.0, 41.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 18.0, 340.0, 667.0, 210.0 ],
+					"presentation_rect" : [ 17.0, 340.0, 695.0, 210.0 ],
 					"proportion" : 0.5,
 					"rounded" : 0
 				}
@@ -2716,13 +2716,14 @@
 			"obj-1::obj-114" : [ "clear_breakpoints", "clear_breakpoints", 0 ],
 			"obj-1::obj-123" : [ "asGrid", "asGrid", 1 ],
 			"obj-1::obj-128" : [ "zoom", "zoom", 0 ],
-			"obj-1::obj-16" : [ "title", "title", 0 ],
+			"obj-1::obj-154" : [ "title", "title", 0 ],
 			"obj-1::obj-19" : [ "mute", "mute", 0 ],
 			"obj-1::obj-191" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
 			"obj-1::obj-193" : [ "firstChannel_parameter", "firstChannel_parameter", 0 ],
 			"obj-1::obj-195" : [ "chans_parameter", "chans_parameter", 0 ],
 			"obj-1::obj-199" : [ "resetNIGrid", "resetNIGrid", 0 ],
 			"obj-1::obj-22" : [ "lock", "lock", 0 ],
+			"obj-1::obj-242" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
 			"obj-1::obj-42" : [ "morph", "morph", 0 ],
 			"obj-1::obj-45" : [ "S", "S", 1 ],
 			"obj-1::obj-47" : [ "offset", "offset", 0 ],
@@ -2789,6 +2790,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "GCD.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "Step_sequencer.maxsnap",
 				"bootpath" : "~/Documents/Max 9/Snapshots",
 				"patcherrelativepath" : "../../../Snapshots",
@@ -2810,14 +2818,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "drawGrid.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "drawNIGrid.js",
+				"name" : "drawNIGrid_zoom.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
 				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
@@ -2915,6 +2916,13 @@
 			}
 , 			{
 				"name" : "shift_markers.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "zoomNscroll_coremath.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
 				"patcherrelativepath" : "../javascript",
 				"type" : "TEXT",

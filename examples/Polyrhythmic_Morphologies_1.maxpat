@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 107.0, 781.0, 489.0 ],
+		"rect" : [ 59.0, 107.0, 822.0, 489.0 ],
 		"openinpresentation" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
@@ -46,7 +46,7 @@
 					"maxclass" : "live.line",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 733.0, 438.5, 5.0, 23.0 ],
+					"patching_rect" : [ 629.0, 438.5, 5.0, 23.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 588.0, 173.0, 13.0, 20.0 ]
 				}
@@ -60,7 +60,7 @@
 					"maxclass" : "live.line",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 726.0, 438.5, 5.0, 23.0 ],
+					"patching_rect" : [ 622.0, 438.5, 5.0, 23.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 295.0, 166.0, 13.0, 20.0 ]
 				}
@@ -154,7 +154,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 429.0, 314.0, 44.0, 74.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 705.0, 315.0, 41.0, 97.0 ],
+					"presentation_rect" : [ 735.0, 315.0, 41.0, 97.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "sound2",
@@ -184,7 +184,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 198.0, 321.0, 44.0, 74.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 705.0, 186.0, 41.0, 97.0 ],
+					"presentation_rect" : [ 735.0, 186.0, 41.0, 97.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "sound1",
@@ -871,9 +871,9 @@
 					"numoutlets" : 9,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-					"patching_rect" : [ 416.0, 193.0, 123.0, 32.0 ],
+					"patching_rect" : [ 416.0, 193.0, 123.0, 29.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 9.0, 310.0, 689.0, 102.0 ],
+					"presentation_rect" : [ 9.0, 310.0, 715.0, 100.0 ],
 					"varname" : "flowSwing_envelop[1]",
 					"viewvisibility" : 1
 				}
@@ -895,9 +895,9 @@
 					"numoutlets" : 9,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-					"patching_rect" : [ 185.0, 193.0, 123.0, 32.0 ],
+					"patching_rect" : [ 185.0, 193.0, 123.0, 29.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 9.0, 186.0, 689.0, 102.0 ],
+					"presentation_rect" : [ 9.0, 186.0, 715.0, 100.0 ],
 					"varname" : "flowSwing_envelop",
 					"viewvisibility" : 1
 				}
@@ -1006,13 +1006,14 @@
 			"obj-1::obj-114" : [ "clear_breakpoints", "clear_breakpoints", 0 ],
 			"obj-1::obj-123" : [ "asGrid", "asGrid", 1 ],
 			"obj-1::obj-128" : [ "zoom", "zoom", 0 ],
-			"obj-1::obj-16" : [ "title", "title", 0 ],
+			"obj-1::obj-154" : [ "title", "title", 0 ],
 			"obj-1::obj-19" : [ "mute", "mute", 0 ],
 			"obj-1::obj-191" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
 			"obj-1::obj-193" : [ "firstChannel_parameter", "firstChannel_parameter", 0 ],
 			"obj-1::obj-195" : [ "chans_parameter", "chans_parameter", 0 ],
 			"obj-1::obj-199" : [ "resetNIGrid", "resetNIGrid", 0 ],
 			"obj-1::obj-22" : [ "lock", "lock", 0 ],
+			"obj-1::obj-242" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
 			"obj-1::obj-42" : [ "morph", "morph", 0 ],
 			"obj-1::obj-45" : [ "S", "S", 1 ],
 			"obj-1::obj-47" : [ "offset", "offset", 0 ],
@@ -1025,13 +1026,14 @@
 			"obj-2::obj-114" : [ "clear_breakpoints[1]", "clear_breakpoints", 0 ],
 			"obj-2::obj-123" : [ "asGrid[1]", "asGrid", 1 ],
 			"obj-2::obj-128" : [ "zoom[1]", "zoom", 0 ],
-			"obj-2::obj-16" : [ "title[1]", "title", 0 ],
+			"obj-2::obj-154" : [ "title[1]", "title", 0 ],
 			"obj-2::obj-19" : [ "mute[1]", "mute", 0 ],
 			"obj-2::obj-191" : [ "snapToNIGrid_parameter[1]", "snapToNIGrid_parameter", 0 ],
 			"obj-2::obj-193" : [ "firstChannel_parameter[1]", "firstChannel_parameter", 0 ],
 			"obj-2::obj-195" : [ "chans_parameter[1]", "chans_parameter", 0 ],
-			"obj-2::obj-199" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
+			"obj-2::obj-199" : [ "resetNIGrid[2]", "resetNIGrid", 0 ],
 			"obj-2::obj-22" : [ "lock[1]", "lock", 0 ],
+			"obj-2::obj-242" : [ "resetNIGrid[3]", "resetNIGrid", 0 ],
 			"obj-2::obj-42" : [ "morph[1]", "morph", 0 ],
 			"obj-2::obj-45" : [ "S[1]", "S", 1 ],
 			"obj-2::obj-47" : [ "offset[1]", "offset", 0 ],
@@ -1075,11 +1077,15 @@
 				}
 ,
 				"obj-2::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[1]"
+					"parameter_longname" : "resetNIGrid[2]"
 				}
 ,
 				"obj-2::obj-22" : 				{
 					"parameter_longname" : "lock[1]"
+				}
+,
+				"obj-2::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[3]"
 				}
 ,
 				"obj-2::obj-42" : 				{
@@ -1134,6 +1140,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "GCD.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "Polyrhythmic_Morphologies[1].maxsnap",
 				"bootpath" : "~/Documents/Max 9/Snapshots",
 				"patcherrelativepath" : "../../../Snapshots",
@@ -1148,14 +1161,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "drawGrid.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "drawNIGrid.js",
+				"name" : "drawNIGrid_zoom.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
 				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
@@ -1218,6 +1224,13 @@
 			}
 , 			{
 				"name" : "shift_markers.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "zoomNscroll_coremath.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
 				"patcherrelativepath" : "../javascript",
 				"type" : "TEXT",

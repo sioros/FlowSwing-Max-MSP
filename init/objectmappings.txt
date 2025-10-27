@@ -4,6 +4,10 @@ max definesubstitution flowSwing.audioWarp bpatcher @name flowSwing_audioWarp;
 max objectfile  flowSwing.envelop flowSwing_envelop;
 max definesubstitution flowSwing.envelop bpatcher @name flowSwing_envelop;
 
+max objectfile  flowSwing.nested flowSwing_nested;
+max definesubstitution flowSwing.nested bpatcher @name flowSwing_nested;
+
+
 max objectfile liminalGrid liminalGrid;
 
 max objectfile flowSwing.warpInterface SGwarpInterface;
@@ -20,3 +24,6 @@ max definesubstitution flowSwing.stochastic mc.gen~ stochasticGate;
 
 max objectfile flowSwing.stepUI flowSwingStepSequencerUI;
 max definesubstitution flowSwing.stepUI jsui @filename flowSwingStepSequencerUI.js; 
+
+
+

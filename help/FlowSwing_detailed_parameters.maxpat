@@ -10,11 +10,198 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 295.0, 202.0, 872.0, 572.0 ],
+		"rect" : [ 150.0, 196.0, 896.0, 572.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"showrootpatcherontab" : 0,
 		"showontab" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 8,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"classnamespace" : "box",
+						"rect" : [ 0.0, 26.0, 896.0, 546.0 ],
+						"gridsize" : [ 15.0, 15.0 ],
+						"showontab" : 1,
+						"boxes" : [ 							{
+								"box" : 								{
+									"arrows" : 1,
+									"id" : "obj-22",
+									"justification" : 1,
+									"maxclass" : "live.line",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 93.0, 352.0, 10.0, 12.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"arrows" : 1,
+									"id" : "obj-21",
+									"justification" : 1,
+									"maxclass" : "live.line",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 266.0, 349.0, 5.0, 17.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-20",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 22.5, 366.0, 150.0, 34.0 ],
+									"text" : "Click here to restore the view to the full time range."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-17",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 221.0, 366.0, 509.0, 34.0 ],
+									"text" : "A thin zoom bar at the bottom of the interface indicates the currently visible section of the timeline. See the rslider object description for more details."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontface" : 1,
+									"fontsize" : 14.0,
+									"id" : "obj-10",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 738.0, 208.0, 98.0, 23.0 ],
+									"text" : "Zoom control"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"linecount" : 6,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 12.0, 432.0, 859.0, 89.0 ],
+									"text" : "The zoom and scroll interaction maintains a natural, continuous feel. \n\nVertical dragging adjusts the zoom factor: Downrard movement increases magnification (showing a smaller, more detailed section of the timeline), while upward movement decreases magnification (showing a larger portion).\n\nHorizontal dragging scrolls the visible region left or right. "
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 738.0, 233.0, 131.0, 62.0 ],
+									"text" : "A mouse click and drag within the NI Grid display area activates zoom and pan control."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 12.0, 82.0, 717.0, 48.0 ],
+									"text" : "Zoom in and out of the time line for a closer view and detailed editing of breakpoints or warp markers. By narrowing the visible range, finer adjustments can be made with greater precision. This also makes it possible to work comfortably with longer-duration patterns that would otherwise be difficult to view and edit in detail. "
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 18.0,
+									"id" : "obj-24",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 12.0, 49.0, 171.0, 27.0 ],
+									"text" : "Zoom in/out timeline"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"arrows" : 1,
+									"id" : "obj-14",
+									"justification" : 1,
+									"maxclass" : "live.line",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 714.0, 211.0, 22.0, 16.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontface" : 1,
+									"fontsize" : 24.0,
+									"id" : "obj-3",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 12.0, 13.0, 301.0, 34.0 ],
+									"text" : "FlowSwing"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgmode" : 0,
+									"border" : 0,
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
+									"id" : "obj-1",
+									"lockeddragscroll" : 0,
+									"lockedsize" : 0,
+									"maxclass" : "bpatcher",
+									"name" : "flowSwing_envelop.maxpat",
+									"numinlets" : 2,
+									"numoutlets" : 9,
+									"offset" : [ 0.0, 0.0 ],
+									"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
+									"patching_rect" : [ 12.0, 145.0, 700.0, 205.0 ],
+									"varname" : "flowSwing_envelop",
+									"viewvisibility" : 1
+								}
+
+							}
+ ],
+						"lines" : [  ],
+						"toolbaradditions" : [ "audiomute", "audiosolo" ]
+					}
+,
+					"patching_rect" : [ 374.0, 158.0, 132.0, 22.0 ],
+					"text" : "p \"Zoom in/out\"",
+					"varname" : "patcher[4]"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
@@ -31,7 +218,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 872.0, 546.0 ],
+						"rect" : [ 0.0, 26.0, 896.0, 546.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [ 							{
@@ -73,7 +260,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 371.0, 395.0, 6.5, 38.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 821.0, 231.0, 8.727272987365723, 21.454546093940735 ]
+									"presentation_rect" : [ 851.0, 231.0, 8.727272987365723, 21.454546093940735 ]
 								}
 
 							}
@@ -87,7 +274,7 @@
 									"patching_rect" : [ 397.0, 395.0, 150.0, 34.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 2,
-									"presentation_rect" : [ 705.0, 195.0, 150.0, 34.0 ],
+									"presentation_rect" : [ 713.0, 195.0, 150.0, 34.0 ],
 									"text" : "Use the arrows to bring  up the breakpoint function!"
 								}
 
@@ -300,9 +487,9 @@
 									"numoutlets" : 9,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-									"patching_rect" : [ 146.0, 250.0, 129.0, 31.0 ],
+									"patching_rect" : [ 146.0, 250.0, 130.0, 30.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 146.0, 250.0, 688.0, 100.0 ],
+									"presentation_rect" : [ 146.0, 250.0, 718.0, 100.0 ],
 									"varname" : "flowSwing_envelop",
 									"viewvisibility" : 1
 								}
@@ -378,7 +565,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 295.0, 228.0, 872.0, 546.0 ],
+						"rect" : [ 150.0, 222.0, 896.0, 546.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [ 							{
@@ -389,7 +576,7 @@
 									"maxclass" : "live.line",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 53.0, 290.0, 91.2195143699646, 15.121951580047607 ],
+									"patching_rect" : [ 53.0, 277.0, 188.0, 20.0 ],
 									"saved_attribute_attributes" : 									{
 										"linecolor" : 										{
 											"expression" : "themecolor.theme_bgcolor"
@@ -403,11 +590,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-8",
+									"linecount" : 3,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 53.0, 278.0, 86.0, 20.0 ],
-									"text" : "offset indicator"
+									"patching_rect" : [ 53.0, 265.0, 86.0, 48.0 ],
+									"text" : "offset and playback position"
 								}
 
 							}
@@ -430,7 +618,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 709.0, 134.0, 136.0, 20.0 ],
+									"patching_rect" : [ 739.0, 134.0, 136.0, 20.0 ],
 									"text" : "Pulse-Based Offset:"
 								}
 
@@ -442,7 +630,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 367.0, 138.0, 94.0, 20.0 ],
+									"patching_rect" : [ 397.0, 138.0, 94.0, 20.0 ],
 									"text" : "Hold Button:"
 								}
 
@@ -454,7 +642,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 581.25, 58.0, 129.0, 20.0 ],
+									"patching_rect" : [ 611.0, 58.0, 129.0, 20.0 ],
 									"text" : "Percentage Offset:"
 								}
 
@@ -467,7 +655,7 @@
 									"maxclass" : "live.line",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 728.0, 206.0, 10.0, 50.0 ]
+									"patching_rect" : [ 758.0, 206.0, 10.0, 50.0 ]
 								}
 
 							}
@@ -478,7 +666,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 709.0, 156.0, 139.0, 48.0 ],
+									"patching_rect" : [ 739.0, 156.0, 139.0, 48.0 ],
 									"text" : "Offset playback by a multiple of the formative pulse period."
 								}
 
@@ -491,7 +679,7 @@
 									"maxclass" : "live.line",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 613.0, 217.0, 11.0, 40.0 ]
+									"patching_rect" : [ 643.0, 207.5, 11.0, 49.5 ]
 								}
 
 							}
@@ -502,7 +690,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 367.0, 158.0, 302.614388644695282, 48.0 ],
+									"patching_rect" : [ 397.0, 158.0, 302.614388644695282, 48.0 ],
 									"text" : "Temporarily pause playback using the Hold button. When released, playback resumes from the paused position, effectively creating an offset from the phasor."
 								}
 
@@ -515,7 +703,7 @@
 									"maxclass" : "live.line",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 688.0, 112.0, 9.0, 144.0 ]
+									"patching_rect" : [ 718.0, 112.0, 9.0, 144.0 ]
 								}
 
 							}
@@ -526,7 +714,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 581.25, 78.0, 171.0, 34.0 ],
+									"patching_rect" : [ 611.0, 78.0, 171.0, 34.0 ],
 									"text" : "Set an offset as a percentage of the total loop duration."
 								}
 
@@ -538,7 +726,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 13.0, 78.0, 491.0, 20.0 ],
-									"text" : "The starting point of the pattern can be offset relative to the incoming phasor in three ways."
+									"text" : "The starting point of the pattern can be offset relative to the incoming phasor."
 								}
 
 							}
@@ -575,7 +763,7 @@
 									"orientation" : 0,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 215.0, 239.0, 593.0, 10.0 ],
+									"patching_rect" : [ 245.853664398193359, 238.536591053009033, 593.0, 10.0 ],
 									"saved_attribute_attributes" : 									{
 										"slidercolor" : 										{
 											"expression" : "themecolor.theme_stripecolor"
@@ -595,7 +783,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 215.0, 209.0, 81.0, 22.0 ],
+									"patching_rect" : [ 245.853664398193359, 207.317078113555908, 81.0, 22.0 ],
 									"text" : "snapshot~ 50"
 								}
 
@@ -653,7 +841,7 @@
 									"numoutlets" : 9,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-									"patching_rect" : [ 146.0, 250.0, 667.0, 201.0 ],
+									"patching_rect" : [ 146.0, 250.0, 700.0, 205.0 ],
 									"varname" : "flowSwing_envelop",
 									"viewvisibility" : 1
 								}
@@ -694,8 +882,8 @@
 						"toolbaradditions" : [ "audiomute", "audiosolo" ]
 					}
 ,
-					"patching_rect" : [ 371.0, 160.0, 48.0, 22.0 ],
-					"text" : "p offset",
+					"patching_rect" : [ 526.0, 159.0, 50.0, 22.0 ],
+					"text" : "p Offset",
 					"varname" : "patcher[2]"
 				}
 
@@ -717,7 +905,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 872.0, 546.0 ],
+						"rect" : [ 0.0, 26.0, 896.0, 546.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [ 							{
@@ -762,7 +950,7 @@
 									"maxclass" : "live.line",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 564.0, 116.0, 6.553868472576141, 5.0 ]
+									"patching_rect" : [ 579.0, 116.0, 6.553868472576141, 5.0 ]
 								}
 
 							}
@@ -772,7 +960,7 @@
 									"maxclass" : "live.line",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 501.25, 116.0, 8.75, 7.75 ]
+									"patching_rect" : [ 527.0, 116.0, 8.75, 7.75 ]
 								}
 
 							}
@@ -784,7 +972,7 @@
 									"maxclass" : "live.line",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 558.0, 116.0, 12.865496516227722, 108.1871297955513 ]
+									"patching_rect" : [ 573.0, 116.0, 12.865496516227722, 108.1871297955513 ]
 								}
 
 							}
@@ -795,7 +983,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 578.0, 112.0, 287.0, 103.0 ],
+									"patching_rect" : [ 589.0, 112.0, 287.0, 103.0 ],
 									"text" : "The morph parameter controls how strongly breakpoints and markers are pulled toward their NI Grid beats. At 0.0 they stay at user positions; at 1.0 the nearest breakpoint aligns while others shift smoothly; at 1.1 all breakpoints snap exactly to their grid targets. Intermediate values interpolate between these states."
 								}
 
@@ -842,7 +1030,7 @@
 									"maxclass" : "live.line",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 503.75, 116.0, 11.25, 108.0 ]
+									"patching_rect" : [ 530.0, 116.0, 11.25, 108.0 ]
 								}
 
 							}
@@ -853,7 +1041,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 12.0, 112.0, 498.0, 103.0 ],
+									"patching_rect" : [ 38.0, 112.0, 498.0, 103.0 ],
 									"text" : "A FlowSwing pattern can be unlocked (grey) or locked to the NI Grid (orange). Unlocked patterns are freely editable; when locked, breakpoints and markers snap to the nearest NI Grid beat and follow changes in F, T, R, and S.\n\nBy default, these shifts are temporary. Pressing the lock button again restores the original pattern. To keep the shifted positions, click on a breakpoint or marker while locked.This unlocks the pattern and saves the current state as the new base."
 								}
 
@@ -887,7 +1075,7 @@
 									"numoutlets" : 9,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-									"patching_rect" : [ 146.0, 220.0, 667.0, 203.0 ],
+									"patching_rect" : [ 146.0, 220.0, 700.0, 205.0 ],
 									"varname" : "flowSwing_envelop",
 									"viewvisibility" : 1
 								}
@@ -923,60 +1111,95 @@
 		"lines" : [  ],
 		"parameters" : 		{
 			"obj-1::obj-1::obj-109" : [ "breakpoints[3]", "breakpoints", 3 ],
-			"obj-1::obj-1::obj-114" : [ "clear_breakpoints[3]", "clear_breakpoints", 0 ],
+			"obj-1::obj-1::obj-114" : [ "clear_breakpoints[5]", "clear_breakpoints", 0 ],
 			"obj-1::obj-1::obj-123" : [ "asGrid[2]", "asGrid", 1 ],
 			"obj-1::obj-1::obj-128" : [ "zoom[3]", "zoom", 0 ],
-			"obj-1::obj-1::obj-16" : [ "title[3]", "title", 0 ],
+			"obj-1::obj-1::obj-154" : [ "title[2]", "title", 0 ],
 			"obj-1::obj-1::obj-19" : [ "mute[3]", "mute", 0 ],
 			"obj-1::obj-1::obj-191" : [ "snapToNIGrid_parameter[2]", "snapToNIGrid_parameter", 0 ],
 			"obj-1::obj-1::obj-193" : [ "firstChannel_parameter[2]", "firstChannel_parameter", 0 ],
 			"obj-1::obj-1::obj-195" : [ "chans_parameter[2]", "chans_parameter", 0 ],
-			"obj-1::obj-1::obj-199" : [ "resetNIGrid[2]", "resetNIGrid", 0 ],
+			"obj-1::obj-1::obj-199" : [ "resetNIGrid[4]", "resetNIGrid", 0 ],
 			"obj-1::obj-1::obj-22" : [ "lock[3]", "lock", 0 ],
+			"obj-1::obj-1::obj-242" : [ "resetNIGrid[5]", "resetNIGrid", 0 ],
+			"obj-1::obj-1::obj-253" : [ "rescale[2]", "rescale", 0 ],
 			"obj-1::obj-1::obj-42" : [ "morph[3]", "morph", 0 ],
 			"obj-1::obj-1::obj-45" : [ "S[3]", "S", 2 ],
 			"obj-1::obj-1::obj-47" : [ "offset[3]", "offset", 0 ],
 			"obj-1::obj-1::obj-48" : [ "niRotation[3]", "niRotation", 0 ],
 			"obj-1::obj-1::obj-50" : [ "Formative[3]", "Formative", 0 ],
 			"obj-1::obj-1::obj-51" : [ "Target[3]", "Target", 0 ],
+			"obj-1::obj-1::obj-66" : [ "live.menu[3]", "live.menu", 0 ],
+			"obj-1::obj-1::obj-68" : [ "clear_breakpoints[6]", "clear_breakpoints", 0 ],
 			"obj-1::obj-1::obj-90" : [ "secondary_S_control[3]", "secondary_S_control", 0 ],
 			"obj-1::obj-1::obj-91" : [ "hold[3]", "hold", 0 ],
+			"obj-2::obj-1::obj-109" : [ "breakpoints", "breakpoints", 2 ],
+			"obj-2::obj-1::obj-114" : [ "clear_breakpoints", "clear_breakpoints", 0 ],
+			"obj-2::obj-1::obj-123" : [ "asGrid[3]", "asGrid", 1 ],
+			"obj-2::obj-1::obj-128" : [ "zoom", "zoom", 0 ],
+			"obj-2::obj-1::obj-154" : [ "title[3]", "title", 0 ],
+			"obj-2::obj-1::obj-19" : [ "mute", "mute", 0 ],
+			"obj-2::obj-1::obj-191" : [ "snapToNIGrid_parameter[3]", "snapToNIGrid_parameter", 0 ],
+			"obj-2::obj-1::obj-193" : [ "firstChannel_parameter[3]", "firstChannel_parameter", 0 ],
+			"obj-2::obj-1::obj-195" : [ "chans_parameter[3]", "chans_parameter", 0 ],
+			"obj-2::obj-1::obj-199" : [ "resetNIGrid[7]", "resetNIGrid", 0 ],
+			"obj-2::obj-1::obj-22" : [ "lock", "lock", 0 ],
+			"obj-2::obj-1::obj-242" : [ "resetNIGrid[6]", "resetNIGrid", 0 ],
+			"obj-2::obj-1::obj-253" : [ "rescale[3]", "rescale", 0 ],
+			"obj-2::obj-1::obj-42" : [ "morph", "morph", 0 ],
+			"obj-2::obj-1::obj-45" : [ "S", "S", 1 ],
+			"obj-2::obj-1::obj-47" : [ "offset", "offset", 0 ],
+			"obj-2::obj-1::obj-48" : [ "niRotation", "niRotation", 0 ],
+			"obj-2::obj-1::obj-50" : [ "Formative", "Formative", 0 ],
+			"obj-2::obj-1::obj-51" : [ "Target", "Target", 0 ],
+			"obj-2::obj-1::obj-66" : [ "live.menu[4]", "live.menu", 0 ],
+			"obj-2::obj-1::obj-68" : [ "clear_breakpoints[7]", "clear_breakpoints", 0 ],
+			"obj-2::obj-1::obj-90" : [ "secondary_S_control", "secondary_S_control", 0 ],
+			"obj-2::obj-1::obj-91" : [ "hold", "hold", 0 ],
 			"obj-7::obj-1::obj-109" : [ "breakpoints[1]", "breakpoints", 3 ],
 			"obj-7::obj-1::obj-114" : [ "clear_breakpoints[1]", "clear_breakpoints", 0 ],
 			"obj-7::obj-1::obj-123" : [ "asGrid", "asGrid", 1 ],
 			"obj-7::obj-1::obj-128" : [ "zoom[1]", "zoom", 0 ],
-			"obj-7::obj-1::obj-16" : [ "title[1]", "title", 0 ],
+			"obj-7::obj-1::obj-154" : [ "title", "title", 0 ],
 			"obj-7::obj-1::obj-19" : [ "mute[1]", "mute", 0 ],
 			"obj-7::obj-1::obj-191" : [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
 			"obj-7::obj-1::obj-193" : [ "firstChannel_parameter", "firstChannel_parameter", 0 ],
 			"obj-7::obj-1::obj-195" : [ "chans_parameter", "chans_parameter", 0 ],
 			"obj-7::obj-1::obj-199" : [ "resetNIGrid", "resetNIGrid", 0 ],
 			"obj-7::obj-1::obj-22" : [ "lock[1]", "lock", 0 ],
+			"obj-7::obj-1::obj-242" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
+			"obj-7::obj-1::obj-253" : [ "rescale", "rescale", 0 ],
 			"obj-7::obj-1::obj-42" : [ "morph[1]", "morph", 0 ],
 			"obj-7::obj-1::obj-45" : [ "S[1]", "S", 2 ],
 			"obj-7::obj-1::obj-47" : [ "offset[1]", "offset", 0 ],
 			"obj-7::obj-1::obj-48" : [ "niRotation[1]", "niRotation", 0 ],
 			"obj-7::obj-1::obj-50" : [ "Formative[1]", "Formative", 0 ],
 			"obj-7::obj-1::obj-51" : [ "Target[1]", "Target", 0 ],
+			"obj-7::obj-1::obj-66" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-7::obj-1::obj-68" : [ "clear_breakpoints[2]", "clear_breakpoints", 0 ],
 			"obj-7::obj-1::obj-90" : [ "secondary_S_control[1]", "secondary_S_control", 0 ],
 			"obj-7::obj-1::obj-91" : [ "hold[1]", "hold", 0 ],
 			"obj-8::obj-1::obj-109" : [ "breakpoints[2]", "breakpoints", 3 ],
-			"obj-8::obj-1::obj-114" : [ "clear_breakpoints[2]", "clear_breakpoints", 0 ],
+			"obj-8::obj-1::obj-114" : [ "clear_breakpoints[4]", "clear_breakpoints", 0 ],
 			"obj-8::obj-1::obj-123" : [ "asGrid[1]", "asGrid", 1 ],
 			"obj-8::obj-1::obj-128" : [ "zoom[2]", "zoom", 0 ],
-			"obj-8::obj-1::obj-16" : [ "title[2]", "title", 0 ],
+			"obj-8::obj-1::obj-154" : [ "title[1]", "title", 0 ],
 			"obj-8::obj-1::obj-19" : [ "mute[2]", "mute", 0 ],
 			"obj-8::obj-1::obj-191" : [ "snapToNIGrid_parameter[1]", "snapToNIGrid_parameter", 0 ],
 			"obj-8::obj-1::obj-193" : [ "firstChannel_parameter[1]", "firstChannel_parameter", 0 ],
 			"obj-8::obj-1::obj-195" : [ "chans_parameter[1]", "chans_parameter", 0 ],
-			"obj-8::obj-1::obj-199" : [ "resetNIGrid[1]", "resetNIGrid", 0 ],
+			"obj-8::obj-1::obj-199" : [ "resetNIGrid[2]", "resetNIGrid", 0 ],
 			"obj-8::obj-1::obj-22" : [ "lock[2]", "lock", 0 ],
+			"obj-8::obj-1::obj-242" : [ "resetNIGrid[3]", "resetNIGrid", 0 ],
+			"obj-8::obj-1::obj-253" : [ "rescale[1]", "rescale", 0 ],
 			"obj-8::obj-1::obj-42" : [ "morph[2]", "morph", 0 ],
 			"obj-8::obj-1::obj-45" : [ "S[2]", "S", 2 ],
 			"obj-8::obj-1::obj-47" : [ "offset[2]", "offset", 0 ],
 			"obj-8::obj-1::obj-48" : [ "niRotation[2]", "niRotation", 0 ],
 			"obj-8::obj-1::obj-50" : [ "Formative[2]", "Formative", 0 ],
 			"obj-8::obj-1::obj-51" : [ "Target[2]", "Target", 0 ],
+			"obj-8::obj-1::obj-66" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-8::obj-1::obj-68" : [ "clear_breakpoints[3]", "clear_breakpoints", 0 ],
 			"obj-8::obj-1::obj-90" : [ "secondary_S_control[2]", "secondary_S_control", 0 ],
 			"obj-8::obj-1::obj-91" : [ "hold[2]", "hold", 0 ],
 			"parameterbanks" : 			{
@@ -990,7 +1213,7 @@
 ,
 			"parameter_overrides" : 			{
 				"obj-1::obj-1::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[3]"
+					"parameter_longname" : "clear_breakpoints[5]"
 				}
 ,
 				"obj-1::obj-1::obj-128" : 				{
@@ -1014,11 +1237,19 @@
 				}
 ,
 				"obj-1::obj-1::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[2]"
+					"parameter_longname" : "resetNIGrid[4]"
 				}
 ,
 				"obj-1::obj-1::obj-22" : 				{
 					"parameter_longname" : "lock[3]"
+				}
+,
+				"obj-1::obj-1::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[5]"
+				}
+,
+				"obj-1::obj-1::obj-253" : 				{
+					"parameter_longname" : "rescale[2]"
 				}
 ,
 				"obj-1::obj-1::obj-42" : 				{
@@ -1046,12 +1277,52 @@
 					"parameter_longname" : "Target[3]"
 				}
 ,
+				"obj-1::obj-1::obj-66" : 				{
+					"parameter_longname" : "live.menu[3]"
+				}
+,
+				"obj-1::obj-1::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[6]"
+				}
+,
 				"obj-1::obj-1::obj-90" : 				{
 					"parameter_longname" : "secondary_S_control[3]"
 				}
 ,
 				"obj-1::obj-1::obj-91" : 				{
 					"parameter_longname" : "hold[3]"
+				}
+,
+				"obj-2::obj-1::obj-191" : 				{
+					"parameter_longname" : "snapToNIGrid_parameter[3]"
+				}
+,
+				"obj-2::obj-1::obj-193" : 				{
+					"parameter_longname" : "firstChannel_parameter[3]"
+				}
+,
+				"obj-2::obj-1::obj-195" : 				{
+					"parameter_longname" : "chans_parameter[3]"
+				}
+,
+				"obj-2::obj-1::obj-199" : 				{
+					"parameter_longname" : "resetNIGrid[7]"
+				}
+,
+				"obj-2::obj-1::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[6]"
+				}
+,
+				"obj-2::obj-1::obj-253" : 				{
+					"parameter_longname" : "rescale[3]"
+				}
+,
+				"obj-2::obj-1::obj-66" : 				{
+					"parameter_longname" : "live.menu[4]"
+				}
+,
+				"obj-2::obj-1::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[7]"
 				}
 ,
 				"obj-7::obj-1::obj-114" : 				{
@@ -1095,6 +1366,10 @@
 					"parameter_longname" : "Target[1]"
 				}
 ,
+				"obj-7::obj-1::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[2]"
+				}
+,
 				"obj-7::obj-1::obj-90" : 				{
 					"parameter_longname" : "secondary_S_control[1]"
 				}
@@ -1104,7 +1379,7 @@
 				}
 ,
 				"obj-8::obj-1::obj-114" : 				{
-					"parameter_longname" : "clear_breakpoints[2]"
+					"parameter_longname" : "clear_breakpoints[4]"
 				}
 ,
 				"obj-8::obj-1::obj-128" : 				{
@@ -1128,11 +1403,19 @@
 				}
 ,
 				"obj-8::obj-1::obj-199" : 				{
-					"parameter_longname" : "resetNIGrid[1]"
+					"parameter_longname" : "resetNIGrid[2]"
 				}
 ,
 				"obj-8::obj-1::obj-22" : 				{
 					"parameter_longname" : "lock[2]"
+				}
+,
+				"obj-8::obj-1::obj-242" : 				{
+					"parameter_longname" : "resetNIGrid[3]"
+				}
+,
+				"obj-8::obj-1::obj-253" : 				{
+					"parameter_longname" : "rescale[1]"
 				}
 ,
 				"obj-8::obj-1::obj-42" : 				{
@@ -1158,6 +1441,14 @@
 ,
 				"obj-8::obj-1::obj-51" : 				{
 					"parameter_longname" : "Target[2]"
+				}
+,
+				"obj-8::obj-1::obj-66" : 				{
+					"parameter_longname" : "live.menu[2]"
+				}
+,
+				"obj-8::obj-1::obj-68" : 				{
+					"parameter_longname" : "clear_breakpoints[3]"
 				}
 ,
 				"obj-8::obj-1::obj-90" : 				{
@@ -1195,6 +1486,20 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "GCD.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers/subpatchers",
+				"patcherrelativepath" : "../patchers/subpatchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "breakpointsListToDict.maxpat",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/patchers",
+				"patcherrelativepath" : "../patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "complex_quantise.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
 				"patcherrelativepath" : "../javascript",
@@ -1202,14 +1507,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "drawGrid.js",
-				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
-				"patcherrelativepath" : "../jsui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "drawNIGrid.js",
+				"name" : "drawNIGrid_zoom.js",
 				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/jsui",
 				"patcherrelativepath" : "../jsui",
 				"type" : "TEXT",
@@ -1277,6 +1575,13 @@
 				"type" : "TEXT",
 				"implicit" : 1
 			}
+, 			{
+				"name" : "zoomNscroll_coremath.js",
+				"bootpath" : "~/Documents/Max 9/Packages/FlowSwing-Max-MSP/javascript",
+				"patcherrelativepath" : "../javascript",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
  ],
 		"autosave" : 0,
 		"snapshot" : 		{
@@ -1291,52 +1596,72 @@
 			"snapshot" : 			{
 				"valuedictionary" : 				{
 					"parameter_values" : 					{
+						"Formative" : 16.0,
 						"Formative[1]" : 5.0,
 						"Formative[2]" : 5.0,
 						"Formative[3]" : 5.0,
+						"Target" : 12.0,
 						"Target[1]" : 3.0,
 						"Target[2]" : 4.0,
 						"Target[3]" : 4.0,
-						"chans" : 64.0,
-						"chans[1]" : 64.0,
-						"chans[2]" : 64.0,
-						"firstChannel" : 1.0,
-						"firstChannel[1]" : 1.0,
-						"firstChannel[2]" : 1.0,
+						"chans_parameter" : 64.0,
+						"chans_parameter[1]" : 64.0,
+						"chans_parameter[2]" : 64.0,
+						"chans_parameter[3]" : 64.0,
+						"firstChannel_parameter" : 1.0,
+						"firstChannel_parameter[1]" : 1.0,
+						"firstChannel_parameter[2]" : 1.0,
+						"firstChannel_parameter[3]" : 1.0,
+						"hold" : 0.0,
 						"hold[1]" : 0.0,
 						"hold[2]" : 0.0,
 						"hold[3]" : 0.0,
+						"lock" : 1.0,
 						"lock[1]" : 1.0,
 						"lock[2]" : 0.0,
 						"lock[3]" : 0.0,
+						"morph" : 1.0,
 						"morph[1]" : 1.0,
 						"morph[2]" : 1.0,
 						"morph[3]" : 1.0,
+						"mute" : 0.0,
 						"mute[1]" : 0.0,
 						"mute[2]" : 0.0,
 						"mute[3]" : 0.0,
+						"niRotation" : 0.0,
 						"niRotation[1]" : 0.0,
 						"niRotation[2]" : 3.0,
 						"niRotation[3]" : 3.0,
+						"offset" : 0.0,
 						"offset[1]" : 0.0,
 						"offset[2]" : 0.0,
 						"offset[3]" : 0.0,
-						"snapToNIGrid[1]" : 1.0,
-						"snapToNIGrid[2]" : 1.0,
-						"snapToNIGrid[3]" : 1.0,
+						"snapToNIGrid_parameter" : 1.0,
+						"snapToNIGrid_parameter[1]" : 1.0,
+						"snapToNIGrid_parameter[2]" : 1.0,
+						"snapToNIGrid_parameter[3]" : 1.0,
+						"S" : 0.0,
 						"S[1]" : 0.5,
 						"S[2]" : 0.0,
 						"S[3]" : 0.0,
 						"blob" : 						{
+							"title" : [ "FlowSwing" ],
 							"title[1]" : [ "FlowSwing", "E" ],
 							"title[2]" : [ "FlowSwing", "E" ],
-							"title[3]" : [ "FlowSwing", "E" ],
+							"title[3]" : [ "FlowSwing" ],
+							"zoom" : [ 1.0 ],
 							"zoom[1]" : [ 1.0 ],
 							"zoom[2]" : [ 1.0 ],
 							"zoom[3]" : [ 1.0 ],
 							"asGrid" : [ 0.5, 0, 4 ],
 							"asGrid[1]" : [ 0.0, 0, 8 ],
 							"asGrid[2]" : [ 0.0, 0, 8 ],
+							"asGrid[3]" : [ 0.0, 0, 12 ],
+							"breakpoints" : [ 								{
+									"env" : [ 0, 1, 0, 0.125, 0.966101694915254, 0, 0.25, 0.186440677966102, -0.595, 0.375, 0.949152542372881, -0.6, 0.4375, 0.220338983050847, 0, 0.5, 0.915254237288136, 0, 0.625, 0.338983050847458, 0, 0.6875, 0.355932203389831, 0, 0.75, 1, 0, 0.875, 0.372881355932203, -0.595, 1, 1, 0.7 ],
+									"mute" : [ 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0 ]
+								}
+ ],
 							"breakpoints[1]" : [ 								{
 									"env" : [ 0, 0.758064516129032, 0, 0.352445193929174, 0.612903225806452, 0, 0.767284991568297, 0.370967741935484, 0, 1, 0.758064516129032, 0 ],
 									"lock" : 									{
@@ -1386,52 +1711,72 @@
 						"snapshot" : 						{
 							"valuedictionary" : 							{
 								"parameter_values" : 								{
+									"Formative" : 16.0,
 									"Formative[1]" : 5.0,
 									"Formative[2]" : 5.0,
 									"Formative[3]" : 5.0,
+									"Target" : 12.0,
 									"Target[1]" : 3.0,
 									"Target[2]" : 4.0,
 									"Target[3]" : 4.0,
-									"chans" : 64.0,
-									"chans[1]" : 64.0,
-									"chans[2]" : 64.0,
-									"firstChannel" : 1.0,
-									"firstChannel[1]" : 1.0,
-									"firstChannel[2]" : 1.0,
+									"chans_parameter" : 64.0,
+									"chans_parameter[1]" : 64.0,
+									"chans_parameter[2]" : 64.0,
+									"chans_parameter[3]" : 64.0,
+									"firstChannel_parameter" : 1.0,
+									"firstChannel_parameter[1]" : 1.0,
+									"firstChannel_parameter[2]" : 1.0,
+									"firstChannel_parameter[3]" : 1.0,
+									"hold" : 0.0,
 									"hold[1]" : 0.0,
 									"hold[2]" : 0.0,
 									"hold[3]" : 0.0,
+									"lock" : 1.0,
 									"lock[1]" : 1.0,
 									"lock[2]" : 0.0,
 									"lock[3]" : 0.0,
+									"morph" : 1.0,
 									"morph[1]" : 1.0,
 									"morph[2]" : 1.0,
 									"morph[3]" : 1.0,
+									"mute" : 0.0,
 									"mute[1]" : 0.0,
 									"mute[2]" : 0.0,
 									"mute[3]" : 0.0,
+									"niRotation" : 0.0,
 									"niRotation[1]" : 0.0,
 									"niRotation[2]" : 3.0,
 									"niRotation[3]" : 3.0,
+									"offset" : 0.0,
 									"offset[1]" : 0.0,
 									"offset[2]" : 0.0,
 									"offset[3]" : 0.0,
-									"snapToNIGrid[1]" : 1.0,
-									"snapToNIGrid[2]" : 1.0,
-									"snapToNIGrid[3]" : 1.0,
+									"snapToNIGrid_parameter" : 1.0,
+									"snapToNIGrid_parameter[1]" : 1.0,
+									"snapToNIGrid_parameter[2]" : 1.0,
+									"snapToNIGrid_parameter[3]" : 1.0,
+									"S" : 0.0,
 									"S[1]" : 0.5,
 									"S[2]" : 0.0,
 									"S[3]" : 0.0,
 									"blob" : 									{
+										"title" : [ "FlowSwing" ],
 										"title[1]" : [ "FlowSwing", "E" ],
 										"title[2]" : [ "FlowSwing", "E" ],
-										"title[3]" : [ "FlowSwing", "E" ],
+										"title[3]" : [ "FlowSwing" ],
+										"zoom" : [ 1.0 ],
 										"zoom[1]" : [ 1.0 ],
 										"zoom[2]" : [ 1.0 ],
 										"zoom[3]" : [ 1.0 ],
 										"asGrid" : [ 0.5, 0, 4 ],
 										"asGrid[1]" : [ 0.0, 0, 8 ],
 										"asGrid[2]" : [ 0.0, 0, 8 ],
+										"asGrid[3]" : [ 0.0, 0, 12 ],
+										"breakpoints" : [ 											{
+												"env" : [ 0, 1, 0, 0.125, 0.966101694915254, 0, 0.25, 0.186440677966102, -0.595, 0.375, 0.949152542372881, -0.6, 0.4375, 0.220338983050847, 0, 0.5, 0.915254237288136, 0, 0.625, 0.338983050847458, 0, 0.6875, 0.355932203389831, 0, 0.75, 1, 0, 0.875, 0.372881355932203, -0.595, 1, 1, 0.7 ],
+												"mute" : [ 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0 ]
+											}
+ ],
 										"breakpoints[1]" : [ 											{
 												"env" : [ 0, 0.758064516129032, 0, 0.352445193929174, 0.612903225806452, 0, 0.767284991568297, 0.370967741935484, 0, 1, 0.758064516129032, 0 ],
 												"lock" : 												{

@@ -35,15 +35,21 @@ var color_bg        = [0.175, 0.175, 0.175, 1.0];
 var color_markers   = [1.0, 0.73, 0.0, 1.0];
 var color_pulse_bg  = [0.4, 0.4, 0.4, 1.0];
  
+// Zoom (normalized domain [0,1])
+var zoom = [0, 1];
 
 // Data arrays
 var formative = [];
 var ni = [];
 var ni_s1 = [];
-var ni_high = 1;
+var ni_high = 1;           // legacy periodic highlighting (every ni_high points)
 var target = [];
 var markers = [];
 var markers_max = [];
+
+// New: explicit highlight list + fast lookup map
+var ni_high_idx = [];      // list of indices to highlight
+var ni_high_map = null;    // object used as a set for O(1) membership
 
 function list() {
     var a = arrayfromargs(arguments);
@@ -82,7 +88,7 @@ function set(name, v) {
         case "NILength": NILength = v; break;
         case "NIWidth": NIWidth = v; break;
 		case "margin": hmargin = v; break;
-		case "highlight": ni_high = v; break;
+		case "highlight": ni_high = v; break;   // legacy behavior retained
     }
     draw();
     refresh();
@@ -98,6 +104,60 @@ function setcolor(name, r, g, b, a) {
     else if (name === "ni_low") color_ni_low = col;
     draw();
     refresh();
+}
+
+// --- Zoom setter (expects two numbers in [0,1]) ---
+function zoom_x() {
+    var a = arrayfromargs(arguments);
+    if (a.length >= 2) {
+        var z0 = +a[0];
+        var z1 = +a[1];
+        // clamp and order
+        if (z0 < 0) z0 = 0; if (z0 > 1) z0 = 1;
+        if (z1 < 0) z1 = 0; if (z1 > 1) z1 = 1;
+        if (z1 < z0) { var t = z0; z0 = z1; z1 = t; }
+        zoom[0] = z0;
+        zoom[1] = z1;
+        draw();
+        refresh();
+    }
+}
+
+// Map normalized x in [0,1] -> screen x in [-1,1], applying zoom and margin
+function mapX(x01) {
+    var span = zoom[1] - zoom[0];
+    if (span <= 1e-9) span = 1e-9; // avoid division by zero
+    var xn = (x01 - zoom[0]) / span;    // remap to [0,1] window
+    var x2 = (xn * 2.0) - 1.0;          // -> [-1,1]
+    x2 = x2 * (1 - hmargin);            // apply horizontal margin
+    return x2;
+}
+
+// New: set explicit highlight indices (message: "highlight 0 2 5 7")
+function highlight() {
+    var a = arrayfromargs(arguments);
+    ni_high_idx = [];
+    ni_high_map = {};
+    for (var i = 0; i < a.length; i++) {
+        var idx = parseInt(a[i], 10);
+        if (!isNaN(idx) && idx >= 0) {
+            if (!ni_high_map[idx]) {
+                ni_high_map[idx] = 1;
+                ni_high_idx.push(idx);
+            }
+        }
+    }
+    draw();
+    refresh();
+}
+
+function isHighlighted(i) {
+    // If an explicit list exists, use it
+    if (ni_high_idx.length > 0 && ni_high_map) {
+        return !!ni_high_map[i];
+    }
+    // Otherwise, fallback to legacy periodic highlighting
+    return (ni_high > 0) ? (i % ni_high === 0) : false;
 }
 
 function draw() {
@@ -125,14 +185,10 @@ function draw() {
     // Main NI Grid drawing
     var N = ni.length; //Math.min(formative.length, ni.length, ni_s1.length);
     for (var i = 0; i < N; i++) {
-        var xF = formative[i] * 2 - 1;
-        var xNI = ni[i] * 2 - 1;
-        var xNI1 = ni_s1[i] * 2 - 1;
-		xF = xF * (1-hmargin);
-		xNI = xNI * (1-hmargin);
-		xNI1 = xNI1 * (1-hmargin);
+        var xF = mapX(formative[i]);
+        var xNI = mapX(ni[i]);
+        var xNI1 = mapX(ni_s1[i]);
 
-		
         // Formative pulse
         sketch.glcolor(color_pulse);
         sketch.gllinewidth(pulseWidth);
@@ -145,11 +201,11 @@ function draw() {
         sketch.moveto(xF * asp, y_after_pulse);
         sketch.lineto(xNI * asp, y_after_conn1);
 
-        // NI pulse
-		if (i%ni_high === 0)
-        	sketch.glcolor(color_ni);
-		else
-		    sketch.glcolor(color_ni_low);
+        // NI pulse (highlighted vs low)
+        if (isHighlighted(i))
+            sketch.glcolor(color_ni);
+        else
+            sketch.glcolor(color_ni_low);
 		
         sketch.gllinewidth(NIWidth);
         sketch.moveto(xNI * asp, y_after_conn1);
@@ -166,8 +222,7 @@ function draw() {
     sketch.glcolor(color_pulse);
     sketch.gllinewidth(pulseWidth);
     for (var j = 0; j < target.length; j++) {
-        var xT = target[j] * 2 - 1;
-		xT = xT * (1-hmargin);
+        var xT = mapX(target[j]);
         sketch.moveto(xT * asp, y_target_top);
         sketch.lineto(xT * asp, y_target_top - pulseLength * yratio);
     }
@@ -177,10 +232,8 @@ function draw() {
         sketch.glcolor(color_markers);
         sketch.gllinewidth(connectorWidth);
         for (var m = 0; m < markers.length; m++) {
-            var x1 = markers[m] * 2 - 1;
-            var x2 = markers_max[m] * 2 - 1;
-			x1 = x1 * (1-hmargin);
-			x2 = x2 * (1-hmargin);
+            var x1 = mapX(markers[m]);
+            var x2 = mapX(markers_max[m]);
             sketch.moveto(x1 * asp, 1);
             sketch.lineto(x2 * asp, y_after_conn1);
         }

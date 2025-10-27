@@ -202,7 +202,7 @@ See license.md file in the project root for full license information.
 			</digest>
 			<description>
 				<p>
-					In right inlet: Sets the string that appears at the top left corner of the FlowSwing interface and the title bar of the window.
+					In right inlet: Sets the string that appears at the top left corner of the FlowSwing interface.
 				</p>
 			</description>
 		</method>
@@ -249,6 +249,7 @@ See license.md file in the project root for full license information.
 	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name='flowSwing_envelop' />
+		<seealso name="flowSwing_nested" />
 		<seealso name='flowSwing_noise' />
 	</seealsolist>
 	<!--INLETS/OUTLETS-->
