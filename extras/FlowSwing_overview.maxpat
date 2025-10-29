@@ -55,6 +55,29 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"arrows" : 2,
+									"id" : "obj-10",
+									"maxclass" : "live.line",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 135.0, 209.0, 113.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 39.0, 201.0, 94.0, 20.0 ],
+									"text" : "Onsets",
+									"textjustification" : 2
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"hidden" : 1,
 									"id" : "obj-30",
 									"maxclass" : "live.numbox",
@@ -371,7 +394,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 504.0, 259.0, 89.0, 22.0 ],
+									"patching_rect" : [ 504.0, 276.0, 89.0, 22.0 ],
 									"text" : "p \"mc sampler\""
 								}
 
@@ -388,11 +411,10 @@
 									"orientation" : 1,
 									"outlettype" : [ "signal", "", "float", "list" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 689.0, 260.0, 136.0, 20.0 ],
+									"patching_rect" : [ 689.0, 277.0, 136.0, 20.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_initial" : [ -70.0 ],
-											"parameter_initial_enable" : 1,
 											"parameter_invisible" : 2,
 											"parameter_longname" : "bass",
 											"parameter_mmax" : 6.0,
@@ -418,7 +440,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 606.0, 259.0, 72.0, 22.0 ],
+									"patching_rect" : [ 606.0, 276.0, 72.0, 22.0 ],
 									"text" : "startwindow"
 								}
 
@@ -455,7 +477,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 159.0, 256.0, 35.0, 22.0 ],
+									"patching_rect" : [ 163.5, 271.0, 35.0, 22.0 ],
 									"text" : "open"
 								}
 
@@ -507,7 +529,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 20.0, 470.000000000000057, 829.0, 39.0 ],
+									"patching_rect" : [ 20.0, 485.0, 829.0, 39.0 ],
 									"text" : "Toussaint, G. T. (2005). The Euclidean algorithm generates traditional musical rhythms. Proceedings of BRIDGES: Mathematical Connections in Art, Music and Science, 47–56."
 								}
 
@@ -520,7 +542,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 19.0, 375.333333333333371, 806.0, 87.0 ],
+									"patching_rect" : [ 19.0, 390.0, 806.0, 87.0 ],
 									"text" : "Euclidean patterns distribute a set number of onsets as evenly as possible across a fixed number of steps. Found in traditional music worldwide, from Africa to the Middle East and Latin America, they underpin many iconic rhythms, such as the Cuban tresillo and cinquillo. These patterns are generated using a simple algorithm based on Euclid’s method for computing greatest common divisors (see Toussaint, 2025 for details). NI Grids follow the same principle of maximal evenness but, unlike Euclidean patterns, are not based on a structural isochronous pulse."
 								}
 
@@ -533,7 +555,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 19.0, 298.0, 293.0, 23.0 ],
+									"patching_rect" : [ 19.0, 313.0, 293.0, 23.0 ],
 									"text" : "What are the Euclidean rhythmic patterns?"
 								}
 
@@ -546,7 +568,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 20.0, 328.666666666666686, 805.0, 39.0 ],
+									"patching_rect" : [ 20.0, 344.0, 805.0, 39.0 ],
 									"text" : "Euclidean patterns are a special case of NI Grids for S = 1 and F < T. For example, the Turkish Aksak rhythm (x . x . x . x . .) corresponds to E(4,9) and can be generated using an NI Grid with F = 4, T = 9, and S = 1."
 								}
 
@@ -580,7 +602,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 25.0, 524.0, 63.0, 22.0 ],
+									"patching_rect" : [ 25.0, 539.0, 63.0, 22.0 ],
 									"text" : "restore $1"
 								}
 
@@ -595,7 +617,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "list", "int", "" ],
-									"patching_rect" : [ 256.0, 214.0, 593.0, 25.0 ]
+									"patching_rect" : [ 256.0, 234.0, 593.0, 25.0 ]
 								}
 
 							}
@@ -608,7 +630,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 25.0, 556.0, 30.0, 30.0 ]
+									"patching_rect" : [ 25.0, 571.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -618,7 +640,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 225.0, 260.0, 189.0, 20.0 ],
+									"patching_rect" : [ 256.0, 272.0, 189.0, 20.0 ],
 									"text" : "L: Long interval,   S: Short interval"
 								}
 
@@ -1182,7 +1204,7 @@
 										"toolbaradditions" : [ "audiomute", "audiosolo" ]
 									}
 ,
-									"patching_rect" : [ 225.0, 148.0, 115.0, 22.0 ],
+									"patching_rect" : [ 256.0, 148.0, 115.0, 22.0 ],
 									"text" : "p \"write L-S pattern\""
 								}
 
@@ -1224,7 +1246,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 718.0, 141.0, 146.0, 36.0 ],
+									"patching_rect" : [ 672.0, 134.0, 146.0, 36.0 ],
 									"text" : "getTarget, getFormative, getniRotation, getS"
 								}
 
@@ -1251,7 +1273,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 779.0, 98.0, 166.0, 22.0 ],
-									"text" : "loadmess patcher offset 0 -50"
+									"text" : "loadmess patcher offset 0 -30"
 								}
 
 							}
@@ -1269,9 +1291,9 @@
 									"name" : "flowSwing_envelop.maxpat",
 									"numinlets" : 2,
 									"numoutlets" : 9,
-									"offset" : [ 0.0, -50.0 ],
+									"offset" : [ 0.0, -30.0 ],
 									"outlettype" : [ "signal", "multichannelsignal", "signal", "int", "", "", "", "", "" ],
-									"patching_rect" : [ 159.0, 200.0, 705.0, 50.0 ],
+									"patching_rect" : [ 159.0, 200.0, 705.0, 69.0 ],
 									"varname" : "flowSwing_envelop",
 									"viewvisibility" : 1
 								}
@@ -1284,7 +1306,7 @@
 									"maxclass" : "live.line",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 135.0, 244.0, 23.022416979074478, 20.901335656642914 ]
+									"patching_rect" : [ 135.0, 259.0, 23.022416979074478, 20.901335656642914 ]
 								}
 
 							}
@@ -1294,7 +1316,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 59.0, 237.0, 74.0, 20.0 ],
+									"patching_rect" : [ 59.0, 252.0, 74.0, 20.0 ],
 									"text" : "Target pulse",
 									"textjustification" : 2
 								}
@@ -1307,7 +1329,7 @@
 									"maxclass" : "live.line",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 135.0, 206.0, 23.022416979074478, 20.901335656642914 ]
+									"patching_rect" : [ 135.0, 221.0, 23.022416979074478, 20.901335656642914 ]
 								}
 
 							}
@@ -1317,7 +1339,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 39.0, 199.0, 94.0, 20.0 ],
+									"patching_rect" : [ 39.0, 214.0, 94.0, 20.0 ],
 									"text" : "Formative pulse",
 									"textjustification" : 2
 								}
@@ -1570,7 +1592,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-35",
-									"items" : [ "choose an example to load the patch", ",", "FlowSwing dynamic parameters", ",", "FlowSwing looper", ",", "Link FlowSwing instances", ",", "Little wander", ",", "Nested flow", ",", "Nested NI Grids", ",", "Polyrhythmic Morphologies 1", ",", "Polyrhythmic morphologies 2", ",", "Polyrhythmic morphologies 3", ",", "Polyrhythmic morphologies 4", ",", "Sounds of Silence", ",", "Step sequencer", ",", "Stochastic gates", ",", "The many FlowSwing hypothesis" ],
+									"items" : [ "choose an example to load the patch", ",", "FlowSwing dynamic parameters", ",", "FlowSwing looper", ",", "link FlowSwing instances", ",", "Little wander", ",", "Nested flow", ",", "Polyrhythmic Morphologies 1", ",", "Polyrhythmic morphologies 2", ",", "Polyrhythmic morphologies 3", ",", "Polyrhythmic morphologies 4", ",", "Sounds of Silence", ",", "Step sequencer", ",", "Stochastic gates", ",", "the many FlowSwing hypothesis" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
