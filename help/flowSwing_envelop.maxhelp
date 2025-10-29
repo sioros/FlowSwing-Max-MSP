@@ -12,8 +12,7 @@
 		"classnamespace" : "box",
 		"rect" : [ 100.0, 100.0, 1083.0, 694.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
-		"showrootpatcherontab" : 0,
-		"showontab" : 0,
+		"showontab" : 1,
 		"helpsidebarclosed" : 1,
 		"boxes" : [ 			{
 				"box" : 				{
@@ -32,7 +31,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 100.0, 126.0, 1083.0, 668.0 ],
+						"rect" : [ 0.0, 26.0, 1083.0, 668.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [ 							{
@@ -42,7 +41,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 945.0, 438.0, 104.0, 62.0 ],
+									"patching_rect" : [ 945.0, 438.0, 107.0, 62.0 ],
 									"text" : "The pattr object is used to store a snapshot of the pitch sequence"
 								}
 
@@ -152,7 +151,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 926.0, 574.0, 136.0, 62.0 ],
+									"patching_rect" : [ 926.0, 574.0, 137.0, 62.0 ],
 									"text" : "Use settpitches with a list of values to set the vertical position of each step."
 								}
 
@@ -318,7 +317,6 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 29.0, 167.0, 118.0, 103.0 ],
-													"presentation_linecount" : 7,
 													"text" : "The second from right outlet of flowSwing.envelop is used to retrieve the actual time position for all event (active and silent)."
 												}
 
@@ -795,7 +793,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 939.0, 507.0, 74.0, 22.0 ],
-									"restore" : [ 86, 40, 66, 112, 70 ],
+									"restore" : [ 76, 64, 43, 33, 16 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_invisible" : 1,
@@ -3683,7 +3681,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 1083.0, 668.0 ],
+						"rect" : [ 100.0, 126.0, 1083.0, 668.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"showontab" : 1,
 						"boxes" : [ 							{
@@ -4593,7 +4591,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 66.0, 462.0, 150.0, 48.0 ],
+									"patching_rect" : [ 66.0, 497.0, 150.0, 48.0 ],
 									"text" : "Left output can modulate synthesis and FX parameters at audio rate",
 									"textjustification" : 2
 								}
@@ -4676,7 +4674,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 356.0, 195.0, 20.0, 20.0 ],
+									"patching_rect" : [ 353.0, 194.0, 20.0, 20.0 ],
 									"rounded" : 60.0,
 									"saved_attribute_attributes" : 									{
 										"bgcolor" : 										{
@@ -4709,7 +4707,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 598.0, 195.0, 20.0, 20.0 ],
+									"patching_rect" : [ 596.0, 195.0, 20.0, 20.0 ],
 									"rounded" : 60.0,
 									"saved_attribute_attributes" : 									{
 										"bgcolor" : 										{
@@ -4834,12 +4832,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-41",
-									"linecount" : 3,
+									"linecount" : 7,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 25.0, 361.0, 167.0, 48.0 ],
-									"text" : "Insert breakpoints to draw an envelop on the function object of Flow Swing",
+									"patching_rect" : [ 30.0, 346.0, 166.0, 103.0 ],
+									"text" : "Insert breakpoints or generate a pattern aligned to the current NI Grid.\nRescale changes the pattern’s timing.\nRepeat rescales and repeats it to fill the cycle.",
 									"textjustification" : 2
 								}
 
