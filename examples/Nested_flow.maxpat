@@ -15,12 +15,24 @@
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 6,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 163.0, 183.0, 100.0, 22.0 ],
+					"text" : "scale~ 0. 1. 1. 2."
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-36",
-					"linecount" : 6,
+					"linecount" : 7,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 777.0, 473.0, 152.0, 89.0 ],
+					"patching_rect" : [ 4.0, 453.0, 127.0, 103.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 7,
 					"presentation_rect" : [ 724.0, 76.0, 127.0, 103.0 ],
@@ -31,14 +43,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-35",
-					"linecount" : 3,
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 762.0, 458.0, 150.0, 48.0 ],
+					"patching_rect" : [ 5.0, 388.0, 124.0, 62.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 4,
-					"presentation_rect" : [ 724.0, 408.0, 129.0, 62.0 ],
+					"presentation_linecount" : 3,
+					"presentation_rect" : [ 724.0, 408.0, 131.0, 48.0 ],
 					"text" : "The higher the S2, the greater the shift of the layers 2's middle peak."
 				}
 
@@ -59,11 +71,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-25",
-					"linecount" : 15,
+					"linecount" : 22,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 737.0, 175.0, 153.0, 213.0 ],
+					"patching_rect" : [ 5.0, 68.0, 115.0, 310.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 4,
 					"presentation_rect" : [ 162.0, 13.0, 561.0, 62.0 ],
@@ -76,10 +88,11 @@
 					"fontface" : 1,
 					"fontsize" : 20.0,
 					"id" : "obj-9",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 807.0, 228.0, 252.0, 29.0 ],
+					"patching_rect" : [ 5.0, 5.0, 81.0, 52.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 22.0, 8.0, 126.0, 29.0 ],
 					"text" : "Nested Flow"
@@ -294,12 +307,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-19",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 198.75, 353.0, 120.0, 36.0 ],
+					"patching_rect" : [ 198.75, 353.0, 130.0, 22.0 ],
 					"text" : "scale~ 0. 1. 0.025 1. 1."
 				}
 
@@ -444,7 +456,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 198.75, 242.0, 50.0, 22.0 ],
-					"text" : "110"
+					"text" : "160"
 				}
 
 			}
@@ -554,7 +566,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 2 ],
-					"order" : 3,
+					"order" : 4,
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -579,6 +591,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"order" : 0,
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"order" : 3,
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -774,6 +794,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 5 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
@@ -1278,7 +1305,7 @@
 						"ModInB" : 5.0,
 						"ModOutA" : 1.0,
 						"ModOutB" : 1.0,
-						"Morph" : 0.001494250137627,
+						"Morph" : 0.021028277715574,
 						"Noise A" : 0.0,
 						"Noise A range" : 0.0,
 						"Noise A range[1]" : 1.0,
@@ -1290,8 +1317,8 @@
 						"Q" : 0.94488188976378,
 						"Q range" : 0.0,
 						"Q range[1]" : 0.0,
-						"Q[1]" : 0.78740157480315,
-						"Reson" : 0.499402299944949,
+						"Q[1]" : 0.0,
+						"Reson" : 0.49158868891377,
 						"Skew" : 0.842519685039367,
 						"Skew range" : 0.0,
 						"Skew range[1]" : 0.5,
@@ -1311,12 +1338,12 @@
 						"decay[1]" : 965.48938460562988,
 						"envCurve" : 3.692361919836229,
 						"envCurve[1]" : 3.692361919836229,
-						"filter" : 9.345614243993063,
+						"filter" : 6.103414751602301,
 						"filter[1]" : 4.886980447917325,
 						"firstChannel_parameter" : 1.0,
 						"firstChannel_parameter[1]" : 1.0,
 						"gain_bass" : -14.189189189189193,
-						"gain_noise" : -9.806980208555018,
+						"gain_noise" : -18.918918918918919,
 						"hold" : 0.0,
 						"hold[1]" : 0.0,
 						"lock" : 1.0,
@@ -1327,7 +1354,7 @@
 						"mute[1]" : 0.0,
 						"niRotation" : 0.0,
 						"niRotation2" : 0.0,
-						"niRotation2[1]" : 0.0,
+						"niRotation2[1]" : 1.0,
 						"niRotation[1]" : 0.0,
 						"offset" : 0.0,
 						"offset[1]" : 0.0,
@@ -1518,7 +1545,7 @@
 									"ModInB" : 5.0,
 									"ModOutA" : 1.0,
 									"ModOutB" : 1.0,
-									"Morph" : 0.001494250137627,
+									"Morph" : 0.021028277715574,
 									"Noise A" : 0.0,
 									"Noise A range" : 0.0,
 									"Noise A range[1]" : 1.0,
@@ -1530,8 +1557,8 @@
 									"Q" : 0.94488188976378,
 									"Q range" : 0.0,
 									"Q range[1]" : 0.0,
-									"Q[1]" : 0.78740157480315,
-									"Reson" : 0.499402299944949,
+									"Q[1]" : 0.0,
+									"Reson" : 0.49158868891377,
 									"Skew" : 0.842519685039367,
 									"Skew range" : 0.0,
 									"Skew range[1]" : 0.5,
@@ -1551,12 +1578,12 @@
 									"decay[1]" : 965.48938460562988,
 									"envCurve" : 3.692361919836229,
 									"envCurve[1]" : 3.692361919836229,
-									"filter" : 9.345614243993063,
+									"filter" : 6.103414751602301,
 									"filter[1]" : 4.886980447917325,
 									"firstChannel_parameter" : 1.0,
 									"firstChannel_parameter[1]" : 1.0,
 									"gain_bass" : -14.189189189189193,
-									"gain_noise" : -9.806980208555018,
+									"gain_noise" : -18.918918918918919,
 									"hold" : 0.0,
 									"hold[1]" : 0.0,
 									"lock" : 1.0,
@@ -1567,7 +1594,7 @@
 									"mute[1]" : 0.0,
 									"niRotation" : 0.0,
 									"niRotation2" : 0.0,
-									"niRotation2[1]" : 0.0,
+									"niRotation2[1]" : 1.0,
 									"niRotation[1]" : 0.0,
 									"offset" : 0.0,
 									"offset[1]" : 0.0,
