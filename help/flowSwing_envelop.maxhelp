@@ -12,7 +12,8 @@
 		"classnamespace" : "box",
 		"rect" : [ 100.0, 100.0, 1083.0, 694.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
-		"showontab" : 1,
+		"showrootpatcherontab" : 0,
+		"showontab" : 0,
 		"helpsidebarclosed" : 1,
 		"boxes" : [ 			{
 				"box" : 				{

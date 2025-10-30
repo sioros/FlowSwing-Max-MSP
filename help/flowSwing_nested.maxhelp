@@ -112,8 +112,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 797.0, 626.0, 220.0, 22.0 ],
-									"text" : "help FlowSwing_nested"
+									"patching_rect" : [ 797.0, 621.0, 220.0, 22.0 ],
+									"text" : "help FlowSwing_envelop"
 								}
 
 							}
