@@ -14,7 +14,7 @@ FlowSwing provides tools for time-warping audio, shaping control signals, and sa
 ## Requirements
 
 - Max 9 or later is required (uses the newer JavaScript V8 engine).
-- Scripts compatible with the older `js` object (JavaScript 1.8.5) are also provided for earlier Max versions.
+- Scripts compatible with the older `js` object (JavaScript 1.8.5) are also provided for earlier Max versions, but need to be installed manually.
 
 ## Installation
 
@@ -57,6 +57,17 @@ This repository is actively maintained and regularly updated with new features, 
 **Version 1** was a pre-release corresponding to the description in the SMC2025 paper (Sioros & Klissouras, 2025).
 **Version 2** introduces new features, a redesigned UI, and an improved DSP engine with bug fixes and better performance. It remains backwards compatible.  
 
+### Highlights in Version 2.4
+
+- **flowSwing.stepUI:** New abstraction providing step-sequencer–style control of breakpoint parameters such as pitch.  
+- **Updated launcher, help files, and examples:** Improved documentation and example patches for easier exploration of the package.  
+- **Breakpoint and marker edit operations:**  
+  flowSwing.envelop and flowSwing.nested now support time/value scaling and breakpoint generation—including generating only y-values for existing breakpoints.  
+  Markers in flowSwing.audioWarp can now be reset to their unwarped positions. 
+- **Drumkit sample pack:** The *Fractanimal Acoustic Drum Kit One-Shots* by **johnnydekk** (freesound.org) and an accompanying SFZ sampler definition are now included in the **media** folder. 
+- **Bug fixes:** Silent/active breakpoint states are now correctly restored when loading older presets, and other minor bug fixes.  
+
+
 ### Highlights in Version 2.3
 - **flowSwing.nested:** New flowSwing device that implements 2 hierarchically nested NI Grids.
 - **Zoom:** Zoom in and out of the time line for a closer view and detailed editing of breakpoints or warp markers.
@@ -83,9 +94,7 @@ This repository is actively maintained and regularly updated with new features, 
 
 ## Contributing
 
-Contributions are welcome. If you find a bug or have an idea for an enhancement:
-- Fork the repository and submit a pull request with clear description and rationale.
-- Include minimal example patches or steps to reproduce when reporting issues.
+Contributions are welcome. If you find a bug or have an idea for an enhancement, please open an issue on this repository’s GitHub Issues page.
 
 ## License
 

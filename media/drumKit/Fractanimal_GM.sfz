@@ -1,0 +1,115 @@
+// Fractanimal Acoustic Kit — GM-style (one note per sample)
+// Sample pack source: freesound.org user "johnnydekk" — all CC0
+// Hi-hats choke with a gentle fade.
+
+<global>
+loop_mode=one_shot
+
+<control>
+// default_path=Samples/   // <-- set if needed
+
+//-------------------------------
+// KICKS — GM 36/35 + nearby extensions
+//-------------------------------
+<group> key=36 pitch_keycenter=36
+<region> sample=581458__johnnydekk__fractanimal_acoustic_drum_kit_kick_1.wav
+
+<group> key=35 pitch_keycenter=35
+<region> sample=581451__johnnydekk__fractanimal_acoustic_drum_kit_kick_2.wav
+
+<group> key=34 pitch_keycenter=34
+<region> sample=581452__johnnydekk__fractanimal_acoustic_drum_kit_kick_3.wav
+
+<group> key=33 pitch_keycenter=33
+<region> sample=581453__johnnydekk__fractanimal_acoustic_drum_kit_kick_4.wav
+
+<group> key=32 pitch_keycenter=32
+<region> sample=581454__johnnydekk__fractanimal_acoustic_drum_kit_kick_5.wav
+
+<group> key=31 pitch_keycenter=31
+<region> sample=581460__johnnydekk__fractanimal_acoustic_drum_kit_kick_6.wav
+
+<group> key=30 pitch_keycenter=30
+<region> sample=581461__johnnydekk__fractanimal_acoustic_drum_kit_kick_7.wav
+
+<group> key=29 pitch_keycenter=29
+<region> sample=581457__johnnydekk__fractanimal_acoustic_drum_kit_kick_8.wav
+
+//-------------------------------
+// SNARES & RIM — GM 38/40/37
+//-------------------------------
+<group> key=38 pitch_keycenter=38
+<region> sample=581469__johnnydekk__fractanimal_acoustic_drum_kit_snare_1.wav
+
+<group> key=40 pitch_keycenter=40
+<region> sample=581468__johnnydekk__fractanimal_acoustic_drum_kit_snare_2.wav
+
+<group> key=37 pitch_keycenter=37
+<region> sample=581456__johnnydekk__fractanimal_acoustic_drum_kit_snare_rimshot_1.wav
+
+//-------------------------------
+// TOMS — GM anchors + nearby extensions to fit all variants
+// Lows on 41/43/45; mids on 47/48 (+59/60); highs on 50 (+61/62/63)
+//-------------------------------
+<group> key=41 pitch_keycenter=41
+<region> sample=581463__johnnydekk__fractanimal_acoustic_drum_kit_low_tom_3.wav
+
+<group> key=43 pitch_keycenter=43
+<region> sample=581464__johnnydekk__fractanimal_acoustic_drum_kit_low_tom_2.wav
+
+<group> key=45 pitch_keycenter=45
+<region> sample=581467__johnnydekk__fractanimal_acoustic_drum_kit_low_tom_1.wav
+
+<group> key=47 pitch_keycenter=47
+<region> sample=581459__johnnydekk__fractanimal_acoustic_drum_kit_mid_tom_1.wav
+
+<group> key=48 pitch_keycenter=48
+<region> sample=581462__johnnydekk__fractanimal_acoustic_drum_kit_mid_tom_2.wav
+
+<group> key=59 pitch_keycenter=59
+<region> sample=581447__johnnydekk__fractanimal_acoustic_drum_kit_mid_tom_3.wav
+
+<group> key=60 pitch_keycenter=60
+<region> sample=581455__johnnydekk__fractanimal_acoustic_drum_kit_mid_tom_4.wav
+
+<group> key=50 pitch_keycenter=50
+<region> sample=581465__johnnydekk__fractanimal_acoustic_drum_kit_high_tom_1.wav
+
+<group> key=61 pitch_keycenter=61
+<region> sample=581449__johnnydekk__fractanimal_acoustic_drum_kit_high_tom_2.wav
+
+<group> key=62 pitch_keycenter=62
+<region> sample=581450__johnnydekk__fractanimal_acoustic_drum_kit_high_tom_3.wav
+
+<group> key=63 pitch_keycenter=63
+<region> sample=581448__johnnydekk__fractanimal_acoustic_drum_kit_high_tom_4.wav
+
+//-------------------------------
+// HI-HATS — GM 42/44/46 + extensions; all choke together
+//-------------------------------
+<group> group=1 off_by=1 off_time=0.02 key=42 pitch_keycenter=42
+<region> sample=581471__johnnydekk__fractanimal_acoustic_drum_kit_high_hat_1.wav
+
+<group> group=1 off_by=1 off_time=0.02 key=54 pitch_keycenter=54
+<region> sample=581474__johnnydekk__fractanimal_acoustic_drum_kit_high_hat_2.wav
+
+<group> group=1 off_by=1 off_time=0.02 key=66 pitch_keycenter=66
+<region> sample=581473__johnnydekk__fractanimal_acoustic_drum_kit_high_hat_3.wav
+
+<group> group=1 off_by=1 off_time=0.02 key=44 pitch_keycenter=44
+<region> sample=581476__johnnydekk__fractanimal_acoustic_drum_kit_high_hat_open_close_1.wav
+
+<group> group=1 off_by=1 off_time=0.02 key=46 pitch_keycenter=46
+<region> sample=581475__johnnydekk__fractanimal_acoustic_drum_kit_high_hat_open_close_2.wav
+
+<group> group=1 off_by=1 off_time=0.02 key=58 pitch_keycenter=58
+<region> sample=581466__johnnydekk__fractanimal_acoustic_drum_kit_high_hat_open_close_3.wav
+
+//-------------------------------
+// CYMBALS — GM Crash 1 (49) & Ride Bell (53)
+//-------------------------------
+<group> key=49 pitch_keycenter=49
+<region> sample=581472__johnnydekk__fractanimal_acoustic_drum_kit_cymbal_ride_crash.wav
+
+<group> key=53 pitch_keycenter=53
+<region> sample=581470__johnnydekk__fractanimal_acoustic_drum_kit_cymbal_centre_bell.wav

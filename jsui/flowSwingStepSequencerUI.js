@@ -30,7 +30,7 @@ mgraphics.autofill = 0;
 
 var times   = []; // [0..1], ascending
 var pitches = []; // aligned to times
-
+var storedpitches = []; // stored pitches if times.length does not match -> watining for the next settimes message
 // UI default style
 var bgRGBA     = [0.175, 0.175, 0.175, 1.];
 var dotRGBA    = [0.902, 0.651, 0.051, 1.];
@@ -52,6 +52,8 @@ var dragging    = false;
 var zooming = false;
 var prevMouseX = null;
 var lockedPitch = null;
+// --- Horizontal zoom (normalized [0,1]) ---
+var zoom = [0, 1];
 
 // helpers
 function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
@@ -70,8 +72,15 @@ function yToPitch(y) {
 	return clamp(p, range[0], range[1]);
    // return clamp(p, 0, 127);
 }
-function timeToX(t) { return t * (w-2*m) + m; }
-	
+//function timeToX(t) { return t * (w-2*m) + m; }
+function timeToX(t) {
+    // map [zoom[0], zoom[1]] -> [m, w-2*m] in pixels
+    var span = zoom[1] - zoom[0];
+    if (span <= 1e-9) span = 1e-9;       // avoid div-by-zero
+    var tn = (t - zoom[0]) / span;       // normalized to [0,1] in the zoom window
+    return tn * (w - 2 * m) + m;
+}
+
 	
 // if the jsui object is included in presentation	
 // get current box size from presentation mode 
@@ -185,7 +194,7 @@ function hitTestIndex(mx, my) {
 
 // interaction
 function onclick(x, y, button, mod1, shift, caps, opt, mod2) {
-	if (mod1!==0)
+	if (shift!==0)
 	{
 		zooming = true;
 		lockedPitch = yToPitch(y);
@@ -197,7 +206,7 @@ function onclick(x, y, button, mod1, shift, caps, opt, mod2) {
 		activeIndex = hitTestIndex(x, y);
     	dragging = (activeIndex !== -1);
 		if (activeIndex>=0)
-			outlet(1, "active", pitches[activeIndex]);
+			outlet(1, "active", [activeIndex, pitches[activeIndex]]);
     	mgraphics.redraw();
 	}
 }
@@ -245,7 +254,7 @@ function ondrag(x, y, button/*, cmd, shift, caps, opt, ctrl*/) {
     	pitches[activeIndex] = yToPitch(y);
 	
     	// output updated pitch list (leftmost outlet)
-		outlet(1, "active", pitches[activeIndex]);
+		outlet(1, "active", activeIndex, [pitches[activeIndex]]);
     	outlet(0, pitches);
 
     	mgraphics.redraw();
@@ -261,7 +270,7 @@ function bang() {
 }
 
 
-function settimes() 
+/* function settimes() 
 { 
     times = arrayfromargs(arguments);
 	var av = (range[1]+range[0])/2;
@@ -285,12 +294,134 @@ function settimes()
 	}
     outlet(0, pitches);
     mgraphics.redraw();
+}*/
+
+function settimes() 
+{ 
+    var newTimes = arrayfromargs(arguments);
+	var havestored = (typeof storedpitches !== "undefined" && storedpitches && storedpitches.length >= 0);
+
+	if (havestored && newTimes.length === storedpitches.length)
+	{
+		pitches = storedpitches.slice ? storedpitches.slice(0) : storedpitches;
+		times = newTimes;
+		storedpitches = [];
+		outlet(0, pitches);
+		mgraphics.redraw();	
+		return;
+	}
+	
+    // keep copies of the previous state before changing anything
+    var prevTimes   = (typeof times !== "undefined" && times && times.length) ? times.slice() : null;
+    var prevPitches = (typeof pitches !== "undefined" && pitches && pitches.length) ? pitches.slice() : null;
+
+    // if lengths match, update only 'times' and leave 'pitches' untouched
+    if (prevPitches && newTimes.length === prevPitches.length) {
+        times = newTimes;
+        outlet(0, pitches);
+        mgraphics.redraw();
+        return;
+    }
+
+    // set new times
+    times = newTimes;
+
+    // compute default value av
+    var av = (range[1] + range[0]) / 2;
+    if (integer) av = Math.round(av);
+
+    // if no previous data -> fill defaults
+    if (!prevTimes || !prevPitches || prevTimes.length === 0 || prevPitches.length === 0) {
+        pitches = new Array(times.length);
+        for (var i = 0; i < times.length; i++) pitches[i] = av;
+        outlet(0, pitches);
+        mgraphics.redraw();
+        return;
+    }
+
+    // build new pitches by matching new times to closest previous times (within tolerance)
+    var EPS = 1e-6; // tolerance for "practically equal"
+    var used = new Array(prevTimes.length);
+    for (var u = 0; u < used.length; u++) used[u] = 0;
+
+    var newPitches = new Array(times.length);
+    for (var i = 0; i < times.length; i++) {
+        var t = times[i];
+        var bestIdx = -1;
+        var bestDiff = Infinity;
+
+        // find closest unused previous time
+        for (var j = 0; j < prevTimes.length; j++) {
+            if (used[j]) continue;
+            var d = Math.abs(t - prevTimes[j]);
+            if (d < bestDiff) { bestDiff = d; bestIdx = j; }
+        }
+
+        // if close enough, reuse its pitch; otherwise use default
+        if (bestIdx !== -1 && bestDiff <= EPS) {
+            newPitches[i] = prevPitches[bestIdx];
+            used[bestIdx] = 1;
+        } else {
+            newPitches[i] = av;
+        }
+    }
+
+    pitches = newPitches;
+    outlet(0, pitches);
+    mgraphics.redraw();
 }
 
 function setpitches() {
+	
+    storedpitches = arrayfromargs(arguments);
+	var haveTimes = (typeof times !== "undefined" && times && times.length >= 0);
+
+	if (haveTimes && storedpitches.length === times.length)
+	{	
+		pitches = storedpitches.slice ? storedpitches.slice(0) : storedpitches;
+		storedpitches = [];
+		outlet(0, pitches);
+		mgraphics.redraw();		
+	}
+}
+
+/* function setpitches() {
     pitches = arrayfromargs(arguments);
     mgraphics.redraw();
-}
+}*/
+
+/*function setpitches() {
+    var incoming = arrayfromargs(arguments);
+
+    var havePrev = (typeof pitches !== "undefined" && pitches && pitches.length >= 0);
+
+    if (!havePrev || pitches.length === 0) {
+        // No previous pitches: take incoming as-is
+        pitches = incoming.slice ? incoming.slice(0) : incoming;
+    } else if (incoming.length < pitches.length) {
+        // Shorter than existing: update only the first part; keep the rest
+        for (var i = 0; i < incoming.length; i++) {
+            pitches[i] = incoming[i];
+        }
+        // leave remaining pitches[i...] unchanged
+    } else {
+        // Same length or longer: replace entirely
+        pitches = incoming.slice ? incoming.slice(0) : incoming;
+    }
+
+    // If pitches shorter than times, fill with default av
+    var targetLen = (typeof times !== "undefined" && times) ? times.length : 0;
+    if (pitches.length < targetLen) {
+        var av = (range[0] + range[1]) / 2;
+        if (integer) av = Math.round(av);
+        for (var j = pitches.length; j < targetLen; j++) {
+            pitches.push(av);
+        }
+    }
+    outlet(0, pitches);
+    mgraphics.redraw();
+}*/
+
 
 function setgrid() {
 	grid = arrayfromargs(arguments);
@@ -304,6 +435,18 @@ function setrange(v1,v2)
 	range[1] = Math.max(v1, v2);
 	mgraphics.redraw();
 
+}
+
+// Set horizontal zoom range: zoom_x <start> <end>, both in [0,1]
+function zoom_x(a, b) {
+    var z0 = +a, z1 = +b;
+    if (isNaN(z0) || isNaN(z1)) return;
+    if (z0 < 0) z0 = 0; if (z0 > 1) z0 = 1;
+    if (z1 < 0) z1 = 0; if (z1 > 1) z1 = 1;
+    if (z1 < z0) { var t = z0; z0 = z1; z1 = t; }
+    if (z1 === z0) z1 = Math.min(1, z0 + 1e-6); // tiny span safeguard
+    zoom[0] = z0; zoom[1] = z1;
+    mgraphics.redraw();
 }
 
 function setfloat(v)

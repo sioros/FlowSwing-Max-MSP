@@ -6,7 +6,7 @@ See license.md file in the project root for full license information.
 -->
 <c74object name='flowSwing.envelop' category='FlowSwing'>
 	<digest>Sequencer with 2 hierarchically nested NI Grids</digest>
-	<description>Generates automation curves and multichannel triggers for sequencing using from hiearchically nested NI Grids.</description>
+	<description>Generates automation curves and multichannel triggers for sequencing using two hiearchically nested NI Grids.</description>
 	<discussion>
 		<h4>
 			<openfilelink filename="FlowSwing_overview.maxpat">FlowSwing Overview</openfilelink>
