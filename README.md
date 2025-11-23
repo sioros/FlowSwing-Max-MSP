@@ -108,6 +108,6 @@ Sioros, G., & Klissouras, O. (2025). Flow Swing: A system for dynamic control an
 
 Sioros, G. (2023). Polyrhythmic modelling of non-isochronous and microtiming patterns. Proceedings of the 24th International Society for Music Information Retrieval Conference. Milan, Italy.
 
-## Source code and updates: 
+## Source code and updates:
 
 https://github.com/sioros/FlowSwing-Max-MSP
