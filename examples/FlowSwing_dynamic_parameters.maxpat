@@ -14,6 +14,28 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-5",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 337.0, 358.0, 73.0, 22.0 ],
+                    "text": "routepass S"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-4",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 680.0, 358.0, 73.0, 22.0 ],
+                    "text": "routepass S"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-50",
                     "linecount": 2,
                     "maxclass": "comment",
@@ -44,7 +66,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 389.0, 182.0, 25.0, 22.0 ],
-                    "text": "1"
+                    "text": "3"
                 }
             },
             {
@@ -1007,7 +1029,7 @@
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "float", "bang" ],
-                    "patching_rect": [ 594.0, 364.0, 166.0, 22.0 ],
+                    "patching_rect": [ 595.0, 390.0, 166.0, 22.0 ],
                     "text": "buffer~ loop simpleDrumLoop"
                 }
             },
@@ -1355,6 +1377,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-5", 0 ],
+                    "source": [ "obj-1", 8 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-8", 0 ],
                     "midpoints": [ 252.875, 389.0, 413.5, 389.0 ],
                     "source": [ "obj-1", 1 ]
@@ -1496,6 +1524,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-4", 0 ],
+                    "source": [ "obj-31", 7 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-28", 0 ],
                     "source": [ "obj-33", 0 ]
                 }
@@ -1534,6 +1568,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-1", 1 ],
+                    "source": [ "obj-4", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-27", 0 ],
                     "order": 0,
                     "source": [ "obj-46", 0 ]
@@ -1545,6 +1585,12 @@
                     "midpoints": [ 239.5, 87.0, 159.5, 87.0 ],
                     "order": 1,
                     "source": [ "obj-46", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-31", 3 ],
+                    "source": [ "obj-5", 0 ]
                 }
             },
             {
@@ -1631,14 +1677,6 @@
             "obj-35": [ "loop gain", "loop gain", 0 ],
             "obj-46": [ "play", "play", 0 ],
             "obj-56": [ "rewind", "rewind", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "parameter_overrides": {
                 "obj-1::obj-253": {
                     "parameter_longname": "rescale"
