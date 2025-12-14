@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+<!--
+Part of the FlowSwing package
+See license.md file in the project root for full license information.
+-->
+<c74object name='flowSwing.onsetDetect' category='FlowSwing'>
+	<digest>Onset detection and automatic creation of warp markers</digest>
+	<description>Creates warpmarkers for flowSwing.audioWarp at onset positions.</description>
+	<discussion>
+		<h4>
+			<openfilelink filename="FlowSwing_overview.maxpat">FlowSwing Overview</openfilelink>
+		</h4>
+		<p>
+			<b>flowSwing.onsetDetect requires the Fluid Corpus Manipulation package.</b>
+
+			<br/>
+			Onset detection is performed using the fluid.bufonsetslice~ object from the Fluid Corpus Manipulation package. Its parameters can be set through messages to the left inlet of flowSwing.onsetDetect. When a bang or message is received in the left inlet, the specified buffer is analysed for onsets and a list of onset positions in samples is output from the left outlet. Additionally, a Dictionary containing warp markers at the detected onset positions along with the current parameter values is output from the right outlet. This Dictionary can be used directly with flowSwing.audioWarp to warp audio according to the detected onsets.
+		</p>
+		<p>
+			<o>flowSwing.onsetDetect</o> is part of the FlowSwing package.
+		</p>
+	</discussion>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name='author'>George Sioros</metadata>
+		<metadata name='tag'>FlowSwing</metadata>
+		<metadata name='tag'>Flow</metadata>
+		<metadata name='tag'>Swing</metadata>
+	</metadatalist>
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="anything">
+			<digest>
+				bang or message to fluid.bufonsetslice~.
+			</digest>
+			<description>
+			</description>
+		</inlet>
+		<inlet id="1" type="anything">
+			<digest>
+				buffer name or messages to set parameters.
+			</digest>
+			<description>
+			</description>
+		</inlet>
+	</inletlist>
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="list">
+			<digest>
+				list of onset position in samples. 
+			</digest>
+			<description>
+			</description>
+		</outlet>
+		<outlet id="1" type="anything">
+			<digest>
+				Dictionary of markers for flowSwing.audioWarp and parameter values.
+			</digest>
+			<description>
+			</description>
+		</outlet>
+	</outletlist>
+	<!--ARGUMENTS-->
+	<objarglist>
+	</objarglist>
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="buffer">
+			<arglist>
+				<arg name="name" optional="0" type="symbol" />
+			</arglist>
+			<digest>
+				<p> right inlet: Sets the name of the buffer~ object to be analysed.</p>
+			</digest>
+			<description>
+			</description>
+		</method>
+		<method name="continous">
+			<arglist>
+				<arg name="on/off" optional="0" type="int" />
+			</arglist>
+			<digest>
+				right inlet: Sets the continous feature on or off (default). when continous is on, the onset detection is performed automatically whenever a parameter is modified.
+			</digest>
+			<description>
+
+			</description>
+		</method>
+		<method name="metric">
+			<arglist>
+				<arg name="metric" optional="0" type="int" />
+			</arglist>
+			<digest>
+				right inlet: sets the onset detction function.
+			</digest>
+			<description>
+
+			</description>
+		</method>
+		<method name="threshold">
+			<arglist>
+				<arg name="value" optional="0" type="float" />
+			</arglist>
+			<digest>
+				right inlet: sets the threshold for a new onset. Different metrics have different value ranges but always above zero.
+			</digest>
+			<description>
+
+			</description>
+		</method>
+
+		<method name="pattrstorge messages">
+			<arglist>
+				<arg name="" optional="0" type="anything" />
+			</arglist>
+			<digest>
+				right inlet: messages to pattrhub such as getstate.
+			</digest>
+			<description>
+
+			</description>
+		</method>
+	</methodlist>
+	<!--ATTRIBUTES-->
+	<attributelist>
+
+	</attributelist>
+	<!--RELATED-->
+	<seealsolist>
+		<seealso name="flowSwing_audioWarp" />
+		<seealso name="fluid.bufonsetslice~" />
+
+	</seealsolist>
+	<!--INLETS/OUTLETS-->
+	<misc name="Inlets">
+		<entry name="Left">
+			<digest>
+				bang or message to fluid.bufonsetslice~.
+			</digest>
+			<description>
+			</description>
+		</entry>
+		<entry name="Right">
+			<digest>
+				buffer name or messages to set parameters.
+			</digest>
+			<description>
+			</description>
+		</entry>
+	</misc>
+	<misc name="Outlets">
+		<entry name="left">
+			<digest>
+				list of onset position in samples.
+			</digest>
+			<description>
+			</description>
+		</entry>
+		<entry name="right">
+				<digest>
+				Dictionary of markers for flowSwing.audioWarp and parameter values.
+			</digest>
+			<description>
+			</description>
+		</entry>
+	</misc>
+
+</c74object>

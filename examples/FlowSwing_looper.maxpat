@@ -14,6 +14,62 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-49",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 415.0, 419.5, 265.0, 20.0 ],
+                    "text": "Automatically set markers using onset locations."
+                }
+            },
+            {
+                "box": {
+                    "bgmode": 0,
+                    "border": 0,
+                    "clickthrough": 0,
+                    "enablehscroll": 0,
+                    "enablevscroll": 0,
+                    "id": "obj-39",
+                    "lockeddragscroll": 0,
+                    "lockedsize": 0,
+                    "maxclass": "bpatcher",
+                    "name": "flowSwing_onsetDetect.maxpat",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "offset": [ 0.0, 0.0 ],
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 351.0, 413.0, 52.0, 29.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 117.0278633236885, 616.4086663424969, 295.0, 30.0 ],
+                    "varname": "flowSwing_onsetDetect[1]",
+                    "viewvisibility": 1
+                }
+            },
+            {
+                "box": {
+                    "bgmode": 0,
+                    "border": 0,
+                    "clickthrough": 0,
+                    "enablehscroll": 0,
+                    "enablevscroll": 0,
+                    "id": "obj-33",
+                    "lockeddragscroll": 0,
+                    "lockedsize": 0,
+                    "maxclass": "bpatcher",
+                    "name": "flowSwing_onsetDetect.maxpat",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "offset": [ 0.0, 0.0 ],
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 195.0, 415.0, 52.0, 29.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 117.0, 364.0, 295.0, 30.0 ],
+                    "varname": "flowSwing_onsetDetect",
+                    "viewvisibility": 1
+                }
+            },
+            {
+                "box": {
                     "id": "obj-53",
                     "linecount": 9,
                     "maxclass": "comment",
@@ -30,7 +86,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 530.0, 492.5, 150.0, 75.0 ],
+                    "patching_rect": [ 530.0, 538.0, 150.0, 75.0 ],
                     "text": "The mode and quality of the timestretch algorithm is set with messages to the second inlet of the flowSwing devices."
                 }
             },
@@ -41,7 +97,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 428.0, 413.0, 150.0, 48.0 ],
+                    "patching_rect": [ 428.0, 458.0, 150.0, 48.0 ],
                     "text": "The two flowSwing devices playback  timewarp the two loops."
                 }
             },
@@ -100,7 +156,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 422.0, 171.0, 20.0, 20.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 28.0, 401.0, 20.0, 20.0 ],
+                    "presentation_rect": [ 28.0, 418.0, 20.0, 20.0 ],
                     "rounded": 60.0,
                     "saved_attribute_attributes": {
                         "bgcolor": {
@@ -123,7 +179,7 @@
                     "patching_rect": [ 444.0, 171.0, 133.0, 20.0 ],
                     "presentation": 1,
                     "presentation_linecount": 2,
-                    "presentation_rect": [ 28.0, 423.0, 80.0, 34.0 ],
+                    "presentation_rect": [ 28.0, 440.0, 80.0, 34.0 ],
                     "text": "Overdub a second loop"
                 }
             },
@@ -238,7 +294,7 @@
                     "patching_rect": [ 652.0, 10.0, 147.0, 282.0 ],
                     "presentation": 1,
                     "presentation_linecount": 6,
-                    "presentation_rect": [ 332.0, 49.5, 497.0, 89.0 ],
+                    "presentation_rect": [ 332.0, 49.5, 499.0, 89.0 ],
                     "text": "Pre-roll is a small amount of audio recorded just before the actual loop or segment starts and it ensures a seamless loop by allowing a short crossfade at the boundary, preventing clicks or discontinuities.\nDelay compensation corrects for the latency introduced by the sound card and audio driver during recording. It ensures that recorded audio is time-aligned with the original playback by offsetting the recording to match the intended timing."
                 }
             },
@@ -320,9 +376,9 @@
                     "numoutlets": 8,
                     "offset": [ 0.0, 0.0 ],
                     "outlettype": [ "signal", "signal", "signal", "signal", "", "", "", "" ],
-                    "patching_rect": [ 288.0, 422.0, 115.0, 31.0 ],
+                    "patching_rect": [ 288.0, 452.0, 115.0, 31.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 117.0, 412.0, 704.0, 207.0 ],
+                    "presentation_rect": [ 117.0278633236885, 412.0743018090725, 704.0247650742531, 205.12074223160744 ],
                     "varname": "loop2",
                     "viewvisibility": 1
                 }
@@ -343,7 +399,7 @@
                     "numoutlets": 8,
                     "offset": [ 0.0, 0.0 ],
                     "outlettype": [ "signal", "signal", "signal", "signal", "", "", "", "" ],
-                    "patching_rect": [ 132.0, 422.0, 115.0, 31.0 ],
+                    "patching_rect": [ 132.0, 452.0, 115.0, 31.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 117.0, 159.0, 704.0, 207.0 ],
                     "varname": "loop1",
@@ -360,7 +416,7 @@
                     "numoutlets": 4,
                     "outlettype": [ "signal", "", "float", "list" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 288.0, 476.0, 55.0, 79.0 ],
+                    "patching_rect": [ 288.0, 506.0, 55.0, 79.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 816.0, 412.0, 48.0, 198.0 ],
                     "saved_attribute_attributes": {
@@ -387,7 +443,7 @@
                     "numoutlets": 4,
                     "outlettype": [ "signal", "", "float", "list" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 132.0, 472.0, 55.0, 79.0 ],
+                    "patching_rect": [ 132.0, 502.0, 55.0, 79.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 816.0, 159.0, 48.0, 198.0 ],
                     "saved_attribute_attributes": {
@@ -436,8 +492,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 352.0, 385.0, 38.0, 22.0 ],
-                    "text": "loop2"
+                    "patching_rect": [ 384.0, 383.0, 72.0, 22.0 ],
+                    "text": "buffer loop2"
                 }
             },
             {
@@ -561,8 +617,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 222.0, 365.0, 38.0, 22.0 ],
-                    "text": "loop1"
+                    "patching_rect": [ 228.0, 350.0, 72.0, 22.0 ],
+                    "text": "buffer loop1"
                 }
             },
             {
@@ -682,7 +738,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 435.0, 468.0, 58.0, 22.0 ],
+                    "patching_rect": [ 435.0, 513.0, 58.0, 22.0 ],
                     "text": "loadbang"
                 }
             },
@@ -705,7 +761,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 435.0, 505.0, 88.0, 50.0 ],
+                    "patching_rect": [ 435.0, 550.0, 88.0, 50.0 ],
                     "text": "mode monophonic, quality better"
                 }
             },
@@ -715,7 +771,7 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 0,
-                    "patching_rect": [ 132.0, 574.0, 175.0, 22.0 ],
+                    "patching_rect": [ 132.0, 604.0, 175.0, 22.0 ],
                     "text": "dac~"
                 }
             },
@@ -865,7 +921,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-27", 0 ],
-                    "midpoints": [ 271.0, 238.0, 231.5, 238.0 ],
+                    "midpoints": [ 271.0, 238.0, 237.5, 238.0 ],
                     "order": 0,
                     "source": [ "obj-18", 1 ]
                 }
@@ -918,7 +974,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-12", 2 ],
+                    "destination": [ "obj-33", 1 ],
                     "source": [ "obj-27", 0 ]
                 }
             },
@@ -938,6 +994,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-12", 3 ],
+                    "source": [ "obj-33", 1 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-35", 0 ],
                     "source": [ "obj-34", 0 ]
                 }
@@ -945,7 +1007,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-45", 0 ],
-                    "midpoints": [ 560.5, 365.0, 361.5, 365.0 ],
+                    "midpoints": [ 560.5, 365.0, 393.5, 365.0 ],
                     "source": [ "obj-35", 1 ]
                 }
             },
@@ -961,6 +1023,12 @@
                     "destination": [ "obj-13", 1 ],
                     "order": 0,
                     "source": [ "obj-37", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-13", 3 ],
+                    "source": [ "obj-39", 1 ]
                 }
             },
             {
@@ -1011,14 +1079,14 @@
             {
                 "patchline": {
                     "destination": [ "obj-45", 0 ],
-                    "midpoints": [ 361.5, 365.0, 361.5, 365.0 ],
+                    "midpoints": [ 361.5, 365.0, 393.5, 365.0 ],
                     "source": [ "obj-40", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-27", 0 ],
-                    "midpoints": [ 78.5, 237.5, 231.5, 237.5 ],
+                    "midpoints": [ 78.5, 237.5, 237.5, 237.5 ],
                     "order": 0,
                     "source": [ "obj-41", 0 ]
                 }
@@ -1050,7 +1118,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-13", 2 ],
+                    "destination": [ "obj-39", 1 ],
                     "source": [ "obj-45", 0 ]
                 }
             },
@@ -1071,7 +1139,6 @@
             "obj-10": [ "loop 1", "loop 1", 0 ],
             "obj-11": [ "loop 2", "loop 2", 0 ],
             "obj-12::obj-106": [ "resetMarkers_button", "resetMarkers_button", 0 ],
-            "obj-12::obj-113": [ "onsets_button", "onsets_button", 0 ],
             "obj-12::obj-114": [ "clear_markers", "clear_breakpoints", 0 ],
             "obj-12::obj-132": [ "markers_dict", "markers", 0 ],
             "obj-12::obj-140": [ "snapToNIGrid_parameter", "snapToNIGrid_parameter", 0 ],
@@ -1086,14 +1153,13 @@
             "obj-12::obj-45": [ "S", "S", 0 ],
             "obj-12::obj-47": [ "offset", "offset", 0 ],
             "obj-12::obj-48": [ "niRotation", "niRotation", 0 ],
+            "obj-12::obj-49": [ "buffer", "buffer", 0 ],
             "obj-12::obj-50": [ "Formative", "Formative", 0 ],
             "obj-12::obj-51": [ "Target", "Target", 0 ],
-            "obj-12::obj-52": [ "onset_threshold", "onset_threshold", 0 ],
             "obj-12::obj-84": [ "zoom", "zoom", 0 ],
             "obj-12::obj-90": [ "secondary_S_control", "secondary_S_control", 0 ],
             "obj-12::obj-91": [ "hold", "hold", 0 ],
             "obj-13::obj-106": [ "resetMarkers_button[1]", "resetMarkers_button", 0 ],
-            "obj-13::obj-113": [ "onsets_button[1]", "onsets_button", 0 ],
             "obj-13::obj-114": [ "clear_markers[1]", "clear_breakpoints", 0 ],
             "obj-13::obj-132": [ "markers_dict[1]", "markers", 0 ],
             "obj-13::obj-140": [ "snapToNIGrid_parameter[1]", "snapToNIGrid_parameter", 0 ],
@@ -1108,34 +1174,33 @@
             "obj-13::obj-45": [ "S[1]", "S", 0 ],
             "obj-13::obj-47": [ "offset[1]", "offset", 0 ],
             "obj-13::obj-48": [ "niRotation[1]", "niRotation", 0 ],
+            "obj-13::obj-49": [ "buffer[1]", "buffer", 0 ],
             "obj-13::obj-50": [ "Formative[1]", "Formative", 0 ],
             "obj-13::obj-51": [ "Target[1]", "Target", 0 ],
-            "obj-13::obj-52": [ "onset_threshold[1]", "onset_threshold", 0 ],
             "obj-13::obj-84": [ "zoom[1]", "zoom", 0 ],
             "obj-13::obj-90": [ "secondary_S_control[1]", "secondary_S_control", 0 ],
             "obj-13::obj-91": [ "hold[1]", "hold", 0 ],
             "obj-2": [ "pre-roll", "pre-roll", 0 ],
             "obj-26": [ "live.text", "live.text", 0 ],
             "obj-3": [ "delay compensation", "delay compensation", 0 ],
+            "obj-33::obj-113": [ "onsets_button", "onsets_button", 0 ],
+            "obj-33::obj-3": [ "metric_menu", "metric_menu", 0 ],
+            "obj-33::obj-49": [ "buffer[2]", "buffer", 0 ],
+            "obj-33::obj-52": [ "threshold", "threshold_control", 0 ],
+            "obj-33::obj-6": [ "continous_output_button", "continous_output_button", 0 ],
+            "obj-39::obj-113": [ "onsets_button[1]", "onsets_button", 0 ],
+            "obj-39::obj-3": [ "metric_menu[1]", "metric_menu", 0 ],
+            "obj-39::obj-49": [ "buffer[3]", "buffer", 0 ],
+            "obj-39::obj-52": [ "threshold[1]", "threshold_control", 0 ],
+            "obj-39::obj-6": [ "continous_output_button[1]", "continous_output_button", 0 ],
             "obj-43": [ "toggle[1]", "toggle", 0 ],
             "obj-7": [ "toggle", "toggle", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "parameter_overrides": {
                 "obj-12::obj-114": {
                     "parameter_longname": "clear_markers"
                 },
                 "obj-13::obj-106": {
                     "parameter_longname": "resetMarkers_button[1]"
-                },
-                "obj-13::obj-113": {
-                    "parameter_longname": "onsets_button[1]"
                 },
                 "obj-13::obj-114": {
                     "parameter_longname": "clear_markers[1]"
@@ -1173,9 +1238,6 @@
                 "obj-13::obj-51": {
                     "parameter_longname": "Target[1]"
                 },
-                "obj-13::obj-52": {
-                    "parameter_longname": "onset_threshold[1]"
-                },
                 "obj-13::obj-84": {
                     "parameter_longname": "zoom[1]"
                 },
@@ -1184,6 +1246,18 @@
                 },
                 "obj-13::obj-91": {
                     "parameter_longname": "hold[1]"
+                },
+                "obj-39::obj-113": {
+                    "parameter_longname": "onsets_button[1]"
+                },
+                "obj-39::obj-3": {
+                    "parameter_longname": "metric_menu[1]"
+                },
+                "obj-39::obj-52": {
+                    "parameter_longname": "threshold[1]"
+                },
+                "obj-39::obj-6": {
+                    "parameter_longname": "continous_output_button[1]"
                 }
             },
             "inherited_shortname": 1
@@ -1199,6 +1273,20 @@
                 },
                 "toggle[1]": {
                     "srcname": "2.modifiers.50.code.key",
+                    "min": 0.0,
+                    "max": 1.0,
+                    "flags": 1,
+                    "trigger": 1
+                },
+                "onsets_button[1]": {
+                    "srcname": "2.modifiers.119.code.key",
+                    "min": 0.0,
+                    "max": 1.0,
+                    "flags": 1,
+                    "trigger": 1
+                },
+                "onsets_button": {
+                    "srcname": "2.modifiers.113.code.key",
                     "min": 0.0,
                     "max": 1.0,
                     "flags": 1,

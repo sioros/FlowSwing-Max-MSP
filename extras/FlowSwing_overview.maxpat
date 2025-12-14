@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 260.0, 87.0, 914.0, 766.0 ],
+        "rect": [ 260.0, 87.0, 964.0, 786.0 ],
         "default_fontsize": 13.0,
         "gridsize": [ 7.0, 7.0 ],
         "gridsnaponopen": 2,
@@ -34,38 +34,25 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 260.0, 113.0, 914.0, 740.0 ],
+                        "rect": [ 260.0, 113.0, 964.0, 760.0 ],
                         "subpatcher_template": "Grid_Toolbar",
                         "showontab": 1,
                         "boxes": [
                             {
                                 "box": {
                                     "fontsize": 14.0,
-                                    "id": "obj-6",
+                                    "id": "obj-20",
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 183.0, 589.0, 669.0, 23.0 ],
-                                    "text": "A flexible step-sequencer UI that is paired with FlowSwing instances."
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontface": 1,
-                                    "id": "obj-8",
-                                    "linecount": 2,
-                                    "maxclass": "comment",
-                                    "numinlets": 1,
-                                    "numoutlets": 0,
-                                    "patching_rect": [ 65.0, 146.0, 111.0, 34.0 ],
-                                    "text": "a phasor ramp drives playback",
-                                    "textjustification": 2
+                                    "patching_rect": [ 183.0, 656.0, 767.0, 23.0 ],
+                                    "text": "Onset detection tool for setting warp markers in audioWarp. Requires the Fluid Corpus Manipulation package."
                                 }
                             },
                             {
                                 "box": {
                                     "hidden": 1,
-                                    "id": "obj-32",
+                                    "id": "obj-17",
                                     "maxclass": "newobj",
                                     "numinlets": 1,
                                     "numoutlets": 0,
@@ -79,9 +66,48 @@
                                             "modernui": 1
                                         },
                                         "classnamespace": "box",
-                                        "rect": [ 0.0, 0.0, 1000.0, 720.0 ],
+                                        "rect": [ 59.0, 107.0, 1000.0, 720.0 ],
                                         "subpatcher_template": "Grid_Toolbar",
                                         "boxes": [
+                                            {
+                                                "box": {
+                                                    "id": "obj-2",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [ "", "" ],
+                                                    "patching_rect": [ 57.0, 187.0, 77.0, 22.0 ],
+                                                    "text": "route symbol"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "coll_data": {
+                                                        "count": 2,
+                                                        "data": [
+                                                            {
+                                                                "key": 0,
+                                                                "value": [ "flowSwing_noise.maxhelp" ]
+                                                            },
+                                                            {
+                                                                "key": 1,
+                                                                "value": [ "flowSwing_onsetDetect.maxhelp" ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "id": "obj-1",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 4,
+                                                    "outlettype": [ "", "", "", "" ],
+                                                    "patching_rect": [ 57.0, 130.0, 100.0, 22.0 ],
+                                                    "saved_object_attributes": {
+                                                        "embed": 1,
+                                                        "precision": 6
+                                                    },
+                                                    "text": "coll"
+                                                }
+                                            },
                                             {
                                                 "box": {
                                                     "id": "obj-17",
@@ -89,7 +115,7 @@
                                                     "numinlets": 1,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "" ],
-                                                    "patching_rect": [ 50.0, 170.0, 115.0, 22.0 ],
+                                                    "patching_rect": [ 57.0, 244.0, 115.0, 22.0 ],
                                                     "text": "prepend loadunique"
                                                 }
                                             },
@@ -100,46 +126,30 @@
                                                     "numinlets": 1,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "" ],
-                                                    "patching_rect": [ 50.0, 198.0, 51.0, 22.0 ],
+                                                    "patching_rect": [ 57.0, 272.0, 51.0, 22.0 ],
                                                     "text": "pcontrol"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "id": "obj-20",
-                                                    "maxclass": "message",
-                                                    "numinlets": 2,
-                                                    "numoutlets": 1,
-                                                    "outlettype": [ "" ],
-                                                    "patching_rect": [ 50.0, 138.0, 147.0, 22.0 ],
-                                                    "text": "flowSwing_noise.maxhelp"
-                                                }
-                                            },
-                                            {
-                                                "box": {
-                                                    "id": "obj-32",
-                                                    "maxclass": "newobj",
-                                                    "numinlets": 1,
-                                                    "numoutlets": 1,
-                                                    "outlettype": [ "bang" ],
-                                                    "patching_rect": [ 50.0, 100.0, 25.0, 22.0 ],
-                                                    "text": "b 1"
-                                                }
-                                            },
-                                            {
-                                                "box": {
                                                     "comment": "",
-                                                    "id": "obj-29",
+                                                    "id": "obj-50",
                                                     "index": 1,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "int" ],
-                                                    "patching_rect": [ 50.0, 40.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 57.0, 80.0, 30.0, 30.0 ]
                                                 }
                                             }
                                         ],
                                         "lines": [
+                                            {
+                                                "patchline": {
+                                                    "destination": [ "obj-2", 0 ],
+                                                    "source": [ "obj-1", 0 ]
+                                                }
+                                            },
                                             {
                                                 "patchline": {
                                                     "destination": [ "obj-12", 0 ],
@@ -149,25 +159,51 @@
                                             {
                                                 "patchline": {
                                                     "destination": [ "obj-17", 0 ],
-                                                    "source": [ "obj-20", 0 ]
+                                                    "source": [ "obj-2", 1 ]
                                                 }
                                             },
                                             {
                                                 "patchline": {
-                                                    "destination": [ "obj-32", 0 ],
-                                                    "source": [ "obj-29", 0 ]
+                                                    "destination": [ "obj-17", 0 ],
+                                                    "source": [ "obj-2", 0 ]
                                                 }
                                             },
                                             {
                                                 "patchline": {
-                                                    "destination": [ "obj-20", 0 ],
-                                                    "source": [ "obj-32", 0 ]
+                                                    "destination": [ "obj-1", 0 ],
+                                                    "source": [ "obj-50", 0 ]
                                                 }
                                             }
-                                        ]
+                                        ],
+                                        "toolbaradditions": [ "audiomute", "audiosolo" ]
                                     },
-                                    "patching_rect": [ 10.0, 617.0, 19.0, 22.0 ],
+                                    "patching_rect": [ 3.0, 659.0, 19.0, 22.0 ],
                                     "text": "p"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontsize": 14.0,
+                                    "id": "obj-6",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 183.0, 601.0, 669.0, 23.0 ],
+                                    "text": "Flexible step-sequencer UI that is paired with FlowSwing instances."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontface": 1,
+                                    "fontsize": 14.0,
+                                    "id": "obj-8",
+                                    "linecount": 2,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 54.0, 143.5, 128.0, 39.0 ],
+                                    "text": "a phasor ramp drives playback",
+                                    "textjustification": 2
                                 }
                             },
                             {
@@ -181,9 +217,9 @@
                                     "numoutlets": 3,
                                     "outlettype": [ "int", "", "" ],
                                     "parameter_enable": 0,
-                                    "patching_rect": [ 24.0, 618.0, 153.0, 25.0 ],
+                                    "patching_rect": [ 24.0, 630.0, 153.0, 51.0 ],
                                     "rounded": 4.0,
-                                    "tabs": "FlowSwing.noise"
+                                    "tabs": [ "FlowSwing.noise", "FlowSwing.onsetDetect" ]
                                 }
                             },
                             {
@@ -193,8 +229,8 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 183.0, 619.0, 415.0, 23.0 ],
-                                    "text": "A noise synthesizer with sample-accurate control via mc signals."
+                                    "patching_rect": [ 183.0, 631.0, 415.0, 23.0 ],
+                                    "text": "Noise synthesizer with sample-accurate control via mc signals."
                                 }
                             },
                             {
@@ -874,7 +910,7 @@
                                         ],
                                         "toolbaradditions": [ "audiomute", "audiosolo" ]
                                     },
-                                    "patching_rect": [ 367.0, 657.0, 19.0, 22.0 ],
+                                    "patching_rect": [ 367.0, 681.0, 19.0, 22.0 ],
                                     "text": "p"
                                 }
                             },
@@ -976,7 +1012,7 @@
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "int" ],
-                                                    "patching_rect": [ 50.0, 40.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 57.0, 80.0, 30.0, 30.0 ]
                                                 }
                                             }
                                         ],
@@ -1014,7 +1050,7 @@
                                         ],
                                         "toolbaradditions": [ "audiomute", "audiosolo" ]
                                     },
-                                    "patching_rect": [ 10.0, 579.0, 19.0, 22.0 ],
+                                    "patching_rect": [ 3.0, 589.0, 19.0, 22.0 ],
                                     "text": "p"
                                 }
                             },
@@ -1027,7 +1063,7 @@
                                     "numoutlets": 3,
                                     "outlettype": [ "int", "", "" ],
                                     "parameter_enable": 0,
-                                    "patching_rect": [ 24.0, 681.0, 337.0, 22.0 ],
+                                    "patching_rect": [ 24.0, 717.0, 337.0, 22.0 ],
                                     "prefix": "Package:/FlowSwing-Max-MSP/examples/"
                                 }
                             },
@@ -1039,7 +1075,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 24.0, 656.0, 337.0, 23.0 ],
+                                    "patching_rect": [ 24.0, 692.0, 337.0, 23.0 ],
                                     "text": "Explore the examples to learn about the features"
                                 }
                             },
@@ -1050,7 +1086,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 183.0, 566.0, 598.0, 23.0 ],
+                                    "patching_rect": [ 183.0, 578.0, 598.0, 23.0 ],
                                     "text": "Generates automation curves and multichannel triggers from 2 hiearchicaly organised NI Grids."
                                 }
                             },
@@ -1061,7 +1097,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 183.0, 543.0, 452.0, 23.0 ],
+                                    "patching_rect": [ 183.0, 555.0, 452.0, 23.0 ],
                                     "text": "Generates automation curves and multichannel triggers for sequencing."
                                 }
                             },
@@ -1072,31 +1108,33 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 183.0, 520.0, 530.0, 23.0 ],
-                                    "text": "Time-warping audio samples by aligning warp markers to a Non-Isochronmous Grid."
+                                    "patching_rect": [ 183.0, 532.0, 530.0, 23.0 ],
+                                    "text": "Time-warps audio samples by aligning warp markers to a Non-Isochronmous Grid."
                                 }
                             },
                             {
                                 "box": {
                                     "fontface": 1,
+                                    "fontsize": 14.0,
                                     "id": "obj-35",
                                     "linecount": 3,
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 552.0, 395.0, 157.0, 48.0 ],
+                                    "patching_rect": [ 552.0, 395.0, 151.0, 55.0 ],
                                     "text": "... a sample accurate gate signal to trigger synths and samplers"
                                 }
                             },
                             {
                                 "box": {
                                     "fontface": 1,
+                                    "fontsize": 14.0,
                                     "id": "obj-33",
-                                    "linecount": 4,
+                                    "linecount": 5,
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 13.0, 388.0, 169.0, 62.0 ],
+                                    "patching_rect": [ 3.0, 388.0, 174.0, 87.0 ],
                                     "text": "flowSwing.envelop will generate a control signal to modulate FX and synthesis parameters, and...",
                                     "textjustification": 2
                                 }
@@ -1472,7 +1510,7 @@
                                     "numoutlets": 3,
                                     "outlettype": [ "int", "", "" ],
                                     "parameter_enable": 0,
-                                    "patching_rect": [ 24.0, 518.0, 153.0, 94.0 ],
+                                    "patching_rect": [ 24.0, 530.0, 153.0, 94.0 ],
                                     "rounded": 4.0,
                                     "tabs": [ "FlowSwing.audioWarp", "FlowSwing.envelop", "FlowSwing.nested", "FlowSwing.stepUI" ]
                                 }
@@ -1485,7 +1523,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 24.0, 488.0, 162.0, 23.0 ],
+                                    "patching_rect": [ 24.0, 503.0, 162.0, 23.0 ],
                                     "text": "FlowSwing devices"
                                 }
                             },
@@ -1664,7 +1702,7 @@
                             },
                             {
                                 "patchline": {
-                                    "destination": [ "obj-32", 0 ],
+                                    "destination": [ "obj-17", 0 ],
                                     "hidden": 1,
                                     "source": [ "obj-24", 0 ]
                                 }
@@ -1723,7 +1761,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 0.0, 26.0, 914.0, 740.0 ],
+                        "rect": [ 0.0, 26.0, 964.0, 760.0 ],
                         "openinpresentation": 1,
                         "subpatcher_template": "Grid_Toolbar",
                         "showontab": 1,

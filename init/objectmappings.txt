@@ -27,4 +27,5 @@ max definesubstitution flowSwing.stepUI.jsui jsui @filename flowSwingStepSequenc
 max objectfile flowSwing.stepUI flowSwing_stepUI;
 max definesubstitution flowSwing.stepUI bpatcher @name flowSwing_stepUI; 
 
-
+max objectfile  flowSwing.onsetDetect flowSwing_onsetDetect;
+max definesubstitution flowSwing.onsetDetect bpatcher @name flowSwing_onsetDetect;
