@@ -57,6 +57,10 @@ This repository is actively maintained and regularly updated with new features, 
 **Version 1** was a pre-release corresponding to the description in the SMC2025 paper (Sioros & Klissouras, 2025).
 **Version 2** introduces new features, a redesigned UI, and an improved DSP engine with bug fixes and better performance. It remains backwards compatible.  
 
+### Highlights in Version 2.5
+
+- **flowSwing.onsetDetect:** New onset detection tool for setting warp markers in audioWarp, isolating the FluCoMa dependency and avoiding error message in audioWarp when it is not installed.
+
 ### Highlights in Version 2.4
 
 - **flowSwing.stepUI:** New abstraction providing step-sequencer–style control of breakpoint parameters such as pitch.  
