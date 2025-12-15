@@ -267,17 +267,17 @@ function warpMarker(t){
 }
 
 function drawbuffer(buffer,x){
-	bufName = buffer;
+    bufName = buffer;
 	resolution = x;
-  ocan = new MGraphics(ow,oh);
-  var xw = ow/x;
-  //var yh = oh/y;
-  var u,v;
-  var buf = new Buffer(buffer);
-  bufsize = buf.length();
-  var samps = Math.floor(buf.framecount()/x);
-  var bank;
-  with(ocan){ 
+    ocan = new MGraphics(ow,oh);
+    var xw = ow/x;
+    //var yh = oh/y;
+    var u,v;
+    var buf = new Buffer(buffer);
+    bufsize = buf.length();
+    var samps = Math.floor(buf.framecount()/x);
+    var bank;
+    with(ocan){ 
   	set_source_rgba(waveRGBA[0], waveRGBA[1], waveRGBA[2], waveRGBA[3] );
   	move_to(0,200);
     for(u = 0;u<x;u++){
@@ -297,7 +297,9 @@ function drawbuffer(buffer,x){
   }
 	wave = new Image(ocan);
 	
- bang();
+ //bang();
+    mgraphics.redraw();
+
 }
 
 function push (){
