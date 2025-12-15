@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 128.0, 106.0, 757.0, 709.0 ],
+        "rect": [ 128.0, 106.0, 1150.0, 709.0 ],
         "showrootpatcherontab": 0,
         "showontab": 0,
         "boxes": [
@@ -29,7 +29,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 128.0, 132.0, 757.0, 683.0 ],
+                        "rect": [ 0.0, 26.0, 1150.0, 683.0 ],
                         "showontab": 1,
                         "boxes": [
                             {
@@ -701,7 +701,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 0.0, 26.0, 757.0, 683.0 ],
+                        "rect": [ 128.0, 132.0, 1150.0, 683.0 ],
                         "showontab": 1,
                         "boxes": [
                             {
@@ -1196,7 +1196,6 @@
             "obj-1::obj-1::obj-90": [ "secondary_S_control", "secondary_S_control", 0 ],
             "obj-1::obj-1::obj-91": [ "hold", "hold", 0 ],
             "obj-1::obj-4::obj-106": [ "resetMarkers_button", "resetMarkers_button", 0 ],
-            "obj-1::obj-4::obj-113": [ "onsets_button", "onsets_button", 0 ],
             "obj-1::obj-4::obj-114": [ "clear_breakpoints[4]", "clear_breakpoints", 0 ],
             "obj-1::obj-4::obj-132": [ "markers_dict", "markers", 3 ],
             "obj-1::obj-4::obj-140": [ "snapToNIGrid_parameter[4]", "snapToNIGrid_parameter", 0 ],
@@ -1211,14 +1210,13 @@
             "obj-1::obj-4::obj-45": [ "S[4]", "S", 2 ],
             "obj-1::obj-4::obj-47": [ "offset[4]", "offset", 0 ],
             "obj-1::obj-4::obj-48": [ "niRotation[4]", "niRotation", 0 ],
+            "obj-1::obj-4::obj-49": [ "buffer", "buffer", 0 ],
             "obj-1::obj-4::obj-50": [ "Formative[4]", "Formative", 0 ],
             "obj-1::obj-4::obj-51": [ "Target[4]", "Target", 0 ],
-            "obj-1::obj-4::obj-52": [ "onset_threshold", "onset_threshold", 0 ],
             "obj-1::obj-4::obj-84": [ "zoom[4]", "zoom", 0 ],
             "obj-1::obj-4::obj-90": [ "secondary_S_control[4]", "secondary_S_control", 0 ],
             "obj-1::obj-4::obj-91": [ "hold[4]", "hold", 0 ],
             "obj-1::obj-6::obj-106": [ "resetMarkers_button[1]", "resetMarkers_button", 0 ],
-            "obj-1::obj-6::obj-113": [ "onsets_button[1]", "onsets_button", 0 ],
             "obj-1::obj-6::obj-114": [ "clear_breakpoints[5]", "clear_breakpoints", 0 ],
             "obj-1::obj-6::obj-132": [ "markers_dict[1]", "markers", 3 ],
             "obj-1::obj-6::obj-140": [ "snapToNIGrid_parameter[5]", "snapToNIGrid_parameter", 0 ],
@@ -1233,9 +1231,9 @@
             "obj-1::obj-6::obj-45": [ "S[5]", "S", 2 ],
             "obj-1::obj-6::obj-47": [ "offset[5]", "offset", 0 ],
             "obj-1::obj-6::obj-48": [ "niRotation[5]", "niRotation", 0 ],
+            "obj-1::obj-6::obj-49": [ "buffer[1]", "buffer", 0 ],
             "obj-1::obj-6::obj-50": [ "Formative[5]", "Formative", 0 ],
             "obj-1::obj-6::obj-51": [ "Target[5]", "Target", 0 ],
-            "obj-1::obj-6::obj-52": [ "onset_threshold[1]", "onset_threshold", 0 ],
             "obj-1::obj-6::obj-84": [ "zoom[5]", "zoom", 0 ],
             "obj-1::obj-6::obj-90": [ "secondary_S_control[5]", "secondary_S_control", 0 ],
             "obj-1::obj-6::obj-91": [ "hold[5]", "hold", 0 ],
@@ -1288,7 +1286,6 @@
             "obj-2::obj-1::obj-90": [ "secondary_S_control[6]", "secondary_S_control", 0 ],
             "obj-2::obj-1::obj-91": [ "hold[6]", "hold", 0 ],
             "obj-2::obj-2::obj-106": [ "resetMarkers_button[2]", "resetMarkers_button", 0 ],
-            "obj-2::obj-2::obj-113": [ "onsets_button[2]", "onsets_button", 0 ],
             "obj-2::obj-2::obj-114": [ "clear_breakpoints[8]", "clear_breakpoints", 0 ],
             "obj-2::obj-2::obj-132": [ "markers_dict[2]", "markers", 3 ],
             "obj-2::obj-2::obj-140": [ "snapToNIGrid_parameter[7]", "snapToNIGrid_parameter", 0 ],
@@ -1303,12 +1300,20 @@
             "obj-2::obj-2::obj-45": [ "S[7]", "S", 2 ],
             "obj-2::obj-2::obj-47": [ "offset[7]", "offset", 0 ],
             "obj-2::obj-2::obj-48": [ "niRotation[7]", "niRotation", 0 ],
+            "obj-2::obj-2::obj-49": [ "buffer[2]", "buffer", 0 ],
             "obj-2::obj-2::obj-50": [ "Formative[7]", "Formative", 0 ],
             "obj-2::obj-2::obj-51": [ "Target[7]", "Target", 0 ],
-            "obj-2::obj-2::obj-52": [ "onset_threshold[2]", "onset_threshold", 0 ],
             "obj-2::obj-2::obj-84": [ "zoom[7]", "zoom", 0 ],
             "obj-2::obj-2::obj-90": [ "secondary_S_control[7]", "secondary_S_control", 0 ],
             "obj-2::obj-2::obj-91": [ "hold[7]", "hold", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "parameter_overrides": {
                 "obj-1::obj-1::obj-253": {
                     "parameter_longname": "rescale"
@@ -1364,9 +1369,6 @@
                 "obj-1::obj-6::obj-106": {
                     "parameter_longname": "resetMarkers_button[1]"
                 },
-                "obj-1::obj-6::obj-113": {
-                    "parameter_longname": "onsets_button[1]"
-                },
                 "obj-1::obj-6::obj-114": {
                     "parameter_longname": "clear_breakpoints[5]"
                 },
@@ -1402,9 +1404,6 @@
                 },
                 "obj-1::obj-6::obj-51": {
                     "parameter_longname": "Target[5]"
-                },
-                "obj-1::obj-6::obj-52": {
-                    "parameter_longname": "onset_threshold[1]"
                 },
                 "obj-1::obj-6::obj-84": {
                     "parameter_longname": "zoom[5]"
@@ -1544,9 +1543,6 @@
                 "obj-2::obj-2::obj-106": {
                     "parameter_longname": "resetMarkers_button[2]"
                 },
-                "obj-2::obj-2::obj-113": {
-                    "parameter_longname": "onsets_button[2]"
-                },
                 "obj-2::obj-2::obj-114": {
                     "parameter_longname": "clear_breakpoints[8]"
                 },
@@ -1582,9 +1578,6 @@
                 },
                 "obj-2::obj-2::obj-51": {
                     "parameter_longname": "Target[7]"
-                },
-                "obj-2::obj-2::obj-52": {
-                    "parameter_longname": "onset_threshold[2]"
                 },
                 "obj-2::obj-2::obj-84": {
                     "parameter_longname": "zoom[7]"

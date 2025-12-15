@@ -1443,6 +1443,14 @@
             "obj-9::obj-77": [ "release[1]", "release", 0 ],
             "obj-9::obj-8": [ "Noise F[1]", "Noise F", 0 ],
             "obj-9::obj-96": [ "envCurve[1]", "envCurve", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "parameter_overrides": {
                 "obj-1::obj-253": {
                     "parameter_longname": "rescale"
@@ -1615,7 +1623,7 @@
                         "firstChannel_parameter[1]": 1.0,
                         "hold": 0.0,
                         "hold[1]": 0.0,
-                        "lock": 0.0,
+                        "lock": 1.0,
                         "lock[1]": 1.0,
                         "morph": 1.0,
                         "morph[1]": 1.0,
@@ -1726,7 +1734,7 @@
                                     "firstChannel_parameter[1]": 1.0,
                                     "hold": 0.0,
                                     "hold[1]": 0.0,
-                                    "lock": 0.0,
+                                    "lock": 1.0,
                                     "lock[1]": 1.0,
                                     "morph": 1.0,
                                     "morph[1]": 1.0,

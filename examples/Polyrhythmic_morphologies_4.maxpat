@@ -29,7 +29,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 324.0, 126.0, 322.0, 48.0 ],
+                    "patching_rect": [ 324.0, 126.0, 325.0, 48.0 ],
                     "text": "A flowSwing.envelop instance drives a bass synth sound.\nEach breakpoint is associated with different pitch and skew values ctreating a richer sequence."
                 }
             },
@@ -1210,7 +1210,7 @@
             }
         ],
         "parameters": {
-            "obj-12::obj-113": [ "onsets_button", "onsets_button", 0 ],
+            "obj-12::obj-106": [ "resetMarkers_button", "resetMarkers_button", 0 ],
             "obj-12::obj-114": [ "clear_markers", "clear_breakpoints", 0 ],
             "obj-12::obj-132": [ "markers_dict", "markers", 0 ],
             "obj-12::obj-140": [ "snapToNIGrid_parameter[1]", "snapToNIGrid_parameter", 0 ],
@@ -1225,9 +1225,9 @@
             "obj-12::obj-45": [ "S", "S", 0 ],
             "obj-12::obj-47": [ "offset", "offset", 0 ],
             "obj-12::obj-48": [ "niRotation", "niRotation", 0 ],
+            "obj-12::obj-49": [ "buffer", "buffer", 0 ],
             "obj-12::obj-50": [ "Formative", "Formative", 0 ],
             "obj-12::obj-51": [ "Target", "Target", 0 ],
-            "obj-12::obj-52": [ "onset_threshold", "onset_threshold", 0 ],
             "obj-12::obj-84": [ "zoom[1]", "zoom", 0 ],
             "obj-12::obj-90": [ "secondary_S_control", "secondary_S_control", 0 ],
             "obj-12::obj-91": [ "hold", "hold", 0 ],
@@ -1247,7 +1247,9 @@
             "obj-4::obj-199": [ "resetNIGrid", "resetNIGrid", 0 ],
             "obj-4::obj-22": [ "live.text[27]", "lock", 0 ],
             "obj-4::obj-242": [ "resetNIGrid[1]", "resetNIGrid", 0 ],
-            "obj-4::obj-253": [ "rescale", "rescale", 0 ],
+            "obj-4::obj-253": [ "rescale", "rescaleT_menu", 0 ],
+            "obj-4::obj-272": [ "rescaleY_menu", "rescaleY_menu", 0 ],
+            "obj-4::obj-275": [ "Generate_breakpoints_menu", "Generate_breakpoints_menu", 0 ],
             "obj-4::obj-42": [ "live.numbox[38]", "morph", 0 ],
             "obj-4::obj-45": [ "live.numbox[41]", "S", 0 ],
             "obj-4::obj-47": [ "live.numbox[40]", "offset", 0 ],
@@ -1255,7 +1257,6 @@
             "obj-4::obj-50": [ "live.numbox[39]", "Formative", 0 ],
             "obj-4::obj-51": [ "live.numbox[42]", "Target", 0 ],
             "obj-4::obj-66": [ "live.menu[1]", "live.menu", 0 ],
-            "obj-4::obj-68": [ "clear_breakpoints[1]", "clear_breakpoints", 0 ],
             "obj-4::obj-90": [ "live.numbox[36]", "secondary_S_control", 0 ],
             "obj-4::obj-91": [ "live.text[28]", "hold", 0 ],
             "obj-56": [ "rewind", "rewind", 0 ],
@@ -1307,6 +1308,9 @@
                 },
                 "obj-4::obj-22": {
                     "parameter_longname": "live.text[27]"
+                },
+                "obj-4::obj-253": {
+                    "parameter_longname": "rescale"
                 },
                 "obj-4::obj-42": {
                     "parameter_longname": "live.numbox[38]"
@@ -1384,15 +1388,15 @@
                         "mute": 0.0,
                         "niRotation": 0.0,
                         "offset": 0.0,
-                        "onset_threshold": 0.204724409448819,
-                        "onsets_button": 0.0,
                         "release": 621.6512490449802,
+                        "resetMarkers_button": 0.0,
                         "snapToNIGrid": 1.0,
                         "snapToNIGrid_parameter": 1.0,
                         "snapToNIGrid_parameter[1]": 1.0,
                         "sustain": 0.4,
                         "synth": -15.998425196850391,
                         "blob": {
+                            "buffer": [ "loop1" ],
                             "dict": [
                                 {
                                     "env": [ 0, 1, 0, 0.166666666666667, 0.306451612903226, -0.6, 0.333333333333333, 0.435483870967742, 0, 0.5, 0.919354838709677, 0.7, 0.666666666666667, 0.370967741935484, 0.75, 0.833333333333333, 0.580645161290323, 0, 0.921093789284997, 0.12930019167356, 0, 1, 1, 0.8 ],
@@ -1481,7 +1485,7 @@
                             "zoom": [ 1.0 ],
                             "zoom[1]": [ 1.0 ],
                             "asGrid": [ 0.2, 3, 5 ],
-                            "asGrid[1]": [ 0.0, 0, 5 ]
+                            "asGrid[1]": [ 0.4, 0, 5 ]
                         }
                     }
                 }
@@ -1537,15 +1541,15 @@
                                     "mute": 0.0,
                                     "niRotation": 0.0,
                                     "offset": 0.0,
-                                    "onset_threshold": 0.204724409448819,
-                                    "onsets_button": 0.0,
                                     "release": 621.6512490449802,
+                                    "resetMarkers_button": 0.0,
                                     "snapToNIGrid": 1.0,
                                     "snapToNIGrid_parameter": 1.0,
                                     "snapToNIGrid_parameter[1]": 1.0,
                                     "sustain": 0.4,
                                     "synth": -15.998425196850391,
                                     "blob": {
+                                        "buffer": [ "loop1" ],
                                         "dict": [
                                             {
                                                 "env": [ 0, 1, 0, 0.166666666666667, 0.306451612903226, -0.6, 0.333333333333333, 0.435483870967742, 0, 0.5, 0.919354838709677, 0.7, 0.666666666666667, 0.370967741935484, 0.75, 0.833333333333333, 0.580645161290323, 0, 0.921093789284997, 0.12930019167356, 0, 1, 1, 0.8 ],
@@ -1634,7 +1638,7 @@
                                         "zoom": [ 1.0 ],
                                         "zoom[1]": [ 1.0 ],
                                         "asGrid": [ 0.2, 3, 5 ],
-                                        "asGrid[1]": [ 0.0, 0, 5 ]
+                                        "asGrid[1]": [ 0.4, 0, 5 ]
                                     }
                                 }
                             }
@@ -1667,14 +1671,13 @@
                                     "Noise F range": 0.0,
                                     "Q": 0.0,
                                     "Q range": 0.0,
-                                    "S": 0.5,
+                                    "S": 0.417322834645669,
                                     "Skew": 0.0,
                                     "Skew range": -1.0,
                                     "Target": 5.0,
                                     "ampCurve": 1.837330970368344,
                                     "attack": 208.00838230519045,
                                     "chans_parameter": 64.0,
-                                    "clear_markers": 0.0,
                                     "decay": 1216.44039911468,
                                     "envCurve": 3.692361919836229,
                                     "filter": 4.886980447917325,
@@ -1696,15 +1699,15 @@
                                     "mute": 0.0,
                                     "niRotation": 0.0,
                                     "offset": 0.0,
-                                    "onset_threshold": 0.204724409448819,
-                                    "onsets_button": 0.0,
                                     "release": 621.6512490449802,
+                                    "resetMarkers_button": 0.0,
                                     "snapToNIGrid": 1.0,
                                     "snapToNIGrid_parameter": 1.0,
                                     "snapToNIGrid_parameter[1]": 1.0,
                                     "sustain": 0.4,
                                     "synth": -25.200000000000003,
                                     "blob": {
+                                        "buffer": [ "loop1" ],
                                         "dict": [
                                             {
                                                 "env": [ 0.0, 1.0, 0.0, 0.166666666666667, 0.306451612903226, -0.6, 0.333333333333333, 0.435483870967742, 0.0, 0.5, 0.919354838709677, 0.7, 0.666666666666667, 0.370967741935484, 0.75, 0.833333333333333, 0.580645161290323, 0.0, 1.0, 1.0, 0.8 ],
@@ -1789,7 +1792,7 @@
                                             }
                                         ],
                                         "title": [ "Bass Synth" ],
-                                        "title[2]": [ "Drum loop" ],
+                                        "title[1]": [ "FlowSwing" ],
                                         "zoom": [ 1.0 ],
                                         "zoom[1]": [ 1.0 ],
                                         "asGrid": [ 0.0, 0, 4 ],
@@ -1826,14 +1829,13 @@
                                     "Noise F range": 0.0,
                                     "Q": 0.0,
                                     "Q range": 0.0,
-                                    "S": 0.204724409448819,
+                                    "S": 0.0,
                                     "Skew": 0.0,
                                     "Skew range": -1.0,
                                     "Target": 5.0,
                                     "ampCurve": 1.837330970368344,
                                     "attack": 208.00838230519045,
                                     "chans_parameter": 64.0,
-                                    "clear_markers": 0.0,
                                     "decay": 1216.44039911468,
                                     "envCurve": 3.692361919836229,
                                     "filter": 4.886980447917325,
@@ -1855,15 +1857,15 @@
                                     "mute": 0.0,
                                     "niRotation": 0.0,
                                     "offset": 0.0,
-                                    "onset_threshold": 0.204724409448819,
-                                    "onsets_button": 0.0,
                                     "release": 621.6512490449802,
+                                    "resetMarkers_button": 0.0,
                                     "snapToNIGrid": 1.0,
                                     "snapToNIGrid_parameter": 1.0,
                                     "snapToNIGrid_parameter[1]": 1.0,
                                     "sustain": 0.4,
                                     "synth": -20.53333333333333,
                                     "blob": {
+                                        "buffer": [ "loop1" ],
                                         "dict": [
                                             {
                                                 "env": [ 0.0, 1.0, 0.0, 0.166666666666667, 0.306451612903226, -0.6, 0.333333333333333, 0.435483870967742, 0.0, 0.5, 0.919354838709677, 0.7, 0.666666666666667, 0.370967741935484, 0.75, 0.833333333333333, 0.580645161290323, 0.0, 1.0, 1.0, 0.8 ],
@@ -1948,7 +1950,7 @@
                                             }
                                         ],
                                         "title": [ "Bass Synth" ],
-                                        "title[2]": [ "Drum loop" ],
+                                        "title[1]": [ "FlowSwing" ],
                                         "zoom": [ 1.0 ],
                                         "zoom[1]": [ 1.0 ],
                                         "asGrid": [ 0.0, 0, 4 ],
