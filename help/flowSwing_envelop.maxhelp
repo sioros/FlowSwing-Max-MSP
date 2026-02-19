@@ -4,7 +4,7 @@
         "appversion": {
             "major": 9,
             "minor": 1,
-            "revision": 0,
+            "revision": 2,
             "architecture": "x64",
             "modernui": 1
         },
@@ -13,6 +13,7 @@
         "showrootpatcherontab": 0,
         "showontab": 0,
         "helpsidebarclosed": 1,
+        "integercoordinates": 1,
         "boxes": [
             {
                 "box": {
@@ -25,13 +26,14 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 100.0, 126.0, 1128.0, 676.0 ],
+                        "rect": [ 0.0, 26.0, 1128.0, 676.0 ],
                         "showontab": 1,
+                        "integercoordinates": 1,
                         "boxes": [
                             {
                                 "box": {
@@ -59,7 +61,7 @@
                                         }
                                     },
                                     "text": "2",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -99,7 +101,7 @@
                                         }
                                     },
                                     "text": "1",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -306,12 +308,13 @@
                                         "appversion": {
                                             "major": 9,
                                             "minor": 1,
-                                            "revision": 0,
+                                            "revision": 2,
                                             "architecture": "x64",
                                             "modernui": 1
                                         },
                                         "classnamespace": "box",
                                         "rect": [ 54.0, 140.0, 683.0, 720.0 ],
+                                        "integercoordinates": 1,
                                         "boxes": [
                                             {
                                                 "box": {
@@ -592,7 +595,7 @@
                             },
                             {
                                 "box": {
-                                    "activebgcolor": [ 0.175, 0.175, 0.175, 1.0 ],
+                                    "activebgcolor": [ 0.125, 0.125, 0.125, 1.0 ],
                                     "id": "obj-27",
                                     "maxclass": "live.numbox",
                                     "numinlets": 1,
@@ -747,13 +750,14 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
                         "rect": [ 0.0, 26.0, 1128.0, 676.0 ],
                         "showontab": 1,
+                        "integercoordinates": 1,
                         "boxes": [
                             {
                                 "box": {
@@ -791,7 +795,7 @@
                                         }
                                     },
                                     "text": "2",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -831,7 +835,7 @@
                                         }
                                     },
                                     "text": "1",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -968,12 +972,13 @@
                                         "appversion": {
                                             "major": 9,
                                             "minor": 1,
-                                            "revision": 0,
+                                            "revision": 2,
                                             "architecture": "x64",
                                             "modernui": 1
                                         },
                                         "classnamespace": "box",
                                         "rect": [ 466.0, 232.0, 553.0, 439.0 ],
+                                        "integercoordinates": 1,
                                         "boxes": [
                                             {
                                                 "box": {
@@ -1207,12 +1212,13 @@
                                         "appversion": {
                                             "major": 9,
                                             "minor": 1,
-                                            "revision": 0,
+                                            "revision": 2,
                                             "architecture": "x64",
                                             "modernui": 1
                                         },
                                         "classnamespace": "box",
                                         "rect": [ 111.0, 140.0, 645.0, 720.0 ],
+                                        "integercoordinates": 1,
                                         "boxes": [
                                             {
                                                 "box": {
@@ -1879,7 +1885,7 @@
                             },
                             {
                                 "box": {
-                                    "activebgcolor": [ 0.175, 0.175, 0.175, 1.0 ],
+                                    "activebgcolor": [ 0.125, 0.125, 0.125, 1.0 ],
                                     "id": "obj-27",
                                     "maxclass": "live.numbox",
                                     "numinlets": 1,
@@ -2042,13 +2048,14 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
                         "rect": [ 0.0, 26.0, 1128.0, 676.0 ],
                         "showontab": 1,
+                        "integercoordinates": 1,
                         "boxes": [],
                         "lines": [],
                         "toolbaradditions": [ "audiomute", "audiosolo" ]
@@ -2069,14 +2076,37 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 0.0, 26.0, 1128.0, 676.0 ],
+                        "rect": [ 100.0, 126.0, 1128.0, 676.0 ],
                         "showontab": 1,
+                        "integercoordinates": 1,
                         "boxes": [
+                            {
+                                "box": {
+                                    "id": "obj-26",
+                                    "linecount": 3,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 940.0, 341.0, 150.0, 48.0 ],
+                                    "text": "Beats that do not shift with S are highlighed in the envelop display"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-23",
+                                    "linecount": 2,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 940.0, 276.0, 150.0, 34.0 ],
+                                    "text": "Long beats are highlighted in the NI Grid display"
+                                }
+                            },
                             {
                                 "box": {
                                     "bgcolor": [ 0.956590352327427, 0.76614891786161, 0.452834090916593, 1.0 ],
@@ -2103,7 +2133,7 @@
                                         }
                                     },
                                     "text": "5",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -2143,7 +2173,7 @@
                                         }
                                     },
                                     "text": "1",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -2366,12 +2396,13 @@
                                         "appversion": {
                                             "major": 9,
                                             "minor": 1,
-                                            "revision": 0,
+                                            "revision": 2,
                                             "architecture": "x64",
                                             "modernui": 1
                                         },
                                         "classnamespace": "box",
                                         "rect": [ 54.0, 140.0, 683.0, 720.0 ],
+                                        "integercoordinates": 1,
                                         "boxes": [
                                             {
                                                 "box": {
@@ -2849,12 +2880,13 @@
                                         "appversion": {
                                             "major": 9,
                                             "minor": 1,
-                                            "revision": 0,
+                                            "revision": 2,
                                             "architecture": "x64",
                                             "modernui": 1
                                         },
                                         "classnamespace": "box",
                                         "rect": [ 59.0, 107.0, 370.0, 373.0 ],
+                                        "integercoordinates": 1,
                                         "boxes": [
                                             {
                                                 "box": {
@@ -2988,7 +3020,7 @@
                                     "numinlets": 1,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 940.0, 284.0, 135.0, 22.0 ],
+                                    "patching_rect": [ 909.0, 520.0, 135.0, 22.0 ],
                                     "priority": {
                                         "flowSwing_envelop::S": 2,
                                         "flowSwing_envelop::breakpoints": 3,
@@ -3011,7 +3043,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 940.0, 313.0, 150.0, 89.0 ],
+                                    "patching_rect": [ 909.0, 549.0, 150.0, 89.0 ],
                                     "text": "The Flow Swing patches  are pattr enabled. The right most inlets and outlets can be used to dirrectly set and get all settings."
                                 }
                             },
@@ -3063,7 +3095,7 @@
                                         }
                                     },
                                     "text": "4",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -3092,7 +3124,7 @@
                                         }
                                     },
                                     "text": "3",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -3121,7 +3153,7 @@
                                         }
                                     },
                                     "text": "2",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -3205,7 +3237,7 @@
                             },
                             {
                                 "box": {
-                                    "activebgcolor": [ 0.175, 0.175, 0.175, 1.0 ],
+                                    "activebgcolor": [ 0.125, 0.125, 0.125, 1.0 ],
                                     "id": "obj-27",
                                     "maxclass": "live.numbox",
                                     "numinlets": 1,
@@ -3298,12 +3330,13 @@
                                         "appversion": {
                                             "major": 9,
                                             "minor": 1,
-                                            "revision": 0,
+                                            "revision": 2,
                                             "architecture": "x64",
                                             "modernui": 1
                                         },
                                         "classnamespace": "box",
                                         "rect": [ 190.0, 145.0, 544.0, 625.0 ],
+                                        "integercoordinates": 1,
                                         "boxes": [
                                             {
                                                 "box": {
@@ -3916,6 +3949,14 @@
             "obj-2::obj-1::obj-91": [ "hold[2]", "hold", 0 ],
             "obj-2::obj-27": [ "Duration[2]", "duration", 0 ],
             "obj-2::obj-8::obj-35": [ "min gate duration[1]", "min gate duration", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "parameter_overrides": {
                 "obj-1::obj-1::obj-114": {
                     "parameter_longname": "clear_breakpoints[3]"

@@ -5,7 +5,7 @@
 inlets = 5;
 outlets = 1;
 
-S = 0;
+var S = 0;
 var markers = [];
 var grid = [];
 var indx = [];
@@ -17,25 +17,25 @@ function list(...elements)
 	if (inlet == 3)
 	{
 		markers = [];
-		for (i=0; i<elements.length; i++)
+		for (let i=0; i<elements.length; i++)
 			markers[i] = elements[i];
 		
 	}else if (inlet == 4)
 	{
 		grid = [];
-		for (i=0; i<elements.length; i++)
+		for (let i=0; i<elements.length; i++)
 			grid[i] = elements[i];
 
 	}else if (inlet == 2)
 	{
 		order = [];
-		for (i=0; i<elements.length; i++)
+		for (let i=0; i<elements.length; i++)
 			order[i] = elements[i];
 
 	}else if (inlet == 1)
 	{
 		indx = [];
-		for (i=0; i<elements.length; i++)
+		for (let i=0; i<elements.length; i++)
 			indx[i] = elements[i];
 
 	}
@@ -54,11 +54,8 @@ function msg_float(f)
 
 function bang()
 {
-	if (typeof markers === 'undefined' || typeof markers === null ||
-		typeof grid === 'undefined' || typeof grid === null ||
-		typeof indx === 'undefined' || typeof indx === null ||
-		typeof order === 'undefined' || typeof order === null)
-				return;	
+    if (markers == null || grid == null || indx == null || order == null)
+        return;	
 	
 	shiftMarkers();
 	outlet(0, new_marker_positions);
@@ -68,9 +65,11 @@ function bang()
 
 
 function shiftMarkers() {
+	if (markers.length === 0 || markers.length != order.length || markers.length != indx.length) 
+		return;
     new_marker_positions = new Array(markers.length).fill(0);
-	shift = S;
-	xShift = 0;
+	var shift = S;
+	var xShift = 0;
     if (shift>1.)
 	{
 		xShift = shift - 1.;
@@ -79,7 +78,7 @@ function shiftMarkers() {
 	
     // First shift the markers for which the order is 0
     for (let i = 0; i < markers.length; i++) {
-        if (order[i] === 0) {
+        if (order[i] === 0 && indx[i] < grid.length) {
             new_marker_positions[i] = (1-shift) * markers[i] + shift * grid[indx[i]];
         }
     }
@@ -118,9 +117,9 @@ function shiftMarkers() {
 	if (xShift > 0)
 	{
 		
-		for (i=0; i< markers.length; i++) 
+		for (let i=0; i< markers.length; i++) 
 		{
-     		if (order[i] !== 0) {
+     		if (order[i] !== 0 && indx[i] < grid.length) {
             	new_marker_positions[i] = (1-xShift) * new_marker_positions[i] + xShift * grid[indx[i]];
         	}			
 		}

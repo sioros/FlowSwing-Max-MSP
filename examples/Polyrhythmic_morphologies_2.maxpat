@@ -120,7 +120,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 419.5, 580.0, 67.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 359.0, 560.0, 67.0, 15.0 ],
+                    "presentation_rect": [ 439.0, 560.0, 67.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_initial": [ 110 ],
@@ -148,7 +148,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 168.50000000000003, 571.0, 67.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 359.0, 322.0, 67.0, 15.0 ],
+                    "presentation_rect": [ 439.0, 322.0, 67.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_initial": [ 110 ],
@@ -830,7 +830,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 401.0, 695.0, 53.0, 72.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 436.0, 551.0, 67.0, 121.0 ],
+                    "presentation_rect": [ 511.0, 551.0, 67.0, 121.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_longname": "pattern 2 gain",
@@ -856,7 +856,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 149.0, 699.0, 53.0, 72.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 436.0, 320.0, 67.0, 121.0 ],
+                    "presentation_rect": [ 511.0, 320.0, 67.0, 121.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_longname": "pattern 1 gain",
@@ -1412,6 +1412,9 @@
             "obj-51": [ "CPM", "CPM", 0 ],
             "obj-56": [ "rewind", "rewind", 0 ],
             "obj-8::obj-15": [ "Noise A", "Noise A", 0 ],
+            "obj-8::obj-164": [ "Target_div", "Target_div", 0 ],
+            "obj-8::obj-165": [ "Formative_div", "Formative_div", 0 ],
+            "obj-8::obj-174": [ "S_div", "S_div", 0 ],
             "obj-8::obj-19": [ "Skew range", "Skew_range", 0 ],
             "obj-8::obj-20": [ "Noise F range", "NFrange", 0 ],
             "obj-8::obj-21": [ "Noise A range", "NArange", 0 ],
@@ -1428,6 +1431,9 @@
             "obj-8::obj-8": [ "Noise F", "Noise F", 0 ],
             "obj-8::obj-96": [ "envCurve", "envCurve", 0 ],
             "obj-9::obj-15": [ "Noise A[1]", "Noise A", 0 ],
+            "obj-9::obj-164": [ "Target_div[1]", "Target_div", 0 ],
+            "obj-9::obj-165": [ "Formative_div[1]", "Formative_div", 0 ],
+            "obj-9::obj-174": [ "S_div[1]", "S_div", 0 ],
             "obj-9::obj-19": [ "Skew range[1]", "Skew_range", 0 ],
             "obj-9::obj-20": [ "Noise F range[1]", "NFrange", 0 ],
             "obj-9::obj-21": [ "Noise A range[1]", "NArange", 0 ],
@@ -1443,14 +1449,6 @@
             "obj-9::obj-77": [ "release[1]", "release", 0 ],
             "obj-9::obj-8": [ "Noise F[1]", "Noise F", 0 ],
             "obj-9::obj-96": [ "envCurve[1]", "envCurve", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "parameter_overrides": {
                 "obj-1::obj-253": {
                     "parameter_longname": "rescale"
@@ -1520,6 +1518,15 @@
                 },
                 "obj-9::obj-15": {
                     "parameter_longname": "Noise A[1]"
+                },
+                "obj-9::obj-164": {
+                    "parameter_longname": "Target_div[1]"
+                },
+                "obj-9::obj-165": {
+                    "parameter_longname": "Formative_div[1]"
+                },
+                "obj-9::obj-174": {
+                    "parameter_longname": "S_div[1]"
                 },
                 "obj-9::obj-19": {
                     "parameter_longname": "Skew range[1]"

@@ -22,71 +22,96 @@ function list(...elements)
 	if (inlet == 0)
 	{
 		markers = [];
-		for (i=0; i<elements.length; i++)
+		for (var i=0; i<elements.length; i++)
 			markers[i] = elements[i];
 		
 		bang();	
 	}else
 	{
 		grid = [];
-		for (i=0; i<elements.length; i++)
+		for (var i=0; i<elements.length; i++)
 			grid[i] = elements[i];
 
 	}
 }
 
-function bang()
-{
-	if (typeof markers === 'undefined' || typeof markers === null ||
-		typeof grid === 'undefined' || typeof grid === null)
-		return;
-	quantise();
+function bang() {
+    // robust guard
+    if (!Array.isArray(markers) || !Array.isArray(grid) ||
+        markers.length === 0 || grid.length === 0) {
+		// output empty (often nicer in Max patches?):
+        //outlet(1, []);
+       // outlet(0, []);
+        return;
+    }
 
-	outlet(1, order);
-	outlet(0, indx);
-	
+    try {
+        quantise();
+        outlet(1, order);
+        outlet(0, indx);
+    } catch (e) {
+        // prevent uncaught exceptions from taking the JS down
+      //  post("quantise error: " + e + "\n");
+    }
 }
 
-
-function quantise() 
-{
+function quantise() {
     const L_m = markers.length;
     const L_g = grid.length;
-    
-    // Initialize indx, order, and distances arrays
-    indx = new Array(L_m).fill(0);
+
+    indx = new Array(L_m).fill(-1);
     order = new Array(L_m).fill(0);
-    const distances = new Array(L_m).fill(0);
-    
-    // Calculate distances and find nearest grid locations
+    const distances = new Array(L_m).fill(Infinity);
+
+    // (optional) numeric coercion
+    // If we *know* everything is numeric already, we can remove these two lines.
+    const m = markers.map(v => Number(v));
+    const g = grid.map(v => Number(v));
+
+    // nearest grid for each marker
     for (let i = 0; i < L_m; i++) {
+        if (!Number.isFinite(m[i])) continue;
+
         let minDif = Infinity;
         let minIndx = -1;
 
         for (let j = 0; j < L_g; j++) {
-            const dif = Math.abs(markers[i] - grid[j]);
+            if (!Number.isFinite(g[j])) continue;
+
+            const dif = Math.abs(m[i] - g[j]);
+
             if (dif < minDif - EPS) {
                 minDif = dif;
                 minIndx = j;
-            } else if (Math.abs(dif - minDif) < EPS && j > minIndx) {
-                // Tie-breaker: prefer next grid point
+            } else if (i>0 && Math.abs(dif - minDif) < EPS && j > minIndx) {
+                // tie-breaker: prefer higher index for all breakpoints except the first one
                 minIndx = j;
             }
         }
+
         indx[i] = minIndx;
         distances[i] = minDif;
     }
-    // Determine the order of markers quantised to the same grid location
-    for (let j = 0; j < L_g; j++) {
-        const ss = indx.map((val, idx) => val === j ? idx : -1).filter(idx => idx !== -1);
-        if (ss.length > 0) {
-            const ssDistances = ss.map(idx => distances[idx]);
-            const sortedIndices = ssDistances.map((val, idx) => idx).sort((a, b) => ssDistances[a] - ssDistances[b]);
-            for (let k = 0; k < sortedIndices.length; k++) {
-                order[ss[sortedIndices[k]]] = k;
-            }
+
+    // bucket markers by chosen grid index
+    const buckets = new Map();
+    for (let i = 0; i < L_m; i++) {
+        const j = indx[i];
+        if (j < 0) continue;
+        let arr = buckets.get(j);
+        if (!arr) {
+            arr = [];
+            buckets.set(j, arr);
         }
+        arr.push(i);
     }
 
-    
+    // assign order within each bucket (closest gets 0)
+    for (const [j, arr] of buckets.entries()) {
+        arr.sort((a, b) => (distances[a] - distances[b]) || (a - b));
+        for (let k = 0; k < arr.length; k++) {
+            order[arr[k]] = k;
+        }
+    }
 }
+

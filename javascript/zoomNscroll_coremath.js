@@ -35,16 +35,19 @@ function width(w) {
 }
 
 // Set current view (normalized):   view 0.1 0.6
-function view(a, b) {
+function setview(a, b) {
     var x0 = +a, x1 = +b;
     if (isNaN(x0) || isNaN(x1)) return;
     if (x1 < x0) { var t = x0; x0 = x1; x1 = t; }
     x0 = clamp(x0, 0, 1);
     x1 = clamp(x1, 0, 1);
     xmin = x0; xmax = x1;
-    emit_view();
 }
 
+function view(a,b) {
+    setview(a, b);
+    emit_view();
+}
 // Optional: set zoom sensitivity (natural units per pixel)
 // Example: zoomrate 0.00693  => ~2× per 100 px (default)
 function zoomrate(zr) {
@@ -69,7 +72,7 @@ function mousedown(x_px) {
 }
 
 // Drag deltas in pixels since last event:   drag dx dy
-// Positive dy => zoom OUT (less magnification). Flip sign if you prefer.
+// Positive dy => zoom OUT (less magnification). Flip sign for opposite behaviour.
 function drag(dx_px, dy_px) {
     if (!dragging) return;
 

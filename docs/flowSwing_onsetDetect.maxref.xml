@@ -131,6 +131,7 @@ See license.md file in the project root for full license information.
 	<seealsolist>
 		<seealso name="flowSwing_audioWarp" />
 		<seealso name="fluid.bufonsetslice~" />
+		<seealso name='buffer~' />
 
 	</seealsolist>
 	<!--INLETS/OUTLETS-->

@@ -54,31 +54,6 @@
             },
             {
                 "box": {
-                    "arrows": 2,
-                    "id": "obj-10",
-                    "maxclass": "live.line",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 121.0, 254.0, 113.0, 20.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 91.0, 269.0, 113.0, 20.0 ]
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-11",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 25.0, 246.0, 94.0, 20.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 29.0, 261.0, 60.0, 20.0 ],
-                    "text": "Onsets",
-                    "textjustification": 2
-                }
-            },
-            {
-                "box": {
                     "id": "obj-30",
                     "maxclass": "live.numbox",
                     "numinlets": 1,
@@ -228,7 +203,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 238.0, 478.0, 26.0, 50.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 855.0, 333.0, 26.0, 104.0 ],
+                    "presentation_rect": [ 824.0, 333.0, 26.0, 84.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_initial": [ -70.0 ],
@@ -298,16 +273,17 @@
             },
             {
                 "box": {
+                    "fontface": 2,
                     "fontsize": 14.0,
                     "id": "obj-22",
                     "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 20.0, 665.0, 850.0, 39.0 ],
+                    "patching_rect": [ 20.0, 665.0, 852.0, 39.0 ],
                     "presentation": 1,
                     "presentation_linecount": 2,
-                    "presentation_rect": [ 20.0, 650.0, 850.0, 39.0 ],
+                    "presentation_rect": [ 20.0, 650.0, 852.0, 39.0 ],
                     "text": "Toussaint, G. T. (2005). The Euclidean algorithm generates traditional musical rhythms. Proceedings of BRIDGES: Mathematical Connections in Art, Music and Science, 47–56."
                 }
             },
@@ -1171,7 +1147,9 @@
             "obj-20::obj-199": [ "resetNIGrid", "resetNIGrid", 0 ],
             "obj-20::obj-22": [ "lock", "lock", 0 ],
             "obj-20::obj-242": [ "resetNIGrid[1]", "resetNIGrid", 0 ],
-            "obj-20::obj-253": [ "rescale", "rescale", 0 ],
+            "obj-20::obj-253": [ "rescale", "rescaleT_menu", 0 ],
+            "obj-20::obj-272": [ "rescaleY_menu", "rescaleY_menu", 0 ],
+            "obj-20::obj-275": [ "Generate_breakpoints_menu", "Generate_breakpoints_menu", 0 ],
             "obj-20::obj-42": [ "morph", "morph", 0 ],
             "obj-20::obj-45": [ "S", "S", 1 ],
             "obj-20::obj-47": [ "offset", "offset", 0 ],
@@ -1179,7 +1157,6 @@
             "obj-20::obj-50": [ "Formative", "Formative", 0 ],
             "obj-20::obj-51": [ "Target", "Target", 0 ],
             "obj-20::obj-66": [ "live.menu[1]", "live.menu", 0 ],
-            "obj-20::obj-68": [ "clear_breakpoints[1]", "clear_breakpoints", 0 ],
             "obj-20::obj-90": [ "secondary_S_control", "secondary_S_control", 0 ],
             "obj-20::obj-91": [ "hold", "hold", 0 ],
             "obj-23": [ "bass", "bass", 0 ],
@@ -1190,6 +1167,11 @@
                     "name": "",
                     "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
                     "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
+            "parameter_overrides": {
+                "obj-20::obj-253": {
+                    "parameter_longname": "rescale"
                 }
             },
             "inherited_shortname": 1
@@ -1207,27 +1189,27 @@
             "snapshot": {
                 "valuedictionary": {
                     "parameter_values": {
-                        "Formative": 3.0,
-                        "Target": 8.0,
+                        "Formative": 5.0,
+                        "Target": 2.0,
                         "chans_parameter": 64.0,
                         "firstChannel_parameter": 1.0,
                         "hold": 0.0,
                         "lock": 1.0,
                         "morph": 1.0,
                         "mute": 0.0,
-                        "niRotation": 3.0,
+                        "niRotation": 0.0,
                         "offset": 0.0,
                         "snapToNIGrid_parameter": 1.0,
-                        "speed": 0.8,
-                        "S": 1.0,
+                        "speed": 1.66,
+                        "S": 0.16,
                         "blob": {
                             "title": [ "FlowSwing" ],
                             "zoom": [ 1.0 ],
-                            "asGrid": [ 1.0, 3, 8 ],
+                            "asGrid": [ 0.16, 0, 2 ],
                             "breakpoints": [
                                 {
-                                    "mute": [ 0, 0, 0, 0 ],
-                                    "env": [ 0.0, 1.0, 0.0, 0.375, 1.0, 0.0, 0.75, 0.6667, 0.0, 1.0, 1.0, 0.0 ]
+                                    "mute": [ 0, 0, 0, 0, 0 ],
+                                    "env": [ 0, 1, 0, 0.248, 0.6774, 0, 0.416, 0.3728813559322034, 0, 0.6639999999999999, 0.6774, 0, 1, 1, 0 ]
                                 }
                             ]
                         }
@@ -1235,7 +1217,7 @@
                 }
             },
             "snapshotlist": {
-                "current_snapshot": 3,
+                "current_snapshot": 0,
                 "entries": [
                     {
                         "filetype": "C74Snapshot",

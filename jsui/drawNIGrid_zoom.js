@@ -47,9 +47,9 @@ var target = [];
 var markers = [];
 var markers_max = [];
 
-// New: explicit highlight list + fast lookup map
+// explicit highlight list + fast lookup map
 var ni_high_idx = [];      // list of indices to highlight
-var ni_high_map = null;    // object used as a set for O(1) membership
+var ni_high_map = null;    // object used as a set for membership
 
 function list() {
     var a = arrayfromargs(arguments);
@@ -126,11 +126,17 @@ function zoom_x() {
 // Map normalized x in [0,1] -> screen x in [-1,1], applying zoom and margin
 function mapX(x01) {
     var span = zoom[1] - zoom[0];
-    if (span <= 1e-9) span = 1e-9; // avoid division by zero
+    if (span <= 1e-9) span = 1e-9; 	// avoid division by zero
     var xn = (x01 - zoom[0]) / span;    // remap to [0,1] window
     var x2 = (xn * 2.0) - 1.0;          // -> [-1,1]
     x2 = x2 * (1 - hmargin);            // apply horizontal margin
     return x2;
+}
+// check if an array position contains a valid number. 
+function numAt(arr, i) {
+    if (!arr || i < 0 || i >= arr.length) return null;
+    var v = +arr[i];
+    return isFinite(v) ? v : null;
 }
 
 // New: set explicit highlight indices (message: "highlight 0 2 5 7")
@@ -163,12 +169,14 @@ function isHighlighted(i) {
 function draw() {
     var w = box.rect[2] - box.rect[0];
     var h = box.rect[3] - box.rect[1];
+	if (h<=0) return;
     var asp = w / h;
     sketch.shapeslice(180, 1);
     sketch.glclearcolor(color_bg[0], color_bg[1], color_bg[2], color_bg[3]);
     sketch.glclear();
 
     var totalLength = 2*pulseLength + 2*connectorLength + NILength;
+	if (totalLength <= 0) return;
     var yratio = 2 / totalLength;
     var y_top = 1.0;
     var y_after_pulse = y_top - pulseLength * yratio;
@@ -182,60 +190,92 @@ function draw() {
     sketch.quad(-asp, 1, 0,  asp, 1, 0,  asp, y_after_pulse, 0,  -asp, y_after_pulse, 0);
     sketch.quad(-asp, y_target_top, 0, asp, y_target_top, 0, asp, -1, 0, -asp, -1, 0);
 
-    // Main NI Grid drawing
-    var N = ni.length; //Math.min(formative.length, ni.length, ni_s1.length);
-    for (var i = 0; i < N; i++) {
-        var xF = mapX(formative[i]);
-        var xNI = mapX(ni[i]);
-        var xNI1 = mapX(ni_s1[i]);
+	// Main NI Grid drawing (draw whatever is available)
+	var lenF  = (formative && formative.length) ? formative.length : 0;
+	var lenNI = (ni && ni.length) ? ni.length : 0;
+	var lenN1 = (ni_s1 && ni_s1.length) ? ni_s1.length : 0;
 
-        // Formative pulse
-        sketch.glcolor(color_pulse);
-        sketch.gllinewidth(pulseWidth);
-        sketch.moveto(xF * asp, y_top);
-        sketch.lineto(xF * asp, y_after_pulse);
+	var N = Math.max(lenF, lenNI, lenN1);
 
-        // Connector to NI
-        sketch.glcolor(color_connectors);
-        sketch.gllinewidth(connectorWidth);
-        sketch.moveto(xF * asp, y_after_pulse);
-        sketch.lineto(xNI * asp, y_after_conn1);
+	for (var i = 0; i < N; i++) {
+		var f  = numAt(formative, i);
+		var n  = numAt(ni, i);
+		var n1 = numAt(ni_s1, i);
 
-        // NI pulse (highlighted vs low)
-        if (isHighlighted(i))
-            sketch.glcolor(color_ni);
-        else
-            sketch.glcolor(color_ni_low);
-		
-        sketch.gllinewidth(NIWidth);
-        sketch.moveto(xNI * asp, y_after_conn1);
-        sketch.lineto(xNI * asp, y_after_NI);
+		var xF, xNI, xNI1;
 
-        // Connector to NI_s1
-        sketch.glcolor(color_connectors);
-        sketch.gllinewidth(connectorWidth);
-        sketch.moveto(xNI * asp, y_after_NI);
-        sketch.lineto(xNI1 * asp, y_target_top);
-    }
+		// Formative pulse (needs formative[i])
+		if (f !== null) {
+			xF = mapX(f);
+			sketch.glcolor(color_pulse);
+			sketch.gllinewidth(pulseWidth);
+			sketch.moveto(xF * asp, y_top);
+			sketch.lineto(xF * asp, y_after_pulse);
+		}
+
+		// Connector Formative -> NI (needs both)
+		if (f !== null && n !== null) {
+			xF = mapX(f);
+			xNI = mapX(n);
+			sketch.glcolor(color_connectors);
+			sketch.gllinewidth(connectorWidth);
+			sketch.moveto(xF * asp, y_after_pulse);
+			sketch.lineto(xNI * asp, y_after_conn1);
+		}
+
+		// NI pulse (needs ni[i])
+		if (n !== null) {
+			xNI = mapX(n);
+			if (isHighlighted(i)) sketch.glcolor(color_ni);
+			else sketch.glcolor(color_ni_low);
+
+			sketch.gllinewidth(NIWidth);
+			sketch.moveto(xNI * asp, y_after_conn1);
+			sketch.lineto(xNI * asp, y_after_NI);
+		}
+
+		// Connector NI -> NI_s1 (needs both)
+		if (n !== null && n1 !== null) {
+			xNI = mapX(n);
+			xNI1 = mapX(n1);
+			sketch.glcolor(color_connectors);
+			sketch.gllinewidth(connectorWidth);
+			sketch.moveto(xNI * asp, y_after_NI);
+			sketch.lineto(xNI1 * asp, y_target_top);
+		}
+	}
+
 
     // Target pulse lines
     sketch.glcolor(color_pulse);
     sketch.gllinewidth(pulseWidth);
-    for (var j = 0; j < target.length; j++) {
-        var xT = mapX(target[j]);
-        sketch.moveto(xT * asp, y_target_top);
-        sketch.lineto(xT * asp, y_target_top - pulseLength * yratio);
+	var lenT = (target && target.length) ? target.length : 0;
+
+    for (var j = 0; j < lenT; j++) {
+		var t  = numAt(target, j);
+		if (t !== null) {
+			var xT = mapX(t);
+			sketch.moveto(xT * asp, y_target_top);
+			sketch.lineto(xT * asp, y_target_top - pulseLength * yratio);
+		}
     }
+	
+	var lenM = (markers && markers.length) ? markers.length : 0;
+	var lenMMax = (markers_max && markers_max.length) ? markers_max.length : 0;
 
     // Marker lines
-    if (markers.length > 0 && markers.length === markers_max.length) {
+    if (lenM > 0 && lenM === lenMMax) {
         sketch.glcolor(color_markers);
         sketch.gllinewidth(connectorWidth);
         for (var m = 0; m < markers.length; m++) {
-            var x1 = mapX(markers[m]);
-            var x2 = mapX(markers_max[m]);
-            sketch.moveto(x1 * asp, 1);
-            sketch.lineto(x2 * asp, y_after_conn1);
+			var mark  = numAt(markers, m);
+			var mark_max  = numAt(markers_max, m);
+			if (mark !== null && mark_max!==null){
+				var x1 = mapX(mark);
+				var x2 = mapX(mark_max);
+				sketch.moveto(x1 * asp, 1);
+				sketch.lineto(x2 * asp, y_after_conn1);
+			}
         }
     }
 }

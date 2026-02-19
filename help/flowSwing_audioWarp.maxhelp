@@ -4,15 +4,16 @@
         "appversion": {
             "major": 9,
             "minor": 1,
-            "revision": 0,
+            "revision": 2,
             "architecture": "x64",
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 100.0, 100.0, 1109.0, 630.0 ],
+        "rect": [ 181.0, 181.0, 1109.0, 657.0 ],
         "showrootpatcherontab": 0,
         "showontab": 0,
         "helpsidebarclosed": 1,
+        "integercoordinates": 1,
         "boxes": [
             {
                 "box": {
@@ -25,13 +26,14 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 0.0, 26.0, 1109.0, 604.0 ],
+                        "rect": [ 0.0, 26.0, 1109.0, 631.0 ],
                         "showontab": 1,
+                        "integercoordinates": 1,
                         "boxes": [],
                         "lines": [],
                         "toolbaradditions": [ "audiomute", "audiosolo" ]
@@ -51,14 +53,37 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 100.0, 126.0, 1109.0, 604.0 ],
+                        "rect": [ 181.0, 207.0, 1109.0, 631.0 ],
                         "showontab": 1,
+                        "integercoordinates": 1,
                         "boxes": [
+                            {
+                                "box": {
+                                    "id": "obj-4",
+                                    "linecount": 3,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 931.0, 363.0, 153.0, 48.0 ],
+                                    "text": "Beats that do not shift with S are highlighed in the envelop display"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-14",
+                                    "linecount": 2,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 931.0, 298.0, 153.0, 34.0 ],
+                                    "text": "Long beats are highlighted in the NI Grid display"
+                                }
+                            },
                             {
                                 "box": {
                                     "id": "obj-9",
@@ -117,7 +142,7 @@
                                         }
                                     },
                                     "text": "6",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -157,7 +182,7 @@
                                         }
                                     },
                                     "text": "5",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -221,13 +246,14 @@
                                         "appversion": {
                                             "major": 9,
                                             "minor": 1,
-                                            "revision": 0,
+                                            "revision": 2,
                                             "architecture": "x64",
                                             "modernui": 1
                                         },
                                         "classnamespace": "box",
                                         "rect": [ 59.0, 107.0, 1000.0, 720.0 ],
                                         "subpatcher_template": "Grid_Toolbar",
+                                        "integercoordinates": 1,
                                         "boxes": [
                                             {
                                                 "box": {
@@ -400,12 +426,13 @@
                                         "appversion": {
                                             "major": 9,
                                             "minor": 1,
-                                            "revision": 0,
+                                            "revision": 2,
                                             "architecture": "x64",
                                             "modernui": 1
                                         },
                                         "classnamespace": "box",
                                         "rect": [ 59.0, 107.0, 1000.0, 720.0 ],
+                                        "integercoordinates": 1,
                                         "boxes": [
                                             {
                                                 "box": {
@@ -681,7 +708,7 @@
                                     "numinlets": 1,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 921.0, 280.0, 135.0, 22.0 ],
+                                    "patching_rect": [ 725.0, 463.0, 135.0, 22.0 ],
                                     "priority": {
                                         "flowSwing_audioWarp::S": 2,
                                         "flowSwing_audioWarp::markers": 3,
@@ -704,7 +731,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 921.0, 309.0, 150.0, 117.0 ],
+                                    "patching_rect": [ 725.0, 492.0, 150.0, 117.0 ],
                                     "text": "The Flow Swing patches  are pattr and snapshot enabled. The right most inlets and outlets can be used to dirrectly set and get all parameters and send messages to pattrhub."
                                 }
                             },
@@ -745,7 +772,7 @@
                                         }
                                     },
                                     "text": "4",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -774,7 +801,7 @@
                                         }
                                     },
                                     "text": "3",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -803,7 +830,7 @@
                                         }
                                     },
                                     "text": "2",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -844,7 +871,7 @@
                                         }
                                     },
                                     "text": "1",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -905,7 +932,7 @@
                             },
                             {
                                 "box": {
-                                    "activebgcolor": [ 0.175, 0.175, 0.175, 1.0 ],
+                                    "activebgcolor": [ 0.125, 0.125, 0.125, 1.0 ],
                                     "id": "obj-27",
                                     "maxclass": "live.numbox",
                                     "numinlets": 1,
@@ -1113,6 +1140,7 @@
             "obj-1::obj-1::obj-161": [ "asGrid", "asGrid", 1 ],
             "obj-1::obj-1::obj-19": [ "mute", "mute", 0 ],
             "obj-1::obj-1::obj-199": [ "resetNIGrid", "resetNIGrid", 0 ],
+            "obj-1::obj-1::obj-209": [ "zoom_y_control", "zoom_y_control", 0 ],
             "obj-1::obj-1::obj-22": [ "lock", "lock", 0 ],
             "obj-1::obj-1::obj-242": [ "resetNIGrid[1]", "resetNIGrid", 0 ],
             "obj-1::obj-1::obj-42": [ "morph", "morph", 0 ],
@@ -1127,14 +1155,6 @@
             "obj-1::obj-1::obj-91": [ "hold", "hold", 0 ],
             "obj-1::obj-2": [ "gswitch2", "printSwitch", 0 ],
             "obj-1::obj-27": [ "Duration", "duration", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0,

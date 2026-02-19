@@ -73,7 +73,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 99.0, 112.0, 106.0, 20.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 137.0, 72.13716867566109, 106.0, 20.0 ],
+                    "presentation_rect": [ 137.0, 87.0, 106.0, 20.0 ],
                     "text": "Control playback"
                 }
             },
@@ -86,7 +86,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 208.0, 665.0, 71.0, 20.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 21.0, 72.0, 71.0, 20.0 ],
+                    "presentation_rect": [ 21.0, 87.0, 71.0, 20.0 ],
                     "text": "Start audio"
                 }
             },
@@ -152,8 +152,9 @@
                     "numoutlets": 0,
                     "patching_rect": [ 21.0, 44.0, 467.0, 34.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 21.0, 44.0, 680.0, 20.0 ],
-                    "text": "This patch blends a 6-over-8 polyrhythm with quintuple timing. Adjust the value of S to explore different ‘polyrhythmic blends’."
+                    "presentation_linecount": 2,
+                    "presentation_rect": [ 21.0, 44.0, 680.0, 34.0 ],
+                    "text": "This patch blends a 6-over-8 polyrhythm with quintuple timing. Adjust the value of S and rotation configuration (R) to explore different ‘polyrhythmic blends’."
                 }
             },
             {
@@ -412,7 +413,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 196.0, 222.0, 44.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 291.0, 72.0, 44.0, 20.548674702644348 ],
+                    "presentation_rect": [ 291.0, 87.0, 44.0, 20.548674702644348 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
@@ -454,7 +455,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 35.0, 212.0, 44.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 245.0, 72.0, 44.0, 20.548674702644348 ],
+                    "presentation_rect": [ 245.0, 87.0, 44.0, 20.548674702644348 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": ""
@@ -957,7 +958,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 161.0, 665.0, 45.0, 45.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 94.0, 72.0, 20.274337351322174, 20.274337351322174 ]
+                    "presentation_rect": [ 94.0, 87.0, 20.274337351322174, 20.274337351322174 ]
                 }
             },
             {
@@ -1276,14 +1277,6 @@
             "obj-9::obj-77": [ "release", "release", 0 ],
             "obj-9::obj-8": [ "Noise F", "Noise F", 0 ],
             "obj-9::obj-96": [ "envCurve", "envCurve", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "parameter_overrides": {
                 "obj-12::obj-114": {
                     "parameter_longname": "clear_markers"

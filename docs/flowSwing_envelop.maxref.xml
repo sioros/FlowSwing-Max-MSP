@@ -283,7 +283,11 @@ See license.md file in the project root for full license information.
 	<seealsolist>
 		<seealso name="flowSwing_nested" />
 		<seealso name="flowSwing_audioWarp" />
+		<seealso name="flowSwing_subDiv" />
+		<seealso name="flowSwing_stepUI" />
 		<seealso name="flowSwing_noise" />
+		<seealso name="function" />
+
 	</seealsolist>
 	<!--INLETS/OUTLETS-->
 	<misc name="Inlets">

@@ -7,7 +7,7 @@ See license.md file in the project root for full license information.
 <c74object name='flowSwing.noise' category='FlowSwing'>
 	<digest>Synthesizer with tone-to-noise control and mc based polyphony</digest>
 	<description>
-		A flexible noise synthesizer with tone-to-noise control, skew shaping, and ADSR. Supports polyphony and sample-accurate timing via mc signals.
+		A flexible noise synthesizer with tone-to-noise control, Non-Isochronous detune, skew shaping, and ADSR. Supports polyphony and sample-accurate timing via mc signals.
 		<p>
 			<o>flowSwing.noise</o> is part of the FlowSwing package.
 		</p>
@@ -81,7 +81,37 @@ See license.md file in the project root for full license information.
 				<p>6th inlet: Filter cutoff frequency (Hz).</p>
 				<p>7th inlet: Filter resonance (-1. to 1).</p>
 			</description>
-		</method>		
+		</method>
+		<method name="Formative">
+			<arglist>
+				<arg name="Formative pulse of the NI detune subdivision" optional="0" type="int"/>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+				The Formative (F) pulse together with the Target (T) pulse and S parameter define a non-isochronous subdivision of the oscillator’s period. When F = 1 or S = 0, the subdivision is isochronous with no audible effect. For other values, the period is split into Long and Short segments, creating a detuning effect similar to frequency modulation (FM).
+			</description>
+		</method>
+		<method name="Target">
+			<arglist>
+				<arg name="Target pulse of the NI detune subdivision" optional="0" type="int"/>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+				See Formative message for a detailed description.
+			</description>
+		</method>
+		<method name="S">
+			<arglist>
+				<arg name="S parameter of the NI detune subdivision" optional="0" type="float"/>
+			</arglist>
+			<digest>
+			</digest>
+			<description>
+				See Formative message for a detailed description.
+			</description>
+		</method>
 		<method name="ampCurve">
 			<arglist>
 				<arg name="Amplitude sensitivity" optional="0" type="float"/>
@@ -221,7 +251,9 @@ See license.md file in the project root for full license information.
 	<!--RELATED-->
 	<seealsolist>
 		<seealso name="flowSwing_envelop" />
-		<seealso name="flowSwing_audioWarp" />
+		<seealso name="flowSwing_nested" />
+		<seealso name="flowSwing_subDiv" />
+		<seealso name="flowSwing_stepUI" />
 	</seealsolist>
 	<!--INLETS/OUTLETS-->
 	<misc name="Inlets">

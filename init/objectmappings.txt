@@ -29,3 +29,6 @@ max definesubstitution flowSwing.stepUI bpatcher @name flowSwing_stepUI;
 
 max objectfile  flowSwing.onsetDetect flowSwing_onsetDetect;
 max definesubstitution flowSwing.onsetDetect bpatcher @name flowSwing_onsetDetect;
+
+max objectfile  flowSwing.subDiv flowSwing_subDiv;
+

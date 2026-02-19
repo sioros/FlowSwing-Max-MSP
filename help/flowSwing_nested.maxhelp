@@ -4,15 +4,16 @@
         "appversion": {
             "major": 9,
             "minor": 1,
-            "revision": 0,
+            "revision": 2,
             "architecture": "x64",
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 190.0, 167.0, 1122.0, 694.0 ],
+        "rect": [ 100.0, 100.0, 1122.0, 713.0 ],
         "showrootpatcherontab": 0,
         "showontab": 0,
         "helpsidebarclosed": 1,
+        "integercoordinates": 1,
         "boxes": [
             {
                 "box": {
@@ -25,13 +26,14 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 0.0, 26.0, 1122.0, 668.0 ],
+                        "rect": [ 0.0, 26.0, 1122.0, 687.0 ],
                         "showontab": 1,
+                        "integercoordinates": 1,
                         "boxes": [],
                         "lines": [],
                         "toolbaradditions": [ "audiomute", "audiosolo" ]
@@ -52,14 +54,37 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 190.0, 193.0, 1122.0, 668.0 ],
+                        "rect": [ 100.0, 126.0, 1122.0, 687.0 ],
                         "showontab": 1,
+                        "integercoordinates": 1,
                         "boxes": [
+                            {
+                                "box": {
+                                    "id": "obj-26",
+                                    "linecount": 3,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 940.0, 341.0, 153.0, 48.0 ],
+                                    "text": "Beats that do not shift with S are highlighed in the envelop display"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-23",
+                                    "linecount": 3,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 940.0, 267.0, 153.0, 48.0 ],
+                                    "text": "Beats of the primary NI Grid are highlighted in the NI Grid display"
+                                }
+                            },
                             {
                                 "box": {
                                     "bgcolor": [ 0.956590352327427, 0.76614891786161, 0.452834090916593, 1.0 ],
@@ -86,7 +111,7 @@
                                         }
                                     },
                                     "text": "5",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -126,7 +151,7 @@
                                         }
                                     },
                                     "text": "1",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -136,7 +161,7 @@
                                     "numinlets": 2,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 719.0, 553.0, 379.0, 22.0 ],
+                                    "patching_rect": [ 719.0, 643.0, 379.0, 22.0 ],
                                     "text": "Open the flowSwing.envelop help for information on common features"
                                 }
                             },
@@ -148,7 +173,7 @@
                                     "numinlets": 1,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 797.0, 655.0, 51.0, 22.0 ],
+                                    "patching_rect": [ 797.0, 760.0, 51.0, 22.0 ],
                                     "text": "pcontrol"
                                 }
                             },
@@ -160,7 +185,7 @@
                                     "numinlets": 1,
                                     "numoutlets": 1,
                                     "outlettype": [ "bang" ],
-                                    "patching_rect": [ 797.0, 595.0, 25.0, 22.0 ],
+                                    "patching_rect": [ 797.0, 700.0, 25.0, 22.0 ],
                                     "text": "b 1"
                                 }
                             },
@@ -172,7 +197,7 @@
                                     "numinlets": 2,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 797.0, 621.0, 220.0, 22.0 ],
+                                    "patching_rect": [ 797.0, 726.0, 220.0, 22.0 ],
                                     "text": "help FlowSwing_envelop"
                                 }
                             },
@@ -232,7 +257,7 @@
                                     "numinlets": 1,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 719.0, 661.0, 51.0, 22.0 ],
+                                    "patching_rect": [ 719.0, 766.0, 51.0, 22.0 ],
                                     "text": "pcontrol"
                                 }
                             },
@@ -243,7 +268,7 @@
                                     "numinlets": 2,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 719.0, 516.0, 381.0, 22.0 ],
+                                    "patching_rect": [ 719.0, 607.0, 381.0, 22.0 ],
                                     "text": "See a detailed description of the FlowSwing interface and parameters"
                                 }
                             },
@@ -255,7 +280,7 @@
                                     "numinlets": 1,
                                     "numoutlets": 1,
                                     "outlettype": [ "bang" ],
-                                    "patching_rect": [ 719.0, 595.0, 25.0, 22.0 ],
+                                    "patching_rect": [ 719.0, 700.0, 25.0, 22.0 ],
                                     "text": "b 1"
                                 }
                             },
@@ -267,7 +292,7 @@
                                     "numinlets": 2,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 719.0, 630.0, 287.0, 22.0 ],
+                                    "patching_rect": [ 719.0, 735.0, 287.0, 22.0 ],
                                     "text": "loadunique FlowSwing_detailed_parameters.maxpat"
                                 }
                             },
@@ -409,12 +434,13 @@
                                         "appversion": {
                                             "major": 9,
                                             "minor": 1,
-                                            "revision": 0,
+                                            "revision": 2,
                                             "architecture": "x64",
                                             "modernui": 1
                                         },
                                         "classnamespace": "box",
                                         "rect": [ 54.0, 140.0, 683.0, 720.0 ],
+                                        "integercoordinates": 1,
                                         "boxes": [
                                             {
                                                 "box": {
@@ -892,12 +918,13 @@
                                         "appversion": {
                                             "major": 9,
                                             "minor": 1,
-                                            "revision": 0,
+                                            "revision": 2,
                                             "architecture": "x64",
                                             "modernui": 1
                                         },
                                         "classnamespace": "box",
                                         "rect": [ 59.0, 107.0, 370.0, 373.0 ],
+                                        "integercoordinates": 1,
                                         "boxes": [
                                             {
                                                 "box": {
@@ -1031,7 +1058,7 @@
                                     "numinlets": 1,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 940.0, 284.0, 135.0, 22.0 ],
+                                    "patching_rect": [ 755.0, 479.0, 135.0, 22.0 ],
                                     "priority": {
                                         "flowSwing_envelop::S": 2,
                                         "flowSwing_envelop::breakpoints": 3,
@@ -1055,7 +1082,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 940.0, 313.0, 150.0, 89.0 ],
+                                    "patching_rect": [ 755.0, 508.0, 150.0, 89.0 ],
                                     "text": "The Flow Swing patches  are pattr enabled. The right most inlets and outlets can be used to dirrectly set and get all settings"
                                 }
                             },
@@ -1107,7 +1134,7 @@
                                         }
                                     },
                                     "text": "4",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -1136,7 +1163,7 @@
                                         }
                                     },
                                     "text": "3",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -1165,7 +1192,7 @@
                                         }
                                     },
                                     "text": "2",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -1249,7 +1276,7 @@
                             },
                             {
                                 "box": {
-                                    "activebgcolor": [ 0.175, 0.175, 0.175, 1.0 ],
+                                    "activebgcolor": [ 0.125, 0.125, 0.125, 1.0 ],
                                     "id": "obj-27",
                                     "maxclass": "live.numbox",
                                     "numinlets": 1,
@@ -1342,12 +1369,13 @@
                                         "appversion": {
                                             "major": 9,
                                             "minor": 1,
-                                            "revision": 0,
+                                            "revision": 2,
                                             "architecture": "x64",
                                             "modernui": 1
                                         },
                                         "classnamespace": "box",
                                         "rect": [ 190.0, 145.0, 544.0, 625.0 ],
+                                        "integercoordinates": 1,
                                         "boxes": [
                                             {
                                                 "box": {
@@ -1945,6 +1973,14 @@
             "obj-21::obj-8::obj-3": [ "midinote", "midinote", 0 ],
             "obj-21::obj-8::obj-35": [ "min gate duration", "min gate duration", 0 ],
             "obj-21::obj-90": [ "mc sequencer", "mc sequencer", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "parameter_overrides": {
                 "obj-21::obj-1::obj-253": {
                     "parameter_longname": "rescale"

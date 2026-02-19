@@ -30,7 +30,7 @@ mgraphics.autofill = 0;
 
 var times   = []; // [0..1], ascending
 var pitches = []; // aligned to times
-var storedpitches = []; // stored pitches if times.length does not match -> watining for the next settimes message
+var storedpitches = []; // stored pitches if times.length does not match -> waiting for the next settimes message
 // UI default style
 var bgRGBA     = [0.175, 0.175, 0.175, 1.];
 var dotRGBA    = [0.902, 0.651, 0.051, 1.];
@@ -60,7 +60,6 @@ function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
 function pitchToY(p) {
 //	p = clamp(p, range[0], range[1]);
  	var y = (p-range[0])/(range[1]-range[0]);//from range to [0, 1]	
-//(y - ymin) / (ymax - ymin);
  	return (h-2*m) - y * (h-2*m) + m; 
 }
 function yToPitch(y) {
@@ -70,7 +69,6 @@ function yToPitch(y) {
     	p = Math.round(p);
 	
 	return clamp(p, range[0], range[1]);
-   // return clamp(p, 0, 127);
 }
 //function timeToX(t) { return t * (w-2*m) + m; }
 function timeToX(t) {
@@ -116,7 +114,7 @@ function paint() {
     mgraphics.rectangle(0, 0, w, h);
     mgraphics.fill();
 
-    // horizontal guides (every 12 semitones for quick reference)
+    // horizontal guides (every 12 semitones by default)
     set_rgba(guideRGBA);
     mgraphics.set_line_width(1);
     for (var p = 0; p < grid.length; p++) {
@@ -154,8 +152,6 @@ function paint() {
 		}
 
     
-    	// set line width
-    	
     	// start point
     	mgraphics.move_to(x, y);
 		var xf = timeToX(1.);
@@ -217,7 +213,7 @@ function ondrag(x, y, button/*, cmd, shift, caps, opt, ctrl*/) {
 		if (button == 0) { // mouse released
         {
 			zooming = false;
-			prevMousX = null;
+			prevMouseX = null;
         	return;
 		}
     }
@@ -270,42 +266,16 @@ function bang() {
 }
 
 
-/* function settimes() 
-{ 
-    times = arrayfromargs(arguments);
-	var av = (range[1]+range[0])/2;
-	if (integer)
-		av = Math.round(av);
-	if (pitches === null) //set default values for pitches if not already set
-	{
-		pitches = new Array(times.length);
-
-		for (var i = 0; i < pitches.length; i++) {
-    		pitches[i] = (av);
-		}		
-	}
-	else if (pitches.length<times.length)
-	{
-		// set default values for pitches for steps that are not yet set
-		var needed = times.length - pitches.length;
-		for (var i = 0; i < needed; i++) {
-    		pitches.push(av);
-		}
-	}
-    outlet(0, pitches);
-    mgraphics.redraw();
-}*/
-
 function settimes() 
 { 
     var newTimes = arrayfromargs(arguments);
-	var havestored = (typeof storedpitches !== "undefined" && storedpitches && storedpitches.length >= 0);
+	var havestored = (typeof storedpitches !== "undefined" && storedpitches && storedpitches.length > 0);
 
 	if (havestored && newTimes.length === storedpitches.length)
 	{
 		pitches = storedpitches.slice ? storedpitches.slice(0) : storedpitches;
 		times = newTimes;
-		storedpitches = [];
+		storedpitches = null;
 		outlet(0, pitches);
 		mgraphics.redraw();	
 		return;
@@ -374,7 +344,7 @@ function settimes()
 function setpitches() {
 	
     storedpitches = arrayfromargs(arguments);
-	var haveTimes = (typeof times !== "undefined" && times && times.length >= 0);
+	var haveTimes = (typeof times !== "undefined" && times && times.length > 0);
 
 	if (haveTimes && storedpitches.length === times.length)
 	{	
@@ -384,44 +354,6 @@ function setpitches() {
 		mgraphics.redraw();		
 	}
 }
-
-/* function setpitches() {
-    pitches = arrayfromargs(arguments);
-    mgraphics.redraw();
-}*/
-
-/*function setpitches() {
-    var incoming = arrayfromargs(arguments);
-
-    var havePrev = (typeof pitches !== "undefined" && pitches && pitches.length >= 0);
-
-    if (!havePrev || pitches.length === 0) {
-        // No previous pitches: take incoming as-is
-        pitches = incoming.slice ? incoming.slice(0) : incoming;
-    } else if (incoming.length < pitches.length) {
-        // Shorter than existing: update only the first part; keep the rest
-        for (var i = 0; i < incoming.length; i++) {
-            pitches[i] = incoming[i];
-        }
-        // leave remaining pitches[i...] unchanged
-    } else {
-        // Same length or longer: replace entirely
-        pitches = incoming.slice ? incoming.slice(0) : incoming;
-    }
-
-    // If pitches shorter than times, fill with default av
-    var targetLen = (typeof times !== "undefined" && times) ? times.length : 0;
-    if (pitches.length < targetLen) {
-        var av = (range[0] + range[1]) / 2;
-        if (integer) av = Math.round(av);
-        for (var j = pitches.length; j < targetLen; j++) {
-            pitches.push(av);
-        }
-    }
-    outlet(0, pitches);
-    mgraphics.redraw();
-}*/
-
 
 function setgrid() {
 	grid = arrayfromargs(arguments);

@@ -1,201 +1,181 @@
 {
-	"patcher" : 	{
-		"fileversion" : 1,
-		"appversion" : 		{
-			"major" : 9,
-			"minor" : 0,
-			"revision" : 8,
-			"architecture" : "x64",
-			"modernui" : 1
-		}
-,
-		"classnamespace" : "dsp.gen",
-		"rect" : [ 372.0, 82.0, 1033.0, 784.0 ],
-		"gridsize" : [ 15.0, 15.0 ],
-		"boxes" : [ 			{
-				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 756.000000000000114, 683.0, 35.0, 22.0 ],
-					"text" : "out 4"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-10",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 520.666666666666742, 683.0, 35.0, 22.0 ],
-					"text" : "out 3"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-9",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 756.0, 14.0, 28.0, 22.0 ],
-					"text" : "in 5"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 285.333333333333371, 683.0, 35.0, 22.0 ],
-					"text" : "out 2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-6",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 579.5, 14.0, 28.0, 22.0 ],
-					"text" : "in 4"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 403.0, 14.0, 28.0, 22.0 ],
-					"text" : "in 3"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 14.0, 28.0, 22.0 ],
-					"text" : "in 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-2",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 226.5, 14.0, 28.0, 22.0 ],
-					"text" : "in 2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"code" : "// Buffer names\r\nBuffer breakpoints();\r\n\r\n// parameters\r\nParam threshold(1); // default threshold\r\nParam firstChannel(1, min=1);\r\nParam mute(0);\r\n\r\n// History variables\r\nHistory triggered(0);\r\nHistory triggeredAtReset(0);\r\nHistory currentValue(0);\r\n\r\n// Inputs\r\nx = in1;\r\ndeltaX = in2;\r\nphaseJump = in3;\r\nphaseReset = in4; // this should happen at the first breakpoint\r\nphaseRunning = in5;\r\n\r\n// Parameters\r\n\r\n// Voice index (0-offset for multichannel)\r\nch = mc_channel-firstChannel;\r\n\r\n\r\n// Get breakpoints count\r\nnumBreakpoints = breakpoints.dim();\r\n\r\n\r\nactive = 0;\r\nif (ch < numBreakpoints) {\r\n\tactive = 1;\r\n\tphasor_state = change(phaseRunning); //0 no change, -1 stoped, 1 re-started\r\n\tif (phasor_state < -.5) // phasor just stoped (1 --> 0)\r\n\t{\r\n\t\tif (triggered >.5) // if already triggered (either running or completed)\r\n\t\t{\r\n\t\t\ttriggered = 2; // set it to completed\r\n\t\t\tcurrentValue = 0;\r\n\t\t}\r\n\t} else if (phaseRunning>0.5) // if the phase is running\r\n\t{\r\n\t\t\r\n\t\r\n\t\tif (phasor_state >0.5) // phasor is just re-started (0 --> 1)\r\n\t\t{\r\n\t\t\tphaseJump = 1; // treat the situation as a phasejump\r\n\t\t}\r\n\t\t\r\n\t\tphases_ch = breakpoints.peek(ch, 0); // channel 1: phase\r\n\t\tvalues_ch = breakpoints.peek(ch, 1); // channel 2: value\r\n\t\t\r\n\t\tif (phaseReset > 0.5) {\r\n\t\t\tif (triggered < .5) {\r\n\t\t\t\t// Missed breakpoint at phase turn, trigger gate now\r\n\t\t\t\ttriggeredAtReset = 1;\r\n\t\t\t\tcurrentValue = values_ch;\r\n\t\t\t} else {\r\n\t\t\t\t// is running/completed, reset everything\r\n\t\t\t\ttriggered = 0;\r\n\t\t\t\tif (ch < numBreakpoints-1) // reset ouput value only if not the last breakpoint\r\n\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t// the last breakpoint resets its value just when the phase reaches the first breakpoint\r\n\t\t\t}\r\n\t\t}\r\n\t\t\r\n\t\tif (phaseJump < .5 ) {\r\n\t\t\t\r\n\t\t\t\r\n\t\t\tif (triggeredAtReset > 0.5) {\t\t\t\t\r\n\t\t\t\tif (triggeredAtReset > 1.5) \r\n\t\t\t\t{\r\n\t\t\t\t\tif (ch < numBreakpoints-1)//if not the last breakpoint\r\n\t\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t\t// the last breakpoint should continue running until the first breakpoint\r\n\t\t\t\t\ttriggeredAtReset = 0;\r\n\t\t\t\t}else\r\n\t\t\t\t\ttriggeredAtReset = triggeredAtReset + 1;\r\n\r\n\t\t\t} else if (triggered < .5) {// not yet triggered in this cycle\r\n\t\t\t\tif (ch > numBreakpoints-2 &&  currentValue > 0)\t\r\n\t\t\t\t{//if this is the last breakpoint and is still running from the previous cycle\r\n\t\t\t\t\tphase_first = breakpoints.peek(0, 0);\r\n\t\t\t\t\t// switch it off just before the first breakpoint\r\n\t\t\t\t\tif (x+deltaX >= phase_first)\r\n\t\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t}else if (x >= phases_ch) \r\n\t\t\t\t{//else check if it is time to trigger \r\n\t\t\t\t\ttriggered = 1;\r\n\t\t\t\t\tcurrentValue = values_ch;\r\n\t\t\t\t}\r\n\t\t\t} else if (triggered < 1.5) {\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\tif (ch + 1 < numBreakpoints) {\r\n\t\t\t\t\tphases_next = breakpoints.peek(ch + 1, 0);\r\n\t\t\t\t\tif (x >= phases_next) {\r\n\t\t\t\t\t\ttriggered = 2;\r\n\t\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t\t// Last breakpoint runs until phase reset\r\n\t\t\t}\r\n\t\t}\r\n\t\telse { // phaseJump\r\n\t\t\t\r\n\r\n\t\t\tif (triggeredAtReset > 0.5) {\r\n\t\t\t\tif (triggeredAtReset < 1.5) {\r\n\t\t\t\t\ttriggeredAtReset = triggeredAtReset + 1;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t\ttriggeredAtReset = 0;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\tif (triggered < .5) {\r\n\t\t\t\tif (x >= phases_ch) { \r\n\t\t\t\t\tif (x < phases_ch + threshold * deltaX) {\r\n\t\t\t\t\t\ttriggered = 1;\r\n\t\t\t\t\t\tcurrentValue = values_ch;\r\n\t\t\t\t\t} else {\r\n\t\t\t\t\t\ttriggered = 3;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t} else if (triggered < 1.5) { // laready triggered\r\n\r\n\t\t\t\t\t// if the breakpoint is before the new position\r\n\t\t\t\t\t\r\n\t\t\t\t\t// if the next breakpoint is also before the new position then\r\n \t\t\t\t\t// the gate cycle is complete (triggered = 2)\r\n\t\t\t\tif (x >= phases_ch){\r\n\t\t\t\t\tif (ch + 1 < numBreakpoints) {\r\n\t\t\t\t\t\tphases_next = breakpoints.peek(ch + 1, 1);\r\n\t\t\t\t\t\tif (x >= phases_next) {\r\n\t\t\t\t\t\t\ttriggered = 2;\r\n\t\t\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}//if this is the last breakpoint it should run until the end of the cycle\r\n\t\t\t\t}else if (x < phases_ch - threshold * deltaX){// if the breakpoint is after the new position\r\n\t\t\t\t\t// if the breakpoint is singificanylty later\r\n\t\t\t\t\t// reset its trigger status\r\n\t\t\t\t\ttriggered = 0;\r\n\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t} // If later, but not singificanlty do not change state (remains triggered)\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t} else {\r\n\t\t\t\tif (x >= phases_ch) {// breakpoint is ealrier than jump position\r\n\t\t\t\t\tif (x < phases_ch + threshold * deltaX) {// and within the threshold\r\n\t\t\t\t\t\ttriggered = 1; // trigger it\r\n\t\t\t\t\t\tcurrentValue = values_ch;\r\n\t\t\t\t\t}// If breakpoint is singificantly earlier than jump, do not change state.\r\n\t\t\t\t}else if (x < phases_ch - threshold * deltaX){\r\n\t\t\t\t\t// if the breakpoint is singificanylty later\r\n\t\t\t\t\t// reset its trigger status\r\n\t\t\t\t\ttriggered = 0;\r\n\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t}// If later, but not singificanlty do not change state (remains completed)\r\n\t\t\t\t\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n\r\n// Output\r\nout1 = currentValue;\r\nout2 = active;\r\nout3 = triggered;\r\nout4 = triggeredAtReset;",
-					"fontface" : 0,
-					"fontname" : "<Monospaced>",
-					"fontsize" : 12.0,
-					"id" : "obj-3",
-					"maxclass" : "codebox",
-					"numinlets" : 5,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 50.0, 55.0, 725.0, 616.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 50.0, 683.0, 35.0, 22.0 ],
-					"text" : "out 1"
-				}
-
-			}
- ],
-		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 1 ],
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"source" : [ "obj-3", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-3", 3 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-3", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 2 ],
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 3 ],
-					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 4 ],
-					"source" : [ "obj-9", 0 ]
-				}
-
-			}
- ]
-	}
-
+    "patcher": {
+        "fileversion": 1,
+        "appversion": {
+            "major": 9,
+            "minor": 1,
+            "revision": 2,
+            "architecture": "x64",
+            "modernui": 1
+        },
+        "classnamespace": "dsp.gen",
+        "rect": [ 134.0, 134.0, 1033.0, 784.0 ],
+        "boxes": [
+            {
+                "box": {
+                    "id": "obj-7",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 756.0000000000001, 683.0, 35.0, 22.0 ],
+                    "text": "out 4"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-10",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 520.6666666666667, 683.0, 35.0, 22.0 ],
+                    "text": "out 3"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-9",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 756.0, 14.0, 28.0, 22.0 ],
+                    "text": "in 5"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-8",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 285.33333333333337, 683.0, 35.0, 22.0 ],
+                    "text": "out 2"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-6",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 579.5, 14.0, 28.0, 22.0 ],
+                    "text": "in 4"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-5",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 403.0, 14.0, 28.0, 22.0 ],
+                    "text": "in 3"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-1",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 50.0, 14.0, 28.0, 22.0 ],
+                    "text": "in 1"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-2",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 226.5, 14.0, 28.0, 22.0 ],
+                    "text": "in 2"
+                }
+            },
+            {
+                "box": {
+                    "code": "// Buffer names\r\nBuffer breakpoints();\r\n\r\n// parameters\r\nParam threshold(1); // default threshold\r\nParam firstChannel(1, min=1);\r\nParam mute(0);\r\n\r\n// History variables\r\nHistory triggered(0);\r\nHistory triggeredAtReset(0);\r\nHistory currentValue(0);\r\n\r\n// Inputs\r\nx = in1;\r\ndeltaX = in2;\r\nphaseJump = in3;\r\nphaseReset = in4; // this should happen at the first breakpoint\r\nphaseRunning = in5;\r\n\r\n// Parameters\r\n\r\n// Voice index (0-offset for multichannel)\r\nch = mc_channel-firstChannel;\r\n\r\n\r\n// Get breakpoints count\r\nnumBreakpoints = breakpoints.dim();\r\nnumChennalesInBuffer = channels(breakpoints);\r\n\r\nactive = 0;\r\nif (numChennalesInBuffer> 1 && ch>=0 && ch < numBreakpoints) {\r\n\tactive = 1;\r\n\tphasor_state = change(phaseRunning); //0 no change, -1 stoped, 1 re-started\r\n\tif (phasor_state < -.5) // phasor just stoped (1 --> 0)\r\n\t{\r\n\t\tif (triggered >.5) // if already triggered (either running or completed)\r\n\t\t{\r\n\t\t\ttriggered = 2; // set it to completed\r\n\t\t\tcurrentValue = 0;\r\n\t\t}\r\n\t} else if (phaseRunning>0.5) // if the phase is running\r\n\t{\r\n\t\t\r\n\t\r\n\t\tif (phasor_state >0.5) // phasor is just re-started (0 --> 1)\r\n\t\t{\r\n\t\t\tphaseJump = 1; // treat the situation as a phasejump\r\n\t\t}\r\n\t\t\r\n\t\tphases_ch = breakpoints.peek(ch, 0); // channel 1: phase\r\n\t\tvalues_ch = breakpoints.peek(ch, 1); // channel 2: value\r\n\t\t\r\n\t\tif (phaseReset > 0.5) {\r\n\t\t\tif (triggered < .5) {\r\n\t\t\t\t// Missed breakpoint at phase turn, trigger gate now\r\n\t\t\t\ttriggeredAtReset = 1;\r\n\t\t\t\tcurrentValue = values_ch;\r\n\t\t\t} else {\r\n\t\t\t\t// is running/completed, reset everything\r\n\t\t\t\ttriggered = 0;\r\n\t\t\t\tif (ch < numBreakpoints-1) // reset ouput value only if not the last breakpoint\r\n\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t// the last breakpoint resets its value just when the phase reaches the first breakpoint\r\n\t\t\t}\r\n\t\t}\r\n\t\t\r\n\t\tif (phaseJump < .5 ) {\r\n\t\t\t\r\n\t\t\t\r\n\t\t\tif (triggeredAtReset > 0.5) {\t\t\t\t\r\n\t\t\t\tif (triggeredAtReset > 1.5) \r\n\t\t\t\t{\r\n\t\t\t\t\tif (ch < numBreakpoints-1)//if not the last breakpoint\r\n\t\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t\t// the last breakpoint should continue running until the first breakpoint\r\n\t\t\t\t\ttriggeredAtReset = 0;\r\n\t\t\t\t}else\r\n\t\t\t\t\ttriggeredAtReset = triggeredAtReset + 1;\r\n\r\n\t\t\t} else if (triggered < .5) {// not yet triggered in this cycle\r\n\t\t\t\tif (ch > numBreakpoints-2 &&  currentValue > 0)\t\r\n\t\t\t\t{//if this is the last breakpoint and is still running from the previous cycle\r\n\t\t\t\t\tphase_first = breakpoints.peek(0, 0);\r\n\t\t\t\t\t// switch it off just before the first breakpoint\r\n\t\t\t\t\tif (x+deltaX >= phase_first)\r\n\t\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t}else if (x >= phases_ch) \r\n\t\t\t\t{//else check if it is time to trigger \r\n\t\t\t\t\ttriggered = 1;\r\n\t\t\t\t\tcurrentValue = values_ch;\r\n\t\t\t\t}\r\n\t\t\t} else if (triggered < 1.5) {\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\tif (ch + 1 < numBreakpoints) {\r\n\t\t\t\t\tphases_next = breakpoints.peek(ch + 1, 0);\r\n\t\t\t\t\tif (x >= phases_next) {\r\n\t\t\t\t\t\ttriggered = 2;\r\n\t\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t\t// Last breakpoint runs until phase reset\r\n\t\t\t}\r\n\t\t}\r\n\t\telse { // phaseJump\r\n\t\t\t\r\n\r\n\t\t\tif (triggeredAtReset > 0.5) {\r\n\t\t\t\tif (triggeredAtReset < 1.5) {\r\n\t\t\t\t\ttriggeredAtReset = triggeredAtReset + 1;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t\ttriggeredAtReset = 0;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\tif (triggered < .5) {\r\n\t\t\t\tif (x >= phases_ch) { \r\n\t\t\t\t\tif (x < phases_ch + threshold * deltaX) {\r\n\t\t\t\t\t\ttriggered = 1;\r\n\t\t\t\t\t\tcurrentValue = values_ch;\r\n\t\t\t\t\t} else {\r\n\t\t\t\t\t\ttriggered = 3;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t} else if (triggered < 1.5) { // laready triggered\r\n\r\n\t\t\t\t\t// if the breakpoint is before the new position\r\n\t\t\t\t\t\r\n\t\t\t\t\t// if the next breakpoint is also before the new position then\r\n \t\t\t\t\t// the gate cycle is complete (triggered = 2)\r\n\t\t\t\tif (x >= phases_ch){\r\n\t\t\t\t\tif (ch + 1 < numBreakpoints) {\r\n\t\t\t\t\t\tphases_next = breakpoints.peek(ch + 1, 1);\r\n\t\t\t\t\t\tif (x >= phases_next) {\r\n\t\t\t\t\t\t\ttriggered = 2;\r\n\t\t\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}//if this is the last breakpoint it should run until the end of the cycle\r\n\t\t\t\t}else if (x < phases_ch - threshold * deltaX){// if the breakpoint is after the new position\r\n\t\t\t\t\t// if the breakpoint is singificanylty later\r\n\t\t\t\t\t// reset its trigger status\r\n\t\t\t\t\ttriggered = 0;\r\n\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t} // If later, but not singificanlty do not change state (remains triggered)\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t} else {\r\n\t\t\t\tif (x >= phases_ch) {// breakpoint is ealrier than jump position\r\n\t\t\t\t\tif (x < phases_ch + threshold * deltaX) {// and within the threshold\r\n\t\t\t\t\t\ttriggered = 1; // trigger it\r\n\t\t\t\t\t\tcurrentValue = values_ch;\r\n\t\t\t\t\t}// If breakpoint is singificantly earlier than jump, do not change state.\r\n\t\t\t\t}else if (x < phases_ch - threshold * deltaX){\r\n\t\t\t\t\t// if the breakpoint is singificanylty later\r\n\t\t\t\t\t// reset its trigger status\r\n\t\t\t\t\ttriggered = 0;\r\n\t\t\t\t\tcurrentValue = 0;\r\n\t\t\t\t}// If later, but not singificanlty do not change state (remains completed)\r\n\t\t\t\t\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n\r\n// Output\r\nout1 = currentValue;\r\nout2 = active;\r\nout3 = triggered;\r\nout4 = triggeredAtReset;",
+                    "fontface": 0,
+                    "fontname": "<Monospaced>",
+                    "fontsize": 12.0,
+                    "id": "obj-3",
+                    "maxclass": "codebox",
+                    "numinlets": 5,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 50.0, 55.0, 725.0, 616.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-4",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 50.0, 683.0, 35.0, 22.0 ],
+                    "text": "out 1"
+                }
+            }
+        ],
+        "lines": [
+            {
+                "patchline": {
+                    "destination": [ "obj-3", 0 ],
+                    "source": [ "obj-1", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-3", 1 ],
+                    "source": [ "obj-2", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-10", 0 ],
+                    "source": [ "obj-3", 2 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-4", 0 ],
+                    "source": [ "obj-3", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-7", 0 ],
+                    "source": [ "obj-3", 3 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-8", 0 ],
+                    "source": [ "obj-3", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-3", 2 ],
+                    "source": [ "obj-5", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-3", 3 ],
+                    "source": [ "obj-6", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-3", 4 ],
+                    "source": [ "obj-9", 0 ]
+                }
+            }
+        ]
+    }
 }

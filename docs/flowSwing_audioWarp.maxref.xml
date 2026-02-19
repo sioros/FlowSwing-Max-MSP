@@ -248,9 +248,14 @@ See license.md file in the project root for full license information.
 	</attributelist>
 	<!--SEEALSO-->
 	<seealsolist>
+		<seealso name='flowSwing_onsetDetect' />
 		<seealso name='flowSwing_envelop' />
 		<seealso name="flowSwing_nested" />
+		<seealso name="flowSwing_subDiv" />
 		<seealso name='flowSwing_noise' />
+		<seealso name='buffer~' />
+		<seealso name='groove~' />
+
 	</seealsolist>
 	<!--INLETS/OUTLETS-->
 	<misc name="Inlets">

@@ -4,14 +4,15 @@
         "appversion": {
             "major": 9,
             "minor": 1,
-            "revision": 0,
+            "revision": 2,
             "architecture": "x64",
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 100.0, 94.0, 1080.0, 745.0 ],
+        "rect": [ 100.0, 94.0, 1080.0, 777.0 ],
         "showrootpatcherontab": 0,
         "showontab": 0,
+        "integercoordinates": 1,
         "boxes": [
             {
                 "box": {
@@ -24,13 +25,14 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 0.0, 26.0, 1080.0, 719.0 ],
+                        "rect": [ 0.0, 26.0, 1080.0, 751.0 ],
                         "showontab": 1,
+                        "integercoordinates": 1,
                         "boxes": [],
                         "lines": [],
                         "toolbaradditions": [ "audiomute", "audiosolo" ]
@@ -50,13 +52,14 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 100.0, 120.0, 1080.0, 719.0 ],
+                        "rect": [ 100.0, 120.0, 1080.0, 751.0 ],
                         "showontab": 2,
+                        "integercoordinates": 1,
                         "boxes": [
                             {
                                 "box": {
@@ -95,7 +98,7 @@
                                         }
                                     },
                                     "text": "3",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -135,7 +138,7 @@
                                         }
                                     },
                                     "text": "2",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -175,7 +178,7 @@
                                         }
                                     },
                                     "text": "1",
-                                    "textcolor": [ 0.175, 0.175, 0.175, 1.0 ]
+                                    "textcolor": [ 0.125, 0.125, 0.125, 1.0 ]
                                 }
                             },
                             {
@@ -190,12 +193,13 @@
                                         "appversion": {
                                             "major": 9,
                                             "minor": 1,
-                                            "revision": 0,
+                                            "revision": 2,
                                             "architecture": "x64",
                                             "modernui": 1
                                         },
                                         "classnamespace": "box",
                                         "rect": [ 684.0, 486.0, 374.0, 342.0 ],
+                                        "integercoordinates": 1,
                                         "boxes": [
                                             {
                                                 "box": {
@@ -297,12 +301,13 @@
                                         "appversion": {
                                             "major": 9,
                                             "minor": 1,
-                                            "revision": 0,
+                                            "revision": 2,
                                             "architecture": "x64",
                                             "modernui": 1
                                         },
                                         "classnamespace": "box",
                                         "rect": [ 59.0, 107.0, 622.0, 440.0 ],
+                                        "integercoordinates": 1,
                                         "boxes": [
                                             {
                                                 "box": {
@@ -580,7 +585,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 496.0, 16.0, 425.0, 71.0 ],
+                                    "patching_rect": [ 496.0, 46.0, 425.0, 71.0 ],
                                     "text": "flowSwing.stepUI provides a step-sequencer-style interface for editing breakpoint parameters such as pitch. It is designed to work alongside flowSwing.envelop or flowSwing.nested for detailed control of per-breakpoint modulation.”"
                                 }
                             },
@@ -652,7 +657,8 @@
                                         "flowSwing_envelop::breakpoints": 3,
                                         "flowSwing_envelop::asGrid": 1,
                                         "flowSwing_stepUI::pitches": 2,
-                                        "flowSwing_stepUI[1]::pitches": 2
+                                        "flowSwing_stepUI[1]::pitches": 2,
+                                        "sampler::flowSwing_noise::S": 2
                                     },
                                     "saved_object_attributes": {
                                         "client_rect": [ 481, 195, 951, 688 ],
@@ -878,7 +884,7 @@
                                     "numinlets": 2,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 525.0, 686.0, 87.0, 22.0 ],
+                                    "patching_rect": [ 465.0, 688.0, 140.0, 22.0 ],
                                     "text": "released"
                                 }
                             },
@@ -974,7 +980,7 @@
                             {
                                 "patchline": {
                                     "destination": [ "obj-6", 1 ],
-                                    "midpoints": [ 552.0, 675.0, 602.5, 675.0 ],
+                                    "midpoints": [ 552.0, 675.0, 595.5, 675.0 ],
                                     "source": [ "obj-12", 1 ]
                                 }
                             },
@@ -1083,8 +1089,10 @@
         "lines": [],
         "parameters": {
             "obj-1::obj-12::obj-109": [ "pitches[1]", "pitches", 2 ],
-            "obj-1::obj-12::obj-12": [ "live.text[1]", "live.text", 0 ],
+            "obj-1::obj-12::obj-12": [ "live.text[1]", "zoom_100", 0 ],
             "obj-1::obj-12::obj-25": [ "color[1]", "color", 0 ],
+            "obj-1::obj-12::obj-33": [ "zoom_fit[1]", "zoom_fit", 0 ],
+            "obj-1::obj-12::obj-35": [ "set_range[1]", "set_range", 0 ],
             "obj-1::obj-12::obj-6": [ "format[1]", "format", 0 ],
             "obj-1::obj-12::obj-64": [ "range[1]", "range", 0 ],
             "obj-1::obj-12::obj-68": [ "grid[1]", "grid", 0 ],
@@ -1114,13 +1122,18 @@
             "obj-1::obj-1::obj-90": [ "secondary_S_control", "secondary_S_control", 0 ],
             "obj-1::obj-1::obj-91": [ "hold", "hold", 0 ],
             "obj-1::obj-2::obj-109": [ "pitches", "pitches", 2 ],
-            "obj-1::obj-2::obj-12": [ "live.text", "live.text", 0 ],
+            "obj-1::obj-2::obj-12": [ "live.text", "zoom_100", 0 ],
             "obj-1::obj-2::obj-25": [ "color", "color", 0 ],
+            "obj-1::obj-2::obj-33": [ "zoom_fit", "zoom_fit", 0 ],
+            "obj-1::obj-2::obj-35": [ "set_range", "set_range", 0 ],
             "obj-1::obj-2::obj-6": [ "format", "format", 0 ],
             "obj-1::obj-2::obj-64": [ "range", "range", 0 ],
             "obj-1::obj-2::obj-68": [ "grid", "grid", 0 ],
             "obj-1::obj-2::obj-8": [ "floatmode", "floatmode", 0 ],
             "obj-1::obj-50::obj-2::obj-15": [ "Noise A", "Noise A", 0 ],
+            "obj-1::obj-50::obj-2::obj-164": [ "Target_div", "Target_div", 0 ],
+            "obj-1::obj-50::obj-2::obj-165": [ "Formative_div", "Formative_div", 0 ],
+            "obj-1::obj-50::obj-2::obj-174": [ "S_div", "S_div", 0 ],
             "obj-1::obj-50::obj-2::obj-19": [ "Skew range", "Skew_range", 0 ],
             "obj-1::obj-50::obj-2::obj-20": [ "Noise F range", "NFrange", 0 ],
             "obj-1::obj-50::obj-2::obj-21": [ "Noise A range", "NArange", 0 ],
@@ -1136,9 +1149,26 @@
             "obj-1::obj-50::obj-2::obj-77": [ "release", "release", 0 ],
             "obj-1::obj-50::obj-2::obj-8": [ "Noise F", "Noise F", 0 ],
             "obj-1::obj-50::obj-2::obj-96": [ "envCurve", "envCurve", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "parameter_overrides": {
                 "obj-1::obj-12::obj-12": {
                     "parameter_longname": "live.text[1]"
+                },
+                "obj-1::obj-12::obj-33": {
+                    "parameter_longname": "zoom_fit[1]"
+                },
+                "obj-1::obj-12::obj-35": {
+                    "parameter_longname": "set_range[1]"
+                },
+                "obj-1::obj-2::obj-12": {
+                    "parameter_longname": "live.text"
                 }
             },
             "inherited_shortname": 1

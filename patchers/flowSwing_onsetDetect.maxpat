@@ -4,15 +4,16 @@
         "appversion": {
             "major": 9,
             "minor": 1,
-            "revision": 0,
+            "revision": 2,
             "architecture": "x64",
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 76.0, 1092.0, 918.0 ],
+        "rect": [ 34.0, 76.0, 984.0, 870.0 ],
         "openrect": [ 0.0, 0.0, 295.0, 30.0 ],
         "openrectmode": 0,
         "openinpresentation": 1,
+        "integercoordinates": 1,
         "boxes": [
             {
                 "box": {
@@ -57,24 +58,6 @@
             },
             {
                 "box": {
-                    "color": [ 0.0, 1.0, 0.10196078431372549, 1.0 ],
-                    "id": "obj-8",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 3,
-                    "outlettype": [ "", "", "" ],
-                    "patching_rect": [ 385.5, 203.0, 100.0, 22.0 ],
-                    "restore": [ 0.0 ],
-                    "saved_object_attributes": {
-                        "parameter_enable": 0,
-                        "parameter_mappable": 0
-                    },
-                    "text": "pattr continous",
-                    "varname": "continous"
-                }
-            },
-            {
-                "box": {
                     "activebgcolor": [ 0.439, 0.671, 0.98, 1.0 ],
                     "activebgoncolor": [ 1.0, 0.729, 0.0, 1.0 ],
                     "focusbordercolor": [ 0.34901960784313724, 0.34901960784313724, 0.34901960784313724, 0.0 ],
@@ -99,6 +82,7 @@
                         },
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
+                            "parameter_invisible": 2,
                             "parameter_linknames": 1,
                             "parameter_longname": "continous_output_button",
                             "parameter_mmax": 1,
@@ -473,12 +457,13 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
                         "rect": [ 336.0, 82.0, 764.0, 778.0 ],
+                        "integercoordinates": 1,
                         "boxes": [
                             {
                                 "box": {
@@ -1246,7 +1231,7 @@
                 "box": {
                     "angle": 270.0,
                     "background": 1,
-                    "bgcolor": [ 0.674509803921569, 0.674509803921569, 0.674509803921569, 1.0 ],
+                    "bgcolor": [ 0.674509803921569, 0.674509803921569, 0.674509803921569, 0.0 ],
                     "bordercolor": [ 0.619607843137255, 0.745098039215686, 0.952941176470588, 0.0 ],
                     "id": "obj-202",
                     "maxclass": "panel",
@@ -1355,12 +1340,6 @@
                 "patchline": {
                     "destination": [ "obj-26", 0 ],
                     "source": [ "obj-77", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-6", 0 ],
-                    "source": [ "obj-8", 1 ]
                 }
             },
             {

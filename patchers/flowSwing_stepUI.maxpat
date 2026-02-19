@@ -4,12 +4,12 @@
         "appversion": {
             "major": 9,
             "minor": 1,
-            "revision": 0,
+            "revision": 2,
             "architecture": "x64",
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 0.0, 42.0, 1441.0, 859.0 ],
+        "rect": [ 0.0, 42.0, 1645.0, 938.0 ],
         "openrect": [ 0.0, 0.0, 700.0, 100.0 ],
         "openrectmode": 0,
         "openinpresentation": 1,
@@ -17,7 +17,143 @@
         "bottomtoolbarpinned": 1,
         "enablehscroll": 0,
         "enablevscroll": 0,
+        "integercoordinates": 1,
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-36",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 227.0, 144.0, 101.0, 22.0 ],
+                    "text": "prepend settimes"
+                }
+            },
+            {
+                "box": {
+                    "activebgcolor": [ 0.5176470588235295, 0.5176470588235295, 0.5176470588235295, 1.0 ],
+                    "activebgoncolor": [ 1.0, 1.0, 1.0, 1.0 ],
+                    "activetextcolor": [ 0.8470588235294118, 0.8470588235294118, 0.8470588235294118, 1.0 ],
+                    "id": "obj-35",
+                    "maxclass": "live.text",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "parameter_enable": 1,
+                    "patching_rect": [ 417.0, 438.0, 44.0, 15.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 13.0, 81.0, 74.0, 15.0 ],
+                    "saved_attribute_attributes": {
+                        "activebgcolor": {
+                            "expression": ""
+                        },
+                        "activebgoncolor": {
+                            "expression": ""
+                        },
+                        "activetextcolor": {
+                            "expression": ""
+                        },
+                        "valueof": {
+                            "parameter_enum": [ "val1", "val2" ],
+                            "parameter_invisible": 2,
+                            "parameter_longname": "set_range",
+                            "parameter_mmax": 1,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "set_range",
+                            "parameter_type": 2
+                        }
+                    },
+                    "text": "set new range",
+                    "transition": 1,
+                    "varname": "live.text"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-3",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 417.0, 467.0, 38.0, 22.0 ],
+                    "text": "zl.reg"
+                }
+            },
+            {
+                "box": {
+                    "activebgcolor": [ 0.5176470588235295, 0.5176470588235295, 0.5176470588235295, 1.0 ],
+                    "activebgoncolor": [ 1.0, 1.0, 1.0, 1.0 ],
+                    "activetextcolor": [ 0.8470588235294118, 0.8470588235294118, 0.8470588235294118, 1.0 ],
+                    "id": "obj-33",
+                    "maxclass": "live.text",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "parameter_enable": 1,
+                    "patching_rect": [ 346.0, 174.0, 44.0, 15.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 13.0, 51.0, 74.0, 15.0 ],
+                    "saved_attribute_attributes": {
+                        "activebgcolor": {
+                            "expression": ""
+                        },
+                        "activebgoncolor": {
+                            "expression": ""
+                        },
+                        "activetextcolor": {
+                            "expression": ""
+                        },
+                        "valueof": {
+                            "parameter_enum": [ "val1", "val2" ],
+                            "parameter_invisible": 2,
+                            "parameter_longname": "zoom_fit",
+                            "parameter_mmax": 1,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "zoom_fit",
+                            "parameter_type": 2
+                        }
+                    },
+                    "text": "fit to values",
+                    "transition": 1,
+                    "varname": "live.text[1]"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-29",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 346.0, 200.0, 67.0, 22.0 ],
+                    "text": "zoom_y_fit"
+                }
+            },
+            {
+                "box": {
+                    "border": 0,
+                    "filename": "flowSwingStepSequencerUIv8ui.js",
+                    "id": "obj-28",
+                    "ignoreclick": 1,
+                    "maxclass": "v8ui",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 227.0, 185.0, 64.0, 64.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 94.0, 3.0, 604.0, 94.0 ],
+                    "textfile": {
+                        "filename": "flowSwingStepSequencerUIv8ui.js",
+                        "flags": 0,
+                        "embed": 0,
+                        "autowatch": 1
+                    }
+                }
+            },
             {
                 "box": {
                     "id": "obj-31",
@@ -75,12 +211,13 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
                         "rect": [ 826.0, 203.0, 524.0, 602.0 ],
+                        "integercoordinates": 1,
                         "boxes": [
                             {
                                 "box": {
@@ -386,12 +523,13 @@
             {
                 "box": {
                     "id": "obj-22",
+                    "linecount": 2,
                     "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "" ],
-                    "patching_rect": [ 227.0, 63.5, 54.0, 22.0 ],
-                    "text": "route list"
+                    "numinlets": 4,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 227.0, 63.5, 54.0, 36.0 ],
+                    "text": "route list float int"
                 }
             },
             {
@@ -608,97 +746,6 @@
             },
             {
                 "box": {
-                    "id": "obj-2",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 1,
-                    "outlettype": [ "" ],
-                    "patcher": {
-                        "fileversion": 1,
-                        "appversion": {
-                            "major": 9,
-                            "minor": 1,
-                            "revision": 0,
-                            "architecture": "x64",
-                            "modernui": 1
-                        },
-                        "classnamespace": "box",
-                        "rect": [ 156.0, 274.0, 1000.0, 720.0 ],
-                        "boxes": [
-                            {
-                                "box": {
-                                    "id": "obj-3",
-                                    "maxclass": "newobj",
-                                    "numinlets": 2,
-                                    "numoutlets": 2,
-                                    "outlettype": [ "", "" ],
-                                    "patching_rect": [ 264.0, 120.5, 55.0, 22.0 ],
-                                    "text": "zl.ecils 1"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "obj-10",
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 1,
-                                    "outlettype": [ "" ],
-                                    "patching_rect": [ 264.0, 146.0, 101.0, 22.0 ],
-                                    "text": "prepend settimes"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "comment": "",
-                                    "id": "obj-2",
-                                    "index": 1,
-                                    "maxclass": "outlet",
-                                    "numinlets": 1,
-                                    "numoutlets": 0,
-                                    "patching_rect": [ 264.0, 189.0, 30.0, 30.0 ]
-                                }
-                            },
-                            {
-                                "box": {
-                                    "comment": "",
-                                    "id": "obj-1",
-                                    "index": 1,
-                                    "maxclass": "inlet",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [ "" ],
-                                    "patching_rect": [ 264.0, 44.0, 30.0, 30.0 ]
-                                }
-                            }
-                        ],
-                        "lines": [
-                            {
-                                "patchline": {
-                                    "destination": [ "obj-3", 0 ],
-                                    "source": [ "obj-1", 0 ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [ "obj-2", 0 ],
-                                    "source": [ "obj-10", 0 ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [ "obj-10", 0 ],
-                                    "source": [ "obj-3", 0 ]
-                                }
-                            }
-                        ],
-                        "toolbaradditions": [ "audiomute", "audiosolo" ]
-                    },
-                    "patching_rect": [ 227.0, 92.0, 19.0, 22.0 ],
-                    "text": "p"
-                }
-            },
-            {
-                "box": {
                     "id": "obj-89",
                     "maxclass": "message",
                     "numinlets": 2,
@@ -832,12 +879,13 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
                         "rect": [ 84.0, 132.0, 1000.0, 720.0 ],
+                        "integercoordinates": 1,
                         "boxes": [
                             {
                                 "box": {
@@ -1147,7 +1195,7 @@
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 444.0, 405.0, 30.0, 30.0 ]
+                    "patching_rect": [ 542.0, 401.0, 30.0, 30.0 ]
                 }
             },
             {
@@ -1223,7 +1271,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 315.0, 628.0, 50.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 37.0, 39.0, 50.0, 22.0 ],
+                    "presentation_rect": [ 28.0, 27.0, 44.0, 22.0 ],
                     "textcolor": [ 0.902, 0.902, 0.902, 0.0 ],
                     "triangle": 0,
                     "tricolor": [ 0.517898737005579, 0.51789861151792, 0.51789864430985, 0.0 ]
@@ -1233,11 +1281,11 @@
                 "box": {
                     "id": "obj-19",
                     "maxclass": "newobj",
-                    "numinlets": 3,
-                    "numoutlets": 3,
-                    "outlettype": [ "", "", "" ],
-                    "patching_rect": [ 315.0, 405.0, 120.0, 22.0 ],
-                    "text": "route active released"
+                    "numinlets": 4,
+                    "numoutlets": 4,
+                    "outlettype": [ "", "", "", "" ],
+                    "patching_rect": [ 315.0, 405.0, 200.0, 22.0 ],
+                    "text": "route active released range"
                 }
             },
             {
@@ -1278,7 +1326,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 295.0, 26.0, 44.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 20.0, 71.0, 67.0, 21.0 ],
+                    "presentation_rect": [ 13.0, 66.0, 74.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": ""
@@ -1291,16 +1339,17 @@
                         },
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
-                            "parameter_longname": "live.text",
+                            "parameter_invisible": 2,
+                            "parameter_longname": "zoom_100",
                             "parameter_mmax": 1,
                             "parameter_modmode": 0,
-                            "parameter_shortname": "live.text",
+                            "parameter_shortname": "zoom_100",
                             "parameter_type": 2
                         }
                     },
-                    "text": "zoom 100%",
+                    "text": "zoom to 100%",
                     "transition": 1,
-                    "varname": "live.text"
+                    "varname": "live.text[2]"
                 }
             },
             {
@@ -1315,12 +1364,13 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
                         "rect": [ 662.0, 383.0, 465.0, 356.0 ],
+                        "integercoordinates": 1,
                         "boxes": [
                             {
                                 "box": {
@@ -1378,22 +1428,6 @@
             },
             {
                 "box": {
-                    "border": 0,
-                    "filename": "flowSwingStepSequencerUI.js",
-                    "id": "obj-3",
-                    "ignoreclick": 1,
-                    "maxclass": "jsui",
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "" ],
-                    "parameter_enable": 0,
-                    "patching_rect": [ 227.0, 183.0, 107.0, 44.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 94.0, 3.0, 604.0, 94.0 ]
-                }
-            },
-            {
-                "box": {
                     "angle": 270.0,
                     "grad1": [ 0.175, 0.175, 0.175, 1.0 ],
                     "grad2": [ 0.228311182788346, 0.228311120731904, 0.228311136948243, 1.0 ],
@@ -1445,7 +1479,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-3", 0 ],
+                    "destination": [ "obj-28", 0 ],
                     "source": [ "obj-108", 0 ]
                 }
             },
@@ -1529,7 +1563,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-3", 0 ],
+                    "destination": [ "obj-28", 0 ],
                     "source": [ "obj-17", 0 ]
                 }
             },
@@ -1553,8 +1587,8 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-3", 0 ],
-                    "source": [ "obj-2", 0 ]
+                    "destination": [ "obj-3", 1 ],
+                    "source": [ "obj-19", 2 ]
                 }
             },
             {
@@ -1565,14 +1599,26 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-2", 0 ],
-                    "source": [ "obj-22", 0 ]
+                    "destination": [ "obj-28", 0 ],
+                    "source": [ "obj-22", 3 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-3", 0 ],
+                    "destination": [ "obj-36", 0 ],
+                    "source": [ "obj-22", 2 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-36", 0 ],
                     "source": [ "obj-22", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-36", 0 ],
+                    "source": [ "obj-22", 0 ]
                 }
             },
             {
@@ -1583,36 +1629,39 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-3", 0 ],
+                    "destination": [ "obj-28", 0 ],
                     "source": [ "obj-27", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-10", 0 ],
-                    "midpoints": [ 324.5, 385.5, 453.5, 385.5 ],
-                    "order": 0,
-                    "source": [ "obj-3", 1 ]
-                }
-            },
-            {
-                "patchline": {
                     "destination": [ "obj-19", 0 ],
-                    "order": 1,
-                    "source": [ "obj-3", 1 ]
+                    "source": [ "obj-28", 1 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-31", 0 ],
                     "order": 0,
-                    "source": [ "obj-3", 0 ]
+                    "source": [ "obj-28", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-9", 0 ],
                     "order": 1,
+                    "source": [ "obj-28", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-28", 0 ],
+                    "source": [ "obj-29", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-64", 0 ],
                     "source": [ "obj-3", 0 ]
                 }
             },
@@ -1642,6 +1691,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-29", 0 ],
+                    "source": [ "obj-33", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-112", 0 ],
                     "source": [ "obj-34", 2 ]
                 }
@@ -1662,6 +1717,18 @@
             {
                 "patchline": {
                     "destination": [ "obj-3", 0 ],
+                    "source": [ "obj-35", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-28", 0 ],
+                    "source": [ "obj-36", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-28", 0 ],
                     "source": [ "obj-38", 0 ]
                 }
             },
@@ -1691,7 +1758,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-3", 0 ],
+                    "destination": [ "obj-28", 0 ],
                     "source": [ "obj-63", 0 ]
                 }
             },
@@ -1703,7 +1770,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-3", 0 ],
+                    "destination": [ "obj-28", 0 ],
                     "source": [ "obj-65", 0 ]
                 }
             },
@@ -1715,7 +1782,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-3", 0 ],
+                    "destination": [ "obj-28", 0 ],
                     "source": [ "obj-69", 0 ]
                 }
             },
@@ -1758,8 +1825,10 @@
         ],
         "parameters": {
             "obj-109": [ "pitches", "pitches", 2 ],
-            "obj-12": [ "live.text", "live.text", 0 ],
+            "obj-12": [ "zoom_100", "zoom_100", 0 ],
             "obj-25": [ "color", "color", 0 ],
+            "obj-33": [ "zoom_fit", "zoom_fit", 0 ],
+            "obj-35": [ "set_range", "set_range", 0 ],
             "obj-6": [ "format", "format", 0 ],
             "obj-64": [ "range", "range", 0 ],
             "obj-68": [ "grid", "grid", 0 ],

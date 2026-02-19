@@ -57,6 +57,14 @@ This repository is actively maintained and regularly updated with new features, 
 **Version 1** was a pre-release corresponding to the description in the SMC2025 paper (Sioros & Klissouras, 2025).
 **Version 2** introduces new features, a redesigned UI, and an improved DSP engine with bug fixes and better performance. It remains backwards compatible.  
 
+### Highlights in Version 2.6
+
+- **flowSwing.subdiv:** New phasor subdivision object that splits an input ramp into segments of arbitrary relative lengths.  
+- **flowSwing.noise (new feature):** Adds Non-Isochronous phase subdivision to the noise synthesizer.  
+- **flowSwing.audioWarp:** Waveform display now supports vertical zooming.  
+- **Updated UI:** Interface refinements across several devices.  
+- **Performance improvements:** Multiple bug fixes and stability enhancements, with a particular focus on JavaScript code updated to take advantage of the new v8/v8ui objects.  
+
 ### Highlights in Version 2.5
 
 - **flowSwing.onsetDetect:** New onset detection tool for setting warp markers in audioWarp, isolating the FluCoMa dependency and avoiding error message in audioWarp when it is not installed.
@@ -94,7 +102,7 @@ This repository is actively maintained and regularly updated with new features, 
 ## Troubleshooting
 
 - FlowSwing not found in Max: Verify the package folder is directly inside the Max 9/Packages directory and restart Max.
-- JavaScript/V8 errors: Ensure you are running Max 9+; for earlier versions, load the provided legacy scripts (XXXX_js185.js) in js objects instead of v8. If no legacy script is included, the same file works with both js and v8 objects.
+- JavaScript/V8 errors: Ensure you are running Max 9+; for earlier versions, load the provided legacy scripts in js/jsui objects instead of v8/v8ui. If no legacy script is included, the same file works with both js and v8 objects.
 
 ## Contributing
 
