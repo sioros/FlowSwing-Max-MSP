@@ -4,13 +4,14 @@
         "appversion": {
             "major": 9,
             "minor": 1,
-            "revision": 0,
+            "revision": 2,
             "architecture": "x64",
             "modernui": 1
         },
         "classnamespace": "box",
         "rect": [ 144.0, 101.0, 904.0, 659.0 ],
         "openinpresentation": 1,
+        "integercoordinates": 1,
         "boxes": [
             {
                 "box": {
@@ -66,7 +67,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 389.0, 182.0, 25.0, 22.0 ],
-                    "text": "3"
+                    "text": "4"
                 }
             },
             {
@@ -147,12 +148,13 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
                         "rect": [ 618.0, 336.0, 376.0, 330.0 ],
+                        "integercoordinates": 1,
                         "boxes": [
                             {
                                 "box": {
@@ -469,12 +471,13 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
                         "rect": [ 190.0, 145.0, 450.0, 620.0 ],
+                        "integercoordinates": 1,
                         "boxes": [
                             {
                                 "box": {
@@ -776,12 +779,13 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
                         "rect": [ 669.0, 393.0, 389.0, 433.0 ],
+                        "integercoordinates": 1,
                         "boxes": [
                             {
                                 "box": {
@@ -1018,7 +1022,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 641.0, 270.0, 31.0, 22.0 ],
+                    "patching_rect": [ 641.0, 271.0, 31.0, 22.0 ],
                     "text": "loop"
                 }
             },
@@ -1155,12 +1159,13 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 2,
                             "architecture": "x64",
                             "modernui": 1
                         },
                         "classnamespace": "box",
                         "rect": [ 59.0, 107.0, 370.0, 373.0 ],
+                        "integercoordinates": 1,
                         "boxes": [
                             {
                                 "box": {
@@ -1653,7 +1658,6 @@
             "obj-1::obj-91": [ "hold", "hold", 0 ],
             "obj-21": [ "dynamic", "dynamic", 0 ],
             "obj-31::obj-106": [ "resetMarkers_button", "resetMarkers_button", 0 ],
-            "obj-31::obj-113": [ "onsets_button", "onsets_button", 0 ],
             "obj-31::obj-114": [ "clear_markers", "clear_breakpoints", 0 ],
             "obj-31::obj-132": [ "markers_dict", "markers", 0 ],
             "obj-31::obj-140": [ "snapToNIGrid_parameter[1]", "snapToNIGrid_parameter", 0 ],
@@ -1662,15 +1666,16 @@
             "obj-31::obj-161": [ "asGrid[1]", "asGrid", 1 ],
             "obj-31::obj-19": [ "mute[1]", "mute", 0 ],
             "obj-31::obj-199": [ "resetNIGrid[2]", "resetNIGrid", 0 ],
+            "obj-31::obj-209": [ "zoom_y_control", "zoom_y_control", 0 ],
             "obj-31::obj-22": [ "lock[1]", "lock", 0 ],
             "obj-31::obj-242": [ "resetNIGrid[3]", "resetNIGrid", 0 ],
             "obj-31::obj-42": [ "morph[1]", "morph", 0 ],
             "obj-31::obj-45": [ "S[1]", "S", 0 ],
             "obj-31::obj-47": [ "offset[1]", "offset", 0 ],
             "obj-31::obj-48": [ "niRotation[1]", "niRotation", 0 ],
+            "obj-31::obj-49": [ "buffer", "buffer", 0 ],
             "obj-31::obj-50": [ "Formative[1]", "Formative", 0 ],
             "obj-31::obj-51": [ "Target[1]", "Target", 0 ],
-            "obj-31::obj-52": [ "onset_threshold", "onset_threshold", 0 ],
             "obj-31::obj-84": [ "zoom[1]", "zoom", 0 ],
             "obj-31::obj-90": [ "secondary_S_control[1]", "secondary_S_control", 0 ],
             "obj-31::obj-91": [ "hold[1]", "hold", 0 ],
@@ -1762,12 +1767,10 @@
                         "mute": 0.0,
                         "mute[1]": 0.0,
                         "niRotation": 0.0,
-                        "niRotation[1]": 0.0,
+                        "niRotation[1]": 3.0,
                         "noise gain": 0.0,
                         "offset": 0.0,
                         "offset[1]": 0.0,
-                        "onset_threshold": 0.0,
-                        "onsets_button": 0.0,
                         "resetMarkers_button": 0.0,
                         "snapToNIGrid[1]": 1.0,
                         "snapToNIGrid_parameter": 1.0,
@@ -1783,6 +1786,7 @@
                                     "mute": [ 0, 0, 0, 0, 0, 0, 0, 0 ]
                                 }
                             ],
+                            "buffer": [ "loop" ],
                             "markers_dict": [
                                 {
                                     "lock": {
@@ -1833,6 +1837,7 @@
                             "title[1]": [ "Dynamic Audio" ],
                             "zoom": [ 1.0 ],
                             "zoom[1]": [ 1.0 ],
+                            "zoom_y_control": [ 1.0 ],
                             "asGrid": [ 0.0, 0, 5 ],
                             "asGrid[1]": [ 0.0, 0, 8 ]
                         }
@@ -1874,12 +1879,10 @@
                                     "mute": 0.0,
                                     "mute[1]": 0.0,
                                     "niRotation": 0.0,
-                                    "niRotation[1]": 0.0,
+                                    "niRotation[1]": 3.0,
                                     "noise gain": 0.0,
                                     "offset": 0.0,
                                     "offset[1]": 0.0,
-                                    "onset_threshold": 0.0,
-                                    "onsets_button": 0.0,
                                     "resetMarkers_button": 0.0,
                                     "snapToNIGrid[1]": 1.0,
                                     "snapToNIGrid_parameter": 1.0,
@@ -1895,6 +1898,7 @@
                                                 "mute": [ 0, 0, 0, 0, 0, 0, 0, 0 ]
                                             }
                                         ],
+                                        "buffer": [ "loop" ],
                                         "markers_dict": [
                                             {
                                                 "lock": {
@@ -1945,6 +1949,7 @@
                                         "title[1]": [ "Dynamic Audio" ],
                                         "zoom": [ 1.0 ],
                                         "zoom[1]": [ 1.0 ],
+                                        "zoom_y_control": [ 1.0 ],
                                         "asGrid": [ 0.0, 0, 5 ],
                                         "asGrid[1]": [ 0.0, 0, 8 ]
                                     }
